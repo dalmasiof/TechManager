@@ -35,11 +35,11 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.cmbAcesso = new Bunifu.Framework.UI.BunifuDropdown();
             this.swiMostrar = new Bunifu.Framework.UI.BunifuiOSSwitch();
-            this.btnSair = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pcbUser = new System.Windows.Forms.PictureBox();
             this.pcbSenha = new System.Windows.Forms.PictureBox();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
@@ -123,58 +123,6 @@
             this.swiMostrar.Value = true;
             this.swiMostrar.OnValueChange += new System.EventHandler(this.swiMostrar_OnValueChange);
             // 
-            // btnSair
-            // 
-            this.btnSair.ActiveBorderThickness = 1;
-            this.btnSair.ActiveCornerRadius = 20;
-            this.btnSair.ActiveFillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSair.ActiveForecolor = System.Drawing.Color.White;
-            this.btnSair.ActiveLineColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSair.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSair.BackgroundImage")));
-            this.btnSair.ButtonText = "Sair";
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSair.IdleBorderThickness = 1;
-            this.btnSair.IdleCornerRadius = 20;
-            this.btnSair.IdleFillColor = System.Drawing.Color.White;
-            this.btnSair.IdleForecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnSair.IdleLineColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSair.Location = new System.Drawing.Point(422, 332);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(123, 41);
-            this.btnSair.TabIndex = 4;
-            this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSair.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.ActiveBorderThickness = 1;
-            this.btnEntrar.ActiveCornerRadius = 20;
-            this.btnEntrar.ActiveFillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEntrar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnEntrar.ActiveLineColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEntrar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEntrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.BackgroundImage")));
-            this.btnEntrar.ButtonText = "Entrar";
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEntrar.IdleBorderThickness = 1;
-            this.btnEntrar.IdleCornerRadius = 20;
-            this.btnEntrar.IdleFillColor = System.Drawing.Color.White;
-            this.btnEntrar.IdleForecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnEntrar.IdleLineColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEntrar.Location = new System.Drawing.Point(593, 332);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(123, 41);
-            this.btnEntrar.TabIndex = 3;
-            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
             // pcbUser
             // 
             this.pcbUser.BackgroundImage = global::TechManager.Properties.Resources.if_user_group_285648;
@@ -207,18 +155,50 @@
             this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackColor = System.Drawing.Color.White;
+            this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnEntrar.ForeColor = System.Drawing.Color.Black;
+            this.btnEntrar.Location = new System.Drawing.Point(596, 350);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(120, 33);
+            this.btnEntrar.TabIndex = 11;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnSair.ForeColor = System.Drawing.Color.Black;
+            this.btnSair.Location = new System.Drawing.Point(404, 350);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(120, 33);
+            this.btnSair.TabIndex = 12;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 426);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.cmbAcesso);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.swiMostrar);
-            this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.pcbUser);
             this.Controls.Add(this.pcbSenha);
             this.Controls.Add(this.pnlLogo);
@@ -246,12 +226,12 @@
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pcbSenha;
         private System.Windows.Forms.PictureBox pcbUser;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnEntrar;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnSair;
         private Bunifu.Framework.UI.BunifuiOSSwitch swiMostrar;
         private System.Windows.Forms.Label lblMostrar;
         private System.Windows.Forms.TextBox txtSenha;
         private Bunifu.Framework.UI.BunifuDropdown cmbAcesso;
         private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Button btnSair;
     }
 }

@@ -13,6 +13,7 @@ namespace TechManager
 {
     public partial class frmProblema : Form
     {
+        usuarioDTO dtovar = new usuarioDTO();
         public frmProblema()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace TechManager
         private void frmProblema_Load(object sender, EventArgs e)
         {
             lblData.Text = DateTime.Now.ToString();
-            lblNome.Text = usuarioDTO.Nome;
+            lblNome.Text = dtovar.nome ;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

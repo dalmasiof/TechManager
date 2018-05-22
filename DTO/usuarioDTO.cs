@@ -8,13 +8,12 @@ namespace DTO
 {
     public class usuarioDTO
     {
-        private static string nome;
-
-        public static string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string login { get; set; }
+        public string senha { get; set; }
+        public string email { get; set; }
+        public char tipo { get; set; }
 
     }
 }

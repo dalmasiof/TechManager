@@ -13,6 +13,8 @@ namespace TechManager
 {
     public partial class frmLogin : Form
     {
+        usuarioDTO dtovar = new usuarioDTO();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -25,11 +27,6 @@ namespace TechManager
             
         }
 
-
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void txtUser_MouseClick(object sender, MouseEventArgs e)
         {
@@ -145,7 +142,7 @@ namespace TechManager
             }
             else if(cmbAcesso.selectedIndex == 1)
             {
-                usuarioDTO.Nome = txtUser.Text;
+                dtovar.login= txtUser.Text;
                 frmPerfilProf prof = new frmPerfilProf();
                 prof.ShowDialog();
                 this.Hide();
@@ -160,6 +157,9 @@ namespace TechManager
             }
         }
 
-       
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }       
     }
 }

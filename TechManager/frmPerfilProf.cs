@@ -13,6 +13,8 @@ namespace TechManager
 {
     public partial class frmPerfilProf : Form
     {
+        usuarioDTO dtovar = new usuarioDTO();
+
         public frmPerfilProf()
         {
             InitializeComponent();
@@ -20,7 +22,7 @@ namespace TechManager
 
         private void frmPerfilProf_Load(object sender, EventArgs e)
         {
-            lblNome.Text = usuarioDTO.Nome;
+            lblNome.Text = dtovar.nome;
         }
 
         private void btnErro_Click(object sender, EventArgs e)

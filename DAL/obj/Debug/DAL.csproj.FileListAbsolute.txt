@@ -15,3 +15,10 @@ C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\DAL\bin\Deb
 C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\DAL\obj\Debug\DAL.dll
 C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\DAL\obj\Debug\DAL.pdb
+D:\GitHub\TechManager\DAL\bin\Debug\DAL.dll
+D:\GitHub\TechManager\DAL\bin\Debug\DAL.pdb
+D:\GitHub\TechManager\DAL\bin\Debug\DTO.dll
+D:\GitHub\TechManager\DAL\bin\Debug\DTO.pdb
+D:\GitHub\TechManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\GitHub\TechManager\DAL\obj\Debug\DAL.dll
+D:\GitHub\TechManager\DAL\obj\Debug\DAL.pdb
