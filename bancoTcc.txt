@@ -1,0 +1,18 @@
+create database db_tech;
+use db_tech;
+
+create table tb_usuario(
+idUsuario int auto_increment primary key,
+nome varchar(50),
+login varchar(50),
+senha varchar(50),
+email varchar(50),
+tipoUsu char);
+
+create table problema(
+idProb int auto_increment primary key,
+aula varchar(20),
+professor varchar(50),
+idMaquina varchar(20),
+problema varchar(50)
+);

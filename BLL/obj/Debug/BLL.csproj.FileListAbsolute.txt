@@ -1,0 +1,26 @@
+F:\TechManager\BLL\bin\Debug\BLL.dll
+F:\TechManager\BLL\bin\Debug\BLL.pdb
+F:\TechManager\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+F:\TechManager\BLL\obj\Debug\BLL.dll
+F:\TechManager\BLL\obj\Debug\BLL.pdb
+L:\TechManager\BLL\bin\Debug\BLL.dll
+L:\TechManager\BLL\bin\Debug\BLL.pdb
+L:\TechManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+L:\TechManager\BLL\obj\Debug\BLL.dll
+L:\TechManager\BLL\obj\Debug\BLL.pdb
+C:\Users\Admin\Desktop\Nova pasta\TechManager\BLL\bin\Debug\BLL.dll
+C:\Users\Admin\Desktop\Nova pasta\TechManager\BLL\bin\Debug\BLL.pdb
+C:\Users\Admin\Desktop\Nova pasta\TechManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Nova pasta\TechManager\BLL\obj\Debug\BLL.dll
+C:\Users\Admin\Desktop\Nova pasta\TechManager\BLL\obj\Debug\BLL.pdb
+C:\Users\Antonio Carlos\Desktop\TCC Design 2\TechManager\BLL\bin\Debug\BLL.dll
+C:\Users\Antonio Carlos\Desktop\TCC Design 2\TechManager\BLL\bin\Debug\BLL.pdb
+C:\Users\Antonio Carlos\Desktop\TCC Design 2\TechManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Antonio Carlos\Desktop\TCC Design 2\TechManager\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Carlos\Desktop\TCC Design 2\TechManager\BLL\obj\Debug\BLL.dll
+C:\Users\Antonio Carlos\Desktop\TCC Design 2\TechManager\BLL\obj\Debug\BLL.pdb
+C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\BLL\bin\Debug\BLL.dll
+C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\BLL\bin\Debug\BLL.pdb
+C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\BLL\obj\Debug\BLL.dll
+C:\Users\Maza\Downloads\TechManager-20180521T113445Z-001\TechManager\BLL\obj\Debug\BLL.pdb

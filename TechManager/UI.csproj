@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CC806DF-C2B8-4972-B02F-6E27F89A7EC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechManager</RootNamespace>
+    <AssemblyName>TechManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
+      <HintPath>C:\Users\Maza\Desktop\BunifuUIWinForms_v1.5.4\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.4, Version=1.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAdvertenciaProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdvertenciaProf.Designer.cs">
+      <DependentUpon>frmAdvertenciaProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdvertenciaTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdvertenciaTecnico.Designer.cs">
+      <DependentUpon>frmAdvertenciaTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlteraPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlteraPerfil.Designer.cs">
+      <DependentUpon>frmAlteraPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistorico.Designer.cs">
+      <DependentUpon>frmHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrar.Designer.cs">
+      <DependentUpon>frmCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilProf.Designer.cs">
+      <DependentUpon>frmPerfilProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilTec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilTec.Designer.cs">
+      <DependentUpon>frmPerfilTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProblema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProblema.Designer.cs">
+      <DependentUpon>frmProblema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdvertenciaProf.resx">
+      <DependentUpon>frmAdvertenciaProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdvertenciaTecnico.resx">
+      <DependentUpon>frmAdvertenciaTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlteraPerfil.resx">
+      <DependentUpon>frmAlteraPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistorico.resx">
+      <DependentUpon>frmHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrar.resx">
+      <DependentUpon>frmCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilProf.resx">
+      <DependentUpon>frmPerfilProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilTec.resx">
+      <DependentUpon>frmPerfilTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProblema.resx">
+      <DependentUpon>frmProblema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoTCC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoTCC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{8ae6f6e0-3cdf-438c-bff7-1015a1440fde}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{c418522b-4ba7-42eb-9cd4-d8193b902376}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_user-group_285648.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_lock_299105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285648-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoTCC11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216437-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_user-alt_285645.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_go-home_118770.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_go-home_118770 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Camera-Front_379526.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_User_27887.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Error_381599.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etec-2018-inscricoes-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etec-2018-inscricoes-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Error_381599 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Error_381599 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Error_3815991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Error_381599.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_warning_alert_attention-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-round-error-warning-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_alert_attention_search-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Log Out_27856.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_closed %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_transparent %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_transparent %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-color_chart-pie-36_icon-icons.com_53463.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noti1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noti+1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noti11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noti12.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
