@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblema));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVoltar = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -56,6 +57,7 @@
             this.btnAlterar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label7 = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
@@ -92,7 +94,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::TechManager.Properties.Resources.logoTCC11;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(-59, 160);
+            this.pictureBox3.Location = new System.Drawing.Point(-48, 160);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(306, 258);
             this.pictureBox3.TabIndex = 3;
@@ -175,7 +177,7 @@
             this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
             this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAdve.Iconimage = global::TechManager.Properties.Resources.warning_alert_attention_search_512;
+            this.btnAdve.Iconimage = global::TechManager.Properties.Resources.error_warning_alert_attention_512;
             this.btnAdve.Iconimage_right = null;
             this.btnAdve.Iconimage_right_Selected = null;
             this.btnAdve.Iconimage_Selected = null;
@@ -189,7 +191,7 @@
             this.btnAdve.Location = new System.Drawing.Point(13, 368);
             this.btnAdve.Name = "btnAdve";
             this.btnAdve.Normalcolor = System.Drawing.Color.Silver;
-            this.btnAdve.OnHovercolor = System.Drawing.Color.BurlyWood;
+            this.btnAdve.OnHovercolor = System.Drawing.Color.Brown;
             this.btnAdve.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAdve.selected = false;
             this.btnAdve.Size = new System.Drawing.Size(206, 53);
@@ -222,19 +224,19 @@
             // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Peru;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Peru;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -399,6 +401,12 @@
             this.lblData.TabIndex = 28;
             this.lblData.Text = "Aula";
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Clique para mostrar";
+            this.notifyIcon1.Visible = true;
+            // 
             // frmProblema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,5 +467,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnAlterar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

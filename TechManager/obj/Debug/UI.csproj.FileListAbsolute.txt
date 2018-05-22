@@ -190,3 +190,37 @@ D:\GitHub\TechManager\TechManager\bin\Debug\BLL.pdb
 D:\GitHub\TechManager\TechManager\bin\Debug\DTO.pdb
 D:\GitHub\TechManager\TechManager\bin\Debug\DAL.dll
 D:\GitHub\TechManager\TechManager\bin\Debug\DAL.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\TechManager.exe.config
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\TechManager.exe
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\TechManager.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\BLL.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.Core.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\DTO.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\DAL.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\BLL.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\DTO.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\DAL.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmAdvertenciaProf.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmAdvertenciaTecnico.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmAlteraPerfil.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmHistorico.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmLogin.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmCadastrar.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmPerfilProf.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmPerfilTec.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmProblema.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.Properties.Resources.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.exe
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\MySql.Data.dll

@@ -23,6 +23,7 @@ namespace TechManager
         private void frmPerfilProf_Load(object sender, EventArgs e)
         {
             lblNome.Text = dtovar.nome;
+            notifyIcon1.Visible = false;
         }
 
         private void btnErro_Click(object sender, EventArgs e)
@@ -51,7 +52,22 @@ namespace TechManager
         private void btnHist_Click(object sender, EventArgs e)
         {
             frmHistorico historico = new frmHistorico();
-            historico.ShowDialog();
+            historico.Show();
         }
+
+        private void btnStand_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            notifyIcon1.Visible = true;
+            
+        }
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            notifyIcon1.Visible = false;
+        }
+
+        
     }
 }

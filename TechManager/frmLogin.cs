@@ -144,16 +144,15 @@ namespace TechManager
             {
                 dtovar.login= txtUser.Text;
                 frmPerfilProf prof = new frmPerfilProf();
-                prof.ShowDialog();
+                prof.Show();
                 this.Hide();
-                this.Close();
+                
             }
             else
             {
                 frmPerfilTec tec = new frmPerfilTec();
-                tec.ShowDialog();
+                tec.Show();
                 this.Hide();
-                this.Close();
             }
         }
 

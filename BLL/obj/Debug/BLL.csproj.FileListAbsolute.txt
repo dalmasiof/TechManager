@@ -33,3 +33,14 @@ D:\GitHub\TechManager\BLL\bin\Debug\DTO.pdb
 D:\GitHub\TechManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\GitHub\TechManager\BLL\obj\Debug\BLL.dll
 D:\GitHub\TechManager\BLL\obj\Debug\BLL.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\BLL.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\BLL.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\DAL.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\DTO.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\DAL.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\DTO.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\obj\Debug\BLL.dll
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\obj\Debug\BLL.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\MySql.Data.dll

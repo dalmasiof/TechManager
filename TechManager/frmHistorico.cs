@@ -19,6 +19,8 @@ namespace TechManager
 
         private void frmHistorico_Load(object sender, EventArgs e)
         {
+            cmbHist.selectedIndex = 0;
+
             cmbHist.AddItem("Consultar por:");
             cmbHist.AddItem("ID Máquina");
             cmbHist.AddItem("Professor");
