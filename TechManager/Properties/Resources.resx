@@ -247,4 +247,7 @@
   <data name="stringImagem" xml:space="preserve">
     <value>""</value>
   </data>
+  <data name="idLog" xml:space="preserve">
+    <value>""</value>
+  </data>
 </root>

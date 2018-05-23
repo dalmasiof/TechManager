@@ -29,47 +29,67 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.pcbFotoProf = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnProcurarImagem = new System.Windows.Forms.Button();
+            this.txtImagemUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbbAcesso = new System.Windows.Forms.ComboBox();
-            this.lblAcesso = new System.Windows.Forms.Label();
+            this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblConfirmarSenha = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoProf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.pcbHome);
+            this.panel1.Controls.Add(this.pcbLogo);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.bunifuImageButton2);
-            this.panel1.Controls.Add(this.lblNome);
-            this.panel1.Controls.Add(this.pcbFotoProf);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(183, 471);
             this.panel1.TabIndex = 1;
+            // 
+            // pcbHome
+            // 
+            this.pcbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcbHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbHome.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
+            this.pcbHome.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
+            this.pcbHome.Location = new System.Drawing.Point(52, 372);
+            this.pcbHome.Name = "pcbHome";
+            this.pcbHome.Size = new System.Drawing.Size(71, 71);
+            this.pcbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbHome.TabIndex = 19;
+            this.pcbHome.TabStop = false;
+            this.pcbHome.Zoom = 10;
+            // 
+            // pcbLogo
+            // 
+            this.pcbLogo.BackgroundImage = global::TechManager.Properties.Resources.logoTCC1;
+            this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcbLogo.Location = new System.Drawing.Point(2, 12);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(167, 222);
+            this.pcbLogo.TabIndex = 13;
+            this.pcbLogo.TabStop = false;
             // 
             // label2
             // 
@@ -82,58 +102,23 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Voltar";
             // 
-            // bunifuImageButton2
+            // btnProcurarImagem
             // 
-            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.back2;
-            this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.back__1_;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(44, 381);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(76, 60);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 11;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
+            this.btnProcurarImagem.Location = new System.Drawing.Point(556, 63);
+            this.btnProcurarImagem.Name = "btnProcurarImagem";
+            this.btnProcurarImagem.Size = new System.Drawing.Size(75, 23);
+            this.btnProcurarImagem.TabIndex = 8;
+            this.btnProcurarImagem.Text = "Procurar";
+            this.btnProcurarImagem.UseVisualStyleBackColor = true;
             // 
-            // lblNome
+            // txtImagemUsuario
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNome.Location = new System.Drawing.Point(15, 134);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(155, 23);
-            this.lblNome.TabIndex = 2;
-            this.lblNome.Text = "Professor ( Nome )";
-            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pcbFotoProf
-            // 
-            this.pcbFotoProf.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
-            this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbFotoProf.Location = new System.Drawing.Point(31, 25);
-            this.pcbFotoProf.Name = "pcbFotoProf";
-            this.pcbFotoProf.Size = new System.Drawing.Size(118, 106);
-            this.pcbFotoProf.TabIndex = 0;
-            this.pcbFotoProf.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(556, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Procurar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(357, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtImagemUsuario.BackColor = System.Drawing.SystemColors.Control;
+            this.txtImagemUsuario.Enabled = false;
+            this.txtImagemUsuario.Location = new System.Drawing.Point(357, 66);
+            this.txtImagemUsuario.Name = "txtImagemUsuario";
+            this.txtImagemUsuario.Size = new System.Drawing.Size(193, 20);
+            this.txtImagemUsuario.TabIndex = 7;
             // 
             // label1
             // 
@@ -155,126 +140,102 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox6
+            // txtConfirmaSenha
             // 
-            this.textBox6.Location = new System.Drawing.Point(391, 249);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(162, 20);
-            this.textBox6.TabIndex = 26;
+            this.txtConfirmaSenha.Location = new System.Drawing.Point(385, 267);
+            this.txtConfirmaSenha.Name = "txtConfirmaSenha";
+            this.txtConfirmaSenha.Size = new System.Drawing.Size(162, 20);
+            this.txtConfirmaSenha.TabIndex = 26;
             // 
-            // textBox5
+            // txtSenha
             // 
-            this.textBox5.Location = new System.Drawing.Point(391, 217);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 20);
-            this.textBox5.TabIndex = 25;
+            this.txtSenha.Location = new System.Drawing.Point(385, 234);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(162, 20);
+            this.txtSenha.TabIndex = 25;
             // 
-            // textBox4
+            // txtLogin
             // 
-            this.textBox4.Location = new System.Drawing.Point(391, 178);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 20);
-            this.textBox4.TabIndex = 24;
+            this.txtLogin.Location = new System.Drawing.Point(385, 201);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(162, 20);
+            this.txtLogin.TabIndex = 24;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(391, 287);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 20);
-            this.textBox3.TabIndex = 23;
+            this.txtEmail.Location = new System.Drawing.Point(387, 300);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(162, 20);
+            this.txtEmail.TabIndex = 23;
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(391, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 22;
+            this.txtNome.Location = new System.Drawing.Point(385, 168);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(162, 20);
+            this.txtNome.TabIndex = 22;
             // 
-            // label6
+            // lblConfirmarSenha
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(239, 249);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 23);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Confirmar Senha";
+            this.lblConfirmarSenha.AutoSize = true;
+            this.lblConfirmarSenha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarSenha.ForeColor = System.Drawing.Color.DimGray;
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(237, 263);
+            this.lblConfirmarSenha.Name = "lblConfirmarSenha";
+            this.lblConfirmarSenha.Size = new System.Drawing.Size(139, 23);
+            this.lblConfirmarSenha.TabIndex = 21;
+            this.lblConfirmarSenha.Text = "Confirmar Senha";
             // 
-            // label5
+            // lblSenha
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(237, 213);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 23);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Senha";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.DimGray;
+            this.lblSenha.Location = new System.Drawing.Point(237, 230);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(57, 23);
+            this.lblSenha.TabIndex = 20;
+            this.lblSenha.Text = "Senha";
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(239, 287);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 23);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.lblEmail.Location = new System.Drawing.Point(237, 296);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 23);
+            this.lblEmail.TabIndex = 19;
+            this.lblEmail.Text = "Email";
             // 
-            // label3
+            // lblLogin
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(239, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 23);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Login";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lblLogin.Location = new System.Drawing.Point(237, 197);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(51, 23);
+            this.lblLogin.TabIndex = 18;
+            this.lblLogin.Text = "Login";
             // 
-            // label7
+            // lblNome
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(239, 148);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 23);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Nome";
-            // 
-            // cbbAcesso
-            // 
-            this.cbbAcesso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAcesso.FormattingEnabled = true;
-            this.cbbAcesso.Items.AddRange(new object[] {
-            "Professor",
-            "Técnico"});
-            this.cbbAcesso.Location = new System.Drawing.Point(391, 323);
-            this.cbbAcesso.Name = "cbbAcesso";
-            this.cbbAcesso.Size = new System.Drawing.Size(162, 21);
-            this.cbbAcesso.TabIndex = 31;
-            // 
-            // lblAcesso
-            // 
-            this.lblAcesso.AutoSize = true;
-            this.lblAcesso.BackColor = System.Drawing.SystemColors.Control;
-            this.lblAcesso.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcesso.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAcesso.Location = new System.Drawing.Point(243, 319);
-            this.lblAcesso.Name = "lblAcesso";
-            this.lblAcesso.Size = new System.Drawing.Size(64, 23);
-            this.lblAcesso.TabIndex = 30;
-            this.lblAcesso.Text = "Acesso";
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.SystemColors.Control;
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNome.Location = new System.Drawing.Point(237, 164);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(56, 23);
+            this.lblNome.TabIndex = 17;
+            this.lblNome.Text = "Nome";
             // 
             // lblMensagem
             // 
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.Location = new System.Drawing.Point(317, 368);
+            this.lblMensagem.Location = new System.Drawing.Point(311, 356);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(82, 18);
             this.lblMensagem.TabIndex = 29;
@@ -288,12 +249,13 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(249, 408);
+            this.btnCancelar.Location = new System.Drawing.Point(247, 409);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
             this.btnCancelar.TabIndex = 33;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGravar
             // 
@@ -303,12 +265,13 @@
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGravar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGravar.ForeColor = System.Drawing.Color.Black;
-            this.btnGravar.Location = new System.Drawing.Point(444, 408);
+            this.btnGravar.Location = new System.Drawing.Point(442, 409);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(120, 33);
             this.btnGravar.TabIndex = 32;
-            this.btnGravar.Text = "Gravar";
+            this.btnGravar.Text = "Alterar";
             this.btnGravar.UseVisualStyleBackColor = false;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // frmAlteraPerfil
             // 
@@ -317,30 +280,29 @@
             this.ClientSize = new System.Drawing.Size(734, 471);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.cbbAcesso);
-            this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.lblMensagem);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfirmaSenha);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.lblConfirmarSenha);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.btnProcurarImagem);
+            this.Controls.Add(this.txtImagemUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frmAlteraPerfil";
-            this.Text = "frmAlteraPerfil";
+            this.Text = "Alterar Usuário";
+            this.Load += new System.EventHandler(this.frmAlteraPerfil_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoProf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -350,28 +312,25 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.PictureBox pcbFotoProf;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnProcurarImagem;
+        private System.Windows.Forms.TextBox txtImagemUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbbAcesso;
-        private System.Windows.Forms.Label lblAcesso;
+        private System.Windows.Forms.TextBox txtConfirmaSenha;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblConfirmarSenha;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGravar;
+        private System.Windows.Forms.PictureBox pcbLogo;
+        private Bunifu.Framework.UI.BunifuImageButton pcbHome;
     }
 }

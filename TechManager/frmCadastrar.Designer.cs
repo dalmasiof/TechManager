@@ -51,6 +51,8 @@
             this.lblMensagem = new System.Windows.Forms.Label();
             this.lblAcesso = new System.Windows.Forms.Label();
             this.cbbAcesso = new System.Windows.Forms.ComboBox();
+            this.lblRG = new System.Windows.Forms.Label();
+            this.mktxtRG = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -98,7 +100,7 @@
             this.lblFotoPerfil.Location = new System.Drawing.Point(354, 45);
             this.lblFotoPerfil.Name = "lblFotoPerfil";
             this.lblFotoPerfil.Size = new System.Drawing.Size(91, 18);
-            this.lblFotoPerfil.TabIndex = 2;
+            this.lblFotoPerfil.TabIndex = 108;
             this.lblFotoPerfil.Text = "Foto de Perfil";
             // 
             // txtNomeFotoPerfil
@@ -108,14 +110,14 @@
             this.txtNomeFotoPerfil.Location = new System.Drawing.Point(357, 66);
             this.txtNomeFotoPerfil.Name = "txtNomeFotoPerfil";
             this.txtNomeFotoPerfil.Size = new System.Drawing.Size(193, 20);
-            this.txtNomeFotoPerfil.TabIndex = 3;
+            this.txtNomeFotoPerfil.TabIndex = 109;
             // 
             // btnProcurarFoto
             // 
             this.btnProcurarFoto.Location = new System.Drawing.Point(556, 63);
             this.btnProcurarFoto.Name = "btnProcurarFoto";
             this.btnProcurarFoto.Size = new System.Drawing.Size(75, 23);
-            this.btnProcurarFoto.TabIndex = 4;
+            this.btnProcurarFoto.TabIndex = 110;
             this.btnProcurarFoto.Text = "Procurar";
             this.btnProcurarFoto.UseVisualStyleBackColor = true;
             this.btnProcurarFoto.Click += new System.EventHandler(this.btnProcurarFoto_Click);
@@ -129,7 +131,7 @@
             this.lblNome.Location = new System.Drawing.Point(237, 146);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(56, 23);
-            this.lblNome.TabIndex = 5;
+            this.lblNome.TabIndex = 100;
             this.lblNome.Text = "Nome";
             // 
             // lblLogin
@@ -137,10 +139,10 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.lblLogin.Location = new System.Drawing.Point(237, 179);
+            this.lblLogin.Location = new System.Drawing.Point(237, 209);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(51, 23);
-            this.lblLogin.TabIndex = 6;
+            this.lblLogin.TabIndex = 102;
             this.lblLogin.Text = "Login";
             // 
             // lblEmail
@@ -148,10 +150,10 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmail.Location = new System.Drawing.Point(237, 278);
+            this.lblEmail.Location = new System.Drawing.Point(237, 308);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(51, 23);
-            this.lblEmail.TabIndex = 7;
+            this.lblEmail.TabIndex = 105;
             this.lblEmail.Text = "Email";
             // 
             // lblSenha
@@ -159,10 +161,10 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblSenha.Location = new System.Drawing.Point(237, 212);
+            this.lblSenha.Location = new System.Drawing.Point(237, 242);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(57, 23);
-            this.lblSenha.TabIndex = 8;
+            this.lblSenha.TabIndex = 103;
             this.lblSenha.Text = "Senha";
             // 
             // lblConfirmarSenha
@@ -170,46 +172,51 @@
             this.lblConfirmarSenha.AutoSize = true;
             this.lblConfirmarSenha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblConfirmarSenha.Location = new System.Drawing.Point(237, 245);
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(237, 275);
             this.lblConfirmarSenha.Name = "lblConfirmarSenha";
             this.lblConfirmarSenha.Size = new System.Drawing.Size(139, 23);
-            this.lblConfirmarSenha.TabIndex = 9;
+            this.lblConfirmarSenha.TabIndex = 104;
             this.lblConfirmarSenha.Text = "Confirmar Senha";
             // 
             // txtNome
             // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(385, 150);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(162, 20);
-            this.txtNome.TabIndex = 10;
+            this.txtNome.Size = new System.Drawing.Size(162, 21);
+            this.txtNome.TabIndex = 0;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(387, 282);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(387, 312);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(162, 20);
-            this.txtEmail.TabIndex = 11;
+            this.txtEmail.Size = new System.Drawing.Size(162, 21);
+            this.txtEmail.TabIndex = 5;
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(385, 183);
+            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Location = new System.Drawing.Point(385, 213);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(162, 20);
-            this.txtLogin.TabIndex = 12;
+            this.txtLogin.Size = new System.Drawing.Size(162, 21);
+            this.txtLogin.TabIndex = 2;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(385, 216);
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(385, 246);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(162, 20);
-            this.txtSenha.TabIndex = 13;
+            this.txtSenha.Size = new System.Drawing.Size(162, 21);
+            this.txtSenha.TabIndex = 3;
             // 
             // txtConfirmarSenha
             // 
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(385, 249);
+            this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(385, 279);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(162, 20);
-            this.txtConfirmarSenha.TabIndex = 14;
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(162, 21);
+            this.txtConfirmarSenha.TabIndex = 4;
             // 
             // pcbFoto
             // 
@@ -230,10 +237,10 @@
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGravar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGravar.ForeColor = System.Drawing.Color.Black;
-            this.btnGravar.Location = new System.Drawing.Point(442, 409);
+            this.btnGravar.Location = new System.Drawing.Point(442, 427);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(120, 33);
-            this.btnGravar.TabIndex = 17;
+            this.btnGravar.TabIndex = 8;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -246,10 +253,10 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(247, 409);
+            this.btnCancelar.Location = new System.Drawing.Point(247, 427);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
-            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -258,10 +265,10 @@
             // 
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.Location = new System.Drawing.Point(311, 360);
+            this.lblMensagem.Location = new System.Drawing.Point(311, 383);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(82, 18);
-            this.lblMensagem.TabIndex = 19;
+            this.lblMensagem.TabIndex = 107;
             this.lblMensagem.Text = "mensagem";
             // 
             // lblAcesso
@@ -270,23 +277,47 @@
             this.lblAcesso.BackColor = System.Drawing.SystemColors.Control;
             this.lblAcesso.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAcesso.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAcesso.Location = new System.Drawing.Point(237, 311);
+            this.lblAcesso.Location = new System.Drawing.Point(237, 341);
             this.lblAcesso.Name = "lblAcesso";
             this.lblAcesso.Size = new System.Drawing.Size(64, 23);
-            this.lblAcesso.TabIndex = 20;
+            this.lblAcesso.TabIndex = 106;
             this.lblAcesso.Text = "Acesso";
             // 
             // cbbAcesso
             // 
             this.cbbAcesso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbAcesso.FormattingEnabled = true;
             this.cbbAcesso.Items.AddRange(new object[] {
             "Professor",
             "Técnico"});
-            this.cbbAcesso.Location = new System.Drawing.Point(385, 315);
+            this.cbbAcesso.Location = new System.Drawing.Point(385, 345);
             this.cbbAcesso.Name = "cbbAcesso";
-            this.cbbAcesso.Size = new System.Drawing.Size(162, 21);
-            this.cbbAcesso.TabIndex = 21;
+            this.cbbAcesso.Size = new System.Drawing.Size(162, 23);
+            this.cbbAcesso.TabIndex = 6;
+            // 
+            // lblRG
+            // 
+            this.lblRG.AutoSize = true;
+            this.lblRG.BackColor = System.Drawing.SystemColors.Control;
+            this.lblRG.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRG.ForeColor = System.Drawing.Color.DimGray;
+            this.lblRG.Location = new System.Drawing.Point(238, 178);
+            this.lblRG.Name = "lblRG";
+            this.lblRG.Size = new System.Drawing.Size(32, 23);
+            this.lblRG.TabIndex = 101;
+            this.lblRG.Text = "RG";
+            // 
+            // mktxtRG
+            // 
+            this.mktxtRG.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mktxtRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mktxtRG.Location = new System.Drawing.Point(385, 178);
+            this.mktxtRG.Mask = "00.000.000-0";
+            this.mktxtRG.Name = "mktxtRG";
+            this.mktxtRG.Size = new System.Drawing.Size(90, 21);
+            this.mktxtRG.TabIndex = 1;
+            this.mktxtRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // frmCadastrar
             // 
@@ -294,6 +325,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(734, 471);
+            this.Controls.Add(this.mktxtRG);
+            this.Controls.Add(this.lblRG);
             this.Controls.Add(this.cbbAcesso);
             this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.lblMensagem);
@@ -317,7 +350,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastrar";
+            this.Text = "Novo Usuário";
             this.Load += new System.EventHandler(this.frmCadastrar_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
@@ -353,5 +386,7 @@
         private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.Label lblAcesso;
         private System.Windows.Forms.ComboBox cbbAcesso;
+        private System.Windows.Forms.Label lblRG;
+        private System.Windows.Forms.MaskedTextBox mktxtRG;
     }
 }

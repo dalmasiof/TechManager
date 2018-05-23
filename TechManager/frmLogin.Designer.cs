@@ -83,13 +83,14 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtSenha.ForeColor = System.Drawing.Color.Black;
             this.txtSenha.Location = new System.Drawing.Point(492, 195);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(159, 26);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Text = "Senha";
+            this.txtSenha.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSenha_MouseClick);
             this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
             // cmbAcesso
@@ -107,6 +108,7 @@
             this.cmbAcesso.selectedIndex = -1;
             this.cmbAcesso.Size = new System.Drawing.Size(217, 35);
             this.cmbAcesso.TabIndex = 0;
+            this.cmbAcesso.onItemSelected += new System.EventHandler(this.cmbAcesso_onItemSelected);
             // 
             // swiMostrar
             // 
@@ -146,7 +148,7 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtUser.ForeColor = System.Drawing.Color.Black;
             this.txtUser.Location = new System.Drawing.Point(492, 135);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(159, 26);

@@ -23,5 +23,19 @@ namespace BLL
                 throw ex;
             }
         }
+
+        public void alterarUsuario(usuarioDTO dtovar)
+        {
+            try
+            {
+                usuarioDAL dal = new usuarioDAL();
+
+                dal.alterarUsuario(dtovar);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

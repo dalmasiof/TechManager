@@ -20,11 +20,12 @@ namespace DAL
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
-                MySqlCommand sql = new MySqlCommand("insert into tb_usuario(nome,login,senha,email,tipoUsu) values(@Nome,@Login,@Senha,@Email,@Tipousu)")
+                MySqlCommand sql = new MySqlCommand("insert into tb_usuario(nome,rg,login,senha,email,tipoUsu) values(@Nome,@Rg,@Login,@Senha,@Email,@Tipousu)")
                 {
                     Connection = conexao
                 };
                 sql.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = dtovar.nome;
+                sql.Parameters.Add("@Rg", MySqlDbType.VarChar).Value = dtovar.rg;
                 sql.Parameters.Add("@Login", MySqlDbType.VarChar).Value = dtovar.login;
                 sql.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = dtovar.senha;
                 sql.Parameters.Add("@Email", MySqlDbType.VarChar).Value = dtovar.email;
@@ -33,6 +34,33 @@ namespace DAL
                 sql.ExecuteNonQuery();  
             }
             catch(Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public void alterarUsuario(usuarioDTO dtovar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("update tb_usuario set login=@Login,senha=@Senha,email=@Email where idUsuario=@Id")
+                {
+                    Connection = conexao
+                };
+                sql.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = dtovar.nome;
+                sql.Parameters.Add("@Login", MySqlDbType.VarChar).Value = dtovar.login;
+                sql.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = dtovar.senha;
+                sql.Parameters.Add("@Email", MySqlDbType.VarChar).Value = dtovar.email;
+                conexao.Open();
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

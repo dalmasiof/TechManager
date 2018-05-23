@@ -36,3 +36,7 @@ C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DTO\obj\Debug\DTO.csprojR
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DTO\obj\Debug\DTO.dll
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DTO\obj\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\TechManager\DTO\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\TechManager\DTO\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\TechManager\DTO\obj\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\TechManager\DTO\obj\Debug\DTO.pdb

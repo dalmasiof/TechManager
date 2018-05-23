@@ -43,6 +43,7 @@ namespace TechManager
             else
             {
                 dtovar.nome = txtNome.Text;
+                dtovar.rg = mktxtRG.Text;
                 dtovar.login = txtLogin.Text;
                 dtovar.senha = txtSenha.Text;
                 dtovar.email = txtEmail.Text;
@@ -79,7 +80,7 @@ namespace TechManager
             string email = txtEmail.Text;
             Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
-            if (txtNome.Text == "" || txtLogin.Text == "" || txtEmail.Text == "")
+            if (txtNome.Text == "" || txtLogin.Text == "" || txtEmail.Text == "" || mktxtRG.Text == "")
             {
                 lblMensagem.Text = "Todos os campos devem ser preenchidos!";
                 lblMensagem.ForeColor = Color.Red;
@@ -90,6 +91,14 @@ namespace TechManager
             if (txtSenha.Text.Length < 7)
             {
                 lblMensagem.Text = "Senha deve ter no mínimo 8 caracteres";
+                lblMensagem.ForeColor = Color.Red;
+                txtSenha.Focus();
+                return false;
+            }
+
+            if (txtSenha.Text == txtConfirmarSenha.Text)
+            {
+                lblMensagem.Text = "As senhas não coincidem!";
                 lblMensagem.ForeColor = Color.Red;
                 txtSenha.Focus();
                 return false;

@@ -31,3 +31,10 @@ C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DAL\bin\Debug\DAL.pdb
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DAL\bin\Debug\DTO.dll
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DAL\bin\Debug\MySql.Data.dll
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\TechManager\DAL\bin\Debug\DAL.dll
+C:\Users\Admin\Documents\GitHub\TechManager\DAL\bin\Debug\DAL.pdb
+C:\Users\Admin\Documents\GitHub\TechManager\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\GitHub\TechManager\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\GitHub\TechManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\TechManager\DAL\obj\Debug\DAL.dll
+C:\Users\Admin\Documents\GitHub\TechManager\DAL\obj\Debug\DAL.pdb
