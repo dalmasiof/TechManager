@@ -471,6 +471,15 @@ namespace TechManager.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a &quot;&quot;.
+        /// </summary>
+        internal static string stringImagem {
+            get {
+                return ResourceManager.GetString("stringImagem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap warning_alert_attention_search_512 {

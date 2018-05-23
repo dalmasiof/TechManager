@@ -118,6 +118,7 @@
             this.btnProcurarFoto.TabIndex = 4;
             this.btnProcurarFoto.Text = "Procurar";
             this.btnProcurarFoto.UseVisualStyleBackColor = true;
+            this.btnProcurarFoto.Click += new System.EventHandler(this.btnProcurarFoto_Click);
             // 
             // lblNome
             // 
@@ -212,11 +213,12 @@
             // 
             // pcbFoto
             // 
-            this.pcbFoto.BackgroundImage = global::TechManager.Properties.Resources.if_Camera_Front_379526;
             this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcbFoto.Image = global::TechManager.Properties.Resources.if_Camera_Front_379526;
             this.pcbFoto.Location = new System.Drawing.Point(207, 12);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(109, 109);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFoto.TabIndex = 1;
             this.pcbFoto.TabStop = false;
             // 
