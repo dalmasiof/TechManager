@@ -230,7 +230,7 @@
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGravar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnGravar.ForeColor = System.Drawing.Color.Black;
-            this.btnGravar.Location = new System.Drawing.Point(430, 410);
+            this.btnGravar.Location = new System.Drawing.Point(442, 409);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(120, 33);
             this.btnGravar.TabIndex = 17;
@@ -246,7 +246,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(235, 410);
+            this.btnCancelar.Location = new System.Drawing.Point(247, 409);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
             this.btnCancelar.TabIndex = 18;
@@ -293,7 +293,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(752, 470);
+            this.ClientSize = new System.Drawing.Size(734, 471);
             this.Controls.Add(this.cbbAcesso);
             this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.lblMensagem);
