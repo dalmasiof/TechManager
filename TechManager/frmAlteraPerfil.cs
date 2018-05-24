@@ -71,6 +71,14 @@ namespace TechManager
                 return false;
             }
 
+            if (txtSenha.Text == txtConfirmarSenha.Text)
+            {
+                lblMensagem.Text = "As senhas não coincidem!";
+                lblMensagem.ForeColor = Color.Red;
+                txtSenha.Focus();
+                return false;
+            }
+
             if (rg.IsMatch(email))
             {
                 lblMensagem.Text = "Após preencher os campos, clique no botão gravar!";
