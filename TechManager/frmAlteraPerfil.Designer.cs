@@ -36,7 +36,7 @@
             this.txtImagemUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtConfirmaSenha = new System.Windows.Forms.TextBox();
+            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -140,17 +140,19 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // txtConfirmaSenha
+            // txtConfirmarSenha
             // 
-            this.txtConfirmaSenha.Location = new System.Drawing.Point(385, 267);
-            this.txtConfirmaSenha.Name = "txtConfirmaSenha";
-            this.txtConfirmaSenha.Size = new System.Drawing.Size(162, 20);
-            this.txtConfirmaSenha.TabIndex = 26;
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(385, 267);
+            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
+            this.txtConfirmarSenha.PasswordChar = '*';
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(162, 20);
+            this.txtConfirmarSenha.TabIndex = 26;
             // 
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(385, 234);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(162, 20);
             this.txtSenha.TabIndex = 25;
             // 
@@ -281,7 +283,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.lblMensagem);
-            this.Controls.Add(this.txtConfirmaSenha);
+            this.Controls.Add(this.txtConfirmarSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtEmail);
@@ -317,7 +319,7 @@
         private System.Windows.Forms.TextBox txtImagemUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtConfirmaSenha;
+        private System.Windows.Forms.TextBox txtConfirmarSenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtEmail;
