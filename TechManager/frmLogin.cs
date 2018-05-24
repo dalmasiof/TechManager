@@ -178,11 +178,12 @@ namespace TechManager
             }
             catch(Exception ex)
             {
-                throw ex;
+
                 txtUser.Focus();
                 txtUser.Clear();
                 txtSenha.Clear();
-                return;
+                throw ex;
+                
             }
             if (acesso == '1' && txtSenha.Text == senha)
             {
@@ -205,6 +206,7 @@ namespace TechManager
             else
             {
                 MessageBox.Show("Acesso Negado!","Dados Incorretos!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
                 txtUser.Focus();
                 txtUser.Clear();
                 txtSenha.Clear();
@@ -255,6 +257,12 @@ namespace TechManager
         private void txtSenha_MouseClick(object sender, MouseEventArgs e)
         {
             txtSenha.Text = null;
-        }       
+        }
+
+        private void linkSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAlterarSenha frmAlterarSenha = new frmAlterarSenha();
+            frmAlterarSenha.ShowDialog();
+        }
     }
 }

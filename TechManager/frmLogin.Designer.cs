@@ -40,6 +40,7 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.linkSenha = new System.Windows.Forms.LinkLabel();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUser)).BeginInit();
@@ -189,11 +190,23 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // linkSenha
+            // 
+            this.linkSenha.AutoSize = true;
+            this.linkSenha.Location = new System.Drawing.Point(509, 314);
+            this.linkSenha.Name = "linkSenha";
+            this.linkSenha.Size = new System.Drawing.Size(89, 13);
+            this.linkSenha.TabIndex = 13;
+            this.linkSenha.TabStop = true;
+            this.linkSenha.Text = "Recuperar senha";
+            this.linkSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSenha_LinkClicked);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 426);
+            this.Controls.Add(this.linkSenha);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.cmbAcesso);
@@ -235,5 +248,6 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.LinkLabel linkSenha;
     }
 }
