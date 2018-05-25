@@ -17,7 +17,6 @@ namespace TechManager
     {
         usuarioDTO dtovar = new usuarioDTO();
         usuarioBLL bll = new usuarioBLL();
-        char acesso;
 
         public frmAlteraPerfil()
         {
@@ -111,9 +110,12 @@ namespace TechManager
 
         private void frmAlteraPerfil_Load(object sender, EventArgs e)
         {
-
+            lblMensagem.Text = "Após preencher os campos, clique no botão gravar!";
         }
 
-
+        private void pcbHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

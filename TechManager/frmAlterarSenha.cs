@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +21,14 @@ namespace TechManager
 
         private void btnSair_Click(object sender, EventArgs e)
         {
+
+            if (!verificaCampos())
+            {
+                return;
+            }
+            else
+            {
+
             try
             {
 
@@ -39,7 +48,6 @@ namespace TechManager
                     "\n\nEssa é uma mensagem automática, por favor não responder";
 
             smtp.Send(message);
-            MessageBox.Show("Email enviado para "+txtEmail.Text+", caso não encontre verifique a caixa de spams","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 txtEmail.Clear();
             }
             catch(Exception erro)
@@ -48,10 +56,44 @@ namespace TechManager
                 txtEmail.Clear();
             }
             }
+            }
+        private bool verificaCampos()
+        {
+            string email = txtEmail.Text;
+            Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
+            if ( txtEmail.Text == "" )
+            {
+                lblMensagem.Text = "O campo não pode estar vazio";
+                lblMensagem.ForeColor = Color.Red;
+                txtEmail.Focus();
+                return false;
+            }
+
+           
+
+            if (rg.IsMatch(email))
+            {
+                lblMensagem.Text = "";
+                MessageBox.Show("Email enviado para " + txtEmail.Text + ", caso não encontre verifique a caixa de spams", "Enviado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+            }
+            else
+            {
+                lblMensagem.Text = "Email Inválido!";
+                lblMensagem.ForeColor = Color.Red;
+                return false;
+            }
+            return true;
+        }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmAlterarSenha_Load(object sender, EventArgs e)
+        {
+            lblMensagem.Text = "";
         }
     }
 }
