@@ -17,7 +17,7 @@ namespace TechManager
         MySqlConnection conexao = null;
         string conexao_sql = "server=localhost;database=db_tech;user=root;password=1234;port=3306";
         usuarioDTO dtovar = new usuarioDTO();
-        char acesso;
+        char acesso = 'N';
 
         public frmLogin()
         {
@@ -151,67 +151,146 @@ namespace TechManager
             string senha = "";
             conexao = new MySqlConnection(conexao_sql);
 
-            if(cmbAcesso.selectedIndex == 1)
+            if (cmbAcesso.selectedIndex == 1)
             {
-                acesso = '2';
+                try
+                {
+                    conexao.Open();
+                    MySqlCommand comando = new MySqlCommand();
+                    comando.CommandText = "SELECT senha,tipoUsu FROM tb_prof WHERE login='" + txtUser.Text + "' and senha='" + txtSenha.Text + "';";
+                    comando.CommandType = CommandType.Text;
+                    comando.Connection = conexao;
+                    senha = (string)comando.ExecuteScalar();
+                    MySqlDataReader dr = comando.ExecuteReader();
+                    if (dr.HasRows == true)
+                    {
+                        while (dr.Read())
+                        {
+                            dtovar.tipo = Convert.ToChar(dr["tipoUsu"]);
+
+                            frmPerfilProf prof = new frmPerfilProf();
+                            prof.Show();
+                            this.Hide();
+                        }
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dados incorretos", "Acesso Negado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        txtUser.Focus();
+                        txtUser.Clear();
+                        txtSenha.Clear();
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    txtUser.Focus();
+                    txtUser.Clear();
+                    txtSenha.Clear();
+                    MessageBox.Show("" + ex);
+
+                }
             }
 
             else if (cmbAcesso.selectedIndex == 2)
             {
-                acesso = '1';
+                try
+                {
+                    conexao.Open();
+                    MySqlCommand comando = new MySqlCommand();
+                    comando.CommandText = "SELECT senha,tipoUsu FROM tb_tec WHERE login='" + txtUser.Text + "' and senha='" + txtSenha.Text + "';";
+                    comando.CommandType = CommandType.Text;
+                    comando.Connection = conexao;
+                    senha = (string)comando.ExecuteScalar();
+                    MySqlDataReader dr = comando.ExecuteReader();
+                    if (dr.HasRows == true)
+                    {
+                        while (dr.Read())
+                        {
+                            dtovar.tipo = Convert.ToChar(dr["tipoUsu"]);
+
+                            frmPerfilTec prof = new frmPerfilTec();
+                            prof.Show();
+                            this.Hide();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dados incorretos", "Acesso Negado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        txtUser.Focus();
+                        txtUser.Clear();
+                        txtSenha.Clear();
+                        return;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    txtUser.Focus();
+                    txtUser.Clear();
+                    txtSenha.Clear();
+                    MessageBox.Show("" + ex);
+
+                }
             }
 
             else
             {
-                acesso = '3';
-            }
+                try
+                {
+                    conexao.Open();
+                    MySqlCommand comando = new MySqlCommand();
+                    comando.CommandText = "SELECT senha,tipoUsu FROM tb_adm WHERE login='" + txtUser.Text + "' and senha='" + txtSenha.Text + "';";
+                    comando.CommandType = CommandType.Text;
+                    comando.Connection = conexao;
+                    senha = (string)comando.ExecuteScalar();
+                    MySqlDataReader dr = comando.ExecuteReader();
+                    if (dr.HasRows == true)
+                    {
+                        while (dr.Read())
+                        {
+                            dtovar.tipo = Convert.ToChar(dr["tipoUsu"]);
 
-            try
-            {
-                conexao.Open();
-                MySqlCommand comando = new MySqlCommand();
-                comando.CommandText = "SELECT senha FROM tb_usuario WHERE login='"+txtUser.Text+"' and senha='"+txtSenha.Text+"';";
-                comando.CommandType = CommandType.Text;
-                comando.Connection = conexao;
-                senha = (string)comando.ExecuteScalar();
-                conexao.Close();
-            }
-            catch(Exception ex)
-            {
+                            frmPerfilAdm prof = new frmPerfilAdm();
+                            prof.Show();
+                            this.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dados incorretos", "Acesso Negado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                txtUser.Focus();
-                txtUser.Clear();
-                txtSenha.Clear();
-                throw ex;
-                
-            }
-            if (acesso == '1' && txtSenha.Text == senha)
-            {
-                frmPerfilTec menuTec = new frmPerfilTec();
-                menuTec.Show();
-                this.Hide();
-            }
-            else if (acesso == '2' && txtSenha.Text == senha)
-            {
-                frmPerfilProf menuProf = new frmPerfilProf();
-                menuProf.Show();
-                this.Hide();
-            }
-            else if (acesso == '3' && txtSenha.Text == senha)
-            {
-                /*frmPerfilTec menuTec = new frmPerfilTec();
-                menuTec.Show();
-                this.Hide();*/
-            }
-            else
-            {
-                MessageBox.Show("Acesso Negado!","Dados Incorretos!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        txtUser.Focus();
+                        txtUser.Clear();
+                        txtSenha.Clear();
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
 
-                txtUser.Focus();
-                txtUser.Clear();
-                txtSenha.Clear();
+                    MessageBox.Show("Falha com o banco de dados", "Consulte o T.I.!"+ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    txtUser.Focus();
+                    txtUser.Clear();
+                    txtSenha.Clear();
+
+                }
+
+
             }
         }
+
+           
+           
+        
 
         private void btnSair_Click(object sender, EventArgs e)
         {

@@ -1,7 +1,25 @@
 create database db_tech;
 use db_tech;
 
-create table tb_usuario(
+create table tb_prof(
+idUsuario int auto_increment primary key,
+nome varchar(50),
+rg varchar(9),
+login varchar(50),
+senha varchar(50),
+email varchar(50),
+tipoUsu char);
+
+create table tb_adm(
+idUsuario int auto_increment primary key,
+nome varchar(50),
+rg varchar(9),
+login varchar(50),
+senha varchar(50),
+email varchar(50),
+tipoUsu char);
+
+create table tb_tec(
 idUsuario int auto_increment primary key,
 nome varchar(50),
 rg varchar(9),
@@ -17,3 +35,9 @@ professor varchar(50),
 idMaquina varchar(20),
 problema varchar(50)
 );
+
+insert into tb_prof(nome,rg,login,senha,email,tipoUsu)
+values('Joao','123456789','joao','123','joaosao291@gmail.com','P');
+
+/*select * from tb_tec;
+drop table tb_usuario;*/
