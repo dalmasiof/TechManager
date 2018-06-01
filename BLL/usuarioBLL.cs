@@ -37,5 +37,21 @@ namespace BLL
                 throw ex;
             }
         }
+        public List<usuarioDTO> validar(usuarioDTO dto)
+        {
+            try
+            {
+                return new usuarioDAL().validar(dto);
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
+        public List<usuarioDTO> validar(object dto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

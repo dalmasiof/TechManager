@@ -31,9 +31,9 @@ namespace DAL
                 sql.Parameters.Add("@Email", MySqlDbType.VarChar).Value = dtovar.email;
                 sql.Parameters.Add("@Tipousu", MySqlDbType.VarChar).Value = dtovar.tipo;
                 conexao.Open();
-                sql.ExecuteNonQuery();  
+                sql.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -68,6 +68,51 @@ namespace DAL
             finally
             {
                 conexao.Close();
+            }
+        }
+        public List<usuarioDTO> validar(usuarioDTO dto)
+        {
+
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select * from tb_usuario where login = @User and senha = @Pass";
+                comando.Connection = conexao;
+
+                comando.Parameters.Add("@User", MySqlDbType.VarChar).Value = dto.login;
+                comando.Parameters.Add("@Pass", MySqlDbType.VarChar).Value = dto.senha;
+                List<usuarioDTO> listaLogin = new List<usuarioDTO>();
+
+                conexao.Open();
+                MySqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+                        dto.login = Convert.ToString(dr["login"]);
+                        dto.senha = Convert.ToString(dr["senha"]);
+
+                        dto.id = Convert.ToInt32(dr["idUsuario"]);
+                        dto.tipo = Convert.ToChar(dr["tipoUsu"]);
+                        dto.email = Convert.ToString(dr["email"]);
+                        
+                        dto.nome = Convert.ToString(dr["nome"]);
+                        dto.rg = Convert.ToString(dr["rg"]);
+
+
+
+                        listaLogin.Add(dto);
+                    }
+
+                }
+                return listaLogin;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
             }
         }
     }

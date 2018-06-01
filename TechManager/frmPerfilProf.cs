@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using BLL;
 
 namespace TechManager
 {
     public partial class frmPerfilProf : Form
     {
-        usuarioDTO dtovar = new usuarioDTO();
 
         public frmPerfilProf()
         {
@@ -22,7 +22,8 @@ namespace TechManager
 
         private void frmPerfilProf_Load(object sender, EventArgs e)
         {
-            lblNome.Text = dtovar.nome;
+
+            lblNome.Text = "DEU CERTOOOOOOO";
             notifyIcon1.Visible = false;
         }
 
