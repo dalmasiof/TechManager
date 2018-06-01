@@ -1,32 +1,15 @@
 create database db_tech;
 use db_tech;
 
-create table tb_prof(
+create table tb_usuario(
 idUsuario int auto_increment primary key,
 nome varchar(50),
 rg varchar(9),
 login varchar(50),
 senha varchar(50),
 email varchar(50),
-tipoUsu char);
+tipoUsu int(1));
 
-create table tb_adm(
-idUsuario int auto_increment primary key,
-nome varchar(50),
-rg varchar(9),
-login varchar(50),
-senha varchar(50),
-email varchar(50),
-tipoUsu char);
-
-create table tb_tec(
-idUsuario int auto_increment primary key,
-nome varchar(50),
-rg varchar(9),
-login varchar(50),
-senha varchar(50),
-email varchar(50),
-tipoUsu char);
 
 create table problema(
 idProb int auto_increment primary key,
@@ -36,8 +19,14 @@ idMaquina varchar(20),
 problema varchar(50)
 );
 
-insert into tb_prof(nome,rg,login,senha,email,tipoUsu)
-values('Joao','123456789','joao','123','joaosao291@gmail.com','P');
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu)
+values('Joao','123456789','joao','123','joaosao291@gmail.com','1');
 
-/*select * from tb_tec;
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu)
+values('Cristian','123456789','tec','123','joaosao291@gmail.com','2');
+
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu)
+values('Joao','123456789','adm','123','joaosao291@gmail.com','3');
+
+/*select * from tb_usuario;
 drop table tb_usuario;*/

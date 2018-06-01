@@ -318,7 +318,7 @@ namespace TechManager
             {
                 List<usuarioDTO> ListDto = new List<usuarioDTO>();
                 ListDto = new usuarioBLL().validar(dtovar);
-                if ((ListDto.Count > 0)&&(dtovar.tipo == cmbAcesso.selectedIndex))
+                if ((ListDto.Count > 0 )&& (dtovar.tipo == cmbAcesso.selectedIndex))
                 {
                     if (dtovar.tipo == 1)
                     {
