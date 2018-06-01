@@ -19,7 +19,7 @@ namespace TechManager
         string conexao_sql = "server=localhost;database=db_tech;user=root;password=1234;port=3306";
         usuarioDTO dtovar = new usuarioDTO();
         usuarioBLL usuarioBLL = new usuarioBLL();
-        
+
         char acesso = 'N';
 
         public frmLogin()
@@ -28,10 +28,10 @@ namespace TechManager
         }
         int X = 0;
         int Y = 0;
-        
+
         private void btnSeleciona()
         {
-            
+
         }
 
 
@@ -42,9 +42,9 @@ namespace TechManager
 
         private void buni_MouseClick(object sender, MouseEventArgs e)
         {
-            if(cmbAcesso.selectedIndex != 0)
+            if (cmbAcesso.selectedIndex != 0)
             {
-                
+
             }
             else
             {
@@ -114,7 +114,7 @@ namespace TechManager
         {
             arrasta(e);
         }
-       
+
 
         private void pnlLogo_MouseMove(object sender, MouseEventArgs e)
         {
@@ -137,11 +137,11 @@ namespace TechManager
         }
         #endregion
 
-       
+
 
         private void txtSenha_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 btnEntrar.Focus();
                 btnEntrar.ForeColor = Color.Black;
@@ -312,20 +312,21 @@ namespace TechManager
             dtovar.login = txtUser.Text;
             dtovar.senha = txtSenha.Text;
 
-
+            Program.idLogon = dtovar.id;
 
             try
             {
                 List<usuarioDTO> ListDto = new List<usuarioDTO>();
                 ListDto = new usuarioBLL().validar(dtovar);
-                if ((ListDto.Count > 0 )&& (dtovar.tipo == cmbAcesso.selectedIndex))
+                if ((ListDto.Count > 0) && (dtovar.tipo == cmbAcesso.selectedIndex))
                 {
                     if (dtovar.tipo == 1)
                     {
-                    MessageBox.Show("Bem vindo "+dtovar.nome);
-                    frmPerfilProf prof = new frmPerfilProf();
-                    prof.Show();
-                    this.Hide();
+
+                        MessageBox.Show("Bem vindo " + dtovar.nome);
+                        frmPerfilProf prof = new frmPerfilProf();
+                        prof.Show();
+                        this.Hide();
 
                     }
                     else if (dtovar.tipo == 2)
@@ -356,9 +357,9 @@ namespace TechManager
             }
         }
 
-           
-           
-        
+
+
+
 
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -380,15 +381,15 @@ namespace TechManager
                 txtUser.Enabled = true;
                 txtSenha.Enabled = true;
             }
-            
+
 
             else if (cmbAcesso.selectedIndex == 3)
             {
-                
+
                 txtUser.Enabled = true;
                 txtSenha.Enabled = true;
                 txtUser.Focus();
-                
+
                 lblMostrar.Visible = false;
                 txtSenha.PasswordChar = char.Parse("*");
 

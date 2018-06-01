@@ -98,7 +98,7 @@ namespace DAL
                         dto.id = Convert.ToInt32(dr["idUsuario"]);
                         dto.tipo = Convert.ToChar(dr["tipoUsu"]);
                         dto.email = Convert.ToString(dr["email"]);
-                        
+
                         dto.nome = Convert.ToString(dr["nome"]);
                         dto.rg = Convert.ToString(dr["rg"]);
 

@@ -6,8 +6,11 @@ using System.Windows.Forms;
 
 namespace TechManager
 {
-    static class Program
+    public static class Program
     {
+        public static string nomeLogon = "";
+        public static int idLogon = -1;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

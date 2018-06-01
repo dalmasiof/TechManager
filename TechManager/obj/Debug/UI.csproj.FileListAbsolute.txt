@@ -249,3 +249,5 @@ C:\Users\Admin\Documents\GitHub\TechManager\TechManager\bin\Debug\DTO.pdb
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\bin\Debug\DAL.pdb
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmAlterarSenha.resources
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmPerfilAdm.resources
+D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmAlterarSenha.resources
+D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmPerfilAdm.resources

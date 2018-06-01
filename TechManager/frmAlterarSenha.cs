@@ -29,40 +29,40 @@ namespace TechManager
             else
             {
 
-            try
-            {
+                try
+                {
 
-            System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
-            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.emailmyname.com");
-            message.From = new MailAddress("suportetechmanager@outlook.com", "TechManager");
-            message.To.Add(txtEmail.Text);
-           
-            smtp.EnableSsl = true;
-            smtp.Port = 587;
-            smtp.Host = "smtp.live.com";
-            smtp.Credentials = new System.Net.NetworkCredential("suportetechmanager@outlook.com", "trabTcc12!@");
-            smtp.Send(message);
+                    System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
+                    System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.emailmyname.com");
+                    message.From = new MailAddress("suportetechmanager@outlook.com", "TechManager");
+                    message.To.Add(txtEmail.Text);
 
-                message.Subject = "Recuperação de senha";
-            message.Body = "Ola -nome usuario-, sua antiga senha é -senha-,é sugerido que altere para uma nova senha" +
-                    "\n\nEssa é uma mensagem automática, por favor não responder";
+                    smtp.EnableSsl = true;
+                    smtp.Port = 587;
+                    smtp.Host = "smtp.live.com";
+                    smtp.Credentials = new System.Net.NetworkCredential("suportetechmanager@outlook.com", "trabTcc12!@");
+                    smtp.Send(message);
 
-            smtp.Send(message);
-                txtEmail.Clear();
+                    message.Subject = "Recuperação de senha";
+                    message.Body = "Ola -nome usuario-, sua antiga senha é -senha-,é sugerido que altere para uma nova senha" +
+                            "\n\nEssa é uma mensagem automática, por favor não responder";
+
+                    smtp.Send(message);
+                    txtEmail.Clear();
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Não foi possível enviar o email, verifique a conexão" + erro + "", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEmail.Clear();
+                }
             }
-            catch(Exception erro)
-            {
-                MessageBox.Show("Não foi possível enviar o email, verifique a conexão"+erro+"","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                txtEmail.Clear();
-            }
-            }
-            }
+        }
         private bool verificaCampos()
         {
             string email = txtEmail.Text;
             Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
-            if ( txtEmail.Text == "" )
+            if (txtEmail.Text == "")
             {
                 lblMensagem.Text = "O campo não pode estar vazio";
                 lblMensagem.ForeColor = Color.Red;
@@ -70,7 +70,7 @@ namespace TechManager
                 return false;
             }
 
-           
+
 
             if (rg.IsMatch(email))
             {
