@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="probDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuarioDTO.cs" />
   </ItemGroup>

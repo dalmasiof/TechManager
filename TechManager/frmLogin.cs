@@ -15,8 +15,7 @@ namespace TechManager
 {
     public partial class frmLogin : Form
     {
-        MySqlConnection conexao = null;
-        string conexao_sql = "server=localhost;database=db_tech;user=root;password=1234;port=3306";
+       
         usuarioDTO dtovar = new usuarioDTO();
         usuarioBLL usuarioBLL = new usuarioBLL();
 
