@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace TechManager
 {
     public partial class frmPerfilTec : Form
     {
-        public frmPerfilTec()
+        public frmPerfilTec(int idLogon, string nomeLogon)
         {
             InitializeComponent();
         }
@@ -20,6 +21,11 @@ namespace TechManager
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmPerfilTec_Load(object sender, EventArgs e)
+        {
+            lblNome.Text = Convert.ToString(information.id);
         }
 
        

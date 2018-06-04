@@ -151,6 +151,8 @@ namespace TechManager
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string senha = "";
+            string nomeLogon;
+            int idLogon;
 
             #region
             //conexao = new MySqlConnection(conexao_sql);
@@ -311,7 +313,7 @@ namespace TechManager
             dtovar.login = txtUser.Text;
             dtovar.senha = txtSenha.Text;
 
-            Program.idLogon = dtovar.id;
+            
 
             try
             {
@@ -319,11 +321,13 @@ namespace TechManager
                 ListDto = new usuarioBLL().validar(dtovar);
                 if ((ListDto.Count > 0) && (dtovar.tipo == cmbAcesso.selectedIndex))
                 {
+                    idLogon = dtovar.id;
+                    nomeLogon = dtovar.nome;
+
                     if (dtovar.tipo == 1)
                     {
-
                         MessageBox.Show("Bem vindo " + dtovar.nome);
-                        frmPerfilProf prof = new frmPerfilProf();
+                        frmPerfilProf prof = new frmPerfilProf(idLogon,nomeLogon);
                         prof.Show();
                         this.Hide();
 
@@ -331,14 +335,14 @@ namespace TechManager
                     else if (dtovar.tipo == 2)
                     {
                         MessageBox.Show("Bem vindo " + dtovar.nome);
-                        frmPerfilTec prof = new frmPerfilTec();
+                        frmPerfilTec prof = new frmPerfilTec(idLogon, nomeLogon);
                         prof.Show();
                         this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Bem vindo " + dtovar.nome);
-                        frmPerfilAdm prof = new frmPerfilAdm();
+                        frmPerfilAdm prof = new frmPerfilAdm(idLogon, nomeLogon);
                         prof.Show();
                         this.Hide();
                     }

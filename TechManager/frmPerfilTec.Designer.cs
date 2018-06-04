@@ -38,15 +38,15 @@
             this.lblApague = new System.Windows.Forms.Label();
             this.btnHist = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pcbFotoProf = new System.Windows.Forms.PictureBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.pcbFotoTec = new System.Windows.Forms.PictureBox();
             this.btnErro = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoProf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoTec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -96,8 +96,8 @@
             this.panel1.Controls.Add(this.lblApague);
             this.panel1.Controls.Add(this.btnHist);
             this.panel1.Controls.Add(this.btnAdve);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pcbFotoProf);
+            this.panel1.Controls.Add(this.lblNome);
+            this.panel1.Controls.Add(this.pcbFotoTec);
             this.panel1.Controls.Add(this.btnErro);
             this.panel1.Location = new System.Drawing.Point(-1, -3);
             this.panel1.Name = "panel1";
@@ -244,26 +244,26 @@
             this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
             this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // label1
+            // lblNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(22, 134);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "tEC ( Nome )";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNome.Location = new System.Drawing.Point(54, 149);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(105, 23);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "tEC ( Nome )";
             // 
-            // pcbFotoProf
+            // pcbFotoTec
             // 
-            this.pcbFotoProf.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
-            this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbFotoProf.Location = new System.Drawing.Point(44, 25);
-            this.pcbFotoProf.Name = "pcbFotoProf";
-            this.pcbFotoProf.Size = new System.Drawing.Size(118, 106);
-            this.pcbFotoProf.TabIndex = 0;
-            this.pcbFotoProf.TabStop = false;
+            this.pcbFotoTec.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
+            this.pcbFotoTec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcbFotoTec.Location = new System.Drawing.Point(44, 25);
+            this.pcbFotoTec.Name = "pcbFotoTec";
+            this.pcbFotoTec.Size = new System.Drawing.Size(118, 106);
+            this.pcbFotoTec.TabIndex = 0;
+            this.pcbFotoTec.TabStop = false;
             // 
             // btnErro
             // 
@@ -344,10 +344,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmPerfilTec";
             this.Text = "frmPerfilTec";
+            this.Load += new System.EventHandler(this.frmPerfilTec_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoProf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoTec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -372,7 +373,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnHist;
         private Bunifu.Framework.UI.BunifuFlatButton btnErro;
         private Bunifu.Framework.UI.BunifuFlatButton btnAdve;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pcbFotoProf;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.PictureBox pcbFotoTec;
     }
 }

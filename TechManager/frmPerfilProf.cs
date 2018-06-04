@@ -14,16 +14,20 @@ namespace TechManager
 {
     public partial class frmPerfilProf : Form
     {
-
-        public frmPerfilProf()
+        
+        public frmPerfilProf(int idLogon, string nomeLogon)
         {
+            string nome = nomeLogon;
+            int id = idLogon;    
+
             InitializeComponent();
         }
+
+
 
         private void frmPerfilProf_Load(object sender, EventArgs e)
         {
 
-            lblNome.Text = "DEU CERTOOOOOOO";
             notifyIcon1.Visible = false;
         }
 

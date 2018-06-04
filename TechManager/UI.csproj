@@ -153,6 +153,7 @@
     <Compile Include="frmProblema.Designer.cs">
       <DependentUpon>frmProblema.cs</DependentUpon>
     </Compile>
+    <Compile Include="information.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdvertenciaProf.resx">

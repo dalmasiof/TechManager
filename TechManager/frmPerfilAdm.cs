@@ -13,7 +13,7 @@ namespace TechManager
 {
     public partial class frmPerfilAdm : Form
     {
-        public frmPerfilAdm()
+        public frmPerfilAdm(int idLogon, string nomeLogon)
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace TechManager
 
         private void frmPerfilAdm_Load(object sender, EventArgs e)
         {
-            lblNome.Text = dtovar.nome;
+            lblNome.Text = information.nome;
             notifyIcon1.Visible = false;
         }
 
