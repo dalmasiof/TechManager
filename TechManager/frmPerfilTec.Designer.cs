@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilTec));
             this.lblApagar = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +46,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFotoTec)).BeginInit();
@@ -149,6 +152,7 @@
             this.btnStand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStand.Textcolor = System.Drawing.Color.DarkRed;
             this.btnStand.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStand.Click += new System.EventHandler(this.btnStand_Click);
             // 
             // btnSair
             // 
@@ -208,6 +212,7 @@
             this.btnHist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHist.Textcolor = System.Drawing.Color.DarkRed;
             this.btnHist.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHist.Click += new System.EventHandler(this.btnHist_Click);
             // 
             // btnAdve
             // 
@@ -243,6 +248,7 @@
             this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
             this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdve.Click += new System.EventHandler(this.btnAdve_Click);
             // 
             // lblNome
             // 
@@ -299,6 +305,7 @@
             this.btnErro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnErro.Textcolor = System.Drawing.Color.DarkRed;
             this.btnErro.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnErro.Click += new System.EventHandler(this.btnErro_Click);
             // 
             // pictureBox4
             // 
@@ -329,6 +336,13 @@
             this.pictureBox3.Size = new System.Drawing.Size(358, 289);
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick_1);
             // 
             // frmPerfilTec
             // 
@@ -375,5 +389,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAdve;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbFotoTec;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

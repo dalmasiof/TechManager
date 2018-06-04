@@ -21,7 +21,9 @@ namespace TechManager
         probDto dtoVar = new probDto();
         private void frmHistorico_Load(object sender, EventArgs e)
         {
+            usuarioDTO dto = new usuarioDTO();
 
+            lblNome.Text = dto.nome;
 
             cmbHist.AddItem("Consultar por:");
             cmbHist.AddItem("ID Máquina");
@@ -70,7 +72,7 @@ namespace TechManager
                 case 3:
                     txtUser.Enabled = true;
                     txtUser.ForeColor = Color.Black;
-                    txtUser.Text = "Digite a data";
+                    txtUser.Text = Convert.ToString(DateTime.Now);
                     break;
 
 
@@ -80,22 +82,88 @@ namespace TechManager
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
+            switch (cmbHist.selectedIndex)
+            {
+                case 0:
+                    {
+                        carregaGrid();
+                        break;
+                    }
+                case 1:
+                    dtoVar.idMaquina = (txtUser.Text);
+                    try
+                    {
+                        List<probDto> ListDto = new List<probDto>();
+                        ListDto = new probBll().listaPorId(dtoVar);
+                        dgvHist.DataSource = ListDto;
+                    }
+                    catch (Exception erro)
+                    {
+                        throw erro;
+                    }
+                    break;
 
+                case 2:
+                    dtoVar.professor = (txtUser.Text);
+                    try
+                    {
+                        List<probDto> ListDto = new List<probDto>();
+                        ListDto = new probBll().listaPorProf(dtoVar);
+                        dgvHist.DataSource = ListDto;
+                    }
+                    catch (Exception erro)
+                    {
+                        throw erro;
+                    }
+                    break;
+
+                case 3:
+                    
+                    dtoVar.data = Convert.ToString(txtUser.Text);
+                    try
+                    {
+                        List<probDto> ListDto = new List<probDto>();
+                        ListDto = new probBll().listaPorData(dtoVar);
+                        dgvHist.DataSource = ListDto;
+                    }
+                    catch (Exception erro)
+                    {
+                        throw erro;
+                    }
+                    break;
+            }
         }
 
         private void carregaGrid()
         {
-           // dgvHist.AutoGenerateColumns = false;
+            dgvHist.AutoGenerateColumns = false;
             try
             {
                 List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listarProb(dtoVar);
+                ListDto = new probBll().listarProb();
                 dgvHist.DataSource = ListDto;
             }
             catch (Exception erro)
             {
                 throw erro;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dtoVar.idMaquina = (txtUser.Text);
+            try
+            {
+                List<probDto> ListDto = new List<probDto>();
+                ListDto = new probBll().listaPorId(dtoVar);
+                dgvHist.DataSource = ListDto;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+
         }
     }
 }

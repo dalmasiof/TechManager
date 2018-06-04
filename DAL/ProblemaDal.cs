@@ -16,7 +16,7 @@ namespace DAL
         MySqlConnection conexao = null;
         MySqlCommand comando = new MySqlCommand();
 
-        public List<probDto> cargaUsuario(probDto dtovar)
+        public List<probDto> carregaTudo()
 
 
         {
@@ -38,12 +38,149 @@ namespace DAL
                 {
                     while (dr.Read())
                     {
+                        probDto dtovar = new probDto();
 
                         dtovar.idProb = Convert.ToInt32(dr["idProb"]);
                         dtovar.problema = Convert.ToString(dr["problema"]);
                         dtovar.aula = Convert.ToString(dr["aula"]);
                         dtovar.professor = Convert.ToString(dr["professor"]);
-                        dtovar.data = Convert.ToDateTime(dr["dataProb"]);
+                        dtovar.data = Convert.ToString(dr["dataProb"]);
+                        dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+
+                        listProbDto.Add(dtovar);
+
+
+                    }
+                }
+                return listProbDto;
+
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
+        public List<probDto> carregaPorData(probDto dtovar)
+
+
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(professor) LIKE '%" + dtovar.data + "%'";
+                comando.Connection = conexao;
+
+                List<probDto> listProbDto = new List<probDto>();
+                conexao.Open();
+
+                MySqlDataReader dr = comando.ExecuteReader();
+
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+
+                        dtovar.idProb = Convert.ToInt32(dr["idProb"]);
+                        dtovar.problema = Convert.ToString(dr["problema"]);
+                        dtovar.aula = Convert.ToString(dr["aula"]);
+                        dtovar.professor = Convert.ToString(dr["professor"]);
+                        dtovar.data = Convert.ToString(dr["dataProb"]);
+                        dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+
+                        listProbDto.Add(dtovar);
+
+
+                    }
+                }
+                return listProbDto;
+
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
+        public List<probDto> carregaPorProfessor(probDto dtovar)
+
+
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(professor) LIKE '%"+dtovar.professor+"%'";
+                comando.Connection = conexao;
+
+                List<probDto> listProbDto = new List<probDto>();
+                conexao.Open();
+
+                MySqlDataReader dr = comando.ExecuteReader();
+
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+
+                        dtovar.idProb = Convert.ToInt32(dr["idProb"]);
+                        dtovar.problema = Convert.ToString(dr["problema"]);
+                        dtovar.aula = Convert.ToString(dr["aula"]);
+                        dtovar.professor = Convert.ToString(dr["professor"]);
+                        dtovar.data = Convert.ToString(dr["dataProb"]);
+                        dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+
+
+                        listProbDto.Add(dtovar);
+
+
+                    }
+                }
+                return listProbDto;
+
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+        public List<probDto> carregaPorId(probDto dtovar)
+
+
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(idmaquina) LIKE '%"+dtovar.idMaquina+"%';";
+                comando.Connection = conexao;
+
+               
+                List<probDto> listProbDto = new List<probDto>();
+                conexao.Open();
+
+                MySqlDataReader dr = comando.ExecuteReader();
+
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+
+                        dtovar.idProb = Convert.ToInt32(dr["idProb"]);
+                        dtovar.problema = Convert.ToString(dr["problema"]);
+                        dtovar.aula = Convert.ToString(dr["aula"]);
+                        dtovar.professor = Convert.ToString(dr["professor"]);
+                        dtovar.data = Convert.ToString(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
 
                         listProbDto.Add(dtovar);

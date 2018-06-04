@@ -321,6 +321,8 @@ namespace TechManager
                 ListDto = new usuarioBLL().validar(dtovar);
                 if ((ListDto.Count > 0) && (dtovar.tipo == cmbAcesso.selectedIndex))
                 {
+                    information.id = dtovar.id;
+                    information.nome = dtovar.nome;
                     idLogon = dtovar.id;
                     nomeLogon = dtovar.nome;
 

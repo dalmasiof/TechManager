@@ -11,10 +11,10 @@ using DTO;
 
 namespace TechManager
 {
-    public partial class frmProblema : Form
+    public partial class frmProblemaProf : Form
     {
         usuarioDTO dtovar = new usuarioDTO();
-        public frmProblema()
+        public frmProblemaProf()
         {
             InitializeComponent();
         }

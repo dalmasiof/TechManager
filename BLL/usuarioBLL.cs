@@ -49,9 +49,6 @@ namespace BLL
             }
         }
 
-        public List<usuarioDTO> validar(object dto)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

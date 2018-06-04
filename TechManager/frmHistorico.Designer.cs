@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblApague = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.dgvHist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMaquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,8 +57,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.lblApague);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.pcbProfessor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -101,27 +99,16 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // lblApague
+            // lblNome
             // 
-            this.lblApague.AutoSize = true;
-            this.lblApague.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApague.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblApague.Location = new System.Drawing.Point(55, 7);
-            this.lblApague.Name = "lblApague";
-            this.lblApague.Size = new System.Drawing.Size(98, 15);
-            this.lblApague.TabIndex = 5;
-            this.lblApague.Text = "//Foto do usuario";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(40, 134);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Professor ( Nome )";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblNome.Location = new System.Drawing.Point(40, 134);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(155, 23);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "Professor ( Nome )";
             // 
             // pcbProfessor
             // 
@@ -135,20 +122,20 @@
             // 
             // dgvHist
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvHist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHist.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -162,9 +149,45 @@
             this.dgvHist.HeaderForeColor = System.Drawing.Color.White;
             this.dgvHist.Location = new System.Drawing.Point(260, 25);
             this.dgvHist.Name = "dgvHist";
+            this.dgvHist.ReadOnly = true;
             this.dgvHist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHist.Size = new System.Drawing.Size(542, 189);
             this.dgvHist.TabIndex = 10;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "aula";
+            this.Column1.HeaderText = "Aula";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "professor";
+            this.Column2.HeaderText = "Professor";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "problema";
+            this.Column4.HeaderText = "Problema";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // data
+            // 
+            this.data.DataPropertyName = "data";
+            this.data.HeaderText = "Data";
+            this.data.Name = "data";
+            this.data.ReadOnly = true;
+            // 
+            // idMaquina
+            // 
+            this.idMaquina.DataPropertyName = "idMaquina";
+            this.idMaquina.HeaderText = "ID";
+            this.idMaquina.Name = "idMaquina";
+            this.idMaquina.ReadOnly = true;
             // 
             // cmbHist
             // 
@@ -195,36 +218,6 @@
             this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "aula";
-            this.Column1.HeaderText = "Aula";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "professor";
-            this.Column2.HeaderText = "Professor";
-            this.Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "problema";
-            this.Column4.HeaderText = "Problema";
-            this.Column4.Name = "Column4";
-            // 
-            // data
-            // 
-            this.data.DataPropertyName = "data";
-            this.data.HeaderText = "Data";
-            this.data.Name = "data";
-            // 
-            // idMaquina
-            // 
-            this.idMaquina.DataPropertyName = "idMaquina";
-            this.idMaquina.HeaderText = "ID";
-            this.idMaquina.Name = "idMaquina";
-            // 
             // frmHistorico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,8 +247,7 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblApague;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbProfessor;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvHist;
         private Bunifu.Framework.UI.BunifuDropdown cmbHist;

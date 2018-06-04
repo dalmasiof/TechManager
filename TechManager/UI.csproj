@@ -147,11 +147,17 @@
     <Compile Include="frmPerfilTec.Designer.cs">
       <DependentUpon>frmPerfilTec.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProblema.cs">
+    <Compile Include="frmProblemaProf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProblema.Designer.cs">
-      <DependentUpon>frmProblema.cs</DependentUpon>
+    <Compile Include="frmProblemaProf.Designer.cs">
+      <DependentUpon>frmProblemaProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProblemaTec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProblemaTec.Designer.cs">
+      <DependentUpon>frmProblemaTec.cs</DependentUpon>
     </Compile>
     <Compile Include="information.cs" />
     <Compile Include="Program.cs" />
@@ -186,8 +192,11 @@
     <EmbeddedResource Include="frmPerfilTec.resx">
       <DependentUpon>frmPerfilTec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProblema.resx">
-      <DependentUpon>frmProblema.cs</DependentUpon>
+    <EmbeddedResource Include="frmProblemaProf.resx">
+      <DependentUpon>frmProblemaProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProblemaTec.resx">
+      <DependentUpon>frmProblemaTec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

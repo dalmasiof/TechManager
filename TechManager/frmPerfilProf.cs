@@ -33,13 +33,13 @@ namespace TechManager
 
         private void btnErro_Click(object sender, EventArgs e)
         {
-            frmProblema prob = new frmProblema();
+            frmProblemaProf prob = new frmProblemaProf();
             prob.ShowDialog();
         }
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
-            frmAdvertenciaProf adv = new frmAdvertenciaProf();
+            frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
             adv.ShowDialog();
         }
 
