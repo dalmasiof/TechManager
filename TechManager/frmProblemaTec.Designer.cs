@@ -143,9 +143,9 @@
             this.lblNome.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblNome.Location = new System.Drawing.Point(40, 134);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(155, 23);
+            this.lblNome.Size = new System.Drawing.Size(135, 23);
             this.lblNome.TabIndex = 2;
-            this.lblNome.Text = "Professor ( Nome )";
+            this.lblNome.Text = "tecnico ( Nome )";
             // 
             // pcbProfessor
             // 

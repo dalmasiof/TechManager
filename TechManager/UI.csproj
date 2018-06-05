@@ -87,6 +87,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdmAlteraPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmAlteraPerfil.Designer.cs">
+      <DependentUpon>frmAdmAlteraPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmExcluiPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmExcluiPerfil.Designer.cs">
+      <DependentUpon>frmAdmExcluiPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdvertenciaProf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +174,12 @@
     <Compile Include="information.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdmAlteraPerfil.resx">
+      <DependentUpon>frmAdmAlteraPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmExcluiPerfil.resx">
+      <DependentUpon>frmAdmExcluiPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdvertenciaProf.resx">
       <DependentUpon>frmAdvertenciaProf.cs</DependentUpon>
     </EmbeddedResource>
