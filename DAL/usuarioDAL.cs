@@ -44,6 +44,53 @@ namespace DAL
             }
         }
 
+        public List<usuarioDTO> lista()
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+               
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select * from tb_usuario";
+                comando.Connection = conexao;
+
+                
+                List<usuarioDTO> lista = new List<usuarioDTO>();
+
+                conexao.Open();
+                MySqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+                        usuarioDTO dTO = new usuarioDTO();
+
+
+                        dTO.login = Convert.ToString(dr["login"]);
+                        dTO.senha = Convert.ToString(dr["senha"]);
+
+                        dTO.id = Convert.ToInt32(dr["idUsuario"]);
+                        dTO.tipo = Convert.ToInt32(dr["tipoUsu"]);
+                        dTO.email = Convert.ToString(dr["email"]);
+
+                        dTO.nome = Convert.ToString(dr["nome"]);
+                        dTO.rg = Convert.ToString(dr["rg"]);
+
+
+
+                        lista.Add(dTO);
+                    }
+
+                }
+                return lista;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
         public void alterarUsuario(usuarioDTO dtovar)
         {
             try
@@ -69,6 +116,25 @@ namespace DAL
             {
                 conexao.Close();
             }
+        }
+
+        public void deletaUsuario(usuarioDTO dto)
+        {
+           
+                MySqlConnection con = new MySqlConnection();
+                con.ConnectionString = conexao_sql;
+                comando.CommandType = System.Data.CommandType.Text;
+
+                comando.CommandText = "delete from tb_usuario where idUsuario = @Idusu";
+
+                comando.Connection = con;
+
+
+                comando.Parameters.Add("@Idusu", MySqlDbType.Int32).Value = dto.id;
+
+                con.Open();
+                comando.ExecuteNonQuery();
+            
         }
         public List<usuarioDTO> validar(usuarioDTO dto)
         {
