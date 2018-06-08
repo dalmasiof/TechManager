@@ -117,5 +117,10 @@ namespace TechManager
         {
             this.Close();
         }
+
+        private void btnProcurarImagem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

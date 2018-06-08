@@ -96,7 +96,7 @@ namespace TechManager
                 return false;
             }
 
-            if (txtSenha.Text == txtConfirmarSenha.Text)
+            if (txtSenha.Text != txtConfirmarSenha.Text)
             {
                 lblMensagem.Text = "As senhas não coincidem!";
                 lblMensagem.ForeColor = Color.Red;

@@ -15,6 +15,8 @@ namespace DTO
         public string senha { get; set; }
         public string email { get; set; }
         public int tipo { get; set; }
+        public string foto { get; set; }
+
 
     }
 }

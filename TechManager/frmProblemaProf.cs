@@ -35,5 +35,18 @@ namespace TechManager
             frmAdvertenciaProf adv = new frmAdvertenciaProf();
             adv.ShowDialog();
         }
+
+        private void btngravar_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void verificaCampos()
+        {
+            if ((txtAula.Text == "") || (txtID.Text == "") || (txtProblema.Text == ""))
+            {
+
+            }
+        }
+      
     }
 }

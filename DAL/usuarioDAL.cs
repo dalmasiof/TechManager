@@ -168,7 +168,7 @@ namespace DAL
                         dto.nome = Convert.ToString(dr["nome"]);
                         dto.rg = Convert.ToString(dr["rg"]);
 
-
+                        dto.foto = Convert.ToString(dr["foto"]);
 
                         listaLogin.Add(dto);
                     }

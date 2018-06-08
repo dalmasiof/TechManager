@@ -29,6 +29,7 @@ namespace TechManager
         {
             lblNome.Text = information.nome;
             notifyIcon1.Visible = false;
+            pcbFotoProf.ImageLocation = information.foto;
         }
 
         
@@ -56,6 +57,17 @@ namespace TechManager
         {
             this.Hide();
             notifyIcon1.Visible = true;
+        }
+
+        private void frmPerfilAdm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            frmAdmExcluiPerfil exclui = new frmAdmExcluiPerfil();
+            exclui.Show();
         }
     }
 }

@@ -111,6 +111,7 @@
             this.btnProcurarImagem.TabIndex = 8;
             this.btnProcurarImagem.Text = "Procurar";
             this.btnProcurarImagem.UseVisualStyleBackColor = true;
+            this.btnProcurarImagem.Click += new System.EventHandler(this.btnProcurarImagem_Click);
             // 
             // txtImagemUsuario
             // 

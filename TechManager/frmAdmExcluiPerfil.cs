@@ -51,10 +51,10 @@ namespace TechManager
             int sel = dgvExclui.CurrentRow.Index;
 
             lblNome.Text = Convert.ToString(dgvExclui["nome", sel].Value);
-            lblId.Text = Convert.ToString(dgvExclui["id", sel].Value);
+            lblId.Text = Convert.ToString(dgvExclui["idUsuario", sel].Value);
 
-           
-            dto.id = Convert.ToInt32(dgvExclui["id", sel].Value);
+
+            dto.id = Convert.ToInt32(dgvExclui["idUsuario", sel].Value);
 
 
 

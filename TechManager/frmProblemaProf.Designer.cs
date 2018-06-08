@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblemaProf));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVoltar = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEnviar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,12 +51,13 @@
             this.txtAula = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtProblema = new System.Windows.Forms.TextBox();
-            this.btnCacnelar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnExcluir = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAlterar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label7 = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btngravar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
@@ -70,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(84, 551);
+            this.label2.Location = new System.Drawing.Point(85, 535);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 10;
@@ -81,7 +81,7 @@
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Image = global::TechManager.Properties.Resources.back2;
             this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.back__1_;
-            this.btnVoltar.Location = new System.Drawing.Point(12, 533);
+            this.btnVoltar.Location = new System.Drawing.Point(13, 517);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(76, 60);
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,31 +126,6 @@
             this.Column1.HeaderText = "Aula";
             this.Column1.Name = "Column1";
             // 
-            // btnEnviar
-            // 
-            this.btnEnviar.ActiveBorderThickness = 1;
-            this.btnEnviar.ActiveCornerRadius = 20;
-            this.btnEnviar.ActiveFillColor = System.Drawing.Color.Chocolate;
-            this.btnEnviar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnEnviar.ActiveLineColor = System.Drawing.Color.Chocolate;
-            this.btnEnviar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEnviar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnviar.BackgroundImage")));
-            this.btnEnviar.ButtonText = "Enviar";
-            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnEnviar.IdleBorderThickness = 1;
-            this.btnEnviar.IdleCornerRadius = 20;
-            this.btnEnviar.IdleFillColor = System.Drawing.Color.White;
-            this.btnEnviar.IdleForecolor = System.Drawing.Color.Chocolate;
-            this.btnEnviar.IdleLineColor = System.Drawing.Color.Chocolate;
-            this.btnEnviar.Location = new System.Drawing.Point(261, 551);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(150, 41);
-            this.btnEnviar.TabIndex = 4;
-            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Peru;
@@ -163,14 +138,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 614);
+            this.panel1.Size = new System.Drawing.Size(237, 594);
             this.panel1.TabIndex = 18;
             // 
             // btnAdve
             // 
             this.btnAdve.Active = false;
             this.btnAdve.Activecolor = System.Drawing.Color.Goldenrod;
-            this.btnAdve.BackColor = System.Drawing.Color.Silver;
+            this.btnAdve.BackColor = System.Drawing.Color.SeaShell;
             this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdve.BorderRadius = 0;
             this.btnAdve.ButtonText = "Advertencias";
@@ -224,19 +199,19 @@
             // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Peru;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Peru;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -306,81 +281,6 @@
             this.txtProblema.Size = new System.Drawing.Size(238, 127);
             this.txtProblema.TabIndex = 3;
             // 
-            // btnCacnelar
-            // 
-            this.btnCacnelar.ActiveBorderThickness = 1;
-            this.btnCacnelar.ActiveCornerRadius = 20;
-            this.btnCacnelar.ActiveFillColor = System.Drawing.Color.Chocolate;
-            this.btnCacnelar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCacnelar.ActiveLineColor = System.Drawing.Color.Chocolate;
-            this.btnCacnelar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCacnelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCacnelar.BackgroundImage")));
-            this.btnCacnelar.ButtonText = "Cancelar";
-            this.btnCacnelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCacnelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCacnelar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCacnelar.IdleBorderThickness = 1;
-            this.btnCacnelar.IdleCornerRadius = 20;
-            this.btnCacnelar.IdleFillColor = System.Drawing.Color.White;
-            this.btnCacnelar.IdleForecolor = System.Drawing.Color.Chocolate;
-            this.btnCacnelar.IdleLineColor = System.Drawing.Color.Chocolate;
-            this.btnCacnelar.Location = new System.Drawing.Point(741, 550);
-            this.btnCacnelar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCacnelar.Name = "btnCacnelar";
-            this.btnCacnelar.Size = new System.Drawing.Size(150, 41);
-            this.btnCacnelar.TabIndex = 24;
-            this.btnCacnelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.ActiveBorderThickness = 1;
-            this.btnExcluir.ActiveCornerRadius = 20;
-            this.btnExcluir.ActiveFillColor = System.Drawing.Color.Chocolate;
-            this.btnExcluir.ActiveForecolor = System.Drawing.Color.White;
-            this.btnExcluir.ActiveLineColor = System.Drawing.Color.Chocolate;
-            this.btnExcluir.BackColor = System.Drawing.SystemColors.Control;
-            this.btnExcluir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExcluir.BackgroundImage")));
-            this.btnExcluir.ButtonText = "Excluir";
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnExcluir.IdleBorderThickness = 1;
-            this.btnExcluir.IdleCornerRadius = 20;
-            this.btnExcluir.IdleFillColor = System.Drawing.Color.White;
-            this.btnExcluir.IdleForecolor = System.Drawing.Color.Chocolate;
-            this.btnExcluir.IdleLineColor = System.Drawing.Color.Chocolate;
-            this.btnExcluir.Location = new System.Drawing.Point(581, 550);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(5);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(150, 41);
-            this.btnExcluir.TabIndex = 25;
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.ActiveBorderThickness = 1;
-            this.btnAlterar.ActiveCornerRadius = 20;
-            this.btnAlterar.ActiveFillColor = System.Drawing.Color.Chocolate;
-            this.btnAlterar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAlterar.ActiveLineColor = System.Drawing.Color.Chocolate;
-            this.btnAlterar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAlterar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlterar.BackgroundImage")));
-            this.btnAlterar.ButtonText = "Alterar";
-            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAlterar.IdleBorderThickness = 1;
-            this.btnAlterar.IdleCornerRadius = 20;
-            this.btnAlterar.IdleFillColor = System.Drawing.Color.White;
-            this.btnAlterar.IdleForecolor = System.Drawing.Color.Chocolate;
-            this.btnAlterar.IdleLineColor = System.Drawing.Color.Chocolate;
-            this.btnAlterar.Location = new System.Drawing.Point(421, 550);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(150, 41);
-            this.btnAlterar.TabIndex = 26;
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -407,23 +307,84 @@
             this.notifyIcon1.Text = "Clique para mostrar";
             this.notifyIcon1.Visible = true;
             // 
+            // btngravar
+            // 
+            this.btngravar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btngravar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate;
+            this.btngravar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btngravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngravar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btngravar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btngravar.Location = new System.Drawing.Point(285, 544);
+            this.btngravar.Name = "btngravar";
+            this.btngravar.Size = new System.Drawing.Size(137, 33);
+            this.btngravar.TabIndex = 29;
+            this.btngravar.Text = "Enviar";
+            this.btngravar.UseVisualStyleBackColor = false;
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate;
+            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAlterar.Location = new System.Drawing.Point(445, 544);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(137, 33);
+            this.btnAlterar.TabIndex = 30;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate;
+            this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExcluir.Location = new System.Drawing.Point(605, 544);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(137, 33);
+            this.btnExcluir.TabIndex = 31;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelar.Location = new System.Drawing.Point(765, 543);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(137, 33);
+            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // frmProblemaProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 614);
+            this.ClientSize = new System.Drawing.Size(949, 594);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btngravar);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnCacnelar);
             this.Controls.Add(this.txtProblema);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtAula);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuCustomDataGrid1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -448,7 +409,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbProfessor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnEnviar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -462,11 +422,12 @@
         private System.Windows.Forms.TextBox txtAula;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtProblema;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnCacnelar;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnExcluir;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnAlterar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button btngravar;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

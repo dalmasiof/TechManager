@@ -314,7 +314,7 @@ namespace TechManager
             dtovar.senha = txtSenha.Text;
 
             
-
+            
             try
             {
                 List<usuarioDTO> ListDto = new List<usuarioDTO>();
@@ -323,6 +323,8 @@ namespace TechManager
                 {
                     information.id = dtovar.id;
                     information.nome = dtovar.nome;
+                    information.foto = dtovar.foto;
+
                     idLogon = dtovar.id;
                     nomeLogon = dtovar.nome;
 

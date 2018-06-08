@@ -226,7 +226,6 @@ C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.fr
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmCadastrar.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilProf.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilTec.resources
-C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblema.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\bin\Debug\TechManager.exe
@@ -245,3 +244,9 @@ C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\Tec
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmAdmExcluiPerfil.resources
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmProblemaProf.resources
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmProblemaTec.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmAdmAlteraPerfil.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmAdmExcluiPerfil.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmAlterarSenha.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilAdm.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblemaProf.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblemaTec.resources
