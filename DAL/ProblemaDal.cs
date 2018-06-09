@@ -44,7 +44,7 @@ namespace DAL
                         dtovar.problema = Convert.ToString(dr["problema"]);
                         dtovar.aula = Convert.ToString(dr["aula"]);
                         dtovar.professor = Convert.ToString(dr["professor"]);
-                        dtovar.data = Convert.ToString(dr["dataProb"]);
+                        dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
 
                         listProbDto.Add(dtovar);
@@ -59,6 +59,34 @@ namespace DAL
             catch (Exception erro)
             {
                 throw erro;
+            }
+        }
+
+        public void cadProd(probDto dto)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb) values(@aula,@profe,@idmaquina,@descProb,@data)")
+                {
+                    Connection = conexao
+                };
+                sql.Parameters.Add("@aula", MySqlDbType.VarChar).Value = dto.aula;
+                sql.Parameters.Add("@profe", MySqlDbType.VarChar).Value = dto.professor;
+                sql.Parameters.Add("@idmaquina", MySqlDbType.VarChar).Value = dto.idMaquina;
+                sql.Parameters.Add("@descProb", MySqlDbType.VarChar).Value = dto.problema;
+                sql.Parameters.Add("@data", MySqlDbType.DateTime).Value = dto.data;
+                conexao.Open();
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                conexao.Close();
             }
         }
 
@@ -89,7 +117,7 @@ namespace DAL
                         dtovar.problema = Convert.ToString(dr["problema"]);
                         dtovar.aula = Convert.ToString(dr["aula"]);
                         dtovar.professor = Convert.ToString(dr["professor"]);
-                        dtovar.data = Convert.ToString(dr["dataProb"]);
+                        dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
 
                         listProbDto.Add(dtovar);
@@ -134,7 +162,7 @@ namespace DAL
                         dtovar.problema = Convert.ToString(dr["problema"]);
                         dtovar.aula = Convert.ToString(dr["aula"]);
                         dtovar.professor = Convert.ToString(dr["professor"]);
-                        dtovar.data = Convert.ToString(dr["dataProb"]);
+                        dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
 
 
@@ -180,7 +208,7 @@ namespace DAL
                         dtovar.problema = Convert.ToString(dr["problema"]);
                         dtovar.aula = Convert.ToString(dr["aula"]);
                         dtovar.professor = Convert.ToString(dr["professor"]);
-                        dtovar.data = Convert.ToString(dr["dataProb"]);
+                        dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
 
                         listProbDto.Add(dtovar);

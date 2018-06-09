@@ -112,7 +112,6 @@
             // 
             // pcbProfessor
             // 
-            this.pcbProfessor.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
             this.pcbProfessor.Name = "pcbProfessor";
@@ -214,9 +213,8 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(247, 26);
             this.txtUser.TabIndex = 12;
-            this.txtUser.Text = "Usuário";
-            this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // frmHistorico
             // 

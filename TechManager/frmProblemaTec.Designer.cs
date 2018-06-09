@@ -43,6 +43,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -178,7 +179,8 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.check});
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.Peru;
@@ -186,7 +188,7 @@
             this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(299, 51);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(542, 177);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(625, 177);
             this.bunifuCustomDataGrid1.TabIndex = 20;
             // 
             // Column1
@@ -213,6 +215,11 @@
             // 
             this.Column5.HeaderText = "Data";
             this.Column5.Name = "Column5";
+            // 
+            // check
+            // 
+            this.check.HeaderText = "Resolver";
+            this.check.Name = "check";
             // 
             // frmProblemaTec
             // 
@@ -247,5 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
     }
 }

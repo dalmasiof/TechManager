@@ -13,7 +13,7 @@ namespace TechManager
 {
     public partial class frmPerfilTec : Form
     {
-        public frmPerfilTec(int idLogon, string nomeLogon)
+        public frmPerfilTec()
         {
             InitializeComponent();
         }

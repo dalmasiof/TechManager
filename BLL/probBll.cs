@@ -10,6 +10,8 @@ namespace BLL
 {
    public class probBll
     {
+        ProblemaDal dal = new ProblemaDal();
+
         public List<probDto> listarProb()
         {
             try
@@ -53,6 +55,18 @@ namespace BLL
             catch (Exception erro)
             {
                 throw erro;
+            }
+        }
+        public void novoProb(probDto dto)
+        {
+            try
+            {
+
+                dal.cadProd(dto);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

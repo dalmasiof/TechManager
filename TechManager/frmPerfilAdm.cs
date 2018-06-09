@@ -13,7 +13,7 @@ namespace TechManager
 {
     public partial class frmPerfilAdm : Form
     {
-        public frmPerfilAdm(int idLogon, string nomeLogon)
+        public frmPerfilAdm()
         {
             InitializeComponent();
         }
@@ -49,7 +49,7 @@ namespace TechManager
 
         private void btnAltera_Click(object sender, EventArgs e)
         {
-            frmAlteraPerfil altera = new frmAlteraPerfil();
+            frmAdmAlteraPerfil altera = new frmAdmAlteraPerfil();
             altera.ShowDialog();
         }
 

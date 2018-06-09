@@ -39,5 +39,9 @@ namespace TechManager
             this.Close();
         }
 
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
