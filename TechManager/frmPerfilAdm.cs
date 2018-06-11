@@ -13,7 +13,7 @@ namespace TechManager
 {
     public partial class frmPerfilAdm : Form
     {
-        public frmPerfilAdm(int idLogon, string nomeLogon)
+        public frmPerfilAdm()
         {
             InitializeComponent();
         }
@@ -29,6 +29,7 @@ namespace TechManager
         {
             lblNome.Text = information.nome;
             notifyIcon1.Visible = false;
+            pcbFotoProf.ImageLocation = information.foto;
         }
 
         
@@ -48,7 +49,7 @@ namespace TechManager
 
         private void btnAltera_Click(object sender, EventArgs e)
         {
-            frmAlteraPerfil altera = new frmAlteraPerfil();
+            frmAdmAlteraPerfil altera = new frmAdmAlteraPerfil();
             altera.ShowDialog();
         }
 
@@ -56,6 +57,17 @@ namespace TechManager
         {
             this.Hide();
             notifyIcon1.Visible = true;
+        }
+
+        private void frmPerfilAdm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            frmAdmExcluiPerfil exclui = new frmAdmExcluiPerfil();
+            exclui.Show();
         }
     }
 }

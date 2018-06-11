@@ -161,6 +161,7 @@
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDel.Textcolor = System.Drawing.Color.DarkRed;
             this.btnDel.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAltera
             // 
@@ -248,11 +249,11 @@
             // 
             // pcbFotoProf
             // 
-            this.pcbFotoProf.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbFotoProf.Location = new System.Drawing.Point(44, 25);
             this.pcbFotoProf.Name = "pcbFotoProf";
             this.pcbFotoProf.Size = new System.Drawing.Size(118, 106);
+            this.pcbFotoProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoProf.TabIndex = 0;
             this.pcbFotoProf.TabStop = false;
             // 
@@ -294,6 +295,7 @@
             this.Name = "frmPerfilAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPerfilAdm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerfilAdm_FormClosed);
             this.Load += new System.EventHandler(this.frmPerfilAdm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

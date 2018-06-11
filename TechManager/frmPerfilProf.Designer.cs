@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilProf));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnStand = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSair = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnHist = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnErro = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lblNome = new System.Windows.Forms.Label();
             this.pcbFotoProf = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,6 +70,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 605);
             this.panel1.TabIndex = 0;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNome.Location = new System.Drawing.Point(28, 134);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(155, 23);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "Professor ( Nome )";
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -240,21 +252,8 @@
             this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdve.Click += new System.EventHandler(this.btnAdve_Click);
             // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNome.Location = new System.Drawing.Point(28, 134);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(155, 23);
-            this.lblNome.TabIndex = 2;
-            this.lblNome.Text = "Professor ( Nome )";
-            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pcbFotoProf
             // 
-            this.pcbFotoProf.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbFotoProf.Location = new System.Drawing.Point(44, 25);
             this.pcbFotoProf.Name = "pcbFotoProf";
@@ -351,6 +350,7 @@
             this.Name = "frmPerfilProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil Professor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerfilProf_FormClosed);
             this.Load += new System.EventHandler(this.frmPerfilProf_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

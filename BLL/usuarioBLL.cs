@@ -10,11 +10,12 @@ namespace BLL
 {
     public class usuarioBLL
     {
+        usuarioDAL dal = new usuarioDAL();
+
         public void novoUsuario(usuarioDTO dtovar)
         {
             try
             {
-                usuarioDAL dal = new usuarioDAL();
 
                 dal.novoUsuario(dtovar);
             }
@@ -28,7 +29,6 @@ namespace BLL
         {
             try
             {
-                usuarioDAL dal = new usuarioDAL();
 
                 dal.alterarUsuario(dtovar);
             }
@@ -49,9 +49,27 @@ namespace BLL
             }
         }
 
-        public List<usuarioDTO> validar(object dto)
+        public List<usuarioDTO> listaUsuario()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return new usuarioDAL().lista();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+        public void deleteUsu (usuarioDTO dto)
+        {
+            try
+            {
+                dal.deletaUsuario(dto);
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
         }
     }
 }

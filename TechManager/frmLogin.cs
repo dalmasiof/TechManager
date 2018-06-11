@@ -19,7 +19,6 @@ namespace TechManager
         usuarioDTO dtovar = new usuarioDTO();
         usuarioBLL usuarioBLL = new usuarioBLL();
 
-        char acesso = 'N';
 
         public frmLogin()
         {
@@ -150,9 +149,7 @@ namespace TechManager
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string senha = "";
-            string nomeLogon;
-            int idLogon;
+           
 
             #region
             //conexao = new MySqlConnection(conexao_sql);
@@ -314,20 +311,23 @@ namespace TechManager
             dtovar.senha = txtSenha.Text;
 
             
-
+            
             try
             {
                 List<usuarioDTO> ListDto = new List<usuarioDTO>();
                 ListDto = new usuarioBLL().validar(dtovar);
                 if ((ListDto.Count > 0) && (dtovar.tipo == cmbAcesso.selectedIndex))
                 {
-                    idLogon = dtovar.id;
-                    nomeLogon = dtovar.nome;
+                    information.id = dtovar.id;
+                    information.nome = dtovar.nome;
+                    information.foto = dtovar.foto;
+
+                   
 
                     if (dtovar.tipo == 1)
                     {
                         MessageBox.Show("Bem vindo " + dtovar.nome);
-                        frmPerfilProf prof = new frmPerfilProf(idLogon,nomeLogon);
+                        frmPerfilProf prof = new frmPerfilProf();
                         prof.Show();
                         this.Hide();
 
@@ -335,21 +335,21 @@ namespace TechManager
                     else if (dtovar.tipo == 2)
                     {
                         MessageBox.Show("Bem vindo " + dtovar.nome);
-                        frmPerfilTec prof = new frmPerfilTec(idLogon, nomeLogon);
+                        frmPerfilTec prof = new frmPerfilTec();
                         prof.Show();
                         this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Bem vindo " + dtovar.nome);
-                        frmPerfilAdm prof = new frmPerfilAdm(idLogon, nomeLogon);
+                        frmPerfilAdm prof = new frmPerfilAdm();
                         prof.Show();
                         this.Hide();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("errrro ");
+                    MessageBox.Show("Usuário, senha ou tipo de acesso incorretos","Erro de autenticação",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     return;
                 }
 
@@ -383,6 +383,8 @@ namespace TechManager
             {
                 txtUser.Enabled = true;
                 txtSenha.Enabled = true;
+                txtUser.Text = "Usuário";
+                txtSenha.Text = "Senha";
             }
 
 
@@ -392,8 +394,11 @@ namespace TechManager
                 txtUser.Enabled = true;
                 txtSenha.Enabled = true;
                 txtUser.Focus();
+                txtUser.Text = "Usuário";
+                txtSenha.Text = "Senha";
 
                 lblMostrar.Visible = false;
+                swiMostrar.Visible = false;
                 txtSenha.PasswordChar = char.Parse("*");
 
             }

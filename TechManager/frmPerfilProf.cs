@@ -15,10 +15,9 @@ namespace TechManager
     public partial class frmPerfilProf : Form
     {
         
-        public frmPerfilProf(int idLogon, string nomeLogon)
+        public frmPerfilProf()
         {
-            string nome = nomeLogon;
-            int id = idLogon;    
+            
 
             InitializeComponent();
         }
@@ -29,17 +28,19 @@ namespace TechManager
         {
 
             notifyIcon1.Visible = false;
+            lblNome.Text = information.nome;
+            pcbFotoProf.ImageLocation = information.foto;
         }
 
         private void btnErro_Click(object sender, EventArgs e)
         {
-            frmProblema prob = new frmProblema();
+            frmProblemaProf prob = new frmProblemaProf();
             prob.ShowDialog();
         }
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
-            frmAdvertenciaProf adv = new frmAdvertenciaProf();
+            frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
             adv.ShowDialog();
         }
 
@@ -73,6 +74,9 @@ namespace TechManager
             notifyIcon1.Visible = false;
         }
 
-        
+        private void frmPerfilProf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

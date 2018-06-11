@@ -194,15 +194,6 @@ C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Tec
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\TechManager.exe
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\TechManager.pdb
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\BLL.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.Core.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\DTO.dll
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\DAL.dll
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\bin\Debug\BLL.pdb
@@ -217,7 +208,6 @@ C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\Tec
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmCadastrar.resources
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmPerfilProf.resources
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmPerfilTec.resources
-C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmProblema.resources
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.Properties.Resources.resources
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\UI.csproj.CoreCompileInputs.cache
@@ -236,7 +226,6 @@ C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.fr
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmCadastrar.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilProf.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilTec.resources
-C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblema.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\bin\Debug\TechManager.exe
@@ -251,3 +240,13 @@ C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\Tec
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmPerfilAdm.resources
 D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmAlterarSenha.resources
 D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmPerfilAdm.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmAdmAlteraPerfil.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmAdmExcluiPerfil.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmProblemaProf.resources
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmProblemaTec.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmAdmAlteraPerfil.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmAdmExcluiPerfil.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmAlterarSenha.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilAdm.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblemaProf.resources
+C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblemaTec.resources

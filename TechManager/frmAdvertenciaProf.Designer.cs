@@ -45,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblApague = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -227,17 +226,6 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // lblApague
-            // 
-            this.lblApague.AutoSize = true;
-            this.lblApague.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApague.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblApague.Location = new System.Drawing.Point(55, 7);
-            this.lblApague.Name = "lblApague";
-            this.lblApague.Size = new System.Drawing.Size(98, 15);
-            this.lblApague.TabIndex = 5;
-            this.lblApague.Text = "//Foto do usuario";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -265,7 +253,6 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.lblApague);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pcbProfessor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -328,7 +315,6 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblApague;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pcbProfessor;
         private System.Windows.Forms.Panel panel1;

@@ -21,7 +21,10 @@ namespace TechManager
         probDto dtoVar = new probDto();
         private void frmHistorico_Load(object sender, EventArgs e)
         {
+            usuarioDTO dto = new usuarioDTO();
 
+            lblNome.Text = information.nome;
+            pcbProfessor.ImageLocation = information.foto;
 
             cmbHist.AddItem("Consultar por:");
             cmbHist.AddItem("ID Máquina");
@@ -35,66 +38,125 @@ namespace TechManager
 
         }
 
-        private void txtUser_MouseClick(object sender, MouseEventArgs e)
-        {
-            if(txtUser.Text == ("Selecione um método de consulta") || txtUser.Text == ("Digite o ID da máquina") || 
-                txtUser.Text == ("Digite o nome do Professor") || txtUser.Text == ("Digite a data"))
-            {
-                txtUser.Clear();
-            }
-            
-        }
+       
 
-        private void cmbHist_onItemSelected(object sender, EventArgs e)
-        {
-           switch (cmbHist.selectedIndex)
-            {
-                case 0:
-                    txtUser.Enabled = false;
-                    txtUser.Text = "Selecione um método de consulta";
-                    txtUser.ForeColor = Color.Gray;
-                    break;
-
-                    case 1:
-                    txtUser.Enabled = true;
-                    txtUser.ForeColor = Color.Black;
-                    txtUser.Text = "Digite o ID da máquina";
-                    break;
-
-                case 2:
-                    txtUser.Enabled = true;
-                    txtUser.ForeColor = Color.Black;
-                    txtUser.Text = "Digite o nome do Professor";
-                    break;
-
-                case 3:
-                    txtUser.Enabled = true;
-                    txtUser.ForeColor = Color.Black;
-                    txtUser.Text = "Digite a data";
-                    break;
-
-
-
-            }
-        }
+       
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
+            if (txtUser.Text == "")
+            {
+                
+                carregaGrid();
+            }
 
         }
 
         private void carregaGrid()
         {
-           // dgvHist.AutoGenerateColumns = false;
+            dgvHist.AutoGenerateColumns = false;
             try
             {
                 List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listarProb(dtoVar);
+                ListDto = new probBll().listarProb();
                 dgvHist.DataSource = ListDto;
             }
             catch (Exception erro)
             {
                 throw erro;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dtoVar.idMaquina = (txtUser.Text);
+            try
+            {
+                List<probDto> ListDto = new List<probDto>();
+                ListDto = new probBll().listaPorId(dtoVar);
+                dgvHist.DataSource = ListDto;
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (cmbHist.selectedIndex)
+            {
+                case 0:
+                    {
+                        carregaGrid();
+                        
+                        break;
+                    }
+                case 1:
+                    dtoVar.idMaquina = (txtUser.Text);
+                    try
+                    {
+                        List<probDto> ListDto = new List<probDto>();
+                        ListDto = new probBll().listaPorId(dtoVar);
+                        dgvHist.DataSource = ListDto;
+                    }
+                    catch (Exception erro)
+                    {
+                        throw erro;
+                    }
+                    break;
+
+                case 2:
+                    dtoVar.professor = (txtUser.Text);
+                    try
+                    {
+                        List<probDto> ListDto = new List<probDto>();
+                        ListDto = new probBll().listaPorProf(dtoVar);
+                        dgvHist.DataSource = ListDto;
+                    }
+                    catch (Exception erro)
+                    {
+                        throw erro;
+                    }
+                    break;
+
+                case 3:
+
+                    //dtoVar.data = Convert.ToDateTime(txtUser.Text);
+                    //try
+                    //{
+                    //    List<probDto> ListDto = new List<probDto>();
+                    //    ListDto = new probBll().listaPorData(dtoVar);
+                    //    dgvHist.DataSource = ListDto;
+                    //}
+                    //catch (Exception erro)
+                    //{
+                    //    throw erro;
+                    //}
+                    break;
+            }
+        }
+
+        private void cmbHist_onItemSelected(object sender, EventArgs e)
+        {
+            if(cmbHist.selectedIndex == 0)
+            {
+                txtUser.Text = "Escolha um método de pesquisa";
+                txtUser.Enabled = false;
+            }
+            else if (cmbHist.selectedIndex == 0)
+            {
+                txtUser.Clear();
+                txtUser.Enabled = true;
+                txtUser.Focus();
+            }
+            else
+            {
+                txtUser.Clear();
+                txtUser.Enabled = true;
+                txtUser.Focus();
             }
         }
     }
