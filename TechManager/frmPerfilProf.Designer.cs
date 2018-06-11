@@ -41,7 +41,6 @@
             this.pcbFotoProf = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblApagar = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -255,9 +254,11 @@
             // pcbFotoProf
             // 
             this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcbFotoProf.Image = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbFotoProf.Location = new System.Drawing.Point(44, 25);
             this.pcbFotoProf.Name = "pcbFotoProf";
             this.pcbFotoProf.Size = new System.Drawing.Size(118, 106);
+            this.pcbFotoProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoProf.TabIndex = 0;
             this.pcbFotoProf.TabStop = false;
             this.pcbFotoProf.Click += new System.EventHandler(this.pcbFotoProf_Click);
@@ -285,17 +286,6 @@
             this.label4.Size = new System.Drawing.Size(188, 24);
             this.label4.TabIndex = 6;
             this.label4.Text = "Problemas Relatados";
-            // 
-            // lblApagar
-            // 
-            this.lblApagar.AutoSize = true;
-            this.lblApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApagar.ForeColor = System.Drawing.Color.Lime;
-            this.lblApagar.Location = new System.Drawing.Point(544, 453);
-            this.lblApagar.Name = "lblApagar";
-            this.lblApagar.Size = new System.Drawing.Size(80, 16);
-            this.lblApagar.TabIndex = 7;
-            this.lblApagar.Text = "//PictureBox";
             // 
             // pictureBox4
             // 
@@ -339,10 +329,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 605);
-            this.Controls.Add(this.lblApagar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
@@ -380,7 +369,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblApagar;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,7 +38,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
-            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgvProb = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProb)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,13 +159,13 @@
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
             // 
-            // bunifuCustomDataGrid1
+            // dgvProb
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProb.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvProb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Peru;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,49 +173,62 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
             this.check});
-            this.bunifuCustomDataGrid1.DoubleBuffered = true;
-            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
-            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.Peru;
-            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(299, 51);
-            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
-            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(625, 177);
-            this.bunifuCustomDataGrid1.TabIndex = 20;
+            this.dgvProb.DoubleBuffered = true;
+            this.dgvProb.EnableHeadersVisualStyles = false;
+            this.dgvProb.HeaderBgColor = System.Drawing.Color.Peru;
+            this.dgvProb.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvProb.Location = new System.Drawing.Point(299, 51);
+            this.dgvProb.Name = "dgvProb";
+            this.dgvProb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.dgvProb.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProb.Size = new System.Drawing.Size(625, 177);
+            this.dgvProb.TabIndex = 20;
+            this.dgvProb.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellEndEdit);
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "aula";
             this.Column1.HeaderText = "Aula";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "professor";
             this.Column2.HeaderText = "Professor";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "idmaquina";
             this.Column3.HeaderText = "ID Máquina";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "problema";
             this.Column4.HeaderText = "Problema";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "data";
             this.Column5.HeaderText = "Data";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // check
             // 
@@ -226,15 +240,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 614);
-            this.Controls.Add(this.bunifuCustomDataGrid1);
+            this.Controls.Add(this.dgvProb);
             this.Controls.Add(this.panel1);
             this.Name = "frmProblemaTec";
+            this.Text = "Verificar Problemas";
+            this.Load += new System.EventHandler(this.frmProblemaTec_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProb)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,7 +264,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbProfessor;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvProb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

@@ -35,6 +35,9 @@ namespace TechManager
 
             carregaGrid();
 
+            
+
+
 
         }
 
@@ -59,30 +62,41 @@ namespace TechManager
             {
                 List<probDto> ListDto = new List<probDto>();
                 ListDto = new probBll().listarProb();
+
+
                 dgvHist.DataSource = ListDto;
+//---------------------------------------------------------------------------------------------------------------
+                foreach(DataGridViewRow row in dgvHist.Rows)
+                {
+                    int sel = dgvHist.CurrentRow.Index;
+
+                    if (Convert.ToInt32(row.Cells[5].Value) == 1)
+
+                        {
+                            dgvHist.CurrentRow.DefaultCellStyle.BackColor = Color.ForestGreen;
+                            dgvHist[5, sel].Value = Convert.ToString("Checado");
+                    
+                        }
+
+                    else
+                        {
+                            dgvHist.CurrentRow.DefaultCellStyle.BackColor = Color.Maroon;
+                            dgvHist[5, sel].Value = Convert.ToString("Não checado");
+
+                    
+                        }
+
+                    }
             }
             catch (Exception erro)
             {
                 throw erro;
             }
+
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dtoVar.idMaquina = (txtUser.Text);
-            try
-            {
-                List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listaPorId(dtoVar);
-                dgvHist.DataSource = ListDto;
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-
-
-        }
+      
 
         private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
