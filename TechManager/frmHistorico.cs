@@ -73,20 +73,21 @@ namespace TechManager
                     if (Convert.ToInt32(row.Cells[5].Value) == 1)
 
                         {
-                            dgvHist.CurrentRow.DefaultCellStyle.BackColor = Color.ForestGreen;
-                            dgvHist[5, sel].Value = Convert.ToString("Checado");
+                           row.DefaultCellStyle.BackColor = Color.ForestGreen;
+                            row.Cells[5].Value = Convert.ToString("Checado");
                     
                         }
 
                     else
                         {
-                            dgvHist.CurrentRow.DefaultCellStyle.BackColor = Color.Maroon;
-                            dgvHist[5, sel].Value = Convert.ToString("Não checado");
+                            row.DefaultCellStyle.BackColor = Color.Maroon;
+                            row.Cells[5].Value = Convert.ToString("Não checado");
 
                     
                         }
 
-                    }
+
+                }
             }
             catch (Exception erro)
             {
@@ -172,6 +173,11 @@ namespace TechManager
                 txtUser.Enabled = true;
                 txtUser.Focus();
             }
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

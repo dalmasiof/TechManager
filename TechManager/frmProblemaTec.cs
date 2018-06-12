@@ -69,7 +69,7 @@ namespace TechManager
             if (Convert.ToBoolean(dgvProb["check", sel].Value) == true)
             {
                 dgvProb.CurrentRow.DefaultCellStyle.BackColor = Color.ForestGreen;
-                dto.Check = 1;
+                dto.Check = "1";
                 dto.idProb = Convert.ToInt32(dgvProb["check", sel].Value);
 
                 {
@@ -86,6 +86,8 @@ namespace TechManager
 
                         conexao.Open();
                         sql.ExecuteNonQuery();
+
+                        
                     }
                     catch (Exception ex)
                     {
@@ -103,7 +105,7 @@ namespace TechManager
             else
             {
                 dgvProb.CurrentRow.DefaultCellStyle.BackColor = Color.Maroon;
-                dto.Check = 0;
+                dto.Check = "0";
                 dto.idProb = Convert.ToInt32(dgvProb["check", sel].Value);
 
                 try

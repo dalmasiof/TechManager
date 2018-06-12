@@ -28,7 +28,7 @@ namespace TechManager
         private void frmPerfilTec_Load(object sender, EventArgs e)
         {
             lblNome.Text = Convert.ToString(information.nome);
-            //pcbFotoTec.ImageLocation = information.foto;
+            pcbFotoTec.ImageLocation = information.foto;
             ////btnErro.Iconimage_right = Properties.Resources.;
 
             //try

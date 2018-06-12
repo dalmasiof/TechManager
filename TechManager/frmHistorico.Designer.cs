@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -37,14 +37,14 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.dgvHist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMaquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resolvido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -89,6 +89,7 @@
             this.bunifuImageButton2.TabIndex = 3;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // pictureBox3
             // 
@@ -122,20 +123,20 @@
             // 
             // dgvHist
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvHist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHist.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -152,36 +153,9 @@
             this.dgvHist.Name = "dgvHist";
             this.dgvHist.ReadOnly = true;
             this.dgvHist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHist.Size = new System.Drawing.Size(626, 189);
             this.dgvHist.TabIndex = 10;
-            // 
-            // cmbHist
-            // 
-            this.cmbHist.BackColor = System.Drawing.SystemColors.Control;
-            this.cmbHist.BorderRadius = 5;
-            this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
-            this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbHist.ForeColor = System.Drawing.Color.White;
-            this.cmbHist.Location = new System.Drawing.Point(260, 240);
-            this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbHist.Name = "cmbHist";
-            this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
-            this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
-            this.cmbHist.selectedIndex = -1;
-            this.cmbHist.Size = new System.Drawing.Size(217, 35);
-            this.cmbHist.TabIndex = 11;
-            this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUser.Location = new System.Drawing.Point(503, 249);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(247, 26);
-            this.txtUser.TabIndex = 12;
-            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
-            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // Column1
             // 
@@ -224,6 +198,34 @@
             this.resolvido.HeaderText = "Checado?";
             this.resolvido.Name = "resolvido";
             this.resolvido.ReadOnly = true;
+            // 
+            // cmbHist
+            // 
+            this.cmbHist.BackColor = System.Drawing.SystemColors.Control;
+            this.cmbHist.BorderRadius = 5;
+            this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
+            this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbHist.ForeColor = System.Drawing.Color.White;
+            this.cmbHist.Location = new System.Drawing.Point(260, 240);
+            this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHist.Name = "cmbHist";
+            this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
+            this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
+            this.cmbHist.selectedIndex = -1;
+            this.cmbHist.Size = new System.Drawing.Size(217, 35);
+            this.cmbHist.TabIndex = 11;
+            this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtUser.Location = new System.Drawing.Point(503, 249);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(247, 26);
+            this.txtUser.TabIndex = 12;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // frmHistorico
             // 
