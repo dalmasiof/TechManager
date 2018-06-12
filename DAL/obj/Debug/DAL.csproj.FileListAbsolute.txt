@@ -38,3 +38,10 @@ C:\Users\Admin\Documents\GitHub\TechManager\DAL\bin\Debug\DTO.pdb
 C:\Users\Admin\Documents\GitHub\TechManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\TechManager\DAL\obj\Debug\DAL.dll
 C:\Users\Admin\Documents\GitHub\TechManager\DAL\obj\Debug\DAL.pdb
+C:\Users\Admin\Documents\DSFHA\TechManager\DAL\bin\Debug\DAL.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\DAL\bin\Debug\DAL.pdb
+C:\Users\Admin\Documents\DSFHA\TechManager\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\DSFHA\TechManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\DSFHA\TechManager\DAL\obj\Debug\DAL.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\DAL\obj\Debug\DAL.pdb

@@ -19,6 +19,16 @@ namespace TechManager
 
         private void frmAdvertencia_Load(object sender, EventArgs e)
         {
+            lblNome.Text = information.nome;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
 
         }
     }

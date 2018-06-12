@@ -292,9 +292,11 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPerfilAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPerfilAdm";
+            this.Text = "Menu Administrador";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerfilAdm_FormClosed);
             this.Load += new System.EventHandler(this.frmPerfilAdm_Load);
             this.panel1.ResumeLayout(false);

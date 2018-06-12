@@ -338,7 +338,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPerfilProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Perfil Professor";
+            this.Text = "Menu Professor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerfilProf_FormClosed);
             this.Load += new System.EventHandler(this.frmPerfilProf_Load);
             this.panel1.ResumeLayout(false);

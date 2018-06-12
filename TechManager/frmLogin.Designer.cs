@@ -221,7 +221,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "buni";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buni_MouseClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogin_MouseDown);

@@ -30,16 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmExcluiPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvExclui = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
             this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +43,11 @@
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -141,56 +142,6 @@
             this.dgvExclui.TabIndex = 3;
             this.dgvExclui.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExclui_CellClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(252, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 25);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label1.Location = new System.Drawing.Point(247, 283);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nome:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label3.Location = new System.Drawing.Point(286, 241);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Id:";
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.lblId.Location = new System.Drawing.Point(327, 241);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(35, 25);
-            this.lblId.TabIndex = 8;
-            this.lblId.Text = "Id:";
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.lblNome.Location = new System.Drawing.Point(327, 283);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(74, 25);
-            this.lblNome.TabIndex = 7;
-            this.lblNome.Text = "Nome:";
-            // 
             // idUsuario
             // 
             this.idUsuario.DataPropertyName = "idUsuario";
@@ -241,6 +192,56 @@
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(252, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 25);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Excluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label1.Location = new System.Drawing.Point(247, 283);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nome:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label3.Location = new System.Drawing.Point(286, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 25);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Id:";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.lblId.Location = new System.Drawing.Point(327, 241);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(35, 25);
+            this.lblId.TabIndex = 8;
+            this.lblId.Text = "Id:";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.lblNome.Location = new System.Drawing.Point(327, 283);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(74, 25);
+            this.lblNome.TabIndex = 7;
+            this.lblNome.Text = "Nome:";
+            // 
             // frmAdmExcluiPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +254,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvExclui);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdmExcluiPerfil";
             this.Text = "Excluir Perfil";
             this.Load += new System.EventHandler(this.frmAdmExcluiPerfil_Load);

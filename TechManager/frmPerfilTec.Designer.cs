@@ -334,8 +334,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPerfilTec";
-            this.Text = "frmPerfilTec";
+            this.Text = "Menu Técnico";
             this.Load += new System.EventHandler(this.frmPerfilTec_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

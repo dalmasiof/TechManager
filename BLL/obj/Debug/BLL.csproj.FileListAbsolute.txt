@@ -53,3 +53,12 @@ C:\Users\Admin\Documents\GitHub\TechManager\BLL\obj\Debug\BLL.csprojResolveAssem
 C:\Users\Admin\Documents\GitHub\TechManager\BLL\obj\Debug\BLL.dll
 C:\Users\Admin\Documents\GitHub\TechManager\BLL\obj\Debug\BLL.pdb
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\BLL\bin\Debug\MySql.Data.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\bin\Debug\BLL.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\bin\Debug\BLL.pdb
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\bin\Debug\DAL.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\bin\Debug\DTO.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\bin\Debug\DAL.pdb
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\bin\Debug\DTO.pdb
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\obj\Debug\BLL.dll
+C:\Users\Admin\Documents\DSFHA\TechManager\BLL\obj\Debug\BLL.pdb
