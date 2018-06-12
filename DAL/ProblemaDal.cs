@@ -46,6 +46,7 @@ namespace DAL
                         dtovar.professor = Convert.ToString(dr["professor"]);
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+                        dtovar.Check = Convert.ToInt32(dr["resolvido"]);
 
                         listProbDto.Add(dtovar);
 

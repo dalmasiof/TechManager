@@ -30,14 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilTec));
-            this.lblApagar = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnStand = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSair = new Bunifu.Framework.UI.BunifuImageButton();
-            this.lblApague = new System.Windows.Forms.Label();
             this.btnHist = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblNome = new System.Windows.Forms.Label();
@@ -54,17 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblApagar
-            // 
-            this.lblApagar.AutoSize = true;
-            this.lblApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApagar.ForeColor = System.Drawing.Color.Lime;
-            this.lblApagar.Location = new System.Drawing.Point(543, 450);
-            this.lblApagar.Name = "lblApagar";
-            this.lblApagar.Size = new System.Drawing.Size(80, 16);
-            this.lblApagar.TabIndex = 14;
-            this.lblApagar.Text = "//PictureBox";
             // 
             // label4
             // 
@@ -96,15 +83,15 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnStand);
             this.panel1.Controls.Add(this.btnSair);
-            this.panel1.Controls.Add(this.lblApague);
             this.panel1.Controls.Add(this.btnHist);
             this.panel1.Controls.Add(this.btnAdve);
             this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.pcbFotoTec);
             this.panel1.Controls.Add(this.btnErro);
-            this.panel1.Location = new System.Drawing.Point(-1, -3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 610);
+            this.panel1.Size = new System.Drawing.Size(242, 600);
             this.panel1.TabIndex = 8;
             // 
             // label2
@@ -166,17 +153,7 @@
             this.btnSair.TabIndex = 3;
             this.btnSair.TabStop = false;
             this.btnSair.Zoom = 10;
-            // 
-            // lblApague
-            // 
-            this.lblApague.AutoSize = true;
-            this.lblApague.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApague.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblApague.Location = new System.Drawing.Point(55, 7);
-            this.lblApague.Name = "lblApague";
-            this.lblApague.Size = new System.Drawing.Size(98, 15);
-            this.lblApague.TabIndex = 5;
-            this.lblApague.Text = "//Foto do usuario";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnHist
             // 
@@ -263,11 +240,12 @@
             // 
             // pcbFotoTec
             // 
-            this.pcbFotoTec.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbFotoTec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcbFotoTec.Image = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbFotoTec.Location = new System.Drawing.Point(44, 25);
             this.pcbFotoTec.Name = "pcbFotoTec";
             this.pcbFotoTec.Size = new System.Drawing.Size(118, 106);
+            this.pcbFotoTec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoTec.TabIndex = 0;
             this.pcbFotoTec.TabStop = false;
             // 
@@ -283,7 +261,7 @@
             this.btnErro.DisabledColor = System.Drawing.Color.Gray;
             this.btnErro.Iconcolor = System.Drawing.Color.Transparent;
             this.btnErro.Iconimage = global::TechManager.Properties.Resources.error_warning_alert_attention_512;
-            this.btnErro.Iconimage_right = global::TechManager.Properties.Resources.noti11;
+            this.btnErro.Iconimage_right = null;
             this.btnErro.Iconimage_right_Selected = null;
             this.btnErro.Iconimage_Selected = null;
             this.btnErro.IconMarginLeft = 0;
@@ -309,6 +287,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackgroundImage = global::TechManager.Properties.Resources.business_color_chart_pie_36_icon_icons_com_53463;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Location = new System.Drawing.Point(326, 191);
@@ -349,7 +328,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 600);
-            this.Controls.Add(this.lblApagar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox4);
@@ -372,8 +350,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblApagar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -383,7 +359,6 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btnStand;
         private Bunifu.Framework.UI.BunifuImageButton btnSair;
-        private System.Windows.Forms.Label lblApague;
         private Bunifu.Framework.UI.BunifuFlatButton btnHist;
         private Bunifu.Framework.UI.BunifuFlatButton btnErro;
         private Bunifu.Framework.UI.BunifuFlatButton btnAdve;

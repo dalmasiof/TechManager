@@ -15,5 +15,6 @@ namespace DTO
         public string problema { get; set; }
 
         public DateTime data { get; set; }
+        public int Check { get; set; }
     }
 }
