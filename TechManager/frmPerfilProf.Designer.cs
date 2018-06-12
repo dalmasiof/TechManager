@@ -96,7 +96,7 @@
             // btnStand
             // 
             this.btnStand.Active = false;
-            this.btnStand.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnStand.Activecolor = System.Drawing.Color.Silver;
             this.btnStand.BackColor = System.Drawing.Color.Silver;
             this.btnStand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStand.BorderRadius = 0;
@@ -146,7 +146,7 @@
             // btnHist
             // 
             this.btnHist.Active = false;
-            this.btnHist.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnHist.Activecolor = System.Drawing.Color.Silver;
             this.btnHist.BackColor = System.Drawing.Color.Silver;
             this.btnHist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHist.BorderRadius = 0;
@@ -182,7 +182,7 @@
             // btnErro
             // 
             this.btnErro.Active = false;
-            this.btnErro.Activecolor = System.Drawing.Color.Goldenrod;
+            this.btnErro.Activecolor = System.Drawing.Color.Silver;
             this.btnErro.BackColor = System.Drawing.Color.Silver;
             this.btnErro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnErro.BorderRadius = 0;
@@ -218,7 +218,7 @@
             // btnAdve
             // 
             this.btnAdve.Active = false;
-            this.btnAdve.Activecolor = System.Drawing.Color.Brown;
+            this.btnAdve.Activecolor = System.Drawing.Color.Silver;
             this.btnAdve.BackColor = System.Drawing.Color.Silver;
             this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdve.BorderRadius = 0;

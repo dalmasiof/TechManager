@@ -17,7 +17,7 @@ namespace TechManager
     {
         usuarioDTO dtovar = new usuarioDTO();
         usuarioBLL bll = new usuarioBLL();
-        char acesso;
+        int acesso;
 
         public frmCadastrar()
         {
@@ -28,11 +28,11 @@ namespace TechManager
         {
             if (cbbAcesso.Text == "Professor")
             {
-                acesso = '1';
+                acesso = 1;
             }
             else
             {
-                acesso = '0';
+                acesso = 2;
             }
 
             if(!verificaCampos())
@@ -59,6 +59,7 @@ namespace TechManager
                     throw er;
                 }
             }
+            txtNome.Focus();
             limpaCampos();
             lblMensagem.ForeColor = Color.Green;
         }
@@ -125,7 +126,7 @@ namespace TechManager
             txtLogin.Text = null;
             txtSenha.Text = null;
             txtEmail.Text = null;
-            txtConfirmarSenha = null;
+            txtConfirmarSenha.Text = null;
             mktxtRG.Text = null;
             cbbAcesso.SelectedIndex = 0;
             lblMensagem.ForeColor = Color.Black;
@@ -166,6 +167,11 @@ namespace TechManager
                 pcbFoto.ImageLocation = caminhoCompleto;
 
             }
+        }
+
+        private void pcbHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

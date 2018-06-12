@@ -82,6 +82,7 @@
             this.pcbHome.TabIndex = 18;
             this.pcbHome.TabStop = false;
             this.pcbHome.Zoom = 10;
+            this.pcbHome.Click += new System.EventHandler(this.pcbHome_Click);
             // 
             // pcbLogo
             // 

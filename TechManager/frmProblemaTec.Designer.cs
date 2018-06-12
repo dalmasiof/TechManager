@@ -41,6 +41,7 @@
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.dgvProb = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -178,6 +179,7 @@
             this.dgvProb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.id,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -195,6 +197,7 @@
             this.dgvProb.Size = new System.Drawing.Size(625, 177);
             this.dgvProb.TabIndex = 20;
             this.dgvProb.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellEndEdit);
+            this.dgvProb.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellValueChanged);
             // 
             // Column1
             // 
@@ -202,6 +205,13 @@
             this.Column1.HeaderText = "Aula";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "idProb";
+            this.id.HeaderText = "Column6";
+            this.id.Name = "id";
+            this.id.Visible = false;
             // 
             // Column2
             // 
@@ -268,6 +278,7 @@
         private System.Windows.Forms.PictureBox pcbProfessor;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvProb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

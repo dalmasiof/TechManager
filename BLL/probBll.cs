@@ -69,5 +69,16 @@ namespace BLL
                 throw ex;
             }
         }
+        public void alteraSituacao(probDto dtoVar)
+        {
+            try
+            {
+                dal.alteraSituacao(dtoVar);
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
     }
 }

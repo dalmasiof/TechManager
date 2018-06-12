@@ -38,7 +38,7 @@ namespace TechManager
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
-            frmAdvertenciaProf adv = new frmAdvertenciaProf();
+            frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
             adv.ShowDialog();
         }
 
@@ -63,8 +63,15 @@ namespace TechManager
 
                 bll.novoProb(dto);
                 carregaGrid();
-                    lblAviso.Text = "Cadastrado com sucesso";
-                    lblAviso.ForeColor = Color.Green;
+                lblAviso.Text = "Cadastrado com sucesso";
+                lblAviso.ForeColor = Color.Green;
+                foreach(Control c in this.Controls)
+                    {
+                         if(c is TextBox)
+                        {
+                            (c as Control).Text = "";
+                        }
+                    }
             }
             catch (Exception erro)
             {

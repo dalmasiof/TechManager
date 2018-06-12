@@ -29,6 +29,7 @@ namespace TechManager
         {
             lblNome.Text = Convert.ToString(information.nome);
             pcbFotoTec.ImageLocation = information.foto;
+            notifyIcon1.Visible = false;
             ////btnErro.Iconimage_right = Properties.Resources.;
 
             //try
@@ -45,6 +46,7 @@ namespace TechManager
             //{
 
             //}
+
         }
 
         private void btnAdve_Click(object sender, EventArgs e)

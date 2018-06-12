@@ -157,6 +157,7 @@
             this.dgvHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHist.Size = new System.Drawing.Size(626, 189);
             this.dgvHist.TabIndex = 10;
+            this.dgvHist.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHist_CellEndEdit);
             // 
             // Column1
             // 

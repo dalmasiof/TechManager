@@ -62,79 +62,51 @@ namespace TechManager
 
         private void dgvProb_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            probDto dto = new probDto();
+
+            probDto dtoVar = new probDto();
 
             int sel = dgvProb.CurrentRow.Index;
 
             if (Convert.ToBoolean(dgvProb["check", sel].Value) == true)
             {
                 dgvProb.CurrentRow.DefaultCellStyle.BackColor = Color.ForestGreen;
-                dto.Check = "1";
-                dto.idProb = Convert.ToInt32(dgvProb["check", sel].Value);
-
-                {
-                    try
-                    {
-                        conexao = new MySqlConnection(conexao_sql);
-                        MySqlCommand sql = new MySqlCommand("update problema set resolvido = @check where idprob = @id")
-                        {
-                            Connection = conexao
-                        };
-                        sql.Parameters.Add("@check", MySqlDbType.Int32).Value = dto.Check;
-                        sql.Parameters.Add("@id", MySqlDbType.VarChar).Value = dto.idProb;
-
-
-                        conexao.Open();
-                        sql.ExecuteNonQuery();
-
-                        
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
-                    }
-
-                    finally
-                    {
-                        conexao.Close();
-                    }
-                }
-
-
+                dtoVar.Check = "1";
+                dtoVar.idProb = Convert.ToInt32(dgvProb["id", sel].Value);
             }
+
+
             else
             {
                 dgvProb.CurrentRow.DefaultCellStyle.BackColor = Color.Maroon;
-                dto.Check = "0";
-                dto.idProb = Convert.ToInt32(dgvProb["check", sel].Value);
+                dtoVar.Check = "0";
+                dtoVar.idProb = Convert.ToInt32(dgvProb["id", sel].Value);
 
+            }
                 try
                 {
-                    conexao = new MySqlConnection(conexao_sql);
-                    MySqlCommand sql = new MySqlCommand("update problema set resolvido = @check where idprob = @id")
+                    try
                     {
-                        Connection = conexao
-                    };
-                    sql.Parameters.Add("@check", MySqlDbType.Int32).Value = dto.Check;
-                    sql.Parameters.Add("@id", MySqlDbType.Int32).Value = dto.idProb;
-
-
-                    conexao.Open();
-                    sql.ExecuteNonQuery();
+                        probBll bll = new probBll();
+                        bll.alteraSituacao(dtoVar);
+                        
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show("" + erro);
+                    }
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
 
-                finally
-                {
-                    conexao.Close();
-                }
-            }
+               
 
         }
 
-      
+        private void dgvProb_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

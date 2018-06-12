@@ -383,6 +383,7 @@ namespace TechManager
             {
                 txtUser.Enabled = true;
                 txtSenha.Enabled = true;
+                txtUser.Focus();
                 txtUser.Text = "Usuário";
                 txtSenha.Text = "Senha";
             }

@@ -80,7 +80,7 @@
             // btnStand
             // 
             this.btnStand.Active = false;
-            this.btnStand.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnStand.Activecolor = System.Drawing.Color.Silver;
             this.btnStand.BackColor = System.Drawing.Color.Silver;
             this.btnStand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStand.BorderRadius = 0;
@@ -130,7 +130,7 @@
             // btnDel
             // 
             this.btnDel.Active = false;
-            this.btnDel.Activecolor = System.Drawing.Color.Brown;
+            this.btnDel.Activecolor = System.Drawing.Color.Silver;
             this.btnDel.BackColor = System.Drawing.Color.Silver;
             this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDel.BorderRadius = 0;
@@ -166,7 +166,7 @@
             // btnAltera
             // 
             this.btnAltera.Active = false;
-            this.btnAltera.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnAltera.Activecolor = System.Drawing.Color.Silver;
             this.btnAltera.BackColor = System.Drawing.Color.Silver;
             this.btnAltera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAltera.BorderRadius = 0;
@@ -202,7 +202,7 @@
             // btnCad
             // 
             this.btnCad.Active = false;
-            this.btnCad.Activecolor = System.Drawing.Color.LightGreen;
+            this.btnCad.Activecolor = System.Drawing.Color.Silver;
             this.btnCad.BackColor = System.Drawing.Color.Silver;
             this.btnCad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCad.BorderRadius = 0;

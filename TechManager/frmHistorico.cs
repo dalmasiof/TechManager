@@ -19,6 +19,7 @@ namespace TechManager
             InitializeComponent();
         }
         probDto dtoVar = new probDto();
+
         private void frmHistorico_Load(object sender, EventArgs e)
         {
             usuarioDTO dto = new usuarioDTO();
@@ -35,21 +36,21 @@ namespace TechManager
 
             carregaGrid();
 
-            
+
 
 
 
         }
 
-       
 
-       
+
+
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
             if (txtUser.Text == "")
             {
-                
+
                 carregaGrid();
             }
 
@@ -65,26 +66,26 @@ namespace TechManager
 
 
                 dgvHist.DataSource = ListDto;
-//---------------------------------------------------------------------------------------------------------------
-                foreach(DataGridViewRow row in dgvHist.Rows)
+
+                //---------------------------------------------------------------------------------------------------------------
+                foreach (DataGridViewRow row in dgvHist.Rows)
                 {
-                    int sel = dgvHist.CurrentRow.Index;
 
-                    if (Convert.ToInt32(row.Cells[5].Value) == 1)
+                    if (Convert.ToString(row.Cells[5].Value) == "1")
 
-                        {
-                           row.DefaultCellStyle.BackColor = Color.ForestGreen;
-                            row.Cells[5].Value = Convert.ToString("Checado");
-                    
-                        }
+                    {
+                        row.DefaultCellStyle.BackColor = Color.ForestGreen;
+                        row.Cells[5].Value = Convert.ToString("Checado");
+
+                    }
 
                     else
-                        {
-                            row.DefaultCellStyle.BackColor = Color.Maroon;
-                            row.Cells[5].Value = Convert.ToString("Não checado");
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Maroon;
+                        row.Cells[5].Value = Convert.ToString("Não checado");
 
-                    
-                        }
+
+                    }
 
 
                 }
@@ -94,10 +95,10 @@ namespace TechManager
                 throw erro;
             }
 
-            
+
         }
 
-      
+
 
         private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -106,7 +107,7 @@ namespace TechManager
                 case 0:
                     {
                         carregaGrid();
-                        
+
                         break;
                     }
                 case 1:
@@ -156,7 +157,7 @@ namespace TechManager
 
         private void cmbHist_onItemSelected(object sender, EventArgs e)
         {
-            if(cmbHist.selectedIndex == 0)
+            if (cmbHist.selectedIndex == 0)
             {
                 txtUser.Text = "Escolha um método de pesquisa";
                 txtUser.Enabled = false;
@@ -179,5 +180,45 @@ namespace TechManager
         {
             this.Close();
         }
+
+        private void dgvHist_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            foreach (DataGridViewRow row in dgvHist.Rows)
+            {
+
+                if (Convert.ToInt32(row.Cells[5].Value) == 1)
+
+                {
+                    row.DefaultCellStyle.BackColor = Color.ForestGreen;
+                    row.Cells[5].Value = Convert.ToString("Checado");
+
+                    dtoVar.Check = "1";
+                   // dtoVar.idProb = Convert.ToInt32(dgvHist["id", sel].Value);
+
+
+
+                }
+
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.Maroon;
+                    row.Cells[5].Value = Convert.ToString("Não checado");
+                    dtoVar.Check = "0";
+                  //  dtoVar.idProb = Convert.ToInt32(dgvHist["id", sel].Value);
+
+
+                }
+                
+            }
+        }
+
+        private void dgvHist_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
+
+

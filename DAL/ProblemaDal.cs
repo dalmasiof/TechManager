@@ -68,7 +68,7 @@ namespace DAL
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
-                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb) values(@aula,@profe,@idmaquina,@descProb,@data)")
+                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb,resolvido) values(@aula,@profe,@idmaquina,@descProb,@data,0)")
                 {
                     Connection = conexao
                 };
@@ -224,6 +224,31 @@ namespace DAL
             catch (Exception erro)
             {
                 throw erro;
+            }
+        }
+
+        public void alteraSituacao(probDto dtoVar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("update problema set resolvido = @check where idProb = @id")
+                {
+                    Connection = conexao
+                };
+                sql.Parameters.Add("@check", MySqlDbType.VarChar).Value = dtoVar.Check;
+                sql.Parameters.Add("@id", MySqlDbType.Int32).Value = dtoVar.idProb;
+                conexao.Open();
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                conexao.Close();
             }
         }
     }

@@ -44,3 +44,4 @@ C:\Users\Admin\Documents\DSFHA\TechManager\DTO\bin\Debug\DTO.pdb
 C:\Users\Admin\Documents\DSFHA\TechManager\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\DSFHA\TechManager\DTO\obj\Debug\DTO.dll
 C:\Users\Admin\Documents\DSFHA\TechManager\DTO\obj\Debug\DTO.pdb
+C:\Users\Maza\Documents\Visual Studio 2017\TechManager\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
