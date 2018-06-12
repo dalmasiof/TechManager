@@ -179,7 +179,6 @@ D:\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmLogin.resources
 D:\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmCadastrar.resources
 D:\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilProf.resources
 D:\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilTec.resources
-D:\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblema.resources
 D:\GitHub\TechManager\TechManager\obj\Debug\TechManager.Properties.Resources.resources
 D:\GitHub\TechManager\TechManager\obj\Debug\UI.csproj.GenerateResource.Cache
 D:\GitHub\TechManager\TechManager\bin\Debug\TechManager.exe
@@ -250,3 +249,7 @@ C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.fr
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmPerfilAdm.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblemaProf.resources
 C:\Users\Admin\Documents\GitHub\TechManager\TechManager\obj\Debug\TechManager.frmProblemaTec.resources
+D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmAdmAlteraPerfil.resources
+D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmAdmExcluiPerfil.resources
+D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmProblemaProf.resources
+D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmProblemaTec.resources
