@@ -30,15 +30,13 @@ namespace TechManager
             cmbHist.AddItem("Consultar por:");
             cmbHist.AddItem("ID Máquina");
             cmbHist.AddItem("Professor");
-            cmbHist.AddItem("Data");
+            
 
             cmbHist.selectedIndex = 0;
 
             carregaGrid();
 
-
-
-
+                      
 
         }
 
@@ -68,27 +66,7 @@ namespace TechManager
                 dgvHist.DataSource = ListDto;
 
                 //---------------------------------------------------------------------------------------------------------------
-                foreach (DataGridViewRow row in dgvHist.Rows)
-                {
-
-                    if (Convert.ToString(row.Cells[5].Value) == "1")
-
-                    {
-                        row.DefaultCellStyle.BackColor = Color.ForestGreen;
-                        row.Cells[5].Value = Convert.ToString("Checado");
-
-                    }
-
-                    else
-                    {
-                        row.DefaultCellStyle.BackColor = Color.Maroon;
-                        row.Cells[5].Value = Convert.ToString("Não checado");
-
-
-                    }
-
-
-                }
+                Pintalinhas();
             }
             catch (Exception erro)
             {
@@ -117,6 +95,9 @@ namespace TechManager
                         List<probDto> ListDto = new List<probDto>();
                         ListDto = new probBll().listaPorId(dtoVar);
                         dgvHist.DataSource = ListDto;
+
+                        Pintalinhas();
+
                     }
                     catch (Exception erro)
                     {
@@ -131,6 +112,8 @@ namespace TechManager
                         List<probDto> ListDto = new List<probDto>();
                         ListDto = new probBll().listaPorProf(dtoVar);
                         dgvHist.DataSource = ListDto;
+
+                        Pintalinhas();
                     }
                     catch (Exception erro)
                     {
@@ -138,23 +121,46 @@ namespace TechManager
                     }
                     break;
 
-                case 3:
+                //case 3:
 
-                    //dtoVar.data = Convert.ToDateTime(txtUser.Text);
-                    //try
-                    //{
-                    //    List<probDto> ListDto = new List<probDto>();
-                    //    ListDto = new probBll().listaPorData(dtoVar);
-                    //    dgvHist.DataSource = ListDto;
-                    //}
-                    //catch (Exception erro)
-                    //{
-                    //    throw erro;
-                    //}
-                    break;
+                //    //dtoVar.data = Convert.ToDateTime(txtUser.Text);
+                //    //try
+                //    //{
+                //    //    List<probDto> ListDto = new List<probDto>();
+                //    //    ListDto = new probBll().listaPorData(dtoVar);
+                //    //    dgvHist.DataSource = ListDto;
+                //    //}
+                //    //catch (Exception erro)
+                //    //{
+                //    //    throw erro;
+                //    //}
+                //    break;
             }
         }
+        private void Pintalinhas()
+        {
+            foreach (DataGridViewRow row in dgvHist.Rows)
+            {
 
+                if (Convert.ToString(row.Cells[5].Value) == "1")
+
+                {
+                    row.DefaultCellStyle.BackColor = Color.ForestGreen;
+                    row.Cells[5].Value = Convert.ToString("Checado");
+
+                }
+
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.Maroon;
+                    row.Cells[5].Value = Convert.ToString("Não checado");
+
+
+                }
+
+
+            }
+        }
         private void cmbHist_onItemSelected(object sender, EventArgs e)
         {
             if (cmbHist.selectedIndex == 0)
