@@ -87,6 +87,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmAlteraPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <Compile Include="information.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmAlteraPerfil.resx">
       <DependentUpon>frmAdmAlteraPerfil.cs</DependentUpon>
     </EmbeddedResource>

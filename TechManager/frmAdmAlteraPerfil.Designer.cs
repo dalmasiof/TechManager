@@ -34,8 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvExclui = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgvAltera = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +66,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExclui)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAltera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +75,6 @@
             this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.pcbHome);
             this.panel1.Controls.Add(this.pcbLogo);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -108,26 +106,15 @@
             this.pcbLogo.TabIndex = 13;
             this.pcbLogo.TabStop = false;
             // 
-            // label2
+            // dgvAltera
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(63, 455);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Voltar";
-            // 
-            // dgvExclui
-            // 
-            this.dgvExclui.AllowUserToAddRows = false;
-            this.dgvExclui.AllowUserToDeleteRows = false;
+            this.dgvAltera.AllowUserToAddRows = false;
+            this.dgvAltera.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvExclui.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvExclui.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgvExclui.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvExclui.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAltera.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAltera.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvAltera.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAltera.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,9 +122,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExclui.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvExclui.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExclui.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAltera.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAltera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAltera.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nome,
             this.tipo,
@@ -145,22 +132,23 @@
             this.login,
             this.senha,
             this.email});
-            this.dgvExclui.DoubleBuffered = true;
-            this.dgvExclui.EnableHeadersVisualStyles = false;
-            this.dgvExclui.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgvExclui.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvExclui.Location = new System.Drawing.Point(198, 12);
-            this.dgvExclui.MultiSelect = false;
-            this.dgvExclui.Name = "dgvExclui";
-            this.dgvExclui.ReadOnly = true;
-            this.dgvExclui.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvExclui.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExclui.Size = new System.Drawing.Size(641, 150);
-            this.dgvExclui.TabIndex = 4;
+            this.dgvAltera.DoubleBuffered = true;
+            this.dgvAltera.EnableHeadersVisualStyles = false;
+            this.dgvAltera.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgvAltera.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvAltera.Location = new System.Drawing.Point(198, 12);
+            this.dgvAltera.MultiSelect = false;
+            this.dgvAltera.Name = "dgvAltera";
+            this.dgvAltera.ReadOnly = true;
+            this.dgvAltera.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvAltera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAltera.Size = new System.Drawing.Size(641, 150);
+            this.dgvAltera.TabIndex = 4;
+            this.dgvAltera.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAltera_CellClick);
             // 
             // id
             // 
-            this.id.DataPropertyName = "idUsuario";
+            this.id.DataPropertyName = "id";
             this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
@@ -174,7 +162,7 @@
             // 
             // tipo
             // 
-            this.tipo.DataPropertyName = "tipoUsu";
+            this.tipo.DataPropertyName = "tipo";
             this.tipo.HeaderText = "Tipo de acesso";
             this.tipo.Name = "tipo";
             this.tipo.ReadOnly = true;
@@ -280,7 +268,7 @@
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(120, 33);
             this.btnGravar.TabIndex = 120;
-            this.btnGravar.Text = "Gravar";
+            this.btnGravar.Text = "Alterar";
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
@@ -460,17 +448,16 @@
             this.Controls.Add(this.txtNomeFotoPerfil);
             this.Controls.Add(this.lblFotoPerfil);
             this.Controls.Add(this.pcbFoto);
-            this.Controls.Add(this.dgvExclui);
+            this.Controls.Add(this.dgvAltera);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdmAlteraPerfil";
             this.Text = "Alterar perfil";
             this.Load += new System.EventHandler(this.frmAdmAlteraPerfil_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExclui)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAltera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -482,8 +469,7 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton pcbHome;
         private System.Windows.Forms.PictureBox pcbLogo;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvExclui;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvAltera;
         private System.Windows.Forms.MaskedTextBox mktxtRG;
         private System.Windows.Forms.Label lblRG;
         private System.Windows.Forms.Label lblAcesso;

@@ -129,7 +129,6 @@
             // 
             // pcbProfessor
             // 
-            this.pcbProfessor.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
             this.pcbProfessor.Name = "pcbProfessor";

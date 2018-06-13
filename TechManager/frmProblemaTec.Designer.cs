@@ -153,11 +153,11 @@
             // 
             // pcbProfessor
             // 
-            this.pcbProfessor.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
             this.pcbProfessor.Name = "pcbProfessor";
             this.pcbProfessor.Size = new System.Drawing.Size(118, 106);
+            this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
             // 

@@ -41,6 +41,7 @@ namespace TechManager
                 {
                     bll.alterarUsuario(dtovar);
                     lblMensagem.Text = "Alterado com sucesso!";
+                    limpaCampos();
                 }
                 catch (Exception er)
                 {
@@ -70,7 +71,7 @@ namespace TechManager
                 return false;
             }
 
-            if (txtSenha.Text == txtConfirmarSenha.Text)
+            if (txtSenha.Text != txtConfirmarSenha.Text)
             {
                 lblMensagem.Text = "As senhas não coincidem!";
                 lblMensagem.ForeColor = Color.Red;

@@ -18,7 +18,9 @@ namespace TechManager
         {
             InitializeComponent();
         }
+
         usuarioDTO dto = new usuarioDTO();
+
         private void pcbHome_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -26,33 +28,76 @@ namespace TechManager
 
         private void frmAdmExcluiPerfil_Load(object sender, EventArgs e)
         {
+            carregaGrid();
             lblId.Text = "";
             lblNome.Text = "";
-            carregaGrid();
+            lblTipo.Text = "";
+
         }
 
+       
+        
         private void carregaGrid()
         {
+
             dgvExclui.AutoGenerateColumns = false;
             try
             {
                 List<usuarioDTO> ListDto = new List<usuarioDTO>();
                 ListDto = new usuarioBLL().listaUsuario();
                 dgvExclui.DataSource = ListDto;
+                foreach (DataGridViewRow row in dgvExclui.Rows)
+                {
+
+                    //if (Convert.ToInt32(row.Cells[2].Value) == 1)
+                    //{
+                    //    row.Cells[2].Value = Convert.ToString("Professor");
+
+                    //}
+
+                    //else if (Convert.ToInt32(row.Cells[2].Value) == 2)
+                    //{
+                    //    row.Cells[2].Value = Convert.ToString("Técnico");
+                    //}
+                    //else
+                    //{
+                    //    row.Cells[2].Value = Convert.ToString("Administrador");
+                    //}
+
+
+                }
             }
             catch (Exception erro)
             {
                 throw erro;
             }
+
         }
 
         private void dgvExclui_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int sel = dgvExclui.CurrentRow.Index;
+            string nome = Convert.ToString(dgvExclui["nome", sel].Value);
 
             lblNome.Text = Convert.ToString(dgvExclui["nome", sel].Value);
             lblId.Text = Convert.ToString(dgvExclui["idUsuario", sel].Value);
+            
+            int tipo = Convert.ToInt32(dgvExclui["tipo", sel].Value);
+            switch (tipo)
+            {
+                case 1:
+                    lblTipo.Text = "Professor";
+                    break;
 
+                case 2:
+                     lblTipo.Text = "Técnico";
+                    break;
+
+                case 3:
+                     lblTipo.Text = "Administrador";
+                    break;
+
+            }
 
             dto.id = Convert.ToInt32(dgvExclui["idUsuario", sel].Value);
 
@@ -62,27 +107,46 @@ namespace TechManager
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if(lblId.Text == "")
+
+            int sel = dgvExclui.CurrentRow.Index;
+
+            if (lblId.Text == "")
             {
-            MessageBox.Show("Selecione um usuário acima clicando sobree ele", "Usuário não selecionado", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Selecione um usuário acima clicando sobree ele", "Usuário não selecionado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
-                try
+                if (DialogResult.Yes == MessageBox.Show("Certeza que deseja excluir o registro de " + Convert.ToString(dgvExclui["nome", sel].Value) +
+                   "?", "Excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
-                    usuarioBLL bll = new usuarioBLL();
-                    bll.deleteUsu(dto);
-                }
-                catch (Exception erro)
-                {
-                    throw erro;
-                }
-                carregaGrid();
+                    try
+                    {
+                        usuarioBLL bll = new usuarioBLL();
+                        bll.deleteUsu(dto);
+                    }
+                    catch (Exception erro)
+                    {
+                        throw erro;
+                    }
+                    carregaGrid();
+                    lblNome.Text = "";
+                    lblId.Text = "";
+                    lblTipo.Text = "";
 
+                }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            lblNome.Text = "";
+            lblId.Text = "";
+            lblTipo.Text = "";
         }
     }
 }

@@ -119,6 +119,7 @@
             this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
             this.pcbProfessor.Name = "pcbProfessor";
             this.pcbProfessor.Size = new System.Drawing.Size(118, 106);
+            this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
             // 
