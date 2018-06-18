@@ -31,14 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdvertenciaProf));
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtJustificativa = new System.Windows.Forms.TextBox();
             this.lblJustificativa = new System.Windows.Forms.Label();
-            this.dataGridAdvert = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -47,32 +41,18 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.lblAdvertencia = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAdvert)).BeginInit();
+            this.dataGridAdvert = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAdvert)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Professor";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "ID Máquina";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Problema";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Data";
-            this.Column5.Name = "Column5";
             // 
             // txtJustificativa
             // 
@@ -92,43 +72,6 @@
             this.lblJustificativa.Size = new System.Drawing.Size(137, 25);
             this.lblJustificativa.TabIndex = 11;
             this.lblJustificativa.Text = "Justificativa :";
-            // 
-            // dataGridAdvert
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridAdvert.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridAdvert.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridAdvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridAdvert.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridAdvert.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridAdvert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAdvert.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridAdvert.DoubleBuffered = true;
-            this.dataGridAdvert.EnableHeadersVisualStyles = false;
-            this.dataGridAdvert.HeaderBgColor = System.Drawing.Color.Brown;
-            this.dataGridAdvert.HeaderForeColor = System.Drawing.Color.White;
-            this.dataGridAdvert.Location = new System.Drawing.Point(243, 12);
-            this.dataGridAdvert.Name = "dataGridAdvert";
-            this.dataGridAdvert.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridAdvert.Size = new System.Drawing.Size(609, 252);
-            this.dataGridAdvert.TabIndex = 9;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Aula";
-            this.Column1.Name = "Column1";
             // 
             // btnHome
             // 
@@ -233,29 +176,101 @@
             this.lblAdvertencia.TabIndex = 17;
             this.lblAdvertencia.Text = "Advertencia: + Nao efetivada";
             // 
+            // dataGridAdvert
+            // 
+            this.dataGridAdvert.AllowUserToAddRows = false;
+            this.dataGridAdvert.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridAdvert.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridAdvert.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridAdvert.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridAdvert.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridAdvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridAdvert.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridAdvert.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridAdvert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAdvert.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dataGridAdvert.DoubleBuffered = true;
+            this.dataGridAdvert.EnableHeadersVisualStyles = false;
+            this.dataGridAdvert.HeaderBgColor = System.Drawing.Color.Brown;
+            this.dataGridAdvert.HeaderForeColor = System.Drawing.Color.White;
+            this.dataGridAdvert.Location = new System.Drawing.Point(269, 25);
+            this.dataGridAdvert.Name = "dataGridAdvert";
+            this.dataGridAdvert.ReadOnly = true;
+            this.dataGridAdvert.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridAdvert.Size = new System.Drawing.Size(575, 203);
+            this.dataGridAdvert.TabIndex = 20;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "aula";
+            this.Column1.HeaderText = "Aula";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "professor";
+            this.Column2.HeaderText = "Professor";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "idMaquina";
+            this.Column3.HeaderText = "ID Máquina";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "problema";
+            this.Column4.HeaderText = "Problema";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "data";
+            this.Column5.HeaderText = "Data";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // frmAdvertenciaProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 610);
+            this.Controls.Add(this.dataGridAdvert);
             this.Controls.Add(this.lblAdvertencia);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtJustificativa);
             this.Controls.Add(this.lblJustificativa);
-            this.Controls.Add(this.dataGridAdvert);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdvertenciaProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Advertencia Professor";
             this.Load += new System.EventHandler(this.frmAdvertencia_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAdvert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAdvert)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,14 +278,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TextBox txtJustificativa;
         private System.Windows.Forms.Label lblJustificativa;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridAdvert;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private Bunifu.Framework.UI.BunifuImageButton btnHome;
         private System.Windows.Forms.PictureBox pcbLogo;
         private System.Windows.Forms.Label lblNome;
@@ -279,5 +288,11 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label lblAdvertencia;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridAdvert;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

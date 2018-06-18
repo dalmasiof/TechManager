@@ -17,8 +17,6 @@ namespace DAL
         MySqlCommand comando = new MySqlCommand();
 
         public List<probDto> carregaTudo()
-
-
         {
             try
             {
@@ -92,8 +90,6 @@ namespace DAL
         }
 
         public List<probDto> carregaPorData(probDto dtovar)
-
-
         {
             try
             {
@@ -137,15 +133,13 @@ namespace DAL
         }
 
         public List<probDto> carregaPorProfessor(probDto dtovar)
-
-
         {
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(professor) LIKE '%"+dtovar.professor+"%'";
+                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(professor) LIKE '%" + dtovar.professor + "%'";
                 comando.Connection = conexao;
 
                 List<probDto> listProbDto = new List<probDto>();
@@ -182,18 +176,16 @@ namespace DAL
             }
         }
         public List<probDto> carregaPorId(probDto dtovar)
-
-
         {
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(idmaquina) LIKE '%"+dtovar.idMaquina+"%';";
+                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(idmaquina) LIKE '%" + dtovar.idMaquina + "%';";
                 comando.Connection = conexao;
 
-               
+
                 List<probDto> listProbDto = new List<probDto>();
                 conexao.Open();
 

@@ -282,3 +282,4 @@ C:\Users\Admin\Documents\DSFHA\TechManager\TechManager\obj\Debug\TechManager.Pro
 C:\Users\Admin\Documents\DSFHA\TechManager\TechManager\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\DSFHA\TechManager\TechManager\obj\Debug\TechManager.pdb
 C:\Users\Maza\Documents\Visual Studio 2017\TechManager\TechManager\obj\Debug\TechManager.frmSplash.resources
+D:\Github\TechManager\TechManager\obj\Debug\TechManager.frmSplash.resources
