@@ -162,7 +162,7 @@ namespace DAL
                         dto.senha = Convert.ToString(dr["senha"]);
 
                         dto.id = Convert.ToInt32(dr["idUsuario"]);
-                        dto.tipo = Convert.ToChar(dr["tipoUsu"]);
+                        dto.tipo = Convert.ToInt32(dr["tipoUsu"]);
                         dto.email = Convert.ToString(dr["email"]);
 
                         dto.nome = Convert.ToString(dr["nome"]);

@@ -69,5 +69,11 @@ namespace TechManager
             frmAdmExcluiPerfil exclui = new frmAdmExcluiPerfil();
             exclui.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmAbout about = new frmAbout();
+            about.Show();
+        }
     }
 }

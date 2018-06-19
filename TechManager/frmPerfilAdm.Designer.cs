@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFotoProf)).BeginInit();
@@ -111,6 +112,7 @@
             this.btnStand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStand.Textcolor = System.Drawing.Color.DarkRed;
             this.btnStand.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnStand, "Modo StandBy");
             this.btnStand.Click += new System.EventHandler(this.btnStand_Click);
             // 
             // btnSair
@@ -161,6 +163,7 @@
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDel.Textcolor = System.Drawing.Color.DarkRed;
             this.btnDel.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnDel, "Deletar Usuário");
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAltera
@@ -197,6 +200,7 @@
             this.btnAltera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAltera.Textcolor = System.Drawing.Color.DarkRed;
             this.btnAltera.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnAltera, "Alterar Usuário");
             this.btnAltera.Click += new System.EventHandler(this.btnAltera_Click);
             // 
             // btnCad
@@ -233,6 +237,7 @@
             this.btnCad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCad.Textcolor = System.Drawing.Color.DarkRed;
             this.btnCad.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolTip1.SetToolTip(this.btnCad, "Cadastrar usuário");
             this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
             // 
             // lblNome
@@ -266,6 +271,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(242, 172);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "ETEC");
             // 
             // pictureBox3
             // 
@@ -276,6 +282,8 @@
             this.pictureBox3.Size = new System.Drawing.Size(358, 289);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Sobre");
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // notifyIcon1
             // 
@@ -323,5 +331,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
