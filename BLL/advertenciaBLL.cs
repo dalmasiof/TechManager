@@ -12,15 +12,39 @@ namespace BLL
     {
         advertenciaDAL dal = new advertenciaDAL();
 
-        public List<advertenciaDTO> listarProb()
+        public List<advertenciaDTO> listarProbProTec()
         {
             try
             {
-                return new advertenciaDAL().carregaTudo();
+                return new advertenciaDAL().carregaTudoPraJustificar();
             }
             catch (Exception erro)
             {
                 throw erro;
+            }
+        }
+
+        public List<advertenciaDTO> listarProbProProf()
+        {
+            try
+            {
+                return new advertenciaDAL().carregaTudoPraAdvertencia();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
+        public void novaAdvertencia(advertenciaDTO dtovar)
+        {
+            try
+            {
+                dal.novaAdvertencia(dtovar);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

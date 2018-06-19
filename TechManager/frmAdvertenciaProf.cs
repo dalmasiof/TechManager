@@ -14,14 +14,17 @@ namespace TechManager
 {
     public partial class frmAdvertenciaProf : Form
     {
-        probDto dto = new probDto();
+        int registro;
+
+        advertenciaDTO dtovar = new advertenciaDTO();
+        advertenciaBLL bll = new advertenciaBLL();
 
         public frmAdvertenciaProf()
         {
             InitializeComponent();
         }
 
-        private void frmAdvertencia_Load(object sender, EventArgs e)
+        private void frmAdvertenciaTecnico_Load(object sender, EventArgs e)
         {
             pcbProfessor.ImageLocation = information.foto;
             lblNome.Text = information.nome;
@@ -30,12 +33,12 @@ namespace TechManager
 
         private void carregaGrid()
         {
-            dataGridAdvert.AutoGenerateColumns = false;
+            dataGridProb.AutoGenerateColumns = false;
             try
             {
                 List<advertenciaDTO> ListDto = new List<advertenciaDTO>();
-                ListDto = new advertenciaBLL().listarProb();
-                dataGridAdvert.DataSource = ListDto;
+                ListDto = new advertenciaBLL().listarProbProProf();
+                dataGridProb.DataSource = ListDto;
             }
             catch (Exception erro)
             {
@@ -43,14 +46,66 @@ namespace TechManager
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void dataGridProb_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.Close();
+            int sel = dataGridProb.CurrentRow.Index;
+
+            registro = Convert.ToInt32(dataGridProb["idProb", sel].Value);
+
+            lblMensagem.Text = "Relate a Advertencia e clique no botão Enviar!";
+            lblMensagem.ForeColor = Color.Red;
+
+            txtAdvert.Clear();
+            txtAdvert.ForeColor = Color.Black;
+            txtAdvert.Focus();
+        }
+
+        private void txtAdvert_TextChanged(object sender, EventArgs e)
+        {
+            if(txtAdvert.Text == "")
+            {
+                lblMensagem.Text = "A advertencia não pode estar vazia!";
+                lblMensagem.ForeColor = Color.Red;
+                btnEnviar.Enabled = false;
+            }
+
+            else
+            {
+                lblMensagem.Text = "Envie sua advertencia clicando no botão Enviar!";
+                lblMensagem.ForeColor = Color.Green;
+                btnEnviar.Enabled = true;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtAdvert.Text = "Escreva sua advertencia aqui!";
+            txtAdvert.ForeColor = Color.Gray;
+
+            lblMensagem.Text = "";
+
+            lblMensagem.Text = "Selecione um problema para mandar uma Advertencia, e depois clique no botão enviar!";
+            lblMensagem.ForeColor = Color.Red;
+
+            btnEnviar.Enabled = false;
+
+            registro = -1;
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+            dtovar.idProb = registro;
+            dtovar.advertencia = txtAdvert.Text;
 
+            try
+            {
+                bll.novaAdvertencia(dtovar);
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

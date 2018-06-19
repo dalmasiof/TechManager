@@ -51,7 +51,7 @@ namespace TechManager
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
-            frmAdvertenciaProf adv = new frmAdvertenciaProf();
+            frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
             adv.Show();
         }
 
