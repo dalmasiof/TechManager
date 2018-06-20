@@ -16,5 +16,7 @@ namespace DTO
 
         public DateTime data { get; set; }
         public string Check { get; set; }
+
+
     }
 }

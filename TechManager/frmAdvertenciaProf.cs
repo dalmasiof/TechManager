@@ -26,6 +26,7 @@ namespace TechManager
 
         private void frmAdvertenciaTecnico_Load(object sender, EventArgs e)
         {
+            txtAdvert.Enabled = false;
             pcbProfessor.ImageLocation = information.foto;
             lblNome.Text = information.nome;
             carregaGrid();
@@ -39,6 +40,29 @@ namespace TechManager
                 List<advertenciaDTO> ListDto = new List<advertenciaDTO>();
                 ListDto = new advertenciaBLL().listarProbProProf();
                 dataGridProb.DataSource = ListDto;
+
+                /*foreach (DataGridViewRow row in dataGridProb.Rows)
+                {
+
+                    if (Convert.ToString(row.Cells["justificativa"].Value) != 
+"")
+
+                    {
+                        row.Visible = false;
+
+                    }
+
+                    else
+                    {
+                        row.Visible = true;
+
+
+                    }
+
+
+                }*/
+
+
             }
             catch (Exception erro)
             {
@@ -57,6 +81,7 @@ namespace TechManager
 
             txtAdvert.Clear();
             txtAdvert.ForeColor = Color.Black;
+            txtAdvert.Enabled = true;
             txtAdvert.Focus();
         }
 
@@ -79,7 +104,7 @@ namespace TechManager
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtAdvert.Text = "Escreva sua advertencia aqui!";
+            txtAdvert.Text = "Selecione um problema na tabela acima";
             txtAdvert.ForeColor = Color.Gray;
 
             lblMensagem.Text = "";
@@ -102,12 +127,14 @@ namespace TechManager
                 bll.novaAdvertencia(dtovar);
                 lblMensagem.ForeColor = Color.Green;
 
-                txtAdvert.Text = "Escreva sua advertencia aqui!";
+                txtAdvert.Text = "Selecione um problema na tabela acima";
                 txtAdvert.ForeColor = Color.Gray;
 
                 btnEnviar.Enabled = false;
 
                 lblMensagem.Text = "Advertencia enviada ao técnico, selecione um novo problema caso desejar enviar uma advertencia!";
+                txtAdvert.Enabled = false;
+
             }
 
             catch
@@ -115,6 +142,11 @@ namespace TechManager
                 lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
             }
 
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

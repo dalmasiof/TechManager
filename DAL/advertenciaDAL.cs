@@ -116,6 +116,7 @@ namespace DAL
                 {
                     Connection = conexao
                 };
+
                 sql.Parameters.Add("@IdProblema", MySqlDbType.Int32).Value = dtovar.idProb;
                 sql.Parameters.Add("@Advertencia", MySqlDbType.VarChar).Value = dtovar.advertencia;
                 conexao.Open();

@@ -73,14 +73,15 @@
             // 
             this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
-            this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.back__1_;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(68, 537);
+            this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(68, 523);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(74, 60);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(74, 74);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuImageButton2.TabIndex = 3;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // pictureBox3
             // 
@@ -273,7 +274,7 @@
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(244, 482);
+            this.lblMensagem.Location = new System.Drawing.Point(244, 467);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(532, 16);
             this.lblMensagem.TabIndex = 5;

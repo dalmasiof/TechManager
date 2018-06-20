@@ -66,7 +66,7 @@ namespace DAL
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
-                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb,resolvido) values(@aula,@profe,@idmaquina,@descProb,@data,0)")
+                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb) values(@aula,@profe,@idmaquina,@descProb,@data)")
                 {
                     Connection = conexao
                 };
@@ -75,6 +75,8 @@ namespace DAL
                 sql.Parameters.Add("@idmaquina", MySqlDbType.VarChar).Value = dto.idMaquina;
                 sql.Parameters.Add("@descProb", MySqlDbType.VarChar).Value = dto.problema;
                 sql.Parameters.Add("@data", MySqlDbType.DateTime).Value = dto.data;
+
+
                 conexao.Open();
                 sql.ExecuteNonQuery();
             }

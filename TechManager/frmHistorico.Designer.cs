@@ -157,7 +157,7 @@
             this.dgvHist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHist.Size = new System.Drawing.Size(626, 189);
-            this.dgvHist.TabIndex = 10;
+            this.dgvHist.TabIndex = 2;
             this.dgvHist.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHist_CellEndEdit);
             // 
             // Column1
@@ -216,7 +216,7 @@
             this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
             this.cmbHist.selectedIndex = -1;
             this.cmbHist.Size = new System.Drawing.Size(217, 35);
-            this.cmbHist.TabIndex = 11;
+            this.cmbHist.TabIndex = 0;
             this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
             // 
             // txtUser
@@ -226,7 +226,7 @@
             this.txtUser.Location = new System.Drawing.Point(503, 249);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(247, 26);
-            this.txtUser.TabIndex = 12;
+            this.txtUser.TabIndex = 1;
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
