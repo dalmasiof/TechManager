@@ -47,5 +47,17 @@ namespace BLL
                 throw ex;
             }
         }
+
+        public void novaJustificativa(advertenciaDTO dtovar)
+        {
+            try
+            {
+                dal.novaJustificativa(dtovar);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

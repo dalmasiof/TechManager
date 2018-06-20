@@ -116,7 +116,7 @@
             // 
             this.lblAdvert.AutoSize = true;
             this.lblAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvert.Location = new System.Drawing.Point(282, 308);
+            this.lblAdvert.Location = new System.Drawing.Point(283, 272);
             this.lblAdvert.Name = "lblAdvert";
             this.lblAdvert.Size = new System.Drawing.Size(126, 25);
             this.lblAdvert.TabIndex = 4;
@@ -126,7 +126,7 @@
             // 
             this.txtAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdvert.ForeColor = System.Drawing.Color.Gray;
-            this.txtAdvert.Location = new System.Drawing.Point(428, 309);
+            this.txtAdvert.Location = new System.Drawing.Point(428, 273);
             this.txtAdvert.Multiline = true;
             this.txtAdvert.Name = "txtAdvert";
             this.txtAdvert.Size = new System.Drawing.Size(378, 157);
@@ -273,7 +273,7 @@
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(285, 254);
+            this.lblMensagem.Location = new System.Drawing.Point(244, 482);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(532, 16);
             this.lblMensagem.TabIndex = 5;

@@ -43,12 +43,14 @@
             this.lblAdvertencia = new System.Windows.Forms.Label();
             this.dataGridAdvert = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idAdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.justificativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advertencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMensagem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
@@ -58,21 +60,25 @@
             // 
             // txtJustificativa
             // 
+            this.txtJustificativa.Enabled = false;
             this.txtJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJustificativa.Location = new System.Drawing.Point(431, 364);
+            this.txtJustificativa.ForeColor = System.Drawing.Color.Gray;
+            this.txtJustificativa.Location = new System.Drawing.Point(431, 298);
             this.txtJustificativa.Multiline = true;
             this.txtJustificativa.Name = "txtJustificativa";
             this.txtJustificativa.Size = new System.Drawing.Size(349, 163);
             this.txtJustificativa.TabIndex = 1;
+            this.txtJustificativa.Text = "Escreva sua justificativa aqui!";
+            this.txtJustificativa.TextChanged += new System.EventHandler(this.txtJustificativa_TextChanged);
             // 
             // lblJustificativa
             // 
             this.lblJustificativa.AutoSize = true;
             this.lblJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJustificativa.Location = new System.Drawing.Point(280, 430);
+            this.lblJustificativa.Location = new System.Drawing.Point(280, 364);
             this.lblJustificativa.Name = "lblJustificativa";
             this.lblJustificativa.Size = new System.Drawing.Size(137, 25);
-            this.lblJustificativa.TabIndex = 11;
+            this.lblJustificativa.TabIndex = 5;
             this.lblJustificativa.Text = "Justificativa :";
             // 
             // btnHome
@@ -107,7 +113,7 @@
             this.lblNome.Location = new System.Drawing.Point(40, 134);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(136, 23);
-            this.lblNome.TabIndex = 2;
+            this.lblNome.TabIndex = 7;
             this.lblNome.Text = "Tecnico ( Nome )";
             // 
             // pcbProfessor
@@ -146,9 +152,10 @@
             this.btnCancelar.Location = new System.Drawing.Point(431, 565);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
-            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEnviar
             // 
@@ -163,7 +170,7 @@
             this.btnEnviar.Location = new System.Drawing.Point(626, 565);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(120, 33);
-            this.btnEnviar.TabIndex = 15;
+            this.btnEnviar.TabIndex = 2;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
@@ -172,11 +179,11 @@
             // 
             this.lblAdvertencia.AutoSize = true;
             this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvertencia.Location = new System.Drawing.Point(280, 300);
+            this.lblAdvertencia.Location = new System.Drawing.Point(280, 256);
             this.lblAdvertencia.Name = "lblAdvertencia";
-            this.lblAdvertencia.Size = new System.Drawing.Size(511, 25);
-            this.lblAdvertencia.TabIndex = 17;
-            this.lblAdvertencia.Text = "Clique em um Problema para mostrar a Advertencia!";
+            this.lblAdvertencia.Size = new System.Drawing.Size(132, 25);
+            this.lblAdvertencia.TabIndex = 6;
+            this.lblAdvertencia.Text = "Advertencia:";
             // 
             // dataGridAdvert
             // 
@@ -200,6 +207,7 @@
             this.dataGridAdvert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAdvert.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.idAdv,
             this.justificativa,
             this.advertencia,
             this.Column2,
@@ -215,7 +223,7 @@
             this.dataGridAdvert.ReadOnly = true;
             this.dataGridAdvert.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridAdvert.Size = new System.Drawing.Size(575, 203);
-            this.dataGridAdvert.TabIndex = 20;
+            this.dataGridAdvert.TabIndex = 0;
             this.dataGridAdvert.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAdvert_CellClick);
             // 
             // Column1
@@ -224,6 +232,13 @@
             this.Column1.HeaderText = "Aula";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            // 
+            // idAdv
+            // 
+            this.idAdv.DataPropertyName = "idAdv";
+            this.idAdv.HeaderText = "idAdv";
+            this.idAdv.Name = "idAdv";
+            this.idAdv.ReadOnly = true;
             // 
             // justificativa
             // 
@@ -269,11 +284,24 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // lblMensagem
+            // 
+            this.lblMensagem.AutoSize = true;
+            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
+            this.lblMensagem.Location = new System.Drawing.Point(271, 506);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(485, 15);
+            this.lblMensagem.TabIndex = 4;
+            this.lblMensagem.Text = "Selecione um problema para mandar uma Justificativa, e depois clique no botão env" +
+    "iar!";
+            // 
             // frmAdvertenciaTecnico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 610);
+            this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.dataGridAdvert);
             this.Controls.Add(this.lblAdvertencia);
             this.Controls.Add(this.btnCancelar);
@@ -310,7 +338,9 @@
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label lblAdvertencia;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridAdvert;
+        private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAdv;
         private System.Windows.Forms.DataGridViewTextBoxColumn justificativa;
         private System.Windows.Forms.DataGridViewTextBoxColumn advertencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

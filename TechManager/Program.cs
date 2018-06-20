@@ -16,7 +16,7 @@ namespace TechManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAdvertenciaTecnico());
+            Application.Run(new frmSplash());
         }
     }
 }

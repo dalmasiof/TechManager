@@ -305,6 +305,7 @@
             this.Name = "frmPerfilAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Administrador";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerfilAdm_FormClosed);
             this.Load += new System.EventHandler(this.frmPerfilAdm_Load);
             this.panel1.ResumeLayout(false);

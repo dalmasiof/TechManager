@@ -100,12 +100,21 @@ namespace TechManager
             try
             {
                 bll.novaAdvertencia(dtovar);
+                lblMensagem.ForeColor = Color.Green;
+
+                txtAdvert.Text = "Escreva sua advertencia aqui!";
+                txtAdvert.ForeColor = Color.Gray;
+
+                btnEnviar.Enabled = false;
+
+                lblMensagem.Text = "Advertencia enviada ao técnico, selecione um novo problema caso desejar enviar uma advertencia!";
             }
 
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
             }
+
         }
     }
 }

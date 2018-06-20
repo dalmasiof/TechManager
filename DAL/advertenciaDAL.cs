@@ -45,6 +45,7 @@ namespace DAL
                         dtovar.Check = Convert.ToString(dr["resolvido"]);
                         dtovar.justificativa = Convert.ToString(dr["justificativa"]);
                         dtovar.advertencia = Convert.ToString(dr["advertencia"]);
+                        dtovar.idAdv = Convert.ToInt32(dr["idAdv"]);
 
                         listAdvertenciaDto.Add(dtovar);
 
@@ -68,7 +69,7 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM problema";
+                comando.CommandText = "SELECT * FROM problema;";
                 comando.Connection = conexao;
 
                 List<advertenciaDTO> listAdvertenciaDto = new List<advertenciaDTO>();
@@ -90,7 +91,6 @@ namespace DAL
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
                         dtovar.Check = Convert.ToString(dr["resolvido"]);
-                        dtovar.advertencia = Convert.ToString(dr["advertencia"]);
 
                         listAdvertenciaDto.Add(dtovar);
 
@@ -118,6 +118,32 @@ namespace DAL
                 };
                 sql.Parameters.Add("@IdProblema", MySqlDbType.Int32).Value = dtovar.idProb;
                 sql.Parameters.Add("@Advertencia", MySqlDbType.VarChar).Value = dtovar.advertencia;
+                conexao.Open();
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public void novaJustificativa(advertenciaDTO dtovar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("update advertencia set justificativa = @Justificativa,nometec = @Tecnico where idAdv = @IdAdv")
+                {
+                    Connection = conexao
+                };
+                sql.Parameters.Add("@Justificativa", MySqlDbType.VarChar).Value = dtovar.justificativa;
+                sql.Parameters.Add("@Tecnico", MySqlDbType.VarChar).Value = dtovar.nomeTec;
+                sql.Parameters.Add("@IdAdv", MySqlDbType.Int32).Value = dtovar.idAdv;
                 conexao.Open();
                 sql.ExecuteNonQuery();
             }

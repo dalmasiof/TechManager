@@ -86,5 +86,10 @@ namespace TechManager
         {
             Application.Exit();
         }
+
+        private void frmPerfilTec_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
