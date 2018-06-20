@@ -44,16 +44,18 @@ foreign key (idProb) references problema(idProb)
 
 );
 
-/*select tecnico*/
+/*insert professor advertencia*/
+insert into advertencia(idprob,advertencia)
+values(4,"problema não foi resolvido");
+
+/*select tecnico, ele ve a advertencia*/
 SELECT * FROM problema
 INNER JOIN ADVERTENCIA
 ON ADVERTENCIA.idprob = problema.idprob ;
 
-/*insert professor*/
-insert into advertencia(idprob,advertencia)
-values(4,"problema não foi resolvido");
 
-/*update tecnico*/
+
+/*update tecnico, manda justificativa*/
 update advertencia set justificativa = "falta de material",nometec = "junior"; 
 
 

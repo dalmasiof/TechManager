@@ -334,9 +334,12 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPerfilTec";
             this.Text = "Menu Técnico";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerfilTec_FormClosed);
             this.Load += new System.EventHandler(this.frmPerfilTec_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

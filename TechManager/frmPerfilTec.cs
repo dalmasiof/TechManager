@@ -51,7 +51,7 @@ namespace TechManager
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
-            frmAdvertenciaProf adv = new frmAdvertenciaProf();
+            frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
             adv.Show();
         }
 
@@ -83,6 +83,11 @@ namespace TechManager
         }
 
         private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmPerfilTec_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }

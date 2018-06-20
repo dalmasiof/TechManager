@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TechManager</RootNamespace>
     <AssemblyName>TechManager</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -105,17 +105,17 @@
     <Compile Include="frmAdmExcluiPerfil.Designer.cs">
       <DependentUpon>frmAdmExcluiPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdvertenciaProf.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAdvertenciaProf.Designer.cs">
-      <DependentUpon>frmAdvertenciaProf.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAdvertenciaTecnico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdvertenciaTecnico.Designer.cs">
       <DependentUpon>frmAdvertenciaTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdvertenciaProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdvertenciaProf.Designer.cs">
+      <DependentUpon>frmAdvertenciaProf.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAlteraPerfil.cs">
       <SubType>Form</SubType>
@@ -195,11 +195,11 @@
     <EmbeddedResource Include="frmAdmExcluiPerfil.resx">
       <DependentUpon>frmAdmExcluiPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAdvertenciaProf.resx">
-      <DependentUpon>frmAdvertenciaProf.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAdvertenciaTecnico.resx">
       <DependentUpon>frmAdvertenciaTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdvertenciaProf.resx">
+      <DependentUpon>frmAdvertenciaProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAlteraPerfil.resx">
       <DependentUpon>frmAlteraPerfil.cs</DependentUpon>
