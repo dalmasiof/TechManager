@@ -38,10 +38,35 @@ namespace TechManager
                 List<advertenciaDTO> ListDto = new List<advertenciaDTO>();
                 ListDto = new advertenciaBLL().listarProbProTec();
                 dataGridAdvert.DataSource = ListDto;
+
+                CurrencyManager cm = (CurrencyManager)BindingContext[dataGridAdvert.DataSource];
+                cm.EndCurrentEdit();
+                cm.ResumeBinding();
+                cm.SuspendBinding();
+
+                foreach (DataGridViewRow row in dataGridAdvert.Rows)
+                {
+
+                    if (Convert.ToString(row.Cells["justificativa"].Value) == "")
+
+                    {
+                        row.Visible = true;
+
+                    }
+
+                    else
+                    {
+                        row.Visible = false;
+
+
+                    }
+
+
+                }
             }
             catch (Exception erro)
             {
-                throw erro;
+                MessageBox.Show(""+erro);
             }
         }
 
@@ -68,11 +93,13 @@ namespace TechManager
 
                 lblMensagem.Text = "Justificativa enviada ao professor, selecione uma nova advertencia caso queira justificar!";
                 lblAdvertencia.Text = "Advertencia:    ";
+                carregaGrid();
             }
 
-            catch
+            catch (Exception erro)
             {
-                lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
+                MessageBox.Show("" + erro);
+                //lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
             }
         }
 

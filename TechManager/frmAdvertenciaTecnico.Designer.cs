@@ -42,6 +42,7 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.lblAdvertencia = new System.Windows.Forms.Label();
             this.dataGridAdvert = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.lblMensagem = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idAdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.justificativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +51,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblMensagem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
@@ -118,7 +118,6 @@
             // 
             // pcbProfessor
             // 
-            this.pcbProfessor.BackgroundImage = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
             this.pcbProfessor.Name = "pcbProfessor";
@@ -226,6 +225,18 @@
             this.dataGridAdvert.TabIndex = 0;
             this.dataGridAdvert.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAdvert_CellClick);
             // 
+            // lblMensagem
+            // 
+            this.lblMensagem.AutoSize = true;
+            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
+            this.lblMensagem.Location = new System.Drawing.Point(271, 506);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(485, 15);
+            this.lblMensagem.TabIndex = 4;
+            this.lblMensagem.Text = "Selecione um problema para mandar uma Justificativa, e depois clique no botão env" +
+    "iar!";
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "aula";
@@ -242,7 +253,7 @@
             // 
             // justificativa
             // 
-            this.justificativa.DataPropertyName = "justificativa";
+            this.justificativa.DataPropertyName = "justificado";
             this.justificativa.HeaderText = "Column6";
             this.justificativa.Name = "justificativa";
             this.justificativa.ReadOnly = true;
@@ -283,18 +294,6 @@
             this.Column5.HeaderText = "Data";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            // 
-            // lblMensagem
-            // 
-            this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(271, 506);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(485, 15);
-            this.lblMensagem.TabIndex = 4;
-            this.lblMensagem.Text = "Selecione um problema para mandar uma Justificativa, e depois clique no botão env" +
-    "iar!";
             // 
             // frmAdvertenciaTecnico
             // 

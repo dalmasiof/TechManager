@@ -39,17 +39,17 @@
             this.lblAdvert = new System.Windows.Forms.Label();
             this.txtAdvert = new System.Windows.Forms.TextBox();
             this.dataGridProb = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.lblMensagem = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.justificativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.advertido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advertencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.lblMensagem = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -155,7 +155,7 @@
             this.dataGridProb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.justificativa,
+            this.advertido,
             this.advertencia,
             this.Column3,
             this.Column4,
@@ -172,65 +172,6 @@
             this.dataGridProb.Size = new System.Drawing.Size(542, 189);
             this.dataGridProb.TabIndex = 0;
             this.dataGridProb.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProb_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "aula";
-            this.Column1.HeaderText = "Aula";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "professor";
-            this.Column2.HeaderText = "Professor";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // justificativa
-            // 
-            this.justificativa.DataPropertyName = "justificativa";
-            this.justificativa.HeaderText = "Column6";
-            this.justificativa.Name = "justificativa";
-            this.justificativa.ReadOnly = true;
-            this.justificativa.Visible = false;
-            // 
-            // advertencia
-            // 
-            this.advertencia.DataPropertyName = "advertencia";
-            this.advertencia.HeaderText = "Column7";
-            this.advertencia.Name = "advertencia";
-            this.advertencia.ReadOnly = true;
-            this.advertencia.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "idMaquina";
-            this.Column3.HeaderText = "ID Máquina";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "problema";
-            this.Column4.HeaderText = "Problema";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // idProb
-            // 
-            this.idProb.DataPropertyName = "idProb";
-            this.idProb.HeaderText = "idProb";
-            this.idProb.Name = "idProb";
-            this.idProb.ReadOnly = true;
-            this.idProb.Visible = false;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "data";
-            this.Column5.HeaderText = "Data";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // btnCancelar
             // 
@@ -281,6 +222,65 @@
             this.lblMensagem.Text = "Selecione um problema para mandar uma Advertencia, e depois clique no botão envia" +
     "r!";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "aula";
+            this.Column1.HeaderText = "Aula";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "professor";
+            this.Column2.HeaderText = "Professor";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // advertido
+            // 
+            this.advertido.DataPropertyName = "advertido";
+            this.advertido.HeaderText = "Column6";
+            this.advertido.Name = "advertido";
+            this.advertido.ReadOnly = true;
+            this.advertido.Visible = false;
+            // 
+            // advertencia
+            // 
+            this.advertencia.DataPropertyName = "advertencia";
+            this.advertencia.HeaderText = "Column7";
+            this.advertencia.Name = "advertencia";
+            this.advertencia.ReadOnly = true;
+            this.advertencia.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "idMaquina";
+            this.Column3.HeaderText = "ID Máquina";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "problema";
+            this.Column4.HeaderText = "Problema";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // idProb
+            // 
+            this.idProb.DataPropertyName = "idProb";
+            this.idProb.HeaderText = "idProb";
+            this.idProb.Name = "idProb";
+            this.idProb.ReadOnly = true;
+            this.idProb.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "data";
+            this.Column5.HeaderText = "Data";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // frmAdvertenciaProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,7 +324,7 @@
         private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn justificativa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn advertido;
         private System.Windows.Forms.DataGridViewTextBoxColumn advertencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

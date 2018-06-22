@@ -41,32 +41,36 @@ namespace TechManager
                 ListDto = new advertenciaBLL().listarProbProProf();
                 dataGridProb.DataSource = ListDto;
 
-                /*foreach (DataGridViewRow row in dataGridProb.Rows)
+                CurrencyManager cm = (CurrencyManager)BindingContext[dataGridProb.DataSource];
+                cm.EndCurrentEdit();
+                cm.ResumeBinding();
+                cm.SuspendBinding();
+
+                foreach (DataGridViewRow row in dataGridProb.Rows)
                 {
 
-                    if (Convert.ToString(row.Cells["justificativa"].Value) != 
-"")
+                    if (Convert.ToString(row.Cells["advertido"].Value) == "")
 
                     {
-                        row.Visible = false;
+                        row.Visible = true;
 
                     }
 
                     else
                     {
-                        row.Visible = true;
+                        row.Visible = false;
 
 
                     }
 
 
-                }*/
+                }
 
 
             }
             catch (Exception erro)
             {
-                throw erro;
+                MessageBox.Show(""+erro) ;
             }
         }
 
@@ -141,6 +145,7 @@ namespace TechManager
             {
                 lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
             }
+            carregaGrid();
 
         }
 

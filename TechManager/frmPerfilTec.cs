@@ -91,5 +91,11 @@ namespace TechManager
         {
             Application.Exit();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmAbout sobre = new frmAbout();
+            sobre.ShowDialog();
+        }
     }
 }

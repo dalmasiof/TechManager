@@ -20,5 +20,7 @@ namespace DTO
         public string problema { get; set; }
         public DateTime data { get; set; }
         public string Check { get; set; }
+        public string advertido { get; set; }
+        public string justificado { get; set; }
     }
 }

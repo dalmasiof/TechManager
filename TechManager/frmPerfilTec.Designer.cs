@@ -45,6 +45,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFotoTec)).BeginInit();
@@ -315,6 +316,8 @@
             this.pictureBox3.Size = new System.Drawing.Size(358, 289);
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Sobre");
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // notifyIcon1
             // 
@@ -369,5 +372,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbFotoTec;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
