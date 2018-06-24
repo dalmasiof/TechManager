@@ -12,6 +12,17 @@ tipoUsu int(1),
 foto varchar(110)
 );
 
+create table advertencia(
+idAdv int auto_increment primary key auto_increment,
+nomeTec varchar(50),
+justificativa varchar (50),
+advertencia varchar(50),
+idProb int ,
+
+
+foreign key (idProb) references problema(idProb)
+
+);
 
 create table problema(
 idProb int auto_increment primary key,
@@ -20,50 +31,65 @@ professor varchar(50),
 idMaquina varchar(20),
 problema varchar(50),
 dataProb datetime,
-resolvido varchar(10)
+resolvido varchar(10),
+advertido varchar(10),
+justificado varchar(10)
 );
 
 insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto)
-values('Professor','123456789','joao','123','joaosao291@gmail.com','1','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto1.png'),
-('Técnico','123456789','tec','123','tec291@gmail.com','2','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto3.png'),
-('Administrador','123456789','adm','123','Tec291@gmail.com','3','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto2.png');
+values('Professor','123456789','joao','123','joaosao291@gmail.com','1','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto1.png');
+
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto)
+values('Técnico','123456789','tec','123','tec291@gmail.com','2','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto3.png');
+
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto)
+values('Administrador','123456789','adm','12345678','Tec291@gmail.com','3','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto2.png');
 
 insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
-values	("C#","Enildo","02886-151","monitor não liga",'2001-12-02',"0"),
-("OSA","Virgílio","6598213","mouse quebrado",'2018-04-06',"1"),
-("TLBD","Akepeu","pc03-lab4","Teclado quebrado",'2001-11-02',"1"),
-("JAVA","Furlan","lab01-m05","Desliga sozinho",'2011-12-02',"0");
+values	("C#","Enildo","02886-151","monitor não liga",'2001-12-02',"0");
 
-create table advertencia(
-idAdv int auto_increment primary key auto_increment,
-nomeTec varchar(50),
-justificativa varchar (50),
-advertencia varchar(50),
-idProb int ,
-foreign key (idProb) references problema(idProb)
+insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
+values	("OSA","Virgílio","6598213","mouse quebrado",'2018-04-06',"1");
 
-);
+insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
+values	("TLBD","Akepeu","pc03-lab4","Teclado quebrado",'2001-11-02',"1");
 
-/*insert professor advertencia*/
-insert into advertencia(idprob,advertencia)
-values(4,"problema não foi resolvido");
-
-/*select tecnico, ele ve a advertencia*/
-SELECT * FROM problema
-INNER JOIN ADVERTENCIA
-ON ADVERTENCIA.idprob = problema.idprob ;
+insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
+values	("JAVA","Furlan","lab01-m05","Desliga sozinho",'2011-12-02',"0");
 
 
+DELIMITER $
+ 
+CREATE TRIGGER advertido AFTER INSERT
+ON advertencia
+FOR EACH ROW
+BEGIN
+    UPDATE problema SET advertido = "S"
+WHERE idProb = NEW.idProb;
 
-/*update tecnico, manda justificativa*/
-update advertencia set justificativa = "falta de material",nometec = "junior"; 
+END$
+/*---------------------	*/
+DELIMITER ;
+DELIMITER $
+ 
+CREATE TRIGGER justificado after update
+ON advertencia
+FOR EACH ROW
+BEGIN
+    UPDATE problema SET justificado = "S"
+WHERE idProb = NEW.idProb;
+
+END$
+DELIMITER ;
+DROP trigger JUSTIFICADO;
 
 
- drop table advertencia;
+SELECT * FROM problema;
 
-SELECT * FROM advertencia;
-SELECT * FROM problema WHERE CONCAT(idMaquina) LIKE '%la%';
 select * from tb_usuario;
+select * from advertencia;
 drop table problema;
 drop table tb_usuario;
-
+drop table advertencia;
+SELECT * FROM problema INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = problema.idprob
+update
