@@ -67,13 +67,13 @@ namespace TechManager
         private void btnDel_Click(object sender, EventArgs e)
         {
             frmAdmExcluiPerfil exclui = new frmAdmExcluiPerfil();
-            exclui.Show();
+            exclui.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             frmAbout about = new frmAbout();
-            about.Show();
+            about.ShowDialog();
         }
     }
 }

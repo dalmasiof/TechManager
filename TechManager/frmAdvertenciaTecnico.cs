@@ -91,8 +91,8 @@ namespace TechManager
 
                 btnEnviar.Enabled = false;
 
-                lblMensagem.Text = "Justificativa enviada ao professor, selecione uma nova advertencia caso queira justificar!";
-                lblAdvertencia.Text = "Advertencia:    ";
+                lblMensagem.Text = "Justificativa enviada ao professor, selecione um novo aviso caso queira justificar!";
+                lblAdvertencia.Text = "Aviso:    ";
                 carregaGrid();
             }
 
@@ -109,7 +109,7 @@ namespace TechManager
 
             registro = Convert.ToInt32(dataGridAdvert["idAdv", sel].Value);
 
-            lblAdvertencia.Text = "Advertencia:    "+Convert.ToString(dataGridAdvert["advertencia", sel].Value);
+            lblAdvertencia.Text = "Aviso:    "+Convert.ToString(dataGridAdvert["advertencia", sel].Value);
             txtJustificativa.Enabled = true;
             txtJustificativa.Clear();
             txtJustificativa.ForeColor = Color.Black;
@@ -136,7 +136,7 @@ namespace TechManager
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtJustificativa.Text = "Escreva sua advertencia aqui!";
+            txtJustificativa.Text = "Escreva sua justificativa aqui!";
             txtJustificativa.Enabled = false;
             txtJustificativa.ForeColor = Color.Gray;
 

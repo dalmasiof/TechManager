@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TechManager")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Software criado para facilitar e agilizar as questoes administrativas em relação á manuntenção de computadores de uma instituição")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Visus")]
 [assembly: AssemblyProduct("TechManager")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]

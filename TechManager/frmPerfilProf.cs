@@ -58,7 +58,7 @@ namespace TechManager
         private void btnHist_Click(object sender, EventArgs e)
         {
             frmHistorico historico = new frmHistorico();
-            historico.Show();
+            historico.ShowDialog();
         }
 
         private void btnStand_Click(object sender, EventArgs e)

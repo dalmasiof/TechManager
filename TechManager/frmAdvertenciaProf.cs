@@ -80,7 +80,7 @@ namespace TechManager
 
             registro = Convert.ToInt32(dataGridProb["idProb", sel].Value);
 
-            lblMensagem.Text = "Relate a Advertencia e clique no botão Enviar!";
+            lblMensagem.Text = "Relate o aviso e clique no botão Enviar!";
             lblMensagem.ForeColor = Color.Red;
 
             txtAdvert.Clear();
@@ -93,14 +93,14 @@ namespace TechManager
         {
             if(txtAdvert.Text == "")
             {
-                lblMensagem.Text = "A advertencia não pode estar vazia!";
+                lblMensagem.Text = "O aviso não pode estar vazio!";
                 lblMensagem.ForeColor = Color.Red;
                 btnEnviar.Enabled = false;
             }
 
             else
             {
-                lblMensagem.Text = "Envie sua advertencia clicando no botão Enviar!";
+                lblMensagem.Text = "Envie seu aviso clicando no botão Enviar!";
                 lblMensagem.ForeColor = Color.Green;
                 btnEnviar.Enabled = true;
             }
@@ -113,7 +113,7 @@ namespace TechManager
 
             lblMensagem.Text = "";
 
-            lblMensagem.Text = "Selecione um problema para mandar uma Advertencia, e depois clique no botão enviar!";
+            lblMensagem.Text = "Selecione um problema para mandar um aviso, e depois clique no botão enviar!";
             lblMensagem.ForeColor = Color.Red;
 
             btnEnviar.Enabled = false;
@@ -136,7 +136,7 @@ namespace TechManager
 
                 btnEnviar.Enabled = false;
 
-                lblMensagem.Text = "Advertencia enviada ao técnico, selecione um novo problema caso desejar enviar uma advertencia!";
+                lblMensagem.Text = "Aviso enviado ao técnico, selecione um novo problema caso desejar enviar outro aviso!";
                 txtAdvert.Enabled = false;
 
             }

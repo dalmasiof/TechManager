@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO;
 using BLL;
 
+
 namespace TechManager
 {
     public partial class frmPerfilTec : Form
@@ -20,6 +21,7 @@ namespace TechManager
         }
         probBll bll = new probBll();
         probDto dto = new probDto();
+       
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -64,7 +66,7 @@ namespace TechManager
         private void btnHist_Click(object sender, EventArgs e)
         {
             frmHistorico historico = new frmHistorico();
-            historico.Show();
+            historico.ShowDialog();
         }
 
         private void btnStand_Click(object sender, EventArgs e)
@@ -73,7 +75,7 @@ namespace TechManager
             notifyIcon1.Visible = true;
         }
 
-       
+
 
         private void notifyIcon1_MouseClick_1(object sender, MouseEventArgs e)
         {
@@ -97,5 +99,14 @@ namespace TechManager
             frmAbout sobre = new frmAbout();
             sobre.ShowDialog();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+        
+
+
+           
+        }
     }
+
 }

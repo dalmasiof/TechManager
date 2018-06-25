@@ -222,7 +222,7 @@
             this.btnAdve.BackColor = System.Drawing.Color.Silver;
             this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdve.BorderRadius = 0;
-            this.btnAdve.ButtonText = "Mandar Advertencia";
+            this.btnAdve.ButtonText = "Mandar Aviso";
             this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
             this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
@@ -245,7 +245,7 @@
             this.btnAdve.selected = false;
             this.btnAdve.Size = new System.Drawing.Size(206, 53);
             this.btnAdve.TabIndex = 6;
-            this.btnAdve.Text = "Mandar Advertencia";
+            this.btnAdve.Text = "Mandar Aviso";
             this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
             this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -335,7 +335,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPerfilProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

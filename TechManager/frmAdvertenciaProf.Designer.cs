@@ -39,9 +39,6 @@
             this.lblAdvert = new System.Windows.Forms.Label();
             this.txtAdvert = new System.Windows.Forms.TextBox();
             this.dataGridProb = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.lblMensagem = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advertido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +47,9 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.lblMensagem = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -64,9 +64,10 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.pcbProfessor);
-            this.panel1.Location = new System.Drawing.Point(1, -4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 616);
+            this.panel1.Size = new System.Drawing.Size(237, 605);
             this.panel1.TabIndex = 6;
             // 
             // bunifuImageButton2
@@ -119,20 +120,20 @@
             this.lblAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdvert.Location = new System.Drawing.Point(283, 272);
             this.lblAdvert.Name = "lblAdvert";
-            this.lblAdvert.Size = new System.Drawing.Size(126, 25);
+            this.lblAdvert.Size = new System.Drawing.Size(65, 25);
             this.lblAdvert.TabIndex = 4;
-            this.lblAdvert.Text = "Advertência";
+            this.lblAdvert.Text = "Aviso";
             // 
             // txtAdvert
             // 
             this.txtAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdvert.ForeColor = System.Drawing.Color.Gray;
-            this.txtAdvert.Location = new System.Drawing.Point(428, 273);
+            this.txtAdvert.Location = new System.Drawing.Point(354, 273);
             this.txtAdvert.Multiline = true;
             this.txtAdvert.Name = "txtAdvert";
             this.txtAdvert.Size = new System.Drawing.Size(378, 157);
             this.txtAdvert.TabIndex = 1;
-            this.txtAdvert.Text = "Escreva sua advertencia aqui!";
+            this.txtAdvert.Text = "Escreva seu aviso aqui!";
             this.txtAdvert.TextChanged += new System.EventHandler(this.txtAdvert_TextChanged);
             // 
             // dataGridProb
@@ -172,55 +173,6 @@
             this.dataGridProb.Size = new System.Drawing.Size(542, 189);
             this.dataGridProb.TabIndex = 0;
             this.dataGridProb.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProb_CellClick);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(403, 560);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(120, 33);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.BackColor = System.Drawing.Color.White;
-            this.btnEnviar.Enabled = false;
-            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnEnviar.FlatAppearance.CheckedBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnEnviar.ForeColor = System.Drawing.Color.Black;
-            this.btnEnviar.Location = new System.Drawing.Point(598, 560);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(120, 33);
-            this.btnEnviar.TabIndex = 2;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = false;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
-            // lblMensagem
-            // 
-            this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(244, 467);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(532, 16);
-            this.lblMensagem.TabIndex = 5;
-            this.lblMensagem.Text = "Selecione um problema para mandar uma Advertencia, e depois clique no botão envia" +
-    "r!";
             // 
             // Column1
             // 
@@ -281,6 +233,54 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Location = new System.Drawing.Point(403, 560);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(120, 33);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackColor = System.Drawing.Color.White;
+            this.btnEnviar.Enabled = false;
+            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnEnviar.FlatAppearance.CheckedBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnEnviar.ForeColor = System.Drawing.Color.Black;
+            this.btnEnviar.Location = new System.Drawing.Point(598, 560);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(120, 33);
+            this.btnEnviar.TabIndex = 2;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            // 
+            // lblMensagem
+            // 
+            this.lblMensagem.AutoSize = true;
+            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
+            this.lblMensagem.Location = new System.Drawing.Point(244, 467);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(485, 16);
+            this.lblMensagem.TabIndex = 5;
+            this.lblMensagem.Text = "Selecione um problema para mandar um aviso, e depois clique no botão enviar!";
+            // 
             // frmAdvertenciaProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,10 +293,12 @@
             this.Controls.Add(this.lblAdvert);
             this.Controls.Add(this.dataGridProb);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdvertenciaProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Advertencia Professor";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdvertenciaTecnico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

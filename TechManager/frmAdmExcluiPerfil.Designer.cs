@@ -34,7 +34,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dgvExclui = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,11 +61,10 @@
             this.panel1.BackColor = System.Drawing.Color.Brown;
             this.panel1.Controls.Add(this.pcbHome);
             this.panel1.Controls.Add(this.pcbLogo);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 471);
+            this.panel1.Size = new System.Drawing.Size(183, 564);
             this.panel1.TabIndex = 2;
             // 
             // pcbHome
@@ -93,17 +91,6 @@
             this.pcbLogo.Size = new System.Drawing.Size(167, 222);
             this.pcbLogo.TabIndex = 13;
             this.pcbLogo.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(84, 543);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Voltar";
             // 
             // dgvExclui
             // 
@@ -295,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 471);
+            this.ClientSize = new System.Drawing.Size(960, 564);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnCancelar);
@@ -306,12 +293,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvExclui);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdmExcluiPerfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Excluir Perfil";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdmExcluiPerfil_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExclui)).EndInit();
@@ -325,7 +314,6 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton pcbHome;
         private System.Windows.Forms.PictureBox pcbLogo;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvExclui;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

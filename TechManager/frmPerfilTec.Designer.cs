@@ -46,6 +46,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFotoTec)).BeginInit();
@@ -199,7 +200,7 @@
             this.btnAdve.BackColor = System.Drawing.Color.Silver;
             this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdve.BorderRadius = 0;
-            this.btnAdve.ButtonText = "Checar Advertências";
+            this.btnAdve.ButtonText = "Checar Avisos";
             this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
             this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
@@ -222,7 +223,7 @@
             this.btnAdve.selected = false;
             this.btnAdve.Size = new System.Drawing.Size(206, 53);
             this.btnAdve.TabIndex = 6;
-            this.btnAdve.Text = "Checar Advertências";
+            this.btnAdve.Text = "Checar Avisos";
             this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
             this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,6 +327,11 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick_1);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmPerfilTec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,7 +343,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPerfilTec";
             this.Text = "Menu Técnico";
@@ -373,5 +379,6 @@
         private System.Windows.Forms.PictureBox pcbFotoTec;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

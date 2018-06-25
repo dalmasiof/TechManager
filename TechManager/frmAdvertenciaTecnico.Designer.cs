@@ -42,7 +42,6 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.lblAdvertencia = new System.Windows.Forms.Label();
             this.dataGridAdvert = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.lblMensagem = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idAdv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.justificativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +50,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMensagem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
@@ -225,18 +225,6 @@
             this.dataGridAdvert.TabIndex = 0;
             this.dataGridAdvert.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAdvert_CellClick);
             // 
-            // lblMensagem
-            // 
-            this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(271, 506);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(485, 15);
-            this.lblMensagem.TabIndex = 4;
-            this.lblMensagem.Text = "Selecione um problema para mandar uma Justificativa, e depois clique no botão env" +
-    "iar!";
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "aula";
@@ -295,6 +283,18 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // lblMensagem
+            // 
+            this.lblMensagem.AutoSize = true;
+            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
+            this.lblMensagem.Location = new System.Drawing.Point(271, 506);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(485, 15);
+            this.lblMensagem.TabIndex = 4;
+            this.lblMensagem.Text = "Selecione um problema para mandar uma Justificativa, e depois clique no botão env" +
+    "iar!";
+            // 
             // frmAdvertenciaTecnico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,10 +308,12 @@
             this.Controls.Add(this.txtJustificativa);
             this.Controls.Add(this.lblJustificativa);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdvertenciaTecnico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Advertencia Técnico";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdvertencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
