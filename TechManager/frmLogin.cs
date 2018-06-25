@@ -35,24 +35,15 @@ namespace TechManager
 
         private void txtUser_MouseClick(object sender, MouseEventArgs e)
         {
-            txtUser.Text = "";
+            if (txtUser.Text == "Usuário")
+            {
+                txtUser.Text = "";
+            }
         }
 
         private void buni_MouseClick(object sender, MouseEventArgs e)
         {
-            if (cmbAcesso.selectedIndex != 0)
-            {
-
-            }
-            else
-            {
-                txtUser.Enabled = false;
-                txtSenha.Enabled = false;
-                txtUser.Text = "Usuário";
-                txtSenha.Text = "Senha";
-                pnlLogo.Focus();
-                cmbAcesso.selectedIndex = 0;
-            }
+           
 
 
         }
@@ -65,14 +56,8 @@ namespace TechManager
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            txtUser.Enabled = false;
-            txtSenha.Enabled = false;
-            cmbAcesso.AddItem("Escolha um acesso");
-            cmbAcesso.AddItem("Professor");
-            cmbAcesso.AddItem("Técnico");
-            cmbAcesso.AddItem("Administrador");
-
-            cmbAcesso.selectedIndex = 0;
+           
+           
         }
 
         private void swiMostrar_OnValueChange(object sender, EventArgs e)
@@ -151,162 +136,6 @@ namespace TechManager
         {
            
 
-            #region
-            //conexao = new MySqlConnection(conexao_sql);
-
-            //if (cmbAcesso.selectedIndex == 1)
-            //{
-            //    try
-            //    {
-            //        conexao.Open();
-            //        MySqlCommand comando = new MySqlCommand();
-            //        comando.CommandText = "SELECT senha FROM tb_prof WHERE login='" + txtUser.Text + "' and senha='" + txtSenha.Text + "';";
-            //        comando.CommandType = CommandType.Text;
-            //        comando.Connection = conexao;
-            //        senha = (string)comando.ExecuteScalar();
-            //        MySqlDataReader dr = comando.ExecuteReader();
-            //        if (dr.HasRows == true)
-            //            {
-            //            //    while (dr.Read())
-            //            //    {
-            //            //        dtovar.id = Convert.ToInt32(dr["idUsuario"]);
-            //            //        dtovar.tipo = Convert.ToChar(dr["tipoUsu"]);
-            //            //        dtovar.email = Convert.ToString(dr["email"]);
-            //            //        dtovar.login = Convert.ToString(dr["login"]);
-            //            //        dtovar.senha = Convert.ToString(dr["senha"]);
-            //            //        dtovar.nome = Convert.ToString(dr["nome"]);
-            //            //        dtovar.rg = Convert.ToString(dr["rg"]);
-
-            //            frmPerfilProf prof = new frmPerfilProf();
-            //        prof.Show();
-            //        this.Hide();
-            //        //    }
-
-
-            //    }
-            //        else
-            //        {
-            //            MessageBox.Show("Dados incorretos", "Acesso Negado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //            txtUser.Focus();
-            //            txtUser.Clear();
-            //            txtSenha.Clear();
-            //            return;
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        txtUser.Focus();
-            //        txtUser.Clear();
-            //        txtSenha.Clear();
-            //        MessageBox.Show("" + ex);
-
-            //    }
-            //}
-
-            //else if (cmbAcesso.selectedIndex == 2)
-            //{
-            //    try
-            //    {
-            //        conexao.Open();
-            //        MySqlCommand comando = new MySqlCommand();
-            //        comando.CommandText = "SELECT senha FROM tb_tec WHERE login='" + txtUser.Text + "' and senha='" + txtSenha.Text + "';";
-            //        comando.CommandType = CommandType.Text;
-            //        comando.Connection = conexao;
-            //        senha = (string)comando.ExecuteScalar();
-            //        MySqlDataReader dr = comando.ExecuteReader();
-            //        if (dr.HasRows == true)
-            //        {
-            //            while (dr.Read())
-            //            {
-            //                dtovar.tipo = Convert.ToChar(dr["tipoUsu"]);
-            //                dtovar.email = Convert.ToString(dr["email"]);
-            //                dtovar.login = Convert.ToString(dr["login"]);
-            //                dtovar.senha = Convert.ToString(dr["senha"]);
-            //                dtovar.nome = Convert.ToString(dr["nome"]);
-            //                dtovar.rg = Convert.ToString(dr["rg"]);
-
-            //                frmPerfilTec prof = new frmPerfilTec();
-            //                prof.Show();
-            //                this.Hide();
-            //            }
-
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Dados incorretos", "Acesso Negado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //            txtUser.Focus();
-            //            txtUser.Clear();
-            //            txtSenha.Clear();
-            //            return;
-            //        }
-
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        txtUser.Focus();
-            //        txtUser.Clear();
-            //        txtSenha.Clear();
-            //        MessageBox.Show("" + ex);
-
-            //    }
-            //}
-
-            //else
-            //{
-            //    try
-            //    {
-            //        conexao.Open();
-            //        MySqlCommand comando = new MySqlCommand();
-            //        comando.CommandText = "SELECT senha FROM tb_adm WHERE login='" + txtUser.Text + "' and senha='" + txtSenha.Text + "';";
-            //        comando.CommandType = CommandType.Text;
-            //        comando.Connection = conexao;
-            //        senha = (string)comando.ExecuteScalar();
-            //        MySqlDataReader dr = comando.ExecuteReader();
-            //        if (dr.HasRows == true)
-            //        {
-            //            while (dr.Read())
-            //            {
-            //                dtovar.tipo = Convert.ToChar(dr["tipoUsu"]);
-            //                dtovar.email = Convert.ToString(dr["email"]);
-            //                dtovar.login = Convert.ToString(dr["login"]);
-            //                dtovar.senha = Convert.ToString(dr["senha"]);
-            //                dtovar.nome = Convert.ToString(dr["nome"]);
-            //                dtovar.rg = Convert.ToString(dr["rg"]);
-
-            //                frmPerfilAdm prof = new frmPerfilAdm();
-            //                prof.Show();
-            //                this.Hide();
-            //            }
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Dados incorretos", "Acesso Negado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //            txtUser.Focus();
-            //            txtUser.Clear();
-            //            txtSenha.Clear();
-            //            return;
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-
-            //        MessageBox.Show("Falha com o banco de dados", "Consulte o T.I.!"+ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //        txtUser.Focus();
-            //        txtUser.Clear();
-            //        txtSenha.Clear();
-
-            //    }
-
-
-            //}
-            #endregion teste
-
             dtovar.login = txtUser.Text;
             dtovar.senha = txtSenha.Text;
 
@@ -316,7 +145,7 @@ namespace TechManager
             {
                 List<usuarioDTO> ListDto = new List<usuarioDTO>();
                 ListDto = new usuarioBLL().validar(dtovar);
-                if ((ListDto.Count > 0) && (dtovar.tipo == cmbAcesso.selectedIndex))
+                if (ListDto.Count > 0)
                 {
                     information.id = dtovar.id;
                     information.nome = dtovar.nome;
@@ -326,7 +155,6 @@ namespace TechManager
 
                     if (dtovar.tipo == 1)
                     {
-                        MessageBox.Show("Bem vindo " + dtovar.nome);
                         frmPerfilProf prof = new frmPerfilProf();
                         prof.Show();
                         this.Hide();
@@ -334,14 +162,12 @@ namespace TechManager
                     }
                     else if (dtovar.tipo == 2)
                     {
-                        MessageBox.Show("Bem vindo " + dtovar.nome);
                         frmPerfilTec prof = new frmPerfilTec();
                         prof.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Bem vindo " + dtovar.nome);
                         frmPerfilAdm prof = new frmPerfilAdm();
                         prof.Show();
                         this.Hide();
@@ -349,14 +175,16 @@ namespace TechManager
                 }
                 else
                 {
-                    MessageBox.Show("Usuário, senha ou tipo de acesso incorretos","Erro de autenticação",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Usuário, senha ou  incorretos","Erro de autenticação",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    txtUser.Focus();
                     return;
                 }
 
             }
             catch (Exception erro)
             {
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Falha de conexão, entre em contato com o T.I.\n"+erro+"","Falha de conexão",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                txtUser.Focus();
             }
         }
 
@@ -369,46 +197,7 @@ namespace TechManager
             Application.Exit();
         }
 
-        private void cmbAcesso_onItemSelected(object sender, EventArgs e)
-        {
-            if (cmbAcesso.selectedIndex == 0)
-            {
-                txtUser.Enabled = false;
-                txtSenha.Enabled = false;
-                txtUser.Text = "Usuário";
-                txtSenha.Text = "Senha";
-            }
-
-            else if (cmbAcesso.selectedIndex == 1 || cmbAcesso.selectedIndex == 2)
-            {
-                txtUser.Enabled = true;
-                txtSenha.Enabled = true;
-                txtUser.Focus();
-                txtUser.Text = "Usuário";
-                txtSenha.Text = "Senha";
-            }
-
-
-            else if (cmbAcesso.selectedIndex == 3)
-            {
-
-                txtUser.Enabled = true;
-                txtSenha.Enabled = true;
-                txtUser.Focus();
-                txtUser.Text = "Usuário";
-                txtSenha.Text = "Senha";
-
-                lblMostrar.Visible = false;
-                swiMostrar.Visible = false;
-                txtSenha.PasswordChar = char.Parse("*");
-
-            }
-            else
-            {
-                swiMostrar.Visible = true;
-                lblMostrar.Visible = true;
-            }
-        }
+       
 
         private void txtSenha_MouseClick(object sender, MouseEventArgs e)
         {

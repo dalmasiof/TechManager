@@ -33,7 +33,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblMostrar = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.cmbAcesso = new Bunifu.Framework.UI.BunifuDropdown();
             this.swiMostrar = new Bunifu.Framework.UI.BunifuiOSSwitch();
             this.pcbUser = new System.Windows.Forms.PictureBox();
             this.pcbSenha = new System.Windows.Forms.PictureBox();
@@ -89,27 +88,10 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(159, 26);
-            this.txtSenha.TabIndex = 2;
+            this.txtSenha.TabIndex = 1;
             this.txtSenha.Text = "Senha";
             this.txtSenha.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSenha_MouseClick);
             this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
-            // 
-            // cmbAcesso
-            // 
-            this.cmbAcesso.BackColor = System.Drawing.SystemColors.Control;
-            this.cmbAcesso.BorderRadius = 5;
-            this.cmbAcesso.DisabledColor = System.Drawing.Color.Gray;
-            this.cmbAcesso.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAcesso.ForeColor = System.Drawing.Color.White;
-            this.cmbAcesso.Location = new System.Drawing.Point(445, 46);
-            this.cmbAcesso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbAcesso.Name = "cmbAcesso";
-            this.cmbAcesso.NomalColor = System.Drawing.Color.CornflowerBlue;
-            this.cmbAcesso.onHoverColor = System.Drawing.Color.Gray;
-            this.cmbAcesso.selectedIndex = -1;
-            this.cmbAcesso.Size = new System.Drawing.Size(217, 35);
-            this.cmbAcesso.TabIndex = 0;
-            this.cmbAcesso.onItemSelected += new System.EventHandler(this.cmbAcesso_onItemSelected);
             // 
             // swiMostrar
             // 
@@ -153,7 +135,7 @@
             this.txtUser.Location = new System.Drawing.Point(492, 135);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(159, 26);
-            this.txtUser.TabIndex = 1;
+            this.txtUser.TabIndex = 0;
             this.txtUser.Text = "Usuário";
             this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
@@ -169,7 +151,7 @@
             this.btnEntrar.Location = new System.Drawing.Point(596, 350);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(120, 33);
-            this.btnEntrar.TabIndex = 11;
+            this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -185,7 +167,7 @@
             this.btnSair.Location = new System.Drawing.Point(404, 350);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(120, 33);
-            this.btnSair.TabIndex = 12;
+            this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -196,7 +178,7 @@
             this.linkSenha.Location = new System.Drawing.Point(509, 314);
             this.linkSenha.Name = "linkSenha";
             this.linkSenha.Size = new System.Drawing.Size(89, 13);
-            this.linkSenha.TabIndex = 13;
+            this.linkSenha.TabIndex = 4;
             this.linkSenha.TabStop = true;
             this.linkSenha.Text = "Recuperar senha";
             this.linkSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSenha_LinkClicked);
@@ -209,7 +191,6 @@
             this.Controls.Add(this.linkSenha);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.cmbAcesso);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblMostrar);
@@ -244,7 +225,6 @@
         private Bunifu.Framework.UI.BunifuiOSSwitch swiMostrar;
         private System.Windows.Forms.Label lblMostrar;
         private System.Windows.Forms.TextBox txtSenha;
-        private Bunifu.Framework.UI.BunifuDropdown cmbAcesso;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSair;
