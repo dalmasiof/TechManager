@@ -25,7 +25,7 @@ namespace TechManager
 
         private void frmAdmAlteraPerfil_Load(object sender, EventArgs e)
         {
-            //desativaCampos();
+            desativaCampos();
             carregaGrid();
             lblMensagem.Text = "Selecione um registro na tabela.";
 
@@ -47,7 +47,8 @@ namespace TechManager
             catch (Exception erro)
             {
                 throw erro;
-            }
+            }            mktxtRG.ForeColor = Color.Black;
+
         }
 
 
@@ -59,8 +60,18 @@ namespace TechManager
             txtNome.Enabled = false;
             txtNomeFotoPerfil.Enabled = false;
             txtSenha.Enabled = false;
-            cbbAcesso.Enabled = false;
             mktxtRG.Enabled = false;
+        }
+        private void Habilita()
+        {
+
+            txtConfirmarSenha.Enabled = true;
+            txtEmail.Enabled = true;
+            txtLogin.Enabled = true;
+            txtNome.Enabled = true;
+            txtNomeFotoPerfil.Enabled = true;
+            txtSenha.Enabled = true;
+            mktxtRG.Enabled = true;
         }
 
         private void pcbHome_Click(object sender, EventArgs e)
@@ -82,25 +93,18 @@ namespace TechManager
                 dto.senha = txtSenha.Text;
                 dto.email = txtEmail.Text;
                 dto.rg = mktxtRG.Text;
-                if (cbbAcesso.SelectedIndex == 0)
-                {
-                    dto.tipo = 0;
-
-                }
-                else
-                {
-                    dto.tipo = 1;
-                }
+               
 
                 try
                 {
-                    bll.alterarUsuario(dto);
+                    bll.admAlteraUsuario(dto);
                     lblMensagem.Text = "Alterado com sucesso!";
                     LimpaCampos();
+                    carregaGrid();
                 }
                 catch (Exception er)
                 {
-                    throw er;
+                    MessageBox.Show(""+ er);
                 }
             }
         }
@@ -109,8 +113,11 @@ namespace TechManager
         {
             foreach (Control c in this.Controls)
             {
-                if (c is TextBox)
+                if ((c is TextBox) || (c is MaskedTextBox))
                     (c as Control).Text = "";
+                    
+                    
+
             }
         }
 
@@ -119,11 +126,20 @@ namespace TechManager
             string email = txtEmail.Text;
             Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
-            if (txtNome.Text == "" || txtLogin.Text == "" || txtEmail.Text == "")
+            if (txtNome.Text == "" || txtLogin.Text == "" || txtEmail.Text == "" || mktxtRG.Text == "")
             {
                 lblMensagem.Text = "Todos os campos devem ser preenchidos!";
                 lblMensagem.ForeColor = Color.Red;
                 txtNome.Focus();
+                return false;
+            }
+            if (mktxtRG.TextLength != 12)
+            {
+                lblMensagem.Text = "RG imcompleto!";
+                mktxtRG.Focus();
+                mktxtRG.BackColor = Color.Salmon;
+                lblMensagem.ForeColor = Color.Red;
+                mktxtRG.Focus();
                 return false;
             }
 
@@ -131,28 +147,45 @@ namespace TechManager
             {
                 lblMensagem.Text = "Senha deve ter no mínimo 8 caracteres";
                 lblMensagem.ForeColor = Color.Red;
+                txtSenha.BackColor = Color.Salmon;
                 txtSenha.Focus();
                 return false;
+            }
+            else
+            {
+                txtSenha.BackColor = Color.White;
+                mktxtRG.BackColor = Color.White;
             }
 
             if (txtSenha.Text != txtConfirmarSenha.Text)
             {
                 lblMensagem.Text = "As senhas não coincidem!";
                 lblMensagem.ForeColor = Color.Red;
+                txtSenha.BackColor = Color.Salmon;
+
                 txtSenha.Focus();
                 return false;
+            }
+            else
+            {
+                txtSenha.BackColor = Color.White;
+
             }
 
             if (rg.IsMatch(email))
             {
                 lblMensagem.Text = "Após preencher os campos, clique no botão gravar!";
                 lblMensagem.ForeColor = Color.Green;
-                txtEmail.Focus();
+                txtEmail.BackColor = Color.White;
+
             }
             else
             {
                 lblMensagem.Text = "Email Inválido!";
                 lblMensagem.ForeColor = Color.Red;
+                txtEmail.BackColor = Color.Salmon;
+                txtEmail.Focus();
+
                 return false;
             }
             return true;
@@ -161,7 +194,9 @@ namespace TechManager
 
         private void dgvAltera_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            Habilita();
+            mktxtRG.Clear();
+            mktxtRG.ForeColor = Color.Black;
             int sel = dgvAltera.CurrentRow.Index;
 
             txtConfirmarSenha.Text = "";
@@ -176,6 +211,23 @@ namespace TechManager
             lblMensagem.Text = "Após terminar a edição clique em ALTERAR";
         }
 
-        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            desativaCampos();
+            LimpaCampos();
+            mktxtRG.Text = "Apenas números";
+            lblMensagem.Text = "Selecione um registro na tabela.";
+
+        }
+
+        private void mktxtRG_MouseClick(object sender, MouseEventArgs e)
+        {
+            mktxtRG.Clear();
+        }
+
+        private void mktxtRG_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

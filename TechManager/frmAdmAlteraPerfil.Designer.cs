@@ -42,7 +42,6 @@
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mktxtRG = new System.Windows.Forms.MaskedTextBox();
             this.lblRG = new System.Windows.Forms.Label();
             this.lblAcesso = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
@@ -62,7 +61,7 @@
             this.txtNomeFotoPerfil = new System.Windows.Forms.TextBox();
             this.lblFotoPerfil = new System.Windows.Forms.Label();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
-            this.cbbAcesso = new System.Windows.Forms.ComboBox();
+            this.mktxtRG = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -196,17 +195,6 @@
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
-            // mktxtRG
-            // 
-            this.mktxtRG.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.mktxtRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktxtRG.Location = new System.Drawing.Point(388, 334);
-            this.mktxtRG.Mask = "00.000.000-0";
-            this.mktxtRG.Name = "mktxtRG";
-            this.mktxtRG.Size = new System.Drawing.Size(90, 21);
-            this.mktxtRG.TabIndex = 112;
-            this.mktxtRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
             // lblRG
             // 
             this.lblRG.AutoSize = true;
@@ -255,6 +243,7 @@
             this.btnCancelar.TabIndex = 119;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGravar
             // 
@@ -409,18 +398,17 @@
             this.pcbFoto.TabIndex = 113;
             this.pcbFoto.TabStop = false;
             // 
-            // cbbAcesso
+            // mktxtRG
             // 
-            this.cbbAcesso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbAcesso.FormattingEnabled = true;
-            this.cbbAcesso.Items.AddRange(new object[] {
-            "Professor",
-            "Técnico"});
-            this.cbbAcesso.Location = new System.Drawing.Point(388, 501);
-            this.cbbAcesso.Name = "cbbAcesso";
-            this.cbbAcesso.Size = new System.Drawing.Size(162, 23);
-            this.cbbAcesso.TabIndex = 118;
+            this.mktxtRG.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.mktxtRG.Location = new System.Drawing.Point(388, 338);
+            this.mktxtRG.MaxLength = 9;
+            this.mktxtRG.Name = "mktxtRG";
+            this.mktxtRG.Size = new System.Drawing.Size(162, 20);
+            this.mktxtRG.TabIndex = 132;
+            this.mktxtRG.Text = "Apenas números";
+            this.mktxtRG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mktxtRG_MouseClick);
+            this.mktxtRG.TextChanged += new System.EventHandler(this.mktxtRG_TextChanged);
             // 
             // frmAdmAlteraPerfil
             // 
@@ -429,7 +417,6 @@
             this.ClientSize = new System.Drawing.Size(859, 643);
             this.Controls.Add(this.mktxtRG);
             this.Controls.Add(this.lblRG);
-            this.Controls.Add(this.cbbAcesso);
             this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.btnCancelar);
@@ -473,7 +460,6 @@
         private Bunifu.Framework.UI.BunifuImageButton pcbHome;
         private System.Windows.Forms.PictureBox pcbLogo;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvAltera;
-        private System.Windows.Forms.MaskedTextBox mktxtRG;
         private System.Windows.Forms.Label lblRG;
         private System.Windows.Forms.Label lblAcesso;
         private System.Windows.Forms.Label lblMensagem;
@@ -493,7 +479,6 @@
         private System.Windows.Forms.TextBox txtNomeFotoPerfil;
         private System.Windows.Forms.Label lblFotoPerfil;
         private System.Windows.Forms.PictureBox pcbFoto;
-        private System.Windows.Forms.ComboBox cbbAcesso;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
@@ -501,5 +486,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn login;
         private System.Windows.Forms.DataGridViewTextBoxColumn senha;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.TextBox mktxtRG;
     }
 }

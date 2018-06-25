@@ -100,6 +100,36 @@ namespace DAL
                 {
                     Connection = conexao
                 };
+                sql.Parameters.Add("@Id", MySqlDbType.Int32).Value = dtovar.id;
+                sql.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = dtovar.nome;
+                sql.Parameters.Add("@Login", MySqlDbType.VarChar).Value = dtovar.login;
+                sql.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = dtovar.senha;
+                sql.Parameters.Add("@Email", MySqlDbType.VarChar).Value = dtovar.email;
+                conexao.Open();
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public void admAlteraUsuario(usuarioDTO dtovar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("update tb_usuario set login=@Login,nome=@Nome,rg=@Rg,senha=@Senha,email=@Email where idUsuario=@Id")
+                {
+                    Connection = conexao
+                };
+                sql.Parameters.Add("@Id", MySqlDbType.Int32).Value = dtovar.id;
+                sql.Parameters.Add("@Rg", MySqlDbType.VarChar).Value = dtovar.rg;
                 sql.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = dtovar.nome;
                 sql.Parameters.Add("@Login", MySqlDbType.VarChar).Value = dtovar.login;
                 sql.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = dtovar.senha;

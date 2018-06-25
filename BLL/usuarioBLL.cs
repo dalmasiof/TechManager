@@ -71,5 +71,16 @@ namespace BLL
                 throw erro;
             }
         }
+        public void admAlteraUsuario(usuarioDTO dto)
+        {
+            try
+            {
+                dal.admAlteraUsuario(dto);
+            }
+            catch(Exception erro)
+            {
+                throw erro;
+            }
+        }
     }
 }
