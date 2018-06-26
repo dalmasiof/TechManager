@@ -50,4 +50,3 @@ C:\Users\Maza\Desktop\TechManager\DTO\bin\Debug\DTO.pdb
 C:\Users\Maza\Desktop\TechManager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Maza\Desktop\TechManager\DTO\obj\Debug\DTO.dll
 C:\Users\Maza\Desktop\TechManager\DTO\obj\Debug\DTO.pdb
-C:\Users\Maza\Desktop\TechManager\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

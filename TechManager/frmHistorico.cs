@@ -30,7 +30,7 @@ namespace TechManager
             cmbHist.AddItem("Consultar por:");
             cmbHist.AddItem("ID Máquina");
             cmbHist.AddItem("Professor");
-            
+            cmbHist.AddItem("Data");
 
             cmbHist.selectedIndex = 0;
 
@@ -65,7 +65,6 @@ namespace TechManager
 
                 dgvHist.DataSource = ListDto;
 
-                //---------------------------------------------------------------------------------------------------------------
                 Pintalinhas();
             }
             catch (Exception erro)
@@ -121,20 +120,7 @@ namespace TechManager
                     }
                     break;
 
-                //case 3:
-
-                //    //dtoVar.data = Convert.ToDateTime(txtUser.Text);
-                //    //try
-                //    //{
-                //    //    List<probDto> ListDto = new List<probDto>();
-                //    //    ListDto = new probBll().listaPorData(dtoVar);
-                //    //    dgvHist.DataSource = ListDto;
-                //    //}
-                //    //catch (Exception erro)
-                //    //{
-                //    //    throw erro;
-                //    //}
-                //    break;
+                
             }
         }
         private void Pintalinhas()
@@ -168,11 +154,23 @@ namespace TechManager
                 txtUser.Text = "Escolha um método de pesquisa";
                 txtUser.Enabled = false;
             }
-            else if (cmbHist.selectedIndex == 0)
+            else if (cmbHist.selectedIndex == 3)
             {
-                txtUser.Clear();
-                txtUser.Enabled = true;
-                txtUser.Focus();
+                txtUser.Enabled = false;
+                txtUser.Text = "Data mais recente";
+                try
+                {
+                    List<probDto> ListDto = new List<probDto>();
+                    ListDto = new probBll().listaPorData();
+                    dgvHist.DataSource = ListDto;
+
+                    Pintalinhas();
+
+                }
+                catch (Exception erro)
+                {
+                    throw erro;
+                }
             }
             else
             {
@@ -200,8 +198,6 @@ namespace TechManager
                     row.DefaultCellStyle.BackColor = Color.ForestGreen;
                     row.Cells[5].Value = Convert.ToString("Checado");
 
-                    dtoVar.Check = "1";
-                   // dtoVar.idProb = Convert.ToInt32(dgvHist["id", sel].Value);
 
 
 
@@ -211,8 +207,6 @@ namespace TechManager
                 {
                     row.DefaultCellStyle.BackColor = Color.Maroon;
                     row.Cells[5].Value = Convert.ToString("Não checado");
-                    dtoVar.Check = "0";
-                  //  dtoVar.idProb = Convert.ToInt32(dgvHist["id", sel].Value);
 
 
                 }

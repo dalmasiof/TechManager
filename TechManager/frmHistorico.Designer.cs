@@ -68,8 +68,8 @@
             // bunifuImageButton2
             // 
             this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.back2;
-            this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.back__1_;
+            this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
+            this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
             this.bunifuImageButton2.Location = new System.Drawing.Point(77, 465);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(76, 60);

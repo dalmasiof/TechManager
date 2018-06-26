@@ -21,6 +21,7 @@ namespace TechManager
         }
         probBll bll = new probBll();
         probDto dto = new probDto();
+        
        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -32,22 +33,11 @@ namespace TechManager
             lblNome.Text = Convert.ToString(information.nome);
             pcbFotoTec.ImageLocation = information.foto;
             notifyIcon1.Visible = false;
-            ////btnErro.Iconimage_right = Properties.Resources.;
+            timer1.Enabled = true;
 
-            //try
-            //{
-            //    List<probDto> ListDto = new List<probDto>();
-            //    ListDto = new probBll().listarProb();
+            
 
-            //}
-            //catch (Exception erro)
-            //{
-            //    throw erro;
-            //}
-            //if(dto.check == 0)
-            //{
 
-            //}
 
         }
 
@@ -59,6 +49,8 @@ namespace TechManager
 
         private void btnErro_Click(object sender, EventArgs e)
         {
+            btnErro.Iconimage_right = null;
+            this.Hide();
             frmProblemaTec prob = new frmProblemaTec();
             prob.ShowDialog();
         }
@@ -102,10 +94,24 @@ namespace TechManager
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-        
 
 
-           
+            try
+            {
+                List<probDto> ListDto = new List<probDto>();
+                ListDto = new probBll().listarProb();
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            if (dto.problema == null)
+            {
+                btnErro.Iconimage_right = Properties.Resources.noti12;
+
+            }
+
         }
     }
 

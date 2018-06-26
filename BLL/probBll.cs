@@ -46,11 +46,11 @@ namespace BLL
                 throw erro;
             }
         }
-        public List<probDto> listaPorData(probDto dtovar)
+        public List<probDto> listaPorData()
         {
             try
             {
-                return new ProblemaDal().carregaPorData(dtovar);
+                return new ProblemaDal().carregaPorData();
             }
             catch (Exception erro)
             {

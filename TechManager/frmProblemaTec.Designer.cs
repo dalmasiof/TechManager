@@ -106,8 +106,8 @@
             // btnVoltar
             // 
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.Image = global::TechManager.Properties.Resources.back2;
-            this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.back__1_;
+            this.btnVoltar.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
+            this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
             this.btnVoltar.Location = new System.Drawing.Point(12, 533);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(76, 60);

@@ -33,6 +33,8 @@ namespace TechManager
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmPerfilTec tec = new frmPerfilTec();
+            tec.Show();
         }
 
         private void frmProblemaTec_Load(object sender, EventArgs e)

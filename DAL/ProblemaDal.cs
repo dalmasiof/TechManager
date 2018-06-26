@@ -59,6 +59,10 @@ namespace DAL
             {
                 throw erro;
             }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         public void cadProd(probDto dto)
@@ -91,14 +95,14 @@ namespace DAL
             }
         }
 
-        public List<probDto> carregaPorData(probDto dtovar)
+        public List<probDto> carregaPorData()
         {
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(professor) LIKE '%" + dtovar.data + "%'";
+                comando.CommandText = "SELECT * FROM problema order by dataProb";
                 comando.Connection = conexao;
 
                 List<probDto> listProbDto = new List<probDto>();
@@ -107,10 +111,11 @@ namespace DAL
                 MySqlDataReader dr = comando.ExecuteReader();
 
 
-                if (dr.HasRows == true)
-                {
+               
+               
                     while (dr.Read())
                     {
+                        probDto dtovar = new probDto();
 
                         dtovar.idProb = Convert.ToInt32(dr["idProb"]);
                         dtovar.problema = Convert.ToString(dr["problema"]);
@@ -118,12 +123,14 @@ namespace DAL
                         dtovar.professor = Convert.ToString(dr["professor"]);
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+                        dtovar.Check = Convert.ToString(dr["resolvido"]);
 
-                        listProbDto.Add(dtovar);
+
+                    listProbDto.Add(dtovar);
 
 
                     }
-                }
+               
                 return listProbDto;
 
 
@@ -131,6 +138,10 @@ namespace DAL
             catch (Exception erro)
             {
                 throw erro;
+            }
+            finally
+            {
+                conexao.Close();
             }
         }
 
@@ -161,6 +172,7 @@ namespace DAL
                         dtovar.professor = Convert.ToString(dr["professor"]);
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+                        dtovar.Check = Convert.ToString(dr["resolvido"]);
 
 
                         listProbDto.Add(dtovar);
@@ -205,6 +217,7 @@ namespace DAL
                         dtovar.professor = Convert.ToString(dr["professor"]);
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+                        dtovar.Check = Convert.ToString(dr["resolvido"]);
 
                         listProbDto.Add(dtovar);
 
