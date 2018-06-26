@@ -43,7 +43,6 @@
             this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblRG = new System.Windows.Forms.Label();
-            this.lblAcesso = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
@@ -111,6 +110,7 @@
             this.dgvAltera.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvAltera.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAltera.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvAltera.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvAltera.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAltera.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -197,6 +197,7 @@
             // 
             // lblRG
             // 
+            this.lblRG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRG.AutoSize = true;
             this.lblRG.BackColor = System.Drawing.SystemColors.Control;
             this.lblRG.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -207,20 +208,9 @@
             this.lblRG.TabIndex = 122;
             this.lblRG.Text = "RG";
             // 
-            // lblAcesso
-            // 
-            this.lblAcesso.AutoSize = true;
-            this.lblAcesso.BackColor = System.Drawing.SystemColors.Control;
-            this.lblAcesso.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcesso.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAcesso.Location = new System.Drawing.Point(240, 497);
-            this.lblAcesso.Name = "lblAcesso";
-            this.lblAcesso.Size = new System.Drawing.Size(64, 23);
-            this.lblAcesso.TabIndex = 127;
-            this.lblAcesso.Text = "Acesso";
-            // 
             // lblMensagem
             // 
+            this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.Location = new System.Drawing.Point(314, 539);
@@ -231,6 +221,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -247,6 +238,7 @@
             // 
             // btnGravar
             // 
+            this.btnGravar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGravar.BackColor = System.Drawing.Color.White;
             this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnGravar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -263,6 +255,7 @@
             // 
             // txtConfirmarSenha
             // 
+            this.txtConfirmarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarSenha.Location = new System.Drawing.Point(388, 435);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
@@ -272,6 +265,7 @@
             // 
             // txtSenha
             // 
+            this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(388, 402);
             this.txtSenha.Name = "txtSenha";
@@ -281,6 +275,7 @@
             // 
             // txtLogin
             // 
+            this.txtLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.Location = new System.Drawing.Point(388, 369);
             this.txtLogin.Name = "txtLogin";
@@ -289,6 +284,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(390, 468);
             this.txtEmail.Name = "txtEmail";
@@ -297,6 +293,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(388, 306);
             this.txtNome.Name = "txtNome";
@@ -305,6 +302,7 @@
             // 
             // lblConfirmarSenha
             // 
+            this.lblConfirmarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConfirmarSenha.AutoSize = true;
             this.lblConfirmarSenha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarSenha.ForeColor = System.Drawing.Color.DimGray;
@@ -316,6 +314,7 @@
             // 
             // lblSenha
             // 
+            this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.DimGray;
@@ -327,6 +326,7 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
@@ -338,6 +338,7 @@
             // 
             // lblLogin
             // 
+            this.lblLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
@@ -349,6 +350,7 @@
             // 
             // lblNome
             // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.SystemColors.Control;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -361,6 +363,7 @@
             // 
             // btnProcurarFoto
             // 
+            this.btnProcurarFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProcurarFoto.Location = new System.Drawing.Point(559, 219);
             this.btnProcurarFoto.Name = "btnProcurarFoto";
             this.btnProcurarFoto.Size = new System.Drawing.Size(75, 23);
@@ -370,6 +373,7 @@
             // 
             // txtNomeFotoPerfil
             // 
+            this.txtNomeFotoPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeFotoPerfil.BackColor = System.Drawing.SystemColors.Control;
             this.txtNomeFotoPerfil.Enabled = false;
             this.txtNomeFotoPerfil.Location = new System.Drawing.Point(360, 222);
@@ -379,6 +383,7 @@
             // 
             // lblFotoPerfil
             // 
+            this.lblFotoPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFotoPerfil.AutoSize = true;
             this.lblFotoPerfil.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFotoPerfil.Location = new System.Drawing.Point(357, 201);
@@ -389,6 +394,7 @@
             // 
             // pcbFoto
             // 
+            this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbFoto.Image = global::TechManager.Properties.Resources.if_Camera_Front_379526;
             this.pcbFoto.Location = new System.Drawing.Point(210, 168);
@@ -400,6 +406,7 @@
             // 
             // mktxtRG
             // 
+            this.mktxtRG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mktxtRG.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.mktxtRG.Location = new System.Drawing.Point(388, 338);
             this.mktxtRG.MaxLength = 9;
@@ -417,7 +424,6 @@
             this.ClientSize = new System.Drawing.Size(859, 643);
             this.Controls.Add(this.mktxtRG);
             this.Controls.Add(this.lblRG);
-            this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
@@ -461,7 +467,6 @@
         private System.Windows.Forms.PictureBox pcbLogo;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvAltera;
         private System.Windows.Forms.Label lblRG;
-        private System.Windows.Forms.Label lblAcesso;
         private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGravar;

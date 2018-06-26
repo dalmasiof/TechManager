@@ -13,7 +13,7 @@ namespace DTO
         public string aula { get; set; }
         public string professor { get; set; }
         public string problema { get; set; }
-
+        public int noti { get; set; }
         public DateTime data { get; set; }
         public string Check { get; set; }
 

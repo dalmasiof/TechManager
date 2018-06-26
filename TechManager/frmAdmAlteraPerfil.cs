@@ -41,8 +41,29 @@ namespace TechManager
 
 
                 dgvAltera.DataSource = ListDto;
+                CurrencyManager cm = (CurrencyManager)BindingContext[dgvAltera.DataSource];
+                cm.EndCurrentEdit();
+                cm.ResumeBinding();
+                cm.SuspendBinding();
 
-               // Pintalinhas();
+                foreach (DataGridViewRow row in dgvAltera.Rows)
+                {
+
+                    if (Convert.ToString(row.Cells["tipo"].Value) == "3")
+                    {
+                        row.Visible = false;
+
+                    }
+
+                    else
+                    {
+                        row.Visible = true;
+
+
+                    }
+
+
+                }
             }
             catch (Exception erro)
             {
@@ -133,14 +154,19 @@ namespace TechManager
                 txtNome.Focus();
                 return false;
             }
-            if (mktxtRG.TextLength != 12)
+            if (mktxtRG.TextLength != 8)
             {
-                lblMensagem.Text = "RG imcompleto!";
+                lblMensagem.Text = "RG incompleto!";
                 mktxtRG.Focus();
                 mktxtRG.BackColor = Color.Salmon;
                 lblMensagem.ForeColor = Color.Red;
                 mktxtRG.Focus();
                 return false;
+            }
+            else
+            {
+                mktxtRG.BackColor = Color.White;
+
             }
 
             if (txtSenha.Text.Length < 7)

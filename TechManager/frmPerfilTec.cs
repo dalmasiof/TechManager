@@ -22,6 +22,8 @@ namespace TechManager
         probBll bll = new probBll();
         probDto dto = new probDto();
         
+        int notiComeco;
+        int noti;
        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -30,6 +32,19 @@ namespace TechManager
 
         private void frmPerfilTec_Load(object sender, EventArgs e)
         {
+             try
+            {
+                List<probDto> ListDto = new List<probDto>();
+                ListDto = new probBll().notificacao(dto);
+                notiComeco = dto.noti;
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+
             lblNome.Text = Convert.ToString(information.nome);
             pcbFotoTec.ImageLocation = information.foto;
             notifyIcon1.Visible = false;
@@ -78,7 +93,10 @@ namespace TechManager
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmLogin log = new frmLogin();
+            log.Show();
+            this.Hide();
+            
         }
 
         private void frmPerfilTec_FormClosed(object sender, FormClosedEventArgs e)
@@ -95,22 +113,25 @@ namespace TechManager
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-
             try
             {
                 List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listarProb();
+                ListDto = new probBll().notificacao(dto);
+                noti = dto.noti;
 
             }
             catch (Exception erro)
             {
                 throw erro;
             }
-            if (dto.problema == null)
+           
+            
+            if (notiComeco < noti )
             {
                 btnErro.Iconimage_right = Properties.Resources.noti12;
 
             }
+
 
         }
     }

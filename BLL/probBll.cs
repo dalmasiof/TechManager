@@ -80,5 +80,16 @@ namespace BLL
                 throw erro;
             }
         }
+        public List<probDto> notificacao(probDto dtovar)
+        {
+            try
+            {
+                return new ProblemaDal().notifica(dtovar);
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
     }
 }

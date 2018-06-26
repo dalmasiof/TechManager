@@ -46,23 +46,26 @@ namespace TechManager
                 List<usuarioDTO> ListDto = new List<usuarioDTO>();
                 ListDto = new usuarioBLL().listaUsuario();
                 dgvExclui.DataSource = ListDto;
+                CurrencyManager cm = (CurrencyManager)BindingContext[dgvExclui.DataSource];
+                cm.EndCurrentEdit();
+                cm.ResumeBinding();
+                cm.SuspendBinding();
+
                 foreach (DataGridViewRow row in dgvExclui.Rows)
                 {
 
-                    //if (Convert.ToInt32(row.Cells[2].Value) == 1)
-                    //{
-                    //    row.Cells[2].Value = Convert.ToString("Professor");
+                    if (Convert.ToString(row.Cells["tipo"].Value) == "3")
+                    {
+                        row.Visible = false;
 
-                    //}
+                    }
 
-                    //else if (Convert.ToInt32(row.Cells[2].Value) == 2)
-                    //{
-                    //    row.Cells[2].Value = Convert.ToString("Técnico");
-                    //}
-                    //else
-                    //{
-                    //    row.Cells[2].Value = Convert.ToString("Administrador");
-                    //}
+                    else
+                    {
+                        row.Visible = true;
+
+
+                    }
 
 
                 }

@@ -70,7 +70,7 @@ namespace DAL
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
-                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb) values(@aula,@profe,@idmaquina,@descProb,@data)")
+                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb,resolvido) values(@aula,@profe,@idmaquina,@descProb,@data,@re)")
                 {
                     Connection = conexao
                 };
@@ -79,6 +79,7 @@ namespace DAL
                 sql.Parameters.Add("@idmaquina", MySqlDbType.VarChar).Value = dto.idMaquina;
                 sql.Parameters.Add("@descProb", MySqlDbType.VarChar).Value = dto.problema;
                 sql.Parameters.Add("@data", MySqlDbType.DateTime).Value = dto.data;
+                sql.Parameters.Add("@re", MySqlDbType.DateTime).Value = "0";
 
 
                 conexao.Open();
@@ -253,6 +254,49 @@ namespace DAL
                 throw ex;
             }
 
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        public List<probDto> notifica(probDto dtovar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT COUNT(*) FROM problema";
+                comando.Connection = conexao;
+
+
+                List<probDto> listProbDto = new List<probDto>();
+                conexao.Open();
+
+                MySqlDataReader dr = comando.ExecuteReader();
+
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+
+                        dtovar.noti = Convert.ToInt32(dr["COUNT(*)"]);
+                        
+
+                        listProbDto.Add(dtovar);
+
+
+                    }
+                }
+                return listProbDto;
+
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
             finally
             {
                 conexao.Close();

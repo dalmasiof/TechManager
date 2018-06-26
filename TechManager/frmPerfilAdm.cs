@@ -21,7 +21,9 @@ namespace TechManager
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmLogin log = new frmLogin();
+            log.Show();
+            this.Hide();
         }
         usuarioDTO dtovar = new usuarioDTO();
 

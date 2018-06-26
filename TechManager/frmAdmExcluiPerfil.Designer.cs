@@ -98,6 +98,7 @@
             this.dgvExclui.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvExclui.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvExclui.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvExclui.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvExclui.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvExclui.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -184,6 +185,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label1.Location = new System.Drawing.Point(247, 283);
@@ -194,6 +196,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.label3.Location = new System.Drawing.Point(286, 241);
@@ -204,6 +207,7 @@
             // 
             // lblId
             // 
+            this.lblId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.lblId.Location = new System.Drawing.Point(327, 241);
@@ -214,6 +218,7 @@
             // 
             // lblNome
             // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.lblNome.Location = new System.Drawing.Point(327, 283);
@@ -224,6 +229,7 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExcluir.BackColor = System.Drawing.Color.White;
             this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
             this.btnExcluir.FlatAppearance.CheckedBackColor = System.Drawing.Color.IndianRed;
@@ -242,6 +248,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
             this.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.IndianRed;
@@ -260,6 +267,7 @@
             // 
             // lbl1
             // 
+            this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.lbl1.Location = new System.Drawing.Point(496, 241);
@@ -270,6 +278,7 @@
             // 
             // lblTipo
             // 
+            this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.lblTipo.Location = new System.Drawing.Point(667, 241);
