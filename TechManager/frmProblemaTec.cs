@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
-using MySql.Data.MySqlClient;
 
 namespace TechManager
 {
@@ -20,10 +19,7 @@ namespace TechManager
             InitializeComponent();
         }
         probBll bll = new probBll();
-        string conexao_sql = "server=localhost;database=db_tech;user=root;password=1234;port=3306";
-        MySqlConnection conexao = null;
-        MySqlCommand comando = new MySqlCommand();
-
+      
         private void btnAdve_Click(object sender, EventArgs e)
         {
             frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
@@ -45,6 +41,25 @@ namespace TechManager
                 List<probDto> ListDto = new List<probDto>();
                 ListDto = new probBll().listarProb();
                 dgvProb.DataSource = ListDto;
+
+                CurrencyManager cm = (CurrencyManager)BindingContext[dgvProb.DataSource];
+                cm.EndCurrentEdit();
+                cm.ResumeBinding();
+                cm.SuspendBinding();
+                foreach (DataGridViewRow row in dgvProb.Rows)
+                {
+
+                    if (Convert.ToString(row.Cells["check"].Value) == "")
+
+                    {
+                        row.Visible = false;
+
+                    }
+
+                   
+
+
+                }
             }
             catch (Exception erro)
             {
@@ -55,12 +70,6 @@ namespace TechManager
         }
 
         
-
-        
-
-       
-
-       
 
         private void dgvProb_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -98,9 +107,9 @@ namespace TechManager
                     }
                 }
                 catch (Exception ex)
-                {
-                    throw ex;
-                }
+                 {
+                MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 }
 
                
 

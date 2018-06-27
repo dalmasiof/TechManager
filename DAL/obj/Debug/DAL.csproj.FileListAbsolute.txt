@@ -55,3 +55,12 @@ C:\Users\Maza\Desktop\TechManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReferen
 C:\Users\Maza\Desktop\TechManager\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Maza\Desktop\TechManager\DAL\obj\Debug\DAL.dll
 C:\Users\Maza\Desktop\TechManager\DAL\obj\Debug\DAL.pdb
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\obj\Debug\DAL.dll
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\obj\Debug\DAL.pdb
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\bin\Debug\DAL.dll
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\bin\Debug\DAL.pdb
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\bin\Debug\DTO.dll
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DAL\bin\Debug\DTO.pdb

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DTO;
 using MySql.Data.MySqlClient;
 
+
 namespace DAL
 {
     public class advertenciaDAL

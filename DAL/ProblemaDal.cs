@@ -78,8 +78,8 @@ namespace DAL
                 sql.Parameters.Add("@profe", MySqlDbType.VarChar).Value = dto.professor;
                 sql.Parameters.Add("@idmaquina", MySqlDbType.VarChar).Value = dto.idMaquina;
                 sql.Parameters.Add("@descProb", MySqlDbType.VarChar).Value = dto.problema;
-                sql.Parameters.Add("@data", MySqlDbType.DateTime).Value = dto.data;
-                sql.Parameters.Add("@re", MySqlDbType.DateTime).Value = "0";
+                sql.Parameters.Add("@data", MySqlDbType.DateTime).Value = System.DateTime.Now;
+                sql.Parameters.Add("@re", MySqlDbType.VarChar).Value = "";
 
 
                 conexao.Open();
@@ -94,6 +94,15 @@ namespace DAL
             {
                 conexao.Close();
             }
+        }
+
+        public void alteraProb(probDto dTO)
+        {
+
+        }
+        public void deletaProb(probDto dto)
+        {
+
         }
 
         public List<probDto> carregaPorData()
@@ -132,6 +141,55 @@ namespace DAL
 
                     }
                
+                return listProbDto;
+
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        public List<probDto> carregaPorDataNova()
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT * FROM problema order by dataProb desc";
+                comando.Connection = conexao;
+
+                List<probDto> listProbDto = new List<probDto>();
+                conexao.Open();
+
+                MySqlDataReader dr = comando.ExecuteReader();
+
+
+
+
+                while (dr.Read())
+                {
+                    probDto dtovar = new probDto();
+
+                    dtovar.idProb = Convert.ToInt32(dr["idProb"]);
+                    dtovar.problema = Convert.ToString(dr["problema"]);
+                    dtovar.aula = Convert.ToString(dr["aula"]);
+                    dtovar.professor = Convert.ToString(dr["professor"]);
+                    dtovar.data = Convert.ToDateTime(dr["dataProb"]);
+                    dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+                    dtovar.Check = Convert.ToString(dr["resolvido"]);
+
+
+                    listProbDto.Add(dtovar);
+
+
+                }
+
                 return listProbDto;
 
 

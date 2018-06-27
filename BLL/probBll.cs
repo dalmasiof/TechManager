@@ -91,5 +91,17 @@ namespace BLL
                 throw erro;
             }
         }
+
+        public List<probDto> listaPorDataAtual()
+        {
+            try
+            {
+                return new ProblemaDal().carregaPorDataNova();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
     }
 }

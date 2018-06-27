@@ -35,13 +35,6 @@
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.dgvAltera = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblRG = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -61,6 +54,14 @@
             this.lblFotoPerfil = new System.Windows.Forms.Label();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.mktxtRG = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -125,6 +126,7 @@
             this.dgvAltera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAltera.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.teste,
             this.nome,
             this.tipo,
             this.rg,
@@ -144,56 +146,6 @@
             this.dgvAltera.Size = new System.Drawing.Size(641, 150);
             this.dgvAltera.TabIndex = 4;
             this.dgvAltera.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAltera_CellClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "Tipo de acesso";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
-            // rg
-            // 
-            this.rg.DataPropertyName = "rg";
-            this.rg.HeaderText = "RG";
-            this.rg.Name = "rg";
-            this.rg.ReadOnly = true;
-            // 
-            // login
-            // 
-            this.login.DataPropertyName = "login";
-            this.login.HeaderText = "Login";
-            this.login.Name = "login";
-            this.login.ReadOnly = true;
-            // 
-            // senha
-            // 
-            this.senha.DataPropertyName = "senha";
-            this.senha.HeaderText = "Senha";
-            this.senha.Name = "senha";
-            this.senha.ReadOnly = true;
-            this.senha.Visible = false;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // lblRG
             // 
@@ -417,6 +369,63 @@
             this.mktxtRG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mktxtRG_MouseClick);
             this.mktxtRG.TextChanged += new System.EventHandler(this.mktxtRG_TextChanged);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // teste
+            // 
+            this.teste.HeaderText = "Tipo";
+            this.teste.Name = "teste";
+            this.teste.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            this.tipo.DataPropertyName = "tipo";
+            this.tipo.HeaderText = "Tipo de acesso";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            this.tipo.Visible = false;
+            // 
+            // rg
+            // 
+            this.rg.DataPropertyName = "rg";
+            this.rg.HeaderText = "RG";
+            this.rg.Name = "rg";
+            this.rg.ReadOnly = true;
+            // 
+            // login
+            // 
+            this.login.DataPropertyName = "login";
+            this.login.HeaderText = "Login";
+            this.login.Name = "login";
+            this.login.ReadOnly = true;
+            // 
+            // senha
+            // 
+            this.senha.DataPropertyName = "senha";
+            this.senha.HeaderText = "Senha";
+            this.senha.Name = "senha";
+            this.senha.ReadOnly = true;
+            this.senha.Visible = false;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
             // frmAdmAlteraPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,13 +493,14 @@
         private System.Windows.Forms.TextBox txtNomeFotoPerfil;
         private System.Windows.Forms.Label lblFotoPerfil;
         private System.Windows.Forms.PictureBox pcbFoto;
+        private System.Windows.Forms.TextBox mktxtRG;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teste;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn login;
         private System.Windows.Forms.DataGridViewTextBoxColumn senha;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.TextBox mktxtRG;
     }
 }

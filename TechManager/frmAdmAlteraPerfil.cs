@@ -49,15 +49,19 @@ namespace TechManager
                 foreach (DataGridViewRow row in dgvAltera.Rows)
                 {
 
-                    if (Convert.ToString(row.Cells["tipo"].Value) == "3")
+                    if(Convert.ToInt32(row.Cells["tipo"].Value) == 1)
                     {
-                        row.Visible = false;
+                        row.Cells["teste"].Value = Convert.ToString("Professor");
+                    }
+                    else if (Convert.ToInt32(row.Cells["tipo"].Value) == 2)
+                    {
+                        row.Cells["teste"].Value = Convert.ToString("Técnico");
 
                     }
 
                     else
                     {
-                        row.Visible = true;
+                        row.Visible = false;
 
 
                     }

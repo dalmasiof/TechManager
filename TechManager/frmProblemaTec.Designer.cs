@@ -39,13 +39,13 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.dgvProb = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,9 +108,9 @@
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.btnVoltar.Location = new System.Drawing.Point(12, 533);
+            this.btnVoltar.Location = new System.Drawing.Point(57, 529);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(76, 60);
+            this.btnVoltar.Size = new System.Drawing.Size(118, 109);
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnVoltar.TabIndex = 3;
             this.btnVoltar.TabStop = false;
@@ -152,6 +152,9 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvProb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvProb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProb.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvProb.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvProb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -186,40 +189,10 @@
             this.dgvProb.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellEndEdit);
             this.dgvProb.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellValueChanged);
             // 
-            // Column1
+            // check
             // 
-            this.Column1.DataPropertyName = "aula";
-            this.Column1.HeaderText = "Aula";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "idProb";
-            this.id.HeaderText = "Column6";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "professor";
-            this.Column2.HeaderText = "Professor";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "idmaquina";
-            this.Column3.HeaderText = "ID Máquina";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "problema";
-            this.Column4.HeaderText = "Problema";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.check.HeaderText = "Resolver";
+            this.check.Name = "check";
             // 
             // Column5
             // 
@@ -228,10 +201,40 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // check
+            // Column4
             // 
-            this.check.HeaderText = "Resolver";
-            this.check.Name = "check";
+            this.Column4.DataPropertyName = "problema";
+            this.Column4.HeaderText = "Problema";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "idmaquina";
+            this.Column3.HeaderText = "ID Máquina";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "professor";
+            this.Column2.HeaderText = "Professor";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "idProb";
+            this.id.HeaderText = "Column6";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "aula";
+            this.Column1.HeaderText = "Aula";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // frmProblemaTec
             // 

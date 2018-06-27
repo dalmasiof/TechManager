@@ -30,7 +30,8 @@ namespace TechManager
             cmbHist.AddItem("Consultar por:");
             cmbHist.AddItem("ID Máquina");
             cmbHist.AddItem("Professor");
-            cmbHist.AddItem("Data");
+            cmbHist.AddItem("Data mais antiga");
+            cmbHist.AddItem("Data mais atual");
 
             cmbHist.selectedIndex = 0;
 
@@ -46,12 +47,12 @@ namespace TechManager
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
+           // carregaGrid();
             if (txtUser.Text == "")
             {
 
                 carregaGrid();
             }
-
         }
 
         private void carregaGrid()
@@ -132,14 +133,14 @@ namespace TechManager
 
                 {
                     row.DefaultCellStyle.BackColor = Color.ForestGreen;
-                    row.Cells[5].Value = Convert.ToString("Checado");
+                    row.Cells[5].Value = Convert.ToString("Resolvido");
 
                 }
 
                 else
                 {
                     row.DefaultCellStyle.BackColor = Color.Maroon;
-                    row.Cells[5].Value = Convert.ToString("Não checado");
+                    row.Cells[5].Value = Convert.ToString("Não resolvido");
 
 
                 }
@@ -157,11 +158,29 @@ namespace TechManager
             else if (cmbHist.selectedIndex == 3)
             {
                 txtUser.Enabled = false;
-                txtUser.Text = "Data mais recente";
+                txtUser.Text = "Data mais antiga";
                 try
                 {
                     List<probDto> ListDto = new List<probDto>();
                     ListDto = new probBll().listaPorData();
+                    dgvHist.DataSource = ListDto;
+
+                    Pintalinhas();
+
+                }
+                catch (Exception erro)
+                {
+                    throw erro;
+                }
+            }
+            else if(cmbHist.selectedIndex == 4)
+                {
+                txtUser.Enabled = false;
+                txtUser.Text = "Data mais atual";
+                try
+                {
+                    List<probDto> ListDto = new List<probDto>();
+                    ListDto = new probBll().listaPorDataAtual();
                     dgvHist.DataSource = ListDto;
 
                     Pintalinhas();

@@ -60,6 +60,7 @@
             // 
             // txtJustificativa
             // 
+            this.txtJustificativa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtJustificativa.Enabled = false;
             this.txtJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJustificativa.ForeColor = System.Drawing.Color.Gray;
@@ -73,6 +74,7 @@
             // 
             // lblJustificativa
             // 
+            this.lblJustificativa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblJustificativa.AutoSize = true;
             this.lblJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJustificativa.Location = new System.Drawing.Point(280, 364);
@@ -86,9 +88,9 @@
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.btnHome.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.btnHome.Location = new System.Drawing.Point(58, 538);
+            this.btnHome.Location = new System.Drawing.Point(58, 489);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(76, 60);
+            this.btnHome.Size = new System.Drawing.Size(118, 109);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 3;
             this.btnHome.TabStop = false;
@@ -140,6 +142,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
             this.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.IndianRed;
@@ -158,6 +161,7 @@
             // 
             // btnEnviar
             // 
+            this.btnEnviar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEnviar.BackColor = System.Drawing.Color.White;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
             this.btnEnviar.FlatAppearance.CheckedBackColor = System.Drawing.Color.IndianRed;
@@ -176,6 +180,7 @@
             // 
             // lblAdvertencia
             // 
+            this.lblAdvertencia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAdvertencia.AutoSize = true;
             this.lblAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdvertencia.Location = new System.Drawing.Point(280, 256);
@@ -190,6 +195,7 @@
             this.dataGridAdvert.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridAdvert.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridAdvert.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAdvert.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridAdvert.BackgroundColor = System.Drawing.Color.Gainsboro;
@@ -285,6 +291,7 @@
             // 
             // lblMensagem
             // 
+            this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;

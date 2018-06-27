@@ -99,6 +99,31 @@ namespace TechManager
                 List<probDto> ListDto = new List<probDto>();
                 ListDto = new probBll().listarProb();
                 bunifuCustomDataGrid1.DataSource = ListDto;
+
+                CurrencyManager cm = (CurrencyManager)BindingContext[bunifuCustomDataGrid1.DataSource];
+                cm.EndCurrentEdit();
+                cm.ResumeBinding();
+                cm.SuspendBinding();
+
+                foreach (DataGridViewRow row in bunifuCustomDataGrid1.Rows)
+                {
+
+                    if (Convert.ToString(row.Cells["checado"].Value) == "")
+
+                    {
+                        row.Visible = true;
+
+                    }
+
+                    else
+                    {
+                        row.Visible = false;
+
+
+                    }
+
+
+                }
             }
             catch (Exception erro)
             {

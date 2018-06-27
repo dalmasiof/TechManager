@@ -37,14 +37,14 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.dgvHist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMaquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resolvido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -114,6 +114,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvHist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvHist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHist.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvHist.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -146,6 +147,36 @@
             this.dgvHist.Size = new System.Drawing.Size(626, 189);
             this.dgvHist.TabIndex = 2;
             this.dgvHist.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHist_CellEndEdit);
+            // 
+            // cmbHist
+            // 
+            this.cmbHist.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbHist.BackColor = System.Drawing.SystemColors.Control;
+            this.cmbHist.BorderRadius = 5;
+            this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
+            this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbHist.ForeColor = System.Drawing.Color.White;
+            this.cmbHist.Location = new System.Drawing.Point(260, 240);
+            this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHist.Name = "cmbHist";
+            this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
+            this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
+            this.cmbHist.selectedIndex = -1;
+            this.cmbHist.Size = new System.Drawing.Size(217, 35);
+            this.cmbHist.TabIndex = 0;
+            this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtUser.Location = new System.Drawing.Point(503, 249);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(247, 26);
+            this.txtUser.TabIndex = 1;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // Column1
             // 
@@ -185,37 +216,9 @@
             // resolvido
             // 
             this.resolvido.DataPropertyName = "check";
-            this.resolvido.HeaderText = "Checado?";
+            this.resolvido.HeaderText = "Resolvido?";
             this.resolvido.Name = "resolvido";
             this.resolvido.ReadOnly = true;
-            // 
-            // cmbHist
-            // 
-            this.cmbHist.BackColor = System.Drawing.SystemColors.Control;
-            this.cmbHist.BorderRadius = 5;
-            this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
-            this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbHist.ForeColor = System.Drawing.Color.White;
-            this.cmbHist.Location = new System.Drawing.Point(260, 240);
-            this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbHist.Name = "cmbHist";
-            this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
-            this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
-            this.cmbHist.selectedIndex = -1;
-            this.cmbHist.Size = new System.Drawing.Size(217, 35);
-            this.cmbHist.TabIndex = 0;
-            this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUser.Location = new System.Drawing.Point(503, 249);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(247, 26);
-            this.txtUser.TabIndex = 1;
-            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
-            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // frmHistorico
             // 
