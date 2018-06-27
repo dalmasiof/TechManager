@@ -27,6 +27,7 @@ namespace TechManager
             lblNome.Text = information.nome;
             carregaGrid();
             lblAviso.Text = "";
+            dto.idProb = -1;
             
 
         }
@@ -65,13 +66,8 @@ namespace TechManager
                 carregaGrid();
                 lblAviso.Text = "Cadastrado com sucesso";
                 lblAviso.ForeColor = Color.Green;
-                foreach(Control c in this.Controls)
-                    {
-                         if(c is TextBox)
-                        {
-                            (c as Control).Text = "";
-                        }
-                    }
+                    LimpaCampos();
+               
             }
             catch (Exception erro)
             {
@@ -133,12 +129,75 @@ namespace TechManager
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-
+            if(dto.idProb == -1)
+            {
+                lblAviso.Text = "É precio escolher um problema clicando sobre ele para altera-lo";
+                lblAviso.ForeColor = Color.Red;
+                return;
+            }
+            dto.idMaquina = txtID.Text;
+            dto.problema = txtProblema.Text;
+            
+            try
+            {
+                bll.alteraProblema(dto);
+                carregaGrid();
+                lblAviso.Text = "Problema alterado com sucesso";
+                lblAviso.ForeColor = Color.Green;
+            }
+            catch(Exception erro)
+            {
+                MessageBox.Show(""+erro);
+            }
+           
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (dto.idProb == -1)
+            {
+                lblAviso.Text = "É precio escolher um problema clicando sobre ele para deleta-lo";
+                lblAviso.ForeColor = Color.Red;
+                return;
+            }
+            try
+            {
+                bll.deletaProb(dto);
+                carregaGrid();
+                lblAviso.Text = "Problema deletado com sucesso";
+                lblAviso.ForeColor = Color.Green;
+                LimpaCampos();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("" + erro);
+            }
+        }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpaCampos();
+            dto.idProb = -1;
+            lblAviso.Text = "Clique em um problema para alterá-lo ou exclui-lo";
+            lblAviso.ForeColor = Color.Black;
+        }
+        private void LimpaCampos()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    (c as Control).Text = "";
+                }
+            }
+        }
+
+        private void bunifuCustomDataGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int sel = bunifuCustomDataGrid1.CurrentRow.Index;
+            txtID.Text = Convert.ToString(bunifuCustomDataGrid1["Column3", sel].Value);
+            txtProblema.Text = Convert.ToString(bunifuCustomDataGrid1["Column4", sel].Value);
+            dto.idProb = Convert.ToInt32(bunifuCustomDataGrid1["id", sel].Value);
         }
     }
 }

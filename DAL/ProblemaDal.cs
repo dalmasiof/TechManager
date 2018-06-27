@@ -96,13 +96,43 @@ namespace DAL
             }
         }
 
-        public void alteraProb(probDto dTO)
+        public void alteraProb(probDto dtovar)
         {
-
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("update problema set idMaquina = @idM,problema = @prob where idProb = @id")
+                {
+                    Connection = conexao
+                };
+                sql.Parameters.Add("@idM", MySqlDbType.VarChar).Value = dtovar.idMaquina;
+                sql.Parameters.Add("@id", MySqlDbType.Int32).Value = dtovar.idProb;
+                sql.Parameters.Add("@prob", MySqlDbType.VarChar).Value = dtovar.problema;
+                conexao.Open();
+                sql.ExecuteNonQuery();
+            }
+            catch(Exception erro)
+            {
+                throw erro;
+            }
         }
         public void deletaProb(probDto dto)
         {
-
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("delete from problema where idProb = @id")
+                {
+                    Connection = conexao
+                };
+                sql.Parameters.Add("@id", MySqlDbType.Int32).Value = dto.idProb;
+                conexao.Open();
+                sql.ExecuteNonQuery();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
         }
 
         public List<probDto> carregaPorData()

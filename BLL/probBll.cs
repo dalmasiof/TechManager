@@ -103,5 +103,29 @@ namespace BLL
                 throw erro;
             }
         }
+
+        public void alteraProblema(probDto dtovar)
+        {
+            try
+            {
+                dal.alteraProb(dtovar);
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
+        public void deletaProb(probDto dto)
+        {
+            try
+            {
+                dal.deletaProb(dto);
+            }
+            catch(Exception erro)
+            {
+                throw erro;
+            }
+        }
     }
 }
