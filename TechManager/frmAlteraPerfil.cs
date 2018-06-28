@@ -32,6 +32,7 @@ namespace TechManager
 
             else
             {
+                dtovar.id = information.id;
                 dtovar.nome = txtNome.Text;
                 dtovar.login = txtLogin.Text;
                 dtovar.senha = txtSenha.Text;

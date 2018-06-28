@@ -106,19 +106,18 @@ namespace TechManager
 
                 foreach (DataGridViewRow row in dgvProb.Rows)
                 {
-                    //int sel = dgvProb.SelectedRows.Count;
-                   
+                    
 
-                    //if (Convert.ToString(dgvProb["cheka", sel].Value) == "")
 
-                    //{
-                    //    row.Visible = true;
+                    if (Convert.ToString(row.Cells["cheka"].Value) == "")
+                    {
+                        row.Visible = true;
 
-                    //}
-                    //else
-                    //{
-                    //    row.Visible = false;
-                    //}
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
 
 
 

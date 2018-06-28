@@ -65,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 614);
+            this.panel1.Size = new System.Drawing.Size(341, 900);
             this.panel1.TabIndex = 19;
             // 
             // btnAdve
@@ -78,6 +78,7 @@
             this.btnAdve.ButtonText = "Avisos";
             this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAdve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
             this.btnAdve.Iconimage = global::TechManager.Properties.Resources.error_warning_alert_attention_512;
             this.btnAdve.Iconimage_right = null;
@@ -90,13 +91,13 @@
             this.btnAdve.IconVisible = true;
             this.btnAdve.IconZoom = 90D;
             this.btnAdve.IsTab = false;
-            this.btnAdve.Location = new System.Drawing.Point(13, 368);
+            this.btnAdve.Location = new System.Drawing.Point(48, 504);
             this.btnAdve.Name = "btnAdve";
             this.btnAdve.Normalcolor = System.Drawing.Color.Silver;
             this.btnAdve.OnHovercolor = System.Drawing.Color.Brown;
             this.btnAdve.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAdve.selected = false;
-            this.btnAdve.Size = new System.Drawing.Size(206, 53);
+            this.btnAdve.Size = new System.Drawing.Size(231, 53);
             this.btnAdve.TabIndex = 6;
             this.btnAdve.Text = "Avisos";
             this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,7 +110,7 @@
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.btnVoltar.Location = new System.Drawing.Point(57, 529);
+            this.btnVoltar.Location = new System.Drawing.Point(48, 706);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(118, 109);
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,9 +123,9 @@
             // 
             this.pictureBox3.BackgroundImage = global::TechManager.Properties.Resources.logoTCC11;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(-48, 160);
+            this.pictureBox3.Location = new System.Drawing.Point(-22, 214);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(306, 258);
+            this.pictureBox3.Size = new System.Drawing.Size(345, 319);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
@@ -133,7 +134,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblNome.Location = new System.Drawing.Point(40, 134);
+            this.lblNome.Location = new System.Drawing.Point(80, 179);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(135, 23);
             this.lblNome.TabIndex = 2;
@@ -142,9 +143,9 @@
             // pcbProfessor
             // 
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
+            this.pcbProfessor.Location = new System.Drawing.Point(69, 21);
             this.pcbProfessor.Name = "pcbProfessor";
-            this.pcbProfessor.Size = new System.Drawing.Size(118, 106);
+            this.pcbProfessor.Size = new System.Drawing.Size(164, 155);
             this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
@@ -181,12 +182,12 @@
             this.dgvProb.EnableHeadersVisualStyles = false;
             this.dgvProb.HeaderBgColor = System.Drawing.Color.Peru;
             this.dgvProb.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvProb.Location = new System.Drawing.Point(299, 51);
+            this.dgvProb.Location = new System.Drawing.Point(565, 239);
             this.dgvProb.Name = "dgvProb";
             this.dgvProb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             this.dgvProb.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProb.Size = new System.Drawing.Size(625, 177);
+            this.dgvProb.Size = new System.Drawing.Size(764, 373);
             this.dgvProb.TabIndex = 20;
             this.dgvProb.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellEndEdit);
             this.dgvProb.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellValueChanged);
@@ -248,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 614);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.dgvProb);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

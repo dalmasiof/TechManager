@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 538);
+            this.panel1.Size = new System.Drawing.Size(341, 900);
             this.panel1.TabIndex = 8;
             // 
             // bunifuImageButton2
@@ -70,7 +70,7 @@
             this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(58, 465);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(113, 760);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(118, 109);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,29 +83,29 @@
             // 
             this.pictureBox3.BackgroundImage = global::TechManager.Properties.Resources.logoTCC11;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(-43, 175);
+            this.pictureBox3.Location = new System.Drawing.Point(-49, 314);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(306, 258);
+            this.pictureBox3.Size = new System.Drawing.Size(427, 330);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblNome.Location = new System.Drawing.Point(40, 134);
+            this.lblNome.Location = new System.Drawing.Point(92, 190);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(155, 23);
+            this.lblNome.Size = new System.Drawing.Size(169, 26);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Professor ( Nome )";
             // 
             // pcbProfessor
             // 
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
+            this.pcbProfessor.Location = new System.Drawing.Point(88, 27);
             this.pcbProfessor.Name = "pcbProfessor";
-            this.pcbProfessor.Size = new System.Drawing.Size(118, 106);
+            this.pcbProfessor.Size = new System.Drawing.Size(170, 150);
             this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
@@ -139,12 +139,12 @@
             this.dgvHist.EnableHeadersVisualStyles = false;
             this.dgvHist.HeaderBgColor = System.Drawing.Color.Brown;
             this.dgvHist.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvHist.Location = new System.Drawing.Point(260, 25);
+            this.dgvHist.Location = new System.Drawing.Point(532, 69);
             this.dgvHist.Name = "dgvHist";
             this.dgvHist.ReadOnly = true;
             this.dgvHist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHist.Size = new System.Drawing.Size(626, 189);
+            this.dgvHist.Size = new System.Drawing.Size(709, 387);
             this.dgvHist.TabIndex = 2;
             this.dgvHist.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHist_CellEndEdit);
             // 
@@ -198,13 +198,13 @@
             this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
             this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHist.ForeColor = System.Drawing.Color.White;
-            this.cmbHist.Location = new System.Drawing.Point(260, 240);
+            this.cmbHist.Location = new System.Drawing.Point(598, 569);
             this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbHist.Name = "cmbHist";
             this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
             this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
             this.cmbHist.selectedIndex = -1;
-            this.cmbHist.Size = new System.Drawing.Size(217, 35);
+            this.cmbHist.Size = new System.Drawing.Size(243, 42);
             this.cmbHist.TabIndex = 0;
             this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
             // 
@@ -213,9 +213,9 @@
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUser.Location = new System.Drawing.Point(503, 249);
+            this.txtUser.Location = new System.Drawing.Point(889, 585);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(247, 26);
+            this.txtUser.Size = new System.Drawing.Size(253, 26);
             this.txtUser.TabIndex = 1;
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 538);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.cmbHist);
             this.Controls.Add(this.dgvHist);

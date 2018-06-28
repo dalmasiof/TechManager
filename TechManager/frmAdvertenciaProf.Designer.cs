@@ -75,9 +75,9 @@
             this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(68, 523);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(58, 525);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(74, 74);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(118, 109);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuImageButton2.TabIndex = 3;
             this.bunifuImageButton2.TabStop = false;
@@ -111,6 +111,7 @@
             this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
             this.pcbProfessor.Name = "pcbProfessor";
             this.pcbProfessor.Size = new System.Drawing.Size(118, 106);
+            this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
             // 

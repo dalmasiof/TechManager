@@ -64,17 +64,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 601);
+            this.panel1.Size = new System.Drawing.Size(341, 900);
             this.panel1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(69, 559);
+            this.label2.Location = new System.Drawing.Point(115, 833);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 20);
+            this.label2.Size = new System.Drawing.Size(50, 25);
             this.label2.TabIndex = 10;
             this.label2.Text = "Sair";
             // 
@@ -100,13 +100,13 @@
             this.btnStand.IconVisible = true;
             this.btnStand.IconZoom = 90D;
             this.btnStand.IsTab = false;
-            this.btnStand.Location = new System.Drawing.Point(12, 426);
+            this.btnStand.Location = new System.Drawing.Point(32, 553);
             this.btnStand.Name = "btnStand";
             this.btnStand.Normalcolor = System.Drawing.Color.Silver;
             this.btnStand.OnHovercolor = System.Drawing.Color.CornflowerBlue;
             this.btnStand.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStand.selected = false;
-            this.btnStand.Size = new System.Drawing.Size(206, 53);
+            this.btnStand.Size = new System.Drawing.Size(233, 64);
             this.btnStand.TabIndex = 9;
             this.btnStand.Text = "Modo StandBy";
             this.btnStand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,9 +120,9 @@
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Image = global::TechManager.Properties.Resources.oie_transparent;
             this.btnSair.ImageActive = global::TechManager.Properties.Resources.oie_transparent__3_;
-            this.btnSair.Location = new System.Drawing.Point(12, 535);
+            this.btnSair.Location = new System.Drawing.Point(32, 785);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(66, 58);
+            this.btnSair.Size = new System.Drawing.Size(77, 77);
             this.btnSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSair.TabIndex = 3;
             this.btnSair.TabStop = false;
@@ -151,13 +151,13 @@
             this.btnDel.IconVisible = true;
             this.btnDel.IconZoom = 90D;
             this.btnDel.IsTab = false;
-            this.btnDel.Location = new System.Drawing.Point(12, 356);
+            this.btnDel.Location = new System.Drawing.Point(32, 464);
             this.btnDel.Name = "btnDel";
             this.btnDel.Normalcolor = System.Drawing.Color.Silver;
             this.btnDel.OnHovercolor = System.Drawing.Color.Brown;
             this.btnDel.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDel.selected = false;
-            this.btnDel.Size = new System.Drawing.Size(206, 53);
+            this.btnDel.Size = new System.Drawing.Size(233, 64);
             this.btnDel.TabIndex = 6;
             this.btnDel.Text = "Deletar Usuário";
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,13 +188,13 @@
             this.btnAltera.IconVisible = true;
             this.btnAltera.IconZoom = 90D;
             this.btnAltera.IsTab = false;
-            this.btnAltera.Location = new System.Drawing.Point(12, 288);
+            this.btnAltera.Location = new System.Drawing.Point(32, 375);
             this.btnAltera.Name = "btnAltera";
             this.btnAltera.Normalcolor = System.Drawing.Color.Silver;
             this.btnAltera.OnHovercolor = System.Drawing.Color.MediumAquamarine;
             this.btnAltera.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAltera.selected = false;
-            this.btnAltera.Size = new System.Drawing.Size(206, 53);
+            this.btnAltera.Size = new System.Drawing.Size(233, 64);
             this.btnAltera.TabIndex = 8;
             this.btnAltera.Text = "Alterar Usuário";
             this.btnAltera.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -225,13 +225,13 @@
             this.btnCad.IconVisible = true;
             this.btnCad.IconZoom = 90D;
             this.btnCad.IsTab = false;
-            this.btnCad.Location = new System.Drawing.Point(12, 216);
+            this.btnCad.Location = new System.Drawing.Point(32, 286);
             this.btnCad.Name = "btnCad";
             this.btnCad.Normalcolor = System.Drawing.Color.Silver;
             this.btnCad.OnHovercolor = System.Drawing.Color.LightGreen;
             this.btnCad.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCad.selected = false;
-            this.btnCad.Size = new System.Drawing.Size(206, 53);
+            this.btnCad.Size = new System.Drawing.Size(233, 64);
             this.btnCad.TabIndex = 7;
             this.btnCad.Text = "Cadastrar Usuário";
             this.btnCad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -266,20 +266,21 @@
             // 
             this.pictureBox2.BackgroundImage = global::TechManager.Properties.Resources.etec_2018_inscricoes_11;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(264, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(388, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(242, 172);
+            this.pictureBox2.Size = new System.Drawing.Size(395, 303);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox2, "ETEC");
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::TechManager.Properties.Resources.logoTCC11;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(483, -24);
+            this.pictureBox3.Location = new System.Drawing.Point(981, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(358, 289);
+            this.pictureBox3.Size = new System.Drawing.Size(455, 419);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox3, "Sobre");
@@ -296,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 601);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);

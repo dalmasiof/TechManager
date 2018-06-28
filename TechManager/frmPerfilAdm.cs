@@ -77,5 +77,12 @@ namespace TechManager
             frmAbout about = new frmAbout();
             about.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.cps.sp.gov.br/category/etec/");
+        }
+
+        
     }
 }

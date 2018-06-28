@@ -134,6 +134,12 @@ namespace TechManager
 
 
         }
+
+        private void pcbFotoTec_Click(object sender, EventArgs e)
+        {
+            frmAlteraPerfil alt = new frmAlteraPerfil();
+            alt.ShowDialog();
+        }
     }
 
 }
