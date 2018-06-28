@@ -139,13 +139,13 @@ namespace TechManager
                 lblMensagem.Text = "Aviso enviado ao técnico, selecione um novo problema caso desejar enviar outro aviso!";
                 txtAdvert.Enabled = false;
 
+                carregaGrid();
             }
 
             catch
             {
                 lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
             }
-            carregaGrid();
 
         }
 

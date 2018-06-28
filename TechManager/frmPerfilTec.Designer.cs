@@ -243,7 +243,6 @@
             // pcbFotoTec
             // 
             this.pcbFotoTec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbFotoTec.Image = global::TechManager.Properties.Resources.if_User_27887;
             this.pcbFotoTec.Location = new System.Drawing.Point(44, 25);
             this.pcbFotoTec.Name = "pcbFotoTec";
             this.pcbFotoTec.Size = new System.Drawing.Size(118, 106);

@@ -19,7 +19,9 @@ namespace TechManager
             InitializeComponent();
         }
         probBll bll = new probBll();
-      
+        probDto dtoVar = new probDto();
+
+
         private void btnAdve_Click(object sender, EventArgs e)
         {
             frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
@@ -35,36 +37,7 @@ namespace TechManager
 
         private void frmProblemaTec_Load(object sender, EventArgs e)
         {
-            dgvProb.AutoGenerateColumns = false;
-            try
-            {
-                List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listarProb();
-                dgvProb.DataSource = ListDto;
-
-                CurrencyManager cm = (CurrencyManager)BindingContext[dgvProb.DataSource];
-                cm.EndCurrentEdit();
-                cm.ResumeBinding();
-                cm.SuspendBinding();
-                foreach (DataGridViewRow row in dgvProb.Rows)
-                {
-
-                    if (Convert.ToString(row.Cells["check"].Value) == "")
-
-                    {
-                        row.Visible = false;
-
-                    }
-
-                   
-
-
-                }
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
+            carregaGrid();
 
             
         }
@@ -74,7 +47,6 @@ namespace TechManager
         private void dgvProb_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
-            probDto dtoVar = new probDto();
 
             int sel = dgvProb.CurrentRow.Index;
 
@@ -83,6 +55,7 @@ namespace TechManager
                 dgvProb.CurrentRow.DefaultCellStyle.BackColor = Color.ForestGreen;
                 dtoVar.Check = "1";
                 dtoVar.idProb = Convert.ToInt32(dgvProb["id", sel].Value);
+               
             }
 
 
@@ -92,14 +65,14 @@ namespace TechManager
                 dtoVar.Check = "0";
                 dtoVar.idProb = Convert.ToInt32(dgvProb["id", sel].Value);
 
+
             }
-                try
+            try
                 {
                     try
                     {
                         probBll bll = new probBll();
                         bll.alteraSituacao(dtoVar);
-                        
                     }
                     catch (Exception erro)
                     {
@@ -110,11 +83,57 @@ namespace TechManager
                  {
                 MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                  }
+                    
 
                
 
         }
+        private void carregaGrid()
+        {
+            
+            dgvProb.AutoGenerateColumns = false;
+            
+            try
+            {
+                List<probDto> ListDto = new List<probDto>();
+                ListDto = new probBll().listarProb();
+                dgvProb.DataSource = ListDto;
 
+                CurrencyManager cm = (CurrencyManager)BindingContext[dgvProb.DataSource];
+                cm.EndCurrentEdit();
+                cm.ResumeBinding();
+                cm.SuspendBinding();
+
+                foreach (DataGridViewRow row in dgvProb.Rows)
+                {
+                    //int sel = dgvProb.SelectedRows.Count;
+                   
+
+                    //if (Convert.ToString(dgvProb["cheka", sel].Value) == "")
+
+                    //{
+                    //    row.Visible = true;
+
+                    //}
+                    //else
+                    //{
+                    //    row.Visible = false;
+                    //}
+
+
+
+
+
+                }
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+
+        
+    }
         private void dgvProb_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 

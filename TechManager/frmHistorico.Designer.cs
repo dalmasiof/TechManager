@@ -37,14 +37,14 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.dgvHist = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMaquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resolvido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbHist = new Bunifu.Framework.UI.BunifuDropdown();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,9 +70,9 @@
             this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(77, 465);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(58, 465);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(76, 60);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(118, 109);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 3;
             this.bunifuImageButton2.TabStop = false;
@@ -148,36 +148,6 @@
             this.dgvHist.TabIndex = 2;
             this.dgvHist.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHist_CellEndEdit);
             // 
-            // cmbHist
-            // 
-            this.cmbHist.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbHist.BackColor = System.Drawing.SystemColors.Control;
-            this.cmbHist.BorderRadius = 5;
-            this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
-            this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbHist.ForeColor = System.Drawing.Color.White;
-            this.cmbHist.Location = new System.Drawing.Point(260, 240);
-            this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbHist.Name = "cmbHist";
-            this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
-            this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
-            this.cmbHist.selectedIndex = -1;
-            this.cmbHist.Size = new System.Drawing.Size(217, 35);
-            this.cmbHist.TabIndex = 0;
-            this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUser.Location = new System.Drawing.Point(503, 249);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(247, 26);
-            this.txtUser.TabIndex = 1;
-            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
-            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "aula";
@@ -219,6 +189,36 @@
             this.resolvido.HeaderText = "Resolvido?";
             this.resolvido.Name = "resolvido";
             this.resolvido.ReadOnly = true;
+            // 
+            // cmbHist
+            // 
+            this.cmbHist.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbHist.BackColor = System.Drawing.SystemColors.Control;
+            this.cmbHist.BorderRadius = 5;
+            this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
+            this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbHist.ForeColor = System.Drawing.Color.White;
+            this.cmbHist.Location = new System.Drawing.Point(260, 240);
+            this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHist.Name = "cmbHist";
+            this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
+            this.cmbHist.onHoverColor = System.Drawing.Color.Gray;
+            this.cmbHist.selectedIndex = -1;
+            this.cmbHist.Size = new System.Drawing.Size(217, 35);
+            this.cmbHist.TabIndex = 0;
+            this.cmbHist.onItemSelected += new System.EventHandler(this.cmbHist_onItemSelected);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtUser.Location = new System.Drawing.Point(503, 249);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(247, 26);
+            this.txtUser.TabIndex = 1;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // frmHistorico
             // 

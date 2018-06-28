@@ -38,6 +38,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,13 +58,6 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblAviso = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
@@ -70,9 +70,9 @@
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.btnVoltar.Location = new System.Drawing.Point(13, 517);
+            this.btnVoltar.Location = new System.Drawing.Point(44, 517);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(76, 60);
+            this.btnVoltar.Size = new System.Drawing.Size(118, 109);
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnVoltar.TabIndex = 3;
             this.btnVoltar.TabStop = false;
@@ -199,6 +199,57 @@
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(559, 177);
             this.bunifuCustomDataGrid1.TabIndex = 19;
             this.bunifuCustomDataGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "aula";
+            this.Column1.HeaderText = "Aula";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // checado
+            // 
+            this.checado.DataPropertyName = "check";
+            this.checado.HeaderText = "Column6";
+            this.checado.Name = "checado";
+            this.checado.ReadOnly = true;
+            this.checado.Visible = false;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "idProb";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "professor";
+            this.Column2.HeaderText = "Professor";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "idMaquina";
+            this.Column3.HeaderText = "ID Máquina";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "problema";
+            this.Column4.HeaderText = "Problema";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "data";
+            this.Column5.HeaderText = "Data";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // label3
             // 
@@ -345,57 +396,6 @@
             this.lblAviso.Size = new System.Drawing.Size(58, 22);
             this.lblAviso.TabIndex = 33;
             this.lblAviso.Text = "label1";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "aula";
-            this.Column1.HeaderText = "Aula";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // checado
-            // 
-            this.checado.DataPropertyName = "check";
-            this.checado.HeaderText = "Column6";
-            this.checado.Name = "checado";
-            this.checado.ReadOnly = true;
-            this.checado.Visible = false;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "idProb";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "professor";
-            this.Column2.HeaderText = "Professor";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "idMaquina";
-            this.Column3.HeaderText = "ID Máquina";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "problema";
-            this.Column4.HeaderText = "Problema";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "data";
-            this.Column5.HeaderText = "Data";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // frmProblemaProf
             // 

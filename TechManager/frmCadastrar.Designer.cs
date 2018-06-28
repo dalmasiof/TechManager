@@ -76,9 +76,9 @@
             this.pcbHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbHome.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.pcbHome.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.pcbHome.Location = new System.Drawing.Point(53, 373);
+            this.pcbHome.Location = new System.Drawing.Point(28, 371);
             this.pcbHome.Name = "pcbHome";
-            this.pcbHome.Size = new System.Drawing.Size(71, 71);
+            this.pcbHome.Size = new System.Drawing.Size(118, 109);
             this.pcbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbHome.TabIndex = 18;
             this.pcbHome.TabStop = false;

@@ -80,5 +80,10 @@ namespace TechManager
         {
             Application.Exit();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.cps.sp.gov.br/category/etec/");
+        }
     }
 }
