@@ -65,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 900);
+            this.panel1.Size = new System.Drawing.Size(261, 768);
             this.panel1.TabIndex = 7;
             // 
             // pcbHome
@@ -295,7 +295,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.txtAula);
             this.Controls.Add(this.lblAula);
             this.Controls.Add(this.btnCancelar);

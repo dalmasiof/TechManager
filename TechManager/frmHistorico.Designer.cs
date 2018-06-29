@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 900);
+            this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 8;
             // 
             // bunifuImageButton2
@@ -70,7 +70,7 @@
             this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(113, 760);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(97, 633);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(118, 109);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +139,7 @@
             this.dgvHist.EnableHeadersVisualStyles = false;
             this.dgvHist.HeaderBgColor = System.Drawing.Color.Brown;
             this.dgvHist.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvHist.Location = new System.Drawing.Point(532, 69);
+            this.dgvHist.Location = new System.Drawing.Point(415, 3);
             this.dgvHist.Name = "dgvHist";
             this.dgvHist.ReadOnly = true;
             this.dgvHist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -198,7 +198,7 @@
             this.cmbHist.DisabledColor = System.Drawing.Color.Gray;
             this.cmbHist.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHist.ForeColor = System.Drawing.Color.White;
-            this.cmbHist.Location = new System.Drawing.Point(598, 569);
+            this.cmbHist.Location = new System.Drawing.Point(481, 503);
             this.cmbHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbHist.Name = "cmbHist";
             this.cmbHist.NomalColor = System.Drawing.Color.CornflowerBlue;
@@ -213,7 +213,7 @@
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUser.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUser.Location = new System.Drawing.Point(889, 585);
+            this.txtUser.Location = new System.Drawing.Point(772, 519);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(253, 26);
             this.txtUser.TabIndex = 1;
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.cmbHist);
             this.Controls.Add(this.dgvHist);

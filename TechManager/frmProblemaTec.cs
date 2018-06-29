@@ -127,7 +127,7 @@ namespace TechManager
             }
             catch (Exception erro)
             {
-                throw erro;
+                MessageBox.Show("Erro"+erro);
             }
 
 

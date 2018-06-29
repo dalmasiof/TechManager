@@ -17,6 +17,8 @@ namespace DTO
         public int tipo { get; set; }
         public string foto { get; set; }
 
+        public string aula { get; set; }
+
 
     }
 }

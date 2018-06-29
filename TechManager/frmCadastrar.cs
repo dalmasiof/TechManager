@@ -48,6 +48,7 @@ namespace TechManager
                 dtovar.senha = txtSenha.Text;
                 dtovar.email = txtEmail.Text;
                 dtovar.tipo = acesso;
+                dtovar.aula = txtAula.Text;
 
                 try
                 {
@@ -117,6 +118,21 @@ namespace TechManager
                 lblMensagem.ForeColor = Color.Red;
                 return false;
             }
+            while(txtAula.Visible == true)
+                {
+                    if(txtAula.Text == "")
+                    {
+                        lblMensagem.Text = "Digite a aula";
+                        lblMensagem.ForeColor = Color.Red;
+                        return false;
+                    }                
+                }
+            if(cbbAcesso.SelectedIndex == 0)
+            {
+                lblMensagem.Text = "Escolha o tipo de acesso";
+                lblMensagem.ForeColor = Color.Red;
+                return false;
+            }
             return true;
         }
 
@@ -172,6 +188,20 @@ namespace TechManager
         private void pcbHome_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbbAcesso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbbAcesso.Text == "Professor")
+            {
+                txtAula.Visible = true;
+                lblAula.Visible = true;
+            }
+            else
+            {
+                txtAula.Visible = false;
+                lblAula.Visible = false;
+            }
         }
     }
 }

@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 900);
+            this.panel1.Size = new System.Drawing.Size(261, 768);
             this.panel1.TabIndex = 0;
             // 
             // pcbHome
@@ -78,7 +78,7 @@
             this.pcbHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbHome.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.pcbHome.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.pcbHome.Location = new System.Drawing.Point(48, 706);
+            this.pcbHome.Location = new System.Drawing.Point(55, 659);
             this.pcbHome.Name = "pcbHome";
             this.pcbHome.Size = new System.Drawing.Size(118, 109);
             this.pcbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +102,7 @@
             this.lblFotoPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFotoPerfil.AutoSize = true;
             this.lblFotoPerfil.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFotoPerfil.Location = new System.Drawing.Point(760, 111);
+            this.lblFotoPerfil.Location = new System.Drawing.Point(643, 71);
             this.lblFotoPerfil.Name = "lblFotoPerfil";
             this.lblFotoPerfil.Size = new System.Drawing.Size(91, 18);
             this.lblFotoPerfil.TabIndex = 108;
@@ -113,7 +113,7 @@
             this.txtNomeFotoPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeFotoPerfil.BackColor = System.Drawing.SystemColors.Control;
             this.txtNomeFotoPerfil.Enabled = false;
-            this.txtNomeFotoPerfil.Location = new System.Drawing.Point(763, 132);
+            this.txtNomeFotoPerfil.Location = new System.Drawing.Point(646, 92);
             this.txtNomeFotoPerfil.Name = "txtNomeFotoPerfil";
             this.txtNomeFotoPerfil.Size = new System.Drawing.Size(226, 20);
             this.txtNomeFotoPerfil.TabIndex = 109;
@@ -121,7 +121,7 @@
             // btnProcurarFoto
             // 
             this.btnProcurarFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnProcurarFoto.Location = new System.Drawing.Point(1039, 130);
+            this.btnProcurarFoto.Location = new System.Drawing.Point(922, 90);
             this.btnProcurarFoto.Name = "btnProcurarFoto";
             this.btnProcurarFoto.Size = new System.Drawing.Size(75, 23);
             this.btnProcurarFoto.TabIndex = 110;
@@ -136,7 +136,7 @@
             this.lblNome.BackColor = System.Drawing.SystemColors.Control;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNome.Location = new System.Drawing.Point(601, 265);
+            this.lblNome.Location = new System.Drawing.Point(502, 199);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(73, 29);
             this.lblNome.TabIndex = 100;
@@ -148,7 +148,7 @@
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.lblLogin.Location = new System.Drawing.Point(601, 369);
+            this.lblLogin.Location = new System.Drawing.Point(502, 303);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(66, 29);
             this.lblLogin.TabIndex = 102;
@@ -160,7 +160,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmail.Location = new System.Drawing.Point(601, 525);
+            this.lblEmail.Location = new System.Drawing.Point(502, 459);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(68, 29);
             this.lblEmail.TabIndex = 105;
@@ -172,7 +172,7 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblSenha.Location = new System.Drawing.Point(600, 421);
+            this.lblSenha.Location = new System.Drawing.Point(502, 355);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(74, 29);
             this.lblSenha.TabIndex = 103;
@@ -184,7 +184,7 @@
             this.lblConfirmarSenha.AutoSize = true;
             this.lblConfirmarSenha.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblConfirmarSenha.Location = new System.Drawing.Point(601, 473);
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(502, 407);
             this.lblConfirmarSenha.Name = "lblConfirmarSenha";
             this.lblConfirmarSenha.Size = new System.Drawing.Size(178, 29);
             this.lblConfirmarSenha.TabIndex = 104;
@@ -194,7 +194,7 @@
             // 
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(867, 266);
+            this.txtNome.Location = new System.Drawing.Point(750, 200);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(273, 29);
             this.txtNome.TabIndex = 0;
@@ -203,7 +203,7 @@
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(867, 526);
+            this.txtEmail.Location = new System.Drawing.Point(750, 460);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(273, 29);
             this.txtEmail.TabIndex = 5;
@@ -212,7 +212,7 @@
             // 
             this.txtLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(867, 370);
+            this.txtLogin.Location = new System.Drawing.Point(750, 304);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(212, 29);
             this.txtLogin.TabIndex = 2;
@@ -221,7 +221,7 @@
             // 
             this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(867, 422);
+            this.txtSenha.Location = new System.Drawing.Point(750, 356);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(212, 29);
@@ -231,7 +231,7 @@
             // 
             this.txtConfirmarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(867, 474);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(750, 408);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.PasswordChar = '*';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(212, 29);
@@ -242,7 +242,7 @@
             this.pcbFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pcbFoto.Image = global::TechManager.Properties.Resources.if_Camera_Front_379526;
-            this.pcbFoto.Location = new System.Drawing.Point(580, 52);
+            this.pcbFoto.Location = new System.Drawing.Point(464, 12);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(150, 154);
             this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,7 +258,7 @@
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGravar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGravar.ForeColor = System.Drawing.Color.Black;
-            this.btnGravar.Location = new System.Drawing.Point(1176, 810);
+            this.btnGravar.Location = new System.Drawing.Point(922, 702);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(130, 41);
             this.btnGravar.TabIndex = 8;
@@ -275,7 +275,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(540, 810);
+            this.btnCancelar.Location = new System.Drawing.Point(507, 702);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(134, 41);
             this.btnCancelar.TabIndex = 7;
@@ -288,7 +288,7 @@
             this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.Location = new System.Drawing.Point(746, 727);
+            this.lblMensagem.Location = new System.Drawing.Point(629, 640);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(105, 24);
             this.lblMensagem.TabIndex = 107;
@@ -301,7 +301,7 @@
             this.lblAcesso.BackColor = System.Drawing.SystemColors.Control;
             this.lblAcesso.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAcesso.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAcesso.Location = new System.Drawing.Point(600, 629);
+            this.lblAcesso.Location = new System.Drawing.Point(502, 517);
             this.lblAcesso.Name = "lblAcesso";
             this.lblAcesso.Size = new System.Drawing.Size(80, 29);
             this.lblAcesso.TabIndex = 106;
@@ -314,12 +314,14 @@
             this.cbbAcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbAcesso.FormattingEnabled = true;
             this.cbbAcesso.Items.AddRange(new object[] {
+            "Selecione o acesso:",
             "Professor",
             "Técnico"});
-            this.cbbAcesso.Location = new System.Drawing.Point(867, 630);
+            this.cbbAcesso.Location = new System.Drawing.Point(750, 518);
             this.cbbAcesso.Name = "cbbAcesso";
-            this.cbbAcesso.Size = new System.Drawing.Size(162, 32);
+            this.cbbAcesso.Size = new System.Drawing.Size(212, 32);
             this.cbbAcesso.TabIndex = 6;
+            this.cbbAcesso.SelectedIndexChanged += new System.EventHandler(this.cbbAcesso_SelectedIndexChanged);
             // 
             // lblRG
             // 
@@ -328,19 +330,19 @@
             this.lblRG.BackColor = System.Drawing.SystemColors.Control;
             this.lblRG.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRG.ForeColor = System.Drawing.Color.DimGray;
-            this.lblRG.Location = new System.Drawing.Point(601, 317);
+            this.lblRG.Location = new System.Drawing.Point(502, 251);
             this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(41, 29);
+            this.lblRG.Size = new System.Drawing.Size(49, 29);
             this.lblRG.TabIndex = 101;
-            this.lblRG.Text = "RG";
+            this.lblRG.Text = "CPF";
             // 
             // mktxtRG
             // 
             this.mktxtRG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mktxtRG.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mktxtRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mktxtRG.Location = new System.Drawing.Point(867, 318);
-            this.mktxtRG.Mask = "00.000.000-0";
+            this.mktxtRG.Location = new System.Drawing.Point(750, 252);
+            this.mktxtRG.Mask = "000.000.000.00";
             this.mktxtRG.Name = "mktxtRG";
             this.mktxtRG.Size = new System.Drawing.Size(143, 29);
             this.mktxtRG.TabIndex = 1;
@@ -351,32 +353,34 @@
             this.lblAula.AutoSize = true;
             this.lblAula.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAula.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAula.Location = new System.Drawing.Point(609, 577);
+            this.lblAula.Location = new System.Drawing.Point(502, 579);
             this.lblAula.Name = "lblAula";
             this.lblAula.Size = new System.Drawing.Size(58, 29);
             this.lblAula.TabIndex = 111;
             this.lblAula.Text = "Aula";
+            this.lblAula.Visible = false;
             // 
             // txtAula
             // 
             this.txtAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAula.Location = new System.Drawing.Point(867, 578);
+            this.txtAula.Location = new System.Drawing.Point(750, 580);
             this.txtAula.Name = "txtAula";
             this.txtAula.Size = new System.Drawing.Size(212, 29);
             this.txtAula.TabIndex = 112;
+            this.txtAula.Visible = false;
             // 
             // frmCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.txtAula);
             this.Controls.Add(this.lblAula);
+            this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.mktxtRG);
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.cbbAcesso);
-            this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);

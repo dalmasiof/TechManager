@@ -65,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 900);
+            this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 19;
             // 
             // btnAdve
@@ -110,7 +110,7 @@
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.btnVoltar.Location = new System.Drawing.Point(48, 706);
+            this.btnVoltar.Location = new System.Drawing.Point(97, 656);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(118, 109);
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +182,7 @@
             this.dgvProb.EnableHeadersVisualStyles = false;
             this.dgvProb.HeaderBgColor = System.Drawing.Color.Peru;
             this.dgvProb.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvProb.Location = new System.Drawing.Point(565, 239);
+            this.dgvProb.Location = new System.Drawing.Point(448, 173);
             this.dgvProb.Name = "dgvProb";
             this.dgvProb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.dgvProb);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

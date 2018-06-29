@@ -70,7 +70,7 @@
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.btnVoltar.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.btnVoltar.Location = new System.Drawing.Point(48, 706);
+            this.btnVoltar.Location = new System.Drawing.Point(103, 645);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(118, 109);
             this.btnVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,9 +83,9 @@
             // 
             this.pictureBox3.BackgroundImage = global::TechManager.Properties.Resources.logoTCC11;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(-22, 214);
+            this.pictureBox3.Location = new System.Drawing.Point(48, 191);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(345, 319);
+            this.pictureBox3.Size = new System.Drawing.Size(239, 256);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
@@ -113,15 +113,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Peru;
+            this.panel1.Controls.Add(this.lblNome);
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.btnAdve);
             this.panel1.Controls.Add(this.btnVoltar);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.pcbProfessor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 900);
+            this.panel1.Size = new System.Drawing.Size(341, 788);
             this.panel1.TabIndex = 18;
             // 
             // btnAdve
@@ -404,7 +404,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(859, 788);
             this.Controls.Add(this.lblAviso);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);

@@ -127,6 +127,7 @@ namespace TechManager
                 lblMensagem.ForeColor = Color.Red;
                 return false;
             }
+
             return true;
         }
         private void btnVoltar_Click(object sender, EventArgs e)

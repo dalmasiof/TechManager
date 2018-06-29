@@ -4,13 +4,17 @@ use db_tech;
 create table tb_usuario(
 idUsuario int auto_increment primary key,
 nome varchar(50),
-rg varchar(9),
+rg varchar(11),
 login varchar(50),
 senha varchar(50),
 email varchar(50),
 tipoUsu int(1),
-foto varchar(110)
+foto varchar(110),
+aula varchar(20)
 );
+
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto,aula)
+values("Agostinho","123456789","adm","123","aaaa@gmail.com",3,"","");
 
 create table advertencia(
 idAdv int auto_increment primary key auto_increment,
@@ -36,26 +40,6 @@ advertido varchar(10),
 justificado varchar(10)
 );
 
-insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto)
-values('Professor','123456789','joao','123','joaosao291@gmail.com','1','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto1.png');
-
-insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto)
-values('Técnico','123456789','tec','123','tec291@gmail.com','2','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto3.png');
-
-insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto)
-values('Administrador','123456789','adm','12345678','Tec291@gmail.com','3','C:/Users/Admin/Documents/GitHub/TechManager/imagens/foto2.png');
-
-insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
-values	("C#","Enildo","02886-151","monitor não liga",'2001-12-02',"0");
-
-insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
-values	("OSA","Virgílio","6598213","mouse quebrado",'2018-04-06',"1");
-
-insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
-values	("TLBD","Akepeu","pc03-lab4","Teclado quebrado",'2001-11-02',"1");
-
-insert into problema (aula,professor,idMaquina,problema,dataProb,resolvido)
-values	("JAVA","Furlan","lab01-m05","Desliga sozinho",'2011-12-02',"0");
 
 
 DELIMITER $
@@ -81,15 +65,31 @@ WHERE idProb = NEW.idProb;
 
 END$
 DELIMITER ;
+
+DELIMITER $
+ 
+CREATE TRIGGER justificado after update
+ON advertencia
+FOR EACH ROW
+BEGIN
+    UPDATE problema SET justificado = "S"
+WHERE idProb = NEW.idProb;
+
+END$
+DELIMITER ;
 DROP trigger JUSTIFICADO;
 
 
-SELECT * FROM problema;
+SELECT * FROM problema order by dataProb desc;
 
 select * from tb_usuario;
+
 select * from advertencia;
+
 drop table problema;
+
 drop table tb_usuario;
+
 drop table advertencia;
-SELECT * FROM problema INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = problema.idprob
-update
+
+SELECT * FROM problema;

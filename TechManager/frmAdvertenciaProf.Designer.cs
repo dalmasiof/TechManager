@@ -67,7 +67,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 605);
+            this.panel1.Size = new System.Drawing.Size(237, 768);
             this.panel1.TabIndex = 6;
             // 
             // bunifuImageButton2
@@ -75,7 +75,7 @@
             this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuImageButton2.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.bunifuImageButton2.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(58, 525);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(58, 504);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(118, 109);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,6 +117,7 @@
             // 
             // lblAdvert
             // 
+            this.lblAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAdvert.AutoSize = true;
             this.lblAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdvert.Location = new System.Drawing.Point(283, 272);
@@ -127,6 +128,7 @@
             // 
             // txtAdvert
             // 
+            this.txtAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdvert.ForeColor = System.Drawing.Color.Gray;
             this.txtAdvert.Location = new System.Drawing.Point(354, 273);
@@ -142,6 +144,7 @@
             this.dataGridProb.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridProb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridProb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridProb.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridProb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -236,6 +239,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
             this.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -254,6 +258,7 @@
             // 
             // btnEnviar
             // 
+            this.btnEnviar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEnviar.BackColor = System.Drawing.Color.White;
             this.btnEnviar.Enabled = false;
             this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
@@ -273,6 +278,7 @@
             // 
             // lblMensagem
             // 
+            this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;
@@ -286,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 605);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);

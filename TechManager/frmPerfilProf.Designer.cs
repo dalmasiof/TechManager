@@ -68,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 900);
+            this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 0;
             // 
             // lblNome
@@ -118,6 +118,7 @@
             this.btnStand.IconZoom = 90D;
             this.btnStand.IsTab = false;
             this.btnStand.Location = new System.Drawing.Point(32, 553);
+            this.btnStand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStand.Name = "btnStand";
             this.btnStand.Normalcolor = System.Drawing.Color.Silver;
             this.btnStand.OnHovercolor = System.Drawing.Color.CornflowerBlue;
@@ -136,7 +137,7 @@
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Image = global::TechManager.Properties.Resources.oie_transparent;
             this.btnSair.ImageActive = global::TechManager.Properties.Resources.oie_transparent__3_;
-            this.btnSair.Location = new System.Drawing.Point(32, 785);
+            this.btnSair.Location = new System.Drawing.Point(106, 679);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(77, 77);
             this.btnSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -169,6 +170,7 @@
             this.btnHist.IconZoom = 90D;
             this.btnHist.IsTab = false;
             this.btnHist.Location = new System.Drawing.Point(32, 464);
+            this.btnHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHist.Name = "btnHist";
             this.btnHist.Normalcolor = System.Drawing.Color.Silver;
             this.btnHist.OnHovercolor = System.Drawing.Color.MediumAquamarine;
@@ -206,6 +208,7 @@
             this.btnErro.IconZoom = 90D;
             this.btnErro.IsTab = false;
             this.btnErro.Location = new System.Drawing.Point(32, 286);
+            this.btnErro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnErro.Name = "btnErro";
             this.btnErro.Normalcolor = System.Drawing.Color.Silver;
             this.btnErro.OnHovercolor = System.Drawing.Color.BurlyWood;
@@ -243,6 +246,7 @@
             this.btnAdve.IconZoom = 90D;
             this.btnAdve.IsTab = false;
             this.btnAdve.Location = new System.Drawing.Point(32, 375);
+            this.btnAdve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdve.Name = "btnAdve";
             this.btnAdve.Normalcolor = System.Drawing.Color.Silver;
             this.btnAdve.OnHovercolor = System.Drawing.Color.Brown;
@@ -337,7 +341,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label3);

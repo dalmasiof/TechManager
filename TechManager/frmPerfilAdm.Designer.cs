@@ -64,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 900);
+            this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -120,7 +120,7 @@
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Image = global::TechManager.Properties.Resources.oie_transparent;
             this.btnSair.ImageActive = global::TechManager.Properties.Resources.oie_transparent__3_;
-            this.btnSair.Location = new System.Drawing.Point(32, 785);
+            this.btnSair.Location = new System.Drawing.Point(104, 688);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(77, 77);
             this.btnSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,7 +245,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNome.Location = new System.Drawing.Point(28, 134);
+            this.lblNome.Location = new System.Drawing.Point(100, 205);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(116, 23);
             this.lblNome.TabIndex = 2;
@@ -255,7 +255,7 @@
             // pcbFotoProf
             // 
             this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbFotoProf.Location = new System.Drawing.Point(44, 25);
+            this.pcbFotoProf.Location = new System.Drawing.Point(98, 58);
             this.pcbFotoProf.Name = "pcbFotoProf";
             this.pcbFotoProf.Size = new System.Drawing.Size(118, 106);
             this.pcbFotoProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);

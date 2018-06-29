@@ -158,7 +158,7 @@ namespace TechManager
                 txtNome.Focus();
                 return false;
             }
-            if (mktxtRG.TextLength != 8)
+            if (mktxtRG.TextLength < 8)
             {
                 lblMensagem.Text = "RG incompleto!";
                 mktxtRG.Focus();
