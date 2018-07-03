@@ -14,6 +14,8 @@ foto varchar(110),
 aula varchar(20)
 );
 
+select * from historico;
+
 insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto,aula)
 values("Agostinho","123456789","adm","123","aaaa@gmail.com",3,"","");
 
@@ -23,17 +25,7 @@ values("Cristian","123456789","tec","123","aaaa@gmail.com",2,"","");
 insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto,aula)
 values("Antonio","123456789","prof","123","aaaa@gmail.com",1,"","OSA");
 
-create table advertencia(
-idAdv int auto_increment primary key auto_increment,
-nomeTec varchar(50),
-justificativa varchar (50),
-advertencia varchar(50),
-idProb int ,
 
-
-foreign key (idProb) references problema(idProb)
-
-);
 
 create table problema(
 idProb int auto_increment primary key,
@@ -47,6 +39,19 @@ advertido varchar(10),
 justificado varchar(10)
 
 );
+
+create table advertencia(
+idAdv int auto_increment primary key auto_increment,
+nomeTec varchar(50),
+justificativa varchar (50),
+advertencia varchar(50),
+idProb int ,
+
+
+foreign key (idProb) references problema(idProb)
+
+);
+
 create table historico(
 idProb int auto_increment primary key,
 aula varchar(20),
@@ -89,9 +94,6 @@ BEGIN
 
 END$
 DELIMITER ;
-
-
-drop procedure inserir;
 
 DELIMITER $
 CREATE TRIGGER advertido AFTER INSERT
