@@ -162,5 +162,48 @@ namespace DAL
                 conexao.Close();
             }
         }
+        public List<advertenciaDTO> notificaAviso(advertenciaDTO dtovar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT COUNT(*) FROM advertencia";
+                comando.Connection = conexao;
+
+
+                List<advertenciaDTO> listAdvDto = new List<advertenciaDTO>();
+                conexao.Open();
+
+                MySqlDataReader dr = comando.ExecuteReader();
+
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+
+                        dtovar.noti = Convert.ToInt32(dr["COUNT(*)"]);
+
+
+                        listAdvDto.Add(dtovar);
+
+
+                    }
+                }
+                return listAdvDto;
+
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }

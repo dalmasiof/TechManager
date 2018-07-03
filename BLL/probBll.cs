@@ -95,13 +95,14 @@ namespace BLL
         {
             try
             {
-                return new ProblemaDal().notifica(dtovar);
+                return new ProblemaDal().notificaProb(dtovar);
             }
             catch (Exception erro)
             {
                 throw erro;
             }
         }
+       
 
         public List<probDto> listaPorDataAtual()
         {

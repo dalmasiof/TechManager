@@ -22,5 +22,6 @@ namespace DTO
         public string Check { get; set; }
         public string advertido { get; set; }
         public string justificado { get; set; }
+        public int noti { get; set; }
     }
 }

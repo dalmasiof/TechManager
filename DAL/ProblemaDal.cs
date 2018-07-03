@@ -403,7 +403,7 @@ namespace DAL
                 conexaoPro.Close();
             }
         }
-        public List<probDto> notifica(probDto dtovar)
+        public List<probDto> notificaProb(probDto dtovar)
         {
             try
             {
@@ -446,5 +446,6 @@ namespace DAL
                 conexao.Close();
             }
         }
+       
     }
 }

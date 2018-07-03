@@ -47,7 +47,6 @@ advertido varchar(10),
 justificado varchar(10)
 
 );
-
 create table historico(
 idProb int auto_increment primary key,
 aula varchar(20),

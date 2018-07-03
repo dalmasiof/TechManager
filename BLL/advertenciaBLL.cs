@@ -23,7 +23,17 @@ namespace BLL
                 throw erro;
             }
         }
-
+        public List<advertenciaDTO> notificacaAdv(advertenciaDTO dtovar)
+        {
+            try
+            {
+                return new advertenciaDAL().notificaAviso(dtovar);
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
         public List<advertenciaDTO> listarProbProProf()
         {
             try

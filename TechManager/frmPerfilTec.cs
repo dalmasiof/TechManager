@@ -20,11 +20,15 @@ namespace TechManager
             InitializeComponent();
         }
         probBll bll = new probBll();
-        probDto dto = new probDto();
+        probDto dtovar = new probDto();
+        advertenciaDTO dtoVarAdv = new advertenciaDTO();
         
         int notiComeco;
         int noti;
-       
+
+        int notiComecoAdv;
+        int notiAdv;
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -35,8 +39,12 @@ namespace TechManager
              try
             {
                 List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().notificacao(dto);
-                notiComeco = dto.noti;
+                ListDto = new probBll().notificacao(dtovar);
+                notiComeco = dtovar.noti;
+
+                List<advertenciaDTO> ListDtoAdv = new List<advertenciaDTO>();
+                ListDtoAdv = new advertenciaBLL().notificacaAdv(dtoVarAdv);
+                notiComecoAdv = dtoVarAdv.noti;
 
             }
             catch (Exception erro)
@@ -45,10 +53,12 @@ namespace TechManager
             }
 
 
+
             lblNome.Text = Convert.ToString(information.nome);
             pcbFotoTec.ImageLocation = information.foto;
             notifyIcon1.Visible = false;
             timer1.Enabled = true;
+            timer2.Enabled = true;
 
             
             
@@ -114,8 +124,8 @@ namespace TechManager
             try
             {
                 List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().notificacao(dto);
-                noti = dto.noti;
+                ListDto = new probBll().notificacao(dtovar);
+                noti = dtovar.noti;
 
             }
             catch (Exception erro)
@@ -136,13 +146,41 @@ namespace TechManager
 
             }
 
+            ///////////////////////////////////////////////////////////////
 
+           
         }
 
         private void pcbFotoTec_Click(object sender, EventArgs e)
         {
             frmAlteraPerfil alt = new frmAlteraPerfil();
             alt.ShowDialog();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                List<advertenciaDTO> ListDto = new List<advertenciaDTO>();
+                ListDto = new advertenciaBLL().notificacaAdv(dtoVarAdv);
+                notiAdv = dtoVarAdv.noti;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Falha de conexão, entre em contato com o T.I.\n" + erro + "", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            if (notiAdv - notiComecoAdv == 1)
+            {
+                btnAdve.Iconimage_right = Properties.Resources.noti12;
+
+            }
+            else if (notiAdv - notiComecoAdv > 1)
+            {
+                btnAdve.Iconimage_right = Properties.Resources.notiMais;
+
+            }
         }
     }
 

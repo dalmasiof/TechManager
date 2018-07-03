@@ -385,9 +385,6 @@
     <None Include="Resources\noti1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\noti+1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\noti11.png" />
   </ItemGroup>
   <ItemGroup>
@@ -401,6 +398,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_f-cross_256_282471.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notiMais.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noti+1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
