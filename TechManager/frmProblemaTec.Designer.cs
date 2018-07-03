@@ -202,8 +202,9 @@
             // cheka
             // 
             this.cheka.DataPropertyName = "Check";
-            this.cheka.HeaderText = "Column6";
+            this.cheka.HeaderText = "Teste";
             this.cheka.Name = "cheka";
+            this.cheka.Visible = false;
             // 
             // id
             // 

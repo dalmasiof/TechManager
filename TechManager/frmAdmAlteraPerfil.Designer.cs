@@ -35,6 +35,14 @@
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.dgvAltera = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblRG = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -53,14 +61,6 @@
             this.txtNomeFotoPerfil = new System.Windows.Forms.TextBox();
             this.lblFotoPerfil = new System.Windows.Forms.Label();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teste = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mktxtRG = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
@@ -147,6 +147,63 @@
             this.dgvAltera.TabIndex = 4;
             this.dgvAltera.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAltera_CellClick);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // teste
+            // 
+            this.teste.HeaderText = "Tipo";
+            this.teste.Name = "teste";
+            this.teste.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            this.tipo.DataPropertyName = "tipo";
+            this.tipo.HeaderText = "Tipo de acesso";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            this.tipo.Visible = false;
+            // 
+            // rg
+            // 
+            this.rg.DataPropertyName = "rg";
+            this.rg.HeaderText = "CPF";
+            this.rg.Name = "rg";
+            this.rg.ReadOnly = true;
+            // 
+            // login
+            // 
+            this.login.DataPropertyName = "login";
+            this.login.HeaderText = "Login";
+            this.login.Name = "login";
+            this.login.ReadOnly = true;
+            // 
+            // senha
+            // 
+            this.senha.DataPropertyName = "senha";
+            this.senha.HeaderText = "Senha";
+            this.senha.Name = "senha";
+            this.senha.ReadOnly = true;
+            this.senha.Visible = false;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
             // lblRG
             // 
             this.lblRG.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -156,9 +213,9 @@
             this.lblRG.ForeColor = System.Drawing.Color.DimGray;
             this.lblRG.Location = new System.Drawing.Point(241, 334);
             this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(32, 23);
+            this.lblRG.Size = new System.Drawing.Size(39, 23);
             this.lblRG.TabIndex = 122;
-            this.lblRG.Text = "RG";
+            this.lblRG.Text = "CPF";
             // 
             // lblMensagem
             // 
@@ -355,63 +412,6 @@
             this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFoto.TabIndex = 113;
             this.pcbFoto.TabStop = false;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // teste
-            // 
-            this.teste.HeaderText = "Tipo";
-            this.teste.Name = "teste";
-            this.teste.ReadOnly = true;
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "Tipo de acesso";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            this.tipo.Visible = false;
-            // 
-            // rg
-            // 
-            this.rg.DataPropertyName = "rg";
-            this.rg.HeaderText = "CPF";
-            this.rg.Name = "rg";
-            this.rg.ReadOnly = true;
-            // 
-            // login
-            // 
-            this.login.DataPropertyName = "login";
-            this.login.HeaderText = "Login";
-            this.login.Name = "login";
-            this.login.ReadOnly = true;
-            // 
-            // senha
-            // 
-            this.senha.DataPropertyName = "senha";
-            this.senha.HeaderText = "Senha";
-            this.senha.Name = "senha";
-            this.senha.ReadOnly = true;
-            this.senha.Visible = false;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
             // 
             // mktxtRG
             // 

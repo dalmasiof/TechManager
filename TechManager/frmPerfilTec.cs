@@ -51,9 +51,7 @@ namespace TechManager
             timer1.Enabled = true;
 
             
-
-
-
+            
         }
 
         private void btnAdve_Click(object sender, EventArgs e)
@@ -122,13 +120,19 @@ namespace TechManager
             }
             catch (Exception erro)
             {
-                throw erro;
+                MessageBox.Show("Falha de conexão, entre em contato com o T.I.\n" + erro + "", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
            
             
-            if (notiComeco < noti )
+            if (noti - notiComeco == 1)
             {
                 btnErro.Iconimage_right = Properties.Resources.noti12;
+
+            }
+            else if(noti - notiComeco > 1)
+            {
+                btnErro.Iconimage_right = Properties.Resources.notiMais;
 
             }
 

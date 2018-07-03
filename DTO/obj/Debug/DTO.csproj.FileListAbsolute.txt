@@ -55,4 +55,3 @@ C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\bin\Debug\DTO.pdb
 C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.dll
 C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.pdb
-C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

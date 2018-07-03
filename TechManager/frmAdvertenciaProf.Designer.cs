@@ -120,7 +120,7 @@
             this.lblAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAdvert.AutoSize = true;
             this.lblAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvert.Location = new System.Drawing.Point(283, 272);
+            this.lblAdvert.Location = new System.Drawing.Point(523, 276);
             this.lblAdvert.Name = "lblAdvert";
             this.lblAdvert.Size = new System.Drawing.Size(65, 25);
             this.lblAdvert.TabIndex = 4;
@@ -131,7 +131,7 @@
             this.txtAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdvert.ForeColor = System.Drawing.Color.Gray;
-            this.txtAdvert.Location = new System.Drawing.Point(354, 273);
+            this.txtAdvert.Location = new System.Drawing.Point(594, 277);
             this.txtAdvert.Multiline = true;
             this.txtAdvert.Name = "txtAdvert";
             this.txtAdvert.Size = new System.Drawing.Size(378, 157);
@@ -170,7 +170,7 @@
             this.dataGridProb.EnableHeadersVisualStyles = false;
             this.dataGridProb.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dataGridProb.HeaderForeColor = System.Drawing.Color.White;
-            this.dataGridProb.Location = new System.Drawing.Point(288, 21);
+            this.dataGridProb.Location = new System.Drawing.Point(528, 25);
             this.dataGridProb.Name = "dataGridProb";
             this.dataGridProb.ReadOnly = true;
             this.dataGridProb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -248,7 +248,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(403, 560);
+            this.btnCancelar.Location = new System.Drawing.Point(643, 564);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
             this.btnCancelar.TabIndex = 3;
@@ -268,7 +268,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnEnviar.ForeColor = System.Drawing.Color.Black;
-            this.btnEnviar.Location = new System.Drawing.Point(598, 560);
+            this.btnEnviar.Location = new System.Drawing.Point(838, 564);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(120, 33);
             this.btnEnviar.TabIndex = 2;
@@ -282,7 +282,7 @@
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(244, 467);
+            this.lblMensagem.Location = new System.Drawing.Point(484, 471);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(485, 16);
             this.lblMensagem.TabIndex = 5;

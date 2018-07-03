@@ -121,7 +121,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(341, 788);
+            this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 18;
             // 
             // btnAdve
@@ -196,7 +196,7 @@
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.ReadOnly = true;
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(696, 323);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(696, 195);
             this.bunifuCustomDataGrid1.TabIndex = 19;
             this.bunifuCustomDataGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellClick);
             // 
@@ -276,6 +276,7 @@
             this.txtAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAula.Location = new System.Drawing.Point(561, 116);
             this.txtAula.Name = "txtAula";
+            this.txtAula.ReadOnly = true;
             this.txtAula.Size = new System.Drawing.Size(154, 22);
             this.txtAula.TabIndex = 1;
             // 
@@ -324,7 +325,7 @@
             this.btngravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btngravar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btngravar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btngravar.Location = new System.Drawing.Point(559, 799);
+            this.btngravar.Location = new System.Drawing.Point(466, 687);
             this.btngravar.Name = "btngravar";
             this.btngravar.Size = new System.Drawing.Size(156, 41);
             this.btngravar.TabIndex = 29;
@@ -340,7 +341,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAlterar.Location = new System.Drawing.Point(721, 799);
+            this.btnAlterar.Location = new System.Drawing.Point(904, 687);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(156, 41);
             this.btnAlterar.TabIndex = 30;
@@ -356,7 +357,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnExcluir.Location = new System.Drawing.Point(883, 799);
+            this.btnExcluir.Location = new System.Drawing.Point(685, 687);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(156, 41);
             this.btnExcluir.TabIndex = 31;
@@ -372,7 +373,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCancelar.Location = new System.Drawing.Point(1045, 799);
+            this.btnCancelar.Location = new System.Drawing.Point(1123, 687);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(156, 41);
             this.btnCancelar.TabIndex = 32;
@@ -384,7 +385,7 @@
             // 
             this.lblAviso.AutoSize = true;
             this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.lblAviso.Location = new System.Drawing.Point(843, 747);
+            this.lblAviso.Location = new System.Drawing.Point(848, 619);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(58, 22);
             this.lblAviso.TabIndex = 33;
@@ -404,7 +405,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 788);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.lblAviso);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);

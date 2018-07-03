@@ -23,6 +23,54 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select * from historico ";
+                comando.Connection = conexao;
+
+                List<probDto> listProbDto = new List<probDto>();
+                conexao.Open();
+
+                MySqlDataReader dr = comando.ExecuteReader();
+
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+                        probDto dtovar = new probDto();
+
+                        dtovar.idProb = Convert.ToInt32(dr["idProb"]);
+                        dtovar.problema = Convert.ToString(dr["problema"]);
+                        dtovar.aula = Convert.ToString(dr["aula"]);
+                        dtovar.professor = Convert.ToString(dr["professor"]);
+                        dtovar.data = Convert.ToDateTime(dr["dataProb"]);
+                        dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
+                        dtovar.Check = Convert.ToString(dr["resolvido"]);
+
+                        listProbDto.Add(dtovar);
+
+
+                    }
+                }
+                return listProbDto;
+
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        public List<probDto> carregaTec()
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select * from problema";
                 comando.Connection = conexao;
 
@@ -67,23 +115,29 @@ namespace DAL
 
         public void cadProd(probDto dto)
         {
+                MySqlConnection conexaoPro = new MySqlConnection();
             try
             {
-                conexao = new MySqlConnection(conexao_sql);
-                MySqlCommand sql = new MySqlCommand("insert into problema(aula,professor,idMaquina,problema,dataProb,resolvido) values(@aula,@profe,@idmaquina,@descProb,@data,@re)")
-                {
-                    Connection = conexao
-                };
-                sql.Parameters.Add("@aula", MySqlDbType.VarChar).Value = dto.aula;
-                sql.Parameters.Add("@profe", MySqlDbType.VarChar).Value = dto.professor;
-                sql.Parameters.Add("@idmaquina", MySqlDbType.VarChar).Value = dto.idMaquina;
-                sql.Parameters.Add("@descProb", MySqlDbType.VarChar).Value = dto.problema;
-                sql.Parameters.Add("@data", MySqlDbType.DateTime).Value = System.DateTime.Now;
-                sql.Parameters.Add("@re", MySqlDbType.VarChar).Value = "";
+                MySqlCommand comand = new MySqlCommand("inserir");
+                conexaoPro.ConnectionString = conexao_sql;
+
+                comand.CommandType = System.Data.CommandType.StoredProcedure;
+                comand.Connection = conexaoPro;
+                conexaoPro.Open();
 
 
-                conexao.Open();
-                sql.ExecuteNonQuery();
+                comand.Parameters.Add("@Aaula", MySqlDbType.VarChar).Value = dto.aula;
+                comand.Parameters.Add("@Aprofessor", MySqlDbType.VarChar).Value = dto.professor;
+                comand.Parameters.Add("@AidMaquina", MySqlDbType.VarChar).Value = dto.idMaquina;
+                comand.Parameters.Add("@Aproblema", MySqlDbType.VarChar).Value = dto.problema;
+                comand.Parameters.Add("@AdataProb", MySqlDbType.DateTime).Value = System.DateTime.Now;
+                
+                
+                
+                
+
+                comand.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
@@ -92,7 +146,7 @@ namespace DAL
 
             finally
             {
-                conexao.Close();
+                conexaoPro.Close();
             }
         }
 
@@ -325,16 +379,18 @@ namespace DAL
 
         public void alteraSituacao(probDto dtoVar)
         {
+            MySqlConnection conexaoPro = new MySqlConnection();
             try
             {
-                conexao = new MySqlConnection(conexao_sql);
-                MySqlCommand sql = new MySqlCommand("update problema set resolvido = @check where idProb = @id")
+                conexaoPro = new MySqlConnection(conexao_sql);
+                MySqlCommand sql = new MySqlCommand("alterar")
                 {
-                    Connection = conexao
+                    Connection = conexaoPro
                 };
-                sql.Parameters.Add("@check", MySqlDbType.VarChar).Value = dtoVar.Check;
+                sql.CommandType = System.Data.CommandType.StoredProcedure;
+                sql.Parameters.Add("@Vresolvido", MySqlDbType.VarChar).Value = dtoVar.Check;
                 sql.Parameters.Add("@id", MySqlDbType.Int32).Value = dtoVar.idProb;
-                conexao.Open();
+                conexaoPro.Open();
                 sql.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -344,7 +400,7 @@ namespace DAL
 
             finally
             {
-                conexao.Close();
+                conexaoPro.Close();
             }
         }
         public List<probDto> notifica(probDto dtovar)

@@ -16,7 +16,18 @@ namespace BLL
         {
             try
             {
-                return new ProblemaDal().carregaTudo();
+                return new ProblemaDal().carregaTec();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+        public List<probDto> listarTec()
+        {
+            try
+            {
+                return new ProblemaDal().carregaTec();
             }
             catch (Exception erro)
             {
@@ -97,6 +108,17 @@ namespace BLL
             try
             {
                 return new ProblemaDal().carregaPorDataNova();
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+        public List<probDto> listaHist()
+        {
+            try
+            {
+                return new ProblemaDal().carregaTudo();
             }
             catch (Exception erro)
             {

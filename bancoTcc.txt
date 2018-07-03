@@ -1,6 +1,7 @@
 create database db_tech;
 use db_tech;
 
+
 create table tb_usuario(
 idUsuario int auto_increment primary key,
 nome varchar(50),
@@ -15,6 +16,12 @@ aula varchar(20)
 
 insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto,aula)
 values("Agostinho","123456789","adm","123","aaaa@gmail.com",3,"","");
+
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto,aula)
+values("Cristian","123456789","tec","123","aaaa@gmail.com",2,"","");
+
+insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,foto,aula)
+values("Antonio","123456789","prof","123","aaaa@gmail.com",1,"","OSA");
 
 create table advertencia(
 idAdv int auto_increment primary key auto_increment,
@@ -38,12 +45,56 @@ dataProb datetime,
 resolvido varchar(10),
 advertido varchar(10),
 justificado varchar(10)
+
 );
 
+create table historico(
+idProb int auto_increment primary key,
+aula varchar(20),
+professor varchar(50),
+idMaquina varchar(20),
+problema varchar(50),
+dataProb datetime,
+resolvido varchar(10),
+advertido varchar(10),
+justificado varchar(10),
+idAdv int ,
 
+
+foreign key (idAdv) references advertencia(idAdv)
+
+);
 
 DELIMITER $
- 
+CREATE procedure inserir (in Aaula varchar(20),in Aprofessor varchar(50),in AidMaquina varchar(20),in Aproblema varchar(50),in AdataProb datetime  )
+
+BEGIN
+    insert into problema  (aula,professor,idMaquina,problema,dataProb)
+							values(Aaula,Aprofessor,AidMaquina,Aproblema ,AdataProb);
+    insert into historico (aula,professor,idMaquina,problema,dataProb) 
+							values(Aaula,Aprofessor,AidMaquina,Aproblema ,AdataProb);
+
+
+END$
+DELIMITER ;
+
+DELIMITER $
+CREATE procedure alterar (in Vresolvido varchar(20),in id int  )
+
+BEGIN
+    update problema set resolvido = Vresolvido where idProb = id;
+							
+    update historico set resolvido = Vresolvido where idProb = id;
+							
+
+
+END$
+DELIMITER ;
+
+
+drop procedure inserir;
+
+DELIMITER $
 CREATE TRIGGER advertido AFTER INSERT
 ON advertencia
 FOR EACH ROW
@@ -54,17 +105,6 @@ WHERE idProb = NEW.idProb;
 END$
 /*---------------------	*/
 DELIMITER ;
-DELIMITER $
- 
-CREATE TRIGGER justificado after update
-ON advertencia
-FOR EACH ROW
-BEGIN
-    UPDATE problema SET justificado = "S"
-WHERE idProb = NEW.idProb;
-
-END$
-DELIMITER ;
 
 DELIMITER $
  
@@ -77,19 +117,3 @@ WHERE idProb = NEW.idProb;
 
 END$
 DELIMITER ;
-DROP trigger JUSTIFICADO;
-
-
-SELECT * FROM problema order by dataProb desc;
-
-select * from tb_usuario;
-
-select * from advertencia;
-
-drop table problema;
-
-drop table tb_usuario;
-
-drop table advertencia;
-
-SELECT * FROM problema;

@@ -26,43 +26,43 @@ namespace TechManager
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (cbbAcesso.Text == "Professor")
-            {
-                acesso = 1;
-            }
-            else
-            {
-                acesso = 2;
-            }
-
-            if(!verificaCampos())
+            if (!verificaCampos())
             {
                 return;
             }
-            
             else
             {
-                dtovar.nome = txtNome.Text;
-                dtovar.rg = mktxtRG.Text;
-                dtovar.login = txtLogin.Text;
-                dtovar.senha = txtSenha.Text;
-                dtovar.email = txtEmail.Text;
-                dtovar.tipo = acesso;
-                dtovar.aula = txtAula.Text;
+                if (cbbAcesso.Text == "Professor")
+                {
+                    acesso = 1;
+                }
+                else
+                {
+                    acesso = 2;
+                }
+
+                    dtovar.nome = txtNome.Text;
+                    dtovar.rg = mktxtRG.Text;
+                    dtovar.login = txtLogin.Text;
+                    dtovar.senha = txtSenha.Text;
+                    dtovar.email = txtEmail.Text;
+                    dtovar.tipo = acesso;
+                    dtovar.aula = txtAula.Text;
 
                 try
                 {
                     bll.novoUsuario(dtovar);
                     lblMensagem.Text = "Cadastrado com sucesso!";
+                    txtNome.Focus();
+                    limpaCampos();
+                    lblMensagem.ForeColor = Color.Green;
                 }
                 catch (Exception er)
                 {
-                    MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I.","Erro de conexão",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I."+er, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
-            txtNome.Focus();
-            limpaCampos();
-            lblMensagem.ForeColor = Color.Green;
         }
 
         private void frmCadastrar_Load(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace TechManager
                 return false;
             }
 
-            if (txtSenha.Text.Length < 7)
+            if (txtSenha.TextLength < 7)
             {
                 lblMensagem.Text = "Senha deve ter no mínimo 8 caracteres";
                 lblMensagem.ForeColor = Color.Red;
@@ -118,16 +118,16 @@ namespace TechManager
                 lblMensagem.ForeColor = Color.Red;
                 return false;
             }
-            while(txtAula.Visible == true)
-                {
-                    if(txtAula.Text == "")
-                    {
-                        lblMensagem.Text = "Digite a aula";
-                        lblMensagem.ForeColor = Color.Red;
-                        return false;
-                    }                
-                }
-            if(cbbAcesso.SelectedIndex == 0)
+            if ((txtAula.Visible == true) &&  (txtAula.Text == "") )
+            {
+                
+                lblMensagem.Text = "Digite a aula";
+                lblMensagem.ForeColor = Color.Red;
+                return false;
+               
+                
+            }
+            if (cbbAcesso.SelectedIndex == 0)
             {
                 lblMensagem.Text = "Escolha o tipo de acesso";
                 lblMensagem.ForeColor = Color.Red;
@@ -196,6 +196,8 @@ namespace TechManager
             {
                 txtAula.Visible = true;
                 lblAula.Visible = true;
+                txtAula.Focus();
+
             }
             else
             {

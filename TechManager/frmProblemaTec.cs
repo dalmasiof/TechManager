@@ -96,7 +96,7 @@ namespace TechManager
             try
             {
                 List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listarProb();
+                ListDto = new probBll().listarTec();
                 dgvProb.DataSource = ListDto;
 
                 CurrencyManager cm = (CurrencyManager)BindingContext[dgvProb.DataSource];

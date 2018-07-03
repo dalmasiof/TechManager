@@ -47,7 +47,7 @@ namespace TechManager
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
-           // carregaGrid();
+            carregaGrid();
             if (txtUser.Text == "")
             {
 
@@ -61,7 +61,7 @@ namespace TechManager
             try
             {
                 List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listarProb();
+                ListDto = new probBll().listaHist();
 
 
                 dgvHist.DataSource = ListDto;

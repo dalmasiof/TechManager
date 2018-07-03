@@ -20,7 +20,7 @@ namespace DAL
             try
             {
                 conexao = new MySqlConnection(conexao_sql);
-                MySqlCommand sql = new MySqlCommand("insert into tb_usuario(nome,rg,login,senha,email,tipoUsu) values(@Nome,@Rg,@Login,@Senha,@Email,@Tipousu)")
+                MySqlCommand sql = new MySqlCommand("insert into tb_usuario(nome,rg,login,senha,email,tipoUsu,aula) values(@Nome,@Rg,@Login,@Senha,@Email,@Tipousu,@au)")
                 {
                     Connection = conexao
                 };
@@ -30,6 +30,8 @@ namespace DAL
                 sql.Parameters.Add("@Senha", MySqlDbType.VarChar).Value = dtovar.senha;
                 sql.Parameters.Add("@Email", MySqlDbType.VarChar).Value = dtovar.email;
                 sql.Parameters.Add("@Tipousu", MySqlDbType.VarChar).Value = dtovar.tipo;
+                sql.Parameters.Add("@au", MySqlDbType.VarChar).Value = dtovar.aula;
+
                 conexao.Open();
                 sql.ExecuteNonQuery();
             }
@@ -199,6 +201,7 @@ namespace DAL
                         dto.rg = Convert.ToString(dr["rg"]);
 
                         dto.foto = Convert.ToString(dr["foto"]);
+                        dto.aula = Convert.ToString(dr["aula"]);
 
                         listaLogin.Add(dto);
                     }

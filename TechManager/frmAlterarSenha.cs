@@ -6,10 +6,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Mail;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace TechManager
 {
@@ -34,71 +36,86 @@ namespace TechManager
             {
                 return;
             }
-            else
+            if (NetworkInterface.GetIsNetworkAvailable())
             {
-                try
+                //Busca todos os adaptadores de rede
+                foreach (NetworkInterface network in NetworkInterface.GetAllNetworkInterfaces())
                 {
-                    MySqlConnection conexao1 = new MySqlConnection();
-                    conexao1.ConnectionString = conexao_sql;
-                    MySqlCommand comando = new MySqlCommand();
-                    comando.CommandType = System.Data.CommandType.Text;
-                    comando.CommandText = "SELECT * FROM tb_usuario";
-                    comando.Connection = conexao1;
-
-                    MySqlDataReader ER;
-                    conexao1.Open();
-                    ER = comando.ExecuteReader();
-                    if (ER.HasRows)
+                    if (network.OperationalStatus == OperationalStatus.Up && network.NetworkInterfaceType != NetworkInterfaceType.Tunnel && network.NetworkInterfaceType != NetworkInterfaceType.Loopback)
                     {
-                        while (ER.Read())
+                        try
                         {
-                            nome = Convert.ToString(ER["nome"]);
-                            senha = Convert.ToString(ER["senha"]);
+                            MySqlConnection conexao1 = new MySqlConnection();
+                            conexao1.ConnectionString = conexao_sql;
+                            MySqlCommand comando = new MySqlCommand();
+                            comando.CommandType = System.Data.CommandType.Text;
+                            comando.CommandText = "SELECT * FROM tb_usuario where email = @email";
+                            comando.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
+                            comando.Connection = conexao1;
+
+                            MySqlDataReader ER;
+                            conexao1.Open();
+                            ER = comando.ExecuteReader();
+                            if (ER.HasRows == true)
+                            {
+                                while (ER.Read())
+                                {
+                                    nome = Convert.ToString(ER["nome"]);
+                                    senha = Convert.ToString(ER["senha"]);
+                                }
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("E-mail não cadastrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                return;
+                            }
+                        }
+                        catch (Exception erro)
+                        {
+                            MessageBox.Show("" + erro);
+                        }
+                        finally
+                        {
+                            conexao.Close();
+                        }
+
+                        try
+                        {
+
+                            System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
+                            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.emailmyname.com");
+                            message.From = new MailAddress("ayhayakawa@hotmail.com", "Arthur Hayakawa");
+                            message.To.Add(email);
+
+                            smtp.EnableSsl = true;
+                            smtp.Port = 587;
+                            smtp.Host = "smtp.live.com";
+                            smtp.Credentials = new System.Net.NetworkCredential("ayhayakawa@hotmail.com", "0Hc_z8%G2S");
+                           
+
+                            message.Subject = "Recuperação de senha";
+                            message.Body = "Olá " + nome + ", sua antiga senha é " + senha + ",é sugerido que altere para uma nova senha, contate o administrador do sistema!" +
+                                    "\n\nEssa é uma mensagem automática, por favor não responder";
+
+                            smtp.Send(message);
+                            txtEmail.Clear();
+                        }
+
+                        catch (Exception erro)
+                        {
+                            MessageBox.Show("Não foi possível enviar o email, verifique a conexão" + erro + "", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            txtEmail.Clear();
                         }
                     }
-
-                    else
-                    {
-                        return;
-                    }
-                }
-                catch (Exception erro)
-                {
-                    MessageBox.Show("" + erro);
-                }
-                finally
-                {
-                    conexao.Close();
-                }
-
-                try
-                {
-
-                System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
-                System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.emailmyname.com");
-                message.From = new MailAddress("ayhayakawa@hotmail.com", "Arthur Hayakawa");
-                message.To.Add(email);
-
-                smtp.EnableSsl = true;
-                smtp.Port = 587;
-                smtp.Host = "smtp.live.com";
-                smtp.Credentials = new System.Net.NetworkCredential("ayhayakawa@hotmail.com", "0Hc_z8%G2S");
-                smtp.Send(message);
-
-                message.Subject = "Recuperação de senha";
-                message.Body = "Olá " + nome + ", sua antiga senha é " + senha + ",é sugerido que altere para uma nova senha, contate o administrador do sistema!" +
-                        "\n\nEssa é uma mensagem automática, por favor não responder";
-
-                smtp.Send(message);
-                txtEmail.Clear();
-                }
-
-                catch (Exception erro)
-                {
-                    MessageBox.Show("Não foi possível enviar o email, verifique a conexão" + erro + "", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtEmail.Clear();
                 }
             }
+            else
+            {
+                MessageBox.Show("Não foi possível enviar o email, verifique a conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
         private bool verificaCampos()
         {

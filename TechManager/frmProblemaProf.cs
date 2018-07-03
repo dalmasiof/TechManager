@@ -25,6 +25,7 @@ namespace TechManager
             pcbProfessor.ImageLocation = information.foto; 
             lblData.Text = DateTime.Now.ToString();
             lblNome.Text = information.nome;
+            txtAula.Text = information.aula;
             carregaGrid();
             lblAviso.Text = "";
             dto.idProb = -1;
@@ -53,28 +54,29 @@ namespace TechManager
             }
             else
             {
-            try
-            {
-                dto.aula = txtAula.Text;
-                dto.data = DateTime.Now;
-                dto.idMaquina = txtID.Text;
-                dto.professor = information.nome;
-                dto.problema = txtProblema.Text;
+                try
+                {
+                    dto.aula = information.aula;
+                    dto.data = DateTime.Now;
+                    dto.idMaquina = txtID.Text;
+                    dto.professor = information.nome;
+                    dto.problema = txtProblema.Text;
                 
 
-                bll.novoProb(dto);
-                carregaGrid();
-                lblAviso.Text = "Cadastrado com sucesso";
-                lblAviso.ForeColor = Color.Green;
+                    bll.novoProb(dto);
+                    carregaGrid();
+                    lblAviso.Text = "Cadastrado com sucesso";
+                    lblAviso.ForeColor = Color.Green;
                     LimpaCampos();
+                    txtAula.Text = information.aula;
                
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("" + erro);
-            }
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("" + erro);
+                }
 
-            }
+                }
         }
         private bool verificaCampos()
         {
