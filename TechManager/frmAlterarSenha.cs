@@ -36,6 +36,47 @@ namespace TechManager
             {
                 return;
             }
+            else
+            {
+                try
+                {
+                    MySqlConnection conexao1 = new MySqlConnection();
+                    conexao1.ConnectionString = conexao_sql;
+                    MySqlCommand comando = new MySqlCommand();
+                    comando.CommandType = System.Data.CommandType.Text;
+                    comando.CommandText = "SELECT * FROM tb_usuario where email = @email";
+                    comando.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
+                    comando.Connection = conexao1;
+
+                    MySqlDataReader ER;
+                    conexao1.Open();
+                    ER = comando.ExecuteReader();
+                    if (ER.HasRows == true)
+                    {
+                        while (ER.Read())
+                        {
+                            nome = Convert.ToString(ER["nome"]);
+                            senha = Convert.ToString(ER["senha"]);
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("E-mail não cadastrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        return;
+                    }
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("" + erro);
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+
+            }
             if (NetworkInterface.GetIsNetworkAvailable())
             {
                 //Busca todos os adaptadores de rede
@@ -43,43 +84,7 @@ namespace TechManager
                 {
                     if (network.OperationalStatus == OperationalStatus.Up && network.NetworkInterfaceType != NetworkInterfaceType.Tunnel && network.NetworkInterfaceType != NetworkInterfaceType.Loopback)
                     {
-                        try
-                        {
-                            MySqlConnection conexao1 = new MySqlConnection();
-                            conexao1.ConnectionString = conexao_sql;
-                            MySqlCommand comando = new MySqlCommand();
-                            comando.CommandType = System.Data.CommandType.Text;
-                            comando.CommandText = "SELECT * FROM tb_usuario where email = @email";
-                            comando.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
-                            comando.Connection = conexao1;
 
-                            MySqlDataReader ER;
-                            conexao1.Open();
-                            ER = comando.ExecuteReader();
-                            if (ER.HasRows == true)
-                            {
-                                while (ER.Read())
-                                {
-                                    nome = Convert.ToString(ER["nome"]);
-                                    senha = Convert.ToString(ER["senha"]);
-                                }
-                            }
-
-                            else
-                            {
-                                MessageBox.Show("E-mail não cadastrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                                return;
-                            }
-                        }
-                        catch (Exception erro)
-                        {
-                            MessageBox.Show("" + erro);
-                        }
-                        finally
-                        {
-                            conexao.Close();
-                        }
 
                         try
                         {
@@ -93,7 +98,7 @@ namespace TechManager
                             smtp.Port = 587;
                             smtp.Host = "smtp.live.com";
                             smtp.Credentials = new System.Net.NetworkCredential("ayhayakawa@hotmail.com", "0Hc_z8%G2S");
-                           
+
 
                             message.Subject = "Recuperação de senha";
                             message.Body = "Olá " + nome + ", sua antiga senha é " + senha + ",é sugerido que altere para uma nova senha, contate o administrador do sistema!" +
@@ -101,11 +106,15 @@ namespace TechManager
 
                             smtp.Send(message);
                             txtEmail.Clear();
+
+                            lblMensagem.Text = "";
+                            MessageBox.Show("Email enviado para " + txtEmail.Text + ", caso não encontre verifique a caixa de spams", "Enviado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtEmail.Focus();
                         }
 
                         catch (Exception erro)
                         {
-                            MessageBox.Show("Não foi possível enviar o email, verifique a conexão" + erro + "", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Não foi possível enviar o email, verifique a conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             txtEmail.Clear();
                         }
                     }
@@ -114,8 +123,12 @@ namespace TechManager
             else
             {
                 MessageBox.Show("Não foi possível enviar o email, verifique a conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                panel1.Visible = false;
+                lblNome.Text = "Nome: "+nome;
+                lblSenha.Text = "Senha: " + senha;
+
             }
-            
+
         }
         private bool verificaCampos()
         {
@@ -134,9 +147,7 @@ namespace TechManager
 
             if (rg.IsMatch(email))
             {
-                lblMensagem.Text = "";
-                MessageBox.Show("Email enviado para " + txtEmail.Text + ", caso não encontre verifique a caixa de spams", "Enviado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtEmail.Focus();
+                
             }
             else
             {

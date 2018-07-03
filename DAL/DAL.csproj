@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="advertenciaDAL.cs" />
+    <Compile Include="histDal.cs" />
     <Compile Include="ProblemaDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuarioDAL.cs" />

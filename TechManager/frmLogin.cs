@@ -184,7 +184,7 @@ namespace TechManager
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Falha de conexão, entre em contato com o T.I.\n"+erro+"","Falha de conexão",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Falha de conexão, entre em contato com o T.I.\n","Falha de conexão",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 txtUser.Focus();
             }
         }

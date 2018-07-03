@@ -35,39 +35,9 @@ namespace BLL
             }
         }
 
-        public List<probDto> listaPorId(probDto dtovar)
-        {
-            try
-            {
-                return new ProblemaDal().carregaPorId(dtovar);
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-        }
-        public List<probDto> listaPorProf(probDto dtovar)
-        {
-            try
-            {
-                return new ProblemaDal().carregaPorProfessor(dtovar);
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-        }
-        public List<probDto> listaPorData()
-        {
-            try
-            {
-                return new ProblemaDal().carregaPorData();
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-        }
+       
+       
+       
         public void novoProb(probDto dto)
         {
             try
@@ -104,28 +74,6 @@ namespace BLL
         }
        
 
-        public List<probDto> listaPorDataAtual()
-        {
-            try
-            {
-                return new ProblemaDal().carregaPorDataNova();
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-        }
-        public List<probDto> listaHist()
-        {
-            try
-            {
-                return new ProblemaDal().carregaTudo();
-            }
-            catch (Exception erro)
-            {
-                throw erro;
-            }
-        }
 
         public void alteraProblema(probDto dtovar)
         {

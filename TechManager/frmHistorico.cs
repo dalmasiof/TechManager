@@ -18,7 +18,7 @@ namespace TechManager
         {
             InitializeComponent();
         }
-        probDto dtoVar = new probDto();
+        histDto dtoVar = new histDto();
 
         private void frmHistorico_Load(object sender, EventArgs e)
         {
@@ -60,8 +60,8 @@ namespace TechManager
             dgvHist.AutoGenerateColumns = false;
             try
             {
-                List<probDto> ListDto = new List<probDto>();
-                ListDto = new probBll().listaHist();
+                List<histDto> ListDto = new List<histDto>();
+                ListDto = new histBLL().listarTudo();
 
 
                 dgvHist.DataSource = ListDto;
@@ -92,8 +92,8 @@ namespace TechManager
                     dtoVar.idMaquina = (txtUser.Text);
                     try
                     {
-                        List<probDto> ListDto = new List<probDto>();
-                        ListDto = new probBll().listaPorId(dtoVar);
+                        List<histDto> ListDto = new List<histDto>();
+                        ListDto = new histBLL().listarId(dtoVar);
                         dgvHist.DataSource = ListDto;
 
                         Pintalinhas();
@@ -109,8 +109,8 @@ namespace TechManager
                     dtoVar.professor = (txtUser.Text);
                     try
                     {
-                        List<probDto> ListDto = new List<probDto>();
-                        ListDto = new probBll().listaPorProf(dtoVar);
+                        List<histDto> ListDto = new List<histDto>();
+                        ListDto = new histBLL().listarProf(dtoVar);
                         dgvHist.DataSource = ListDto;
 
                         Pintalinhas();
@@ -161,8 +161,8 @@ namespace TechManager
                 txtUser.Text = "Data mais antiga";
                 try
                 {
-                    List<probDto> ListDto = new List<probDto>();
-                    ListDto = new probBll().listaPorData();
+                    List<histDto> ListDto = new List<histDto>();
+                    ListDto = new histBLL().listaPorData();
                     dgvHist.DataSource = ListDto;
 
                     Pintalinhas();
@@ -179,8 +179,8 @@ namespace TechManager
                 txtUser.Text = "Data mais atual";
                 try
                 {
-                    List<probDto> ListDto = new List<probDto>();
-                    ListDto = new probBll().listaPorDataAtual();
+                    List<histDto> ListDto = new List<histDto>();
+                    ListDto = new histBLL().listaPorDataAtual();
                     dgvHist.DataSource = ListDto;
 
                     Pintalinhas();

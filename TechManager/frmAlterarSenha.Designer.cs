@@ -35,12 +35,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblMensagem = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(145, 151);
+            this.txtEmail.Location = new System.Drawing.Point(38, 58);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(226, 20);
             this.txtEmail.TabIndex = 0;
@@ -53,7 +57,7 @@
             this.btnRedefinir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRedefinir.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnRedefinir.ForeColor = System.Drawing.Color.Black;
-            this.btnRedefinir.Location = new System.Drawing.Point(198, 194);
+            this.btnRedefinir.Location = new System.Drawing.Point(91, 101);
             this.btnRedefinir.Name = "btnRedefinir";
             this.btnRedefinir.Size = new System.Drawing.Size(120, 33);
             this.btnRedefinir.TabIndex = 13;
@@ -64,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(179, 115);
+            this.label1.Location = new System.Drawing.Point(72, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 13);
             this.label1.TabIndex = 14;
@@ -88,7 +92,7 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(198, 283);
+            this.btnVoltar.Location = new System.Drawing.Point(197, 311);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(120, 33);
             this.btnVoltar.TabIndex = 16;
@@ -99,23 +103,53 @@
             // lblMensagem
             // 
             this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Location = new System.Drawing.Point(195, 251);
+            this.lblMensagem.Location = new System.Drawing.Point(88, 158);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(35, 13);
             this.lblMensagem.TabIndex = 17;
             this.lblMensagem.Text = "label2";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblMensagem);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.btnRedefinir);
+            this.panel1.Location = new System.Drawing.Point(104, 126);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(314, 179);
+            this.panel1.TabIndex = 18;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblNome.Location = new System.Drawing.Point(130, 210);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(53, 20);
+            this.lblNome.TabIndex = 19;
+            this.lblNome.Text = "label2";
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.lblSenha.Location = new System.Drawing.Point(130, 174);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(53, 20);
+            this.lblSenha.TabIndex = 20;
+            this.lblSenha.Text = "label2";
             // 
             // frmAlterarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 343);
-            this.Controls.Add(this.lblMensagem);
-            this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRedefinir);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblNome);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnVoltar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAlterarSenha";
@@ -123,6 +157,8 @@
             this.Text = "Verificar Senha";
             this.Load += new System.EventHandler(this.frmAlterarSenha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +172,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblMensagem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblSenha;
     }
 }

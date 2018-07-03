@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="advertenciaBLL.cs" />
+    <Compile Include="histBLL.cs" />
     <Compile Include="probBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuarioBLL.cs" />

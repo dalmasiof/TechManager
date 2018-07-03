@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="advertenciaDTO.cs" />
+    <Compile Include="histDto.cs" />
     <Compile Include="probDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuarioDTO.cs" />

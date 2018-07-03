@@ -73,7 +73,7 @@ namespace TechManager
                 }
                 catch (Exception erro)
                 {
-                    MessageBox.Show("" + erro);
+                    MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 }
@@ -125,7 +125,7 @@ namespace TechManager
             }
             catch (Exception erro)
             {
-                throw erro;
+                MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I." , "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

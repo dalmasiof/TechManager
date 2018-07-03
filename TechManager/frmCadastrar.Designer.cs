@@ -347,6 +347,7 @@
             this.mktxtRG.Size = new System.Drawing.Size(143, 29);
             this.mktxtRG.TabIndex = 1;
             this.mktxtRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mktxtRG.TextChanged += new System.EventHandler(this.mktxtRG_TextChanged);
             // 
             // lblAula
             // 

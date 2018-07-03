@@ -45,6 +45,8 @@
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMaquina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resolvido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.just = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -134,7 +136,9 @@
             this.Column4,
             this.data,
             this.idMaquina,
-            this.resolvido});
+            this.resolvido,
+            this.adv,
+            this.just});
             this.dgvHist.DoubleBuffered = true;
             this.dgvHist.EnableHeadersVisualStyles = false;
             this.dgvHist.HeaderBgColor = System.Drawing.Color.Brown;
@@ -144,7 +148,7 @@
             this.dgvHist.ReadOnly = true;
             this.dgvHist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHist.Size = new System.Drawing.Size(709, 387);
+            this.dgvHist.Size = new System.Drawing.Size(866, 387);
             this.dgvHist.TabIndex = 2;
             this.dgvHist.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHist_CellEndEdit);
             // 
@@ -220,6 +224,20 @@
             this.resolvido.Name = "resolvido";
             this.resolvido.ReadOnly = true;
             // 
+            // adv
+            // 
+            this.adv.DataPropertyName = "advertencia";
+            this.adv.HeaderText = "Advertência";
+            this.adv.Name = "adv";
+            this.adv.ReadOnly = true;
+            // 
+            // just
+            // 
+            this.just.DataPropertyName = "justificativa";
+            this.just.HeaderText = "Justificativa";
+            this.just.Name = "just";
+            this.just.ReadOnly = true;
+            // 
             // frmHistorico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,5 +281,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn data;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMaquina;
         private System.Windows.Forms.DataGridViewTextBoxColumn resolvido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn just;
     }
 }
