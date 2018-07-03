@@ -83,6 +83,16 @@ namespace TechManager.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adm {
+            get {
+                object obj = ResourceManager.GetObject("adm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back {
             get {
                 object obj = ResourceManager.GetObject("back", resourceCulture);
@@ -472,6 +482,16 @@ namespace TechManager.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap prof {
+            get {
+                object obj = ResourceManager.GetObject("prof", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap red_round_error_warning_icon {
             get {
                 object obj = ResourceManager.GetObject("red-round-error-warning-icon", resourceCulture);
@@ -505,6 +525,26 @@ namespace TechManager.Properties {
         internal static string stringImagem {
             get {
                 return ResourceManager.GetString("stringImagem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tec {
+            get {
+                object obj = ResourceManager.GetObject("tec", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tec1 {
+            get {
+                object obj = ResourceManager.GetObject("tec1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

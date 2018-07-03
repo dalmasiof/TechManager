@@ -50,6 +50,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.lblMensagem = new System.Windows.Forms.Label();
+            this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,6 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGreen;
+            this.panel1.Controls.Add(this.btnAdve);
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblNome);
@@ -289,7 +291,45 @@
             this.lblMensagem.TabIndex = 5;
             this.lblMensagem.Text = "Selecione um problema para mandar um aviso, e depois clique no botão enviar!";
             // 
-            // frmAdvertenciaProf
+            // btnAdve
+            // 
+            this.btnAdve.Active = false;
+            this.btnAdve.Activecolor = System.Drawing.Color.Silver;
+            this.btnAdve.BackColor = System.Drawing.Color.Silver;
+            this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdve.BorderRadius = 0;
+            this.btnAdve.ButtonText = "Ver Justificativa";
+            this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAdve.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAdve.Iconimage = global::TechManager.Properties.Resources.if_Error_381599;
+            this.btnAdve.Iconimage_right = null;
+            this.btnAdve.Iconimage_right_Selected = null;
+            this.btnAdve.Iconimage_Selected = null;
+            this.btnAdve.IconMarginLeft = 0;
+            this.btnAdve.IconMarginRight = 0;
+            this.btnAdve.IconRightVisible = true;
+            this.btnAdve.IconRightZoom = 0D;
+            this.btnAdve.IconVisible = true;
+            this.btnAdve.IconZoom = 90D;
+            this.btnAdve.IsTab = false;
+            this.btnAdve.Location = new System.Drawing.Point(27, 382);
+            this.btnAdve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdve.Name = "btnAdve";
+            this.btnAdve.Normalcolor = System.Drawing.Color.Silver;
+            this.btnAdve.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnAdve.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAdve.selected = false;
+            this.btnAdve.Size = new System.Drawing.Size(179, 52);
+            this.btnAdve.TabIndex = 7;
+            this.btnAdve.Text = "Ver Justificativa";
+            this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
+            this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdve.Click += new System.EventHandler(this.btnAdve_Click);
+            // 
+            // frmJustificativaProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,7 +343,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmAdvertenciaProf";
+            this.Name = "frmJustificativaProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Advertencia Professor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -340,5 +380,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAdve;
     }
 }

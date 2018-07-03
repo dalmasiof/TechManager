@@ -59,11 +59,12 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::TechManager.Properties.Resources.logoTCC;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(60, 76);
+            this.pictureBox3.Image = global::TechManager.Properties.Resources.logoTCC11;
+            this.pictureBox3.Location = new System.Drawing.Point(35, 37);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(216, 292);
+            this.pictureBox3.Size = new System.Drawing.Size(267, 337);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);

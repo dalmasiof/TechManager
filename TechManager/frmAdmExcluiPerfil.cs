@@ -29,6 +29,7 @@ namespace TechManager
 
         private void frmAdmExcluiPerfil_Load(object sender, EventArgs e)
         {
+            lblAdnm.Text = information.nome;
             carregaGrid();
             lblId.Text = "";
             lblNome.Text = "";

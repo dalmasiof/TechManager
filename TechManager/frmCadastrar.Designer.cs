@@ -51,6 +51,7 @@
             this.mktxtRG = new System.Windows.Forms.MaskedTextBox();
             this.lblAula = new System.Windows.Forms.Label();
             this.txtAula = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -59,6 +60,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pcbHome);
             this.panel1.Controls.Add(this.pcbLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -84,11 +86,12 @@
             // 
             // pcbLogo
             // 
-            this.pcbLogo.BackgroundImage = global::TechManager.Properties.Resources.logoTCC1;
             this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbLogo.Location = new System.Drawing.Point(12, 0);
+            this.pcbLogo.Image = global::TechManager.Properties.Resources.adm;
+            this.pcbLogo.Location = new System.Drawing.Point(55, 25);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(236, 343);
+            this.pcbLogo.Size = new System.Drawing.Size(145, 149);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 2;
             this.pcbLogo.TabStop = false;
             // 
@@ -323,6 +326,18 @@
             this.txtAula.TabIndex = 112;
             this.txtAula.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(70, 201);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Adm ( Nome )";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +372,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCadastrar_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -389,5 +405,6 @@
         private System.Windows.Forms.MaskedTextBox mktxtRG;
         private System.Windows.Forms.Label lblAula;
         private System.Windows.Forms.TextBox txtAula;
+        private System.Windows.Forms.Label label1;
     }
 }

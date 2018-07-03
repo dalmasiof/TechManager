@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProblemaTec));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnVoltar = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -57,7 +56,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Peru;
-            this.panel1.Controls.Add(this.btnAdve);
             this.panel1.Controls.Add(this.btnVoltar);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblNome);
@@ -67,43 +65,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 19;
-            // 
-            // btnAdve
-            // 
-            this.btnAdve.Active = false;
-            this.btnAdve.Activecolor = System.Drawing.Color.Goldenrod;
-            this.btnAdve.BackColor = System.Drawing.Color.Silver;
-            this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdve.BorderRadius = 0;
-            this.btnAdve.ButtonText = "Avisos";
-            this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAdve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAdve.Iconimage = global::TechManager.Properties.Resources.error_warning_alert_attention_512;
-            this.btnAdve.Iconimage_right = null;
-            this.btnAdve.Iconimage_right_Selected = null;
-            this.btnAdve.Iconimage_Selected = null;
-            this.btnAdve.IconMarginLeft = 0;
-            this.btnAdve.IconMarginRight = 0;
-            this.btnAdve.IconRightVisible = true;
-            this.btnAdve.IconRightZoom = 0D;
-            this.btnAdve.IconVisible = true;
-            this.btnAdve.IconZoom = 90D;
-            this.btnAdve.IsTab = false;
-            this.btnAdve.Location = new System.Drawing.Point(48, 504);
-            this.btnAdve.Name = "btnAdve";
-            this.btnAdve.Normalcolor = System.Drawing.Color.Silver;
-            this.btnAdve.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnAdve.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAdve.selected = false;
-            this.btnAdve.Size = new System.Drawing.Size(231, 53);
-            this.btnAdve.TabIndex = 6;
-            this.btnAdve.Text = "Avisos";
-            this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
-            this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdve.Click += new System.EventHandler(this.btnAdve_Click);
             // 
             // btnVoltar
             // 
@@ -143,9 +104,10 @@
             // pcbProfessor
             // 
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbProfessor.Location = new System.Drawing.Point(69, 21);
+            this.pcbProfessor.Image = global::TechManager.Properties.Resources.tec1;
+            this.pcbProfessor.Location = new System.Drawing.Point(70, 21);
             this.pcbProfessor.Name = "pcbProfessor";
-            this.pcbProfessor.Size = new System.Drawing.Size(164, 155);
+            this.pcbProfessor.Size = new System.Drawing.Size(145, 149);
             this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
@@ -273,7 +235,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAdve;
         private Bunifu.Framework.UI.BunifuImageButton btnVoltar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblNome;

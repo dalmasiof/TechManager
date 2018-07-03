@@ -242,9 +242,10 @@
             // pcbFotoProf
             // 
             this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbFotoProf.Location = new System.Drawing.Point(98, 58);
+            this.pcbFotoProf.Image = global::TechManager.Properties.Resources.adm;
+            this.pcbFotoProf.Location = new System.Drawing.Point(83, 35);
             this.pcbFotoProf.Name = "pcbFotoProf";
-            this.pcbFotoProf.Size = new System.Drawing.Size(118, 106);
+            this.pcbFotoProf.Size = new System.Drawing.Size(145, 149);
             this.pcbFotoProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoProf.TabIndex = 0;
             this.pcbFotoProf.TabStop = false;

@@ -37,6 +37,7 @@ namespace TechManager
                 dtovar.login = txtLogin.Text;
                 dtovar.senha = txtSenha.Text;
                 dtovar.email = txtEmail.Text;
+                dtovar.aula = txtAula.Text;
 
                 try
                 {
@@ -100,6 +101,7 @@ namespace TechManager
             txtNome.Text = null;
             txtLogin.Text = null;
             txtSenha.Text = null;
+            txtConfirmarSenha.Text = null;
             txtEmail.Text = null;
             lblMensagem.ForeColor = Color.Black;
         }
@@ -112,7 +114,24 @@ namespace TechManager
 
         private void frmAlteraPerfil_Load(object sender, EventArgs e)
         {
-            lblMensagem.Text = "Após preencher os campos, clique no botão gravar!";
+            if (information.tipo == 1)
+            {
+                pcbLogo.Image = Properties.Resources.prof;
+
+            }
+            else if (information.tipo == 2)
+            {
+                pcbLogo.Image = Properties.Resources.tec1;
+                txtAula.Visible = false;
+                lblAula.Visible = false;
+            }
+            else
+            {
+                pcbLogo.Image = Properties.Resources.adm;
+                txtAula.Visible = false;
+                lblAula.Visible = false;
+            }
+                lblMensagem.Text = "Após preencher os campos, clique no botão gravar!";
         }
 
         private void pcbHome_Click(object sender, EventArgs e)

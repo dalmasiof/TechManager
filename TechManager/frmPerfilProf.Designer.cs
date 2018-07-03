@@ -74,7 +74,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNome.Location = new System.Drawing.Point(28, 134);
+            this.lblNome.Location = new System.Drawing.Point(75, 195);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(155, 23);
             this.lblNome.TabIndex = 2;
@@ -250,10 +250,10 @@
             // pcbFotoProf
             // 
             this.pcbFotoProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbFotoProf.Image = global::TechManager.Properties.Resources.if_User_27887;
-            this.pcbFotoProf.Location = new System.Drawing.Point(44, 25);
+            this.pcbFotoProf.Image = global::TechManager.Properties.Resources.prof;
+            this.pcbFotoProf.Location = new System.Drawing.Point(79, 23);
             this.pcbFotoProf.Name = "pcbFotoProf";
-            this.pcbFotoProf.Size = new System.Drawing.Size(118, 106);
+            this.pcbFotoProf.Size = new System.Drawing.Size(145, 149);
             this.pcbFotoProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoProf.TabIndex = 0;
             this.pcbFotoProf.TabStop = false;

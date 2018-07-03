@@ -237,9 +237,10 @@
             // pcbFotoTec
             // 
             this.pcbFotoTec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbFotoTec.Location = new System.Drawing.Point(56, 39);
+            this.pcbFotoTec.Image = global::TechManager.Properties.Resources.tec1;
+            this.pcbFotoTec.Location = new System.Drawing.Point(61, 39);
             this.pcbFotoTec.Name = "pcbFotoTec";
-            this.pcbFotoTec.Size = new System.Drawing.Size(150, 135);
+            this.pcbFotoTec.Size = new System.Drawing.Size(145, 149);
             this.pcbFotoTec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoTec.TabIndex = 0;
             this.pcbFotoTec.TabStop = false;

@@ -12,5 +12,6 @@ namespace TechManager
         public static int id;
         public static string foto;
         public static string aula;
+        public static int tipo;
     }
 }

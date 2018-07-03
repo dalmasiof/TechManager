@@ -151,6 +151,7 @@ namespace TechManager
                     information.nome = dtovar.nome;
                     information.foto = dtovar.foto;
                     information.aula = dtovar.aula;
+                    information.tipo = dtovar.tipo;
 
                    
 

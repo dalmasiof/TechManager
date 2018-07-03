@@ -90,6 +90,7 @@ namespace TechManager
 
         private void frmCadastrar_Load(object sender, EventArgs e)
         {
+            label1.Text = information.nome;
             lblMensagem.Text = "Após preencher os campos, clique no botão gravar!";
             cbbAcesso.SelectedIndex = 0;
         }

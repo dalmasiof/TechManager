@@ -23,8 +23,21 @@ namespace TechManager
         private void frmHistorico_Load(object sender, EventArgs e)
         {
             usuarioDTO dto = new usuarioDTO();
+            if (information.tipo == 1)
+            {
+                pcbProfessor.Image = Properties.Resources.prof;
+            }
+            else if (information.tipo == 2)
+            {
+                pcbProfessor.Image = Properties.Resources.tec1;
+            }
+            else
+            {
+                pcbProfessor.Image = Properties.Resources.adm;
+            }
 
             lblNome.Text = information.nome;
+            
             pcbProfessor.ImageLocation = information.foto;
 
             cmbHist.AddItem("Consultar por:");
@@ -47,8 +60,8 @@ namespace TechManager
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
-            carregaGrid();
-            if (txtUser.Text == "")
+           // carregaGrid();
+            if (txtUser.TextLength == 0)
             {
 
                 carregaGrid();
@@ -80,6 +93,12 @@ namespace TechManager
 
         private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != 8) && (!char.IsLetter(e.KeyChar)))
+            {
+                e.Handled = true;
+               
+            }
+            
             switch (cmbHist.selectedIndex)
             {
                 case 0:
@@ -144,6 +163,15 @@ namespace TechManager
 
 
                 }
+                if (Convert.ToString(row.Cells[6].Value) == "")
+                {
+                    row.Cells[6].Value = Convert.ToString("Não enviada");
+                }
+                if (Convert.ToString(row.Cells[7].Value) == "")
+                {
+                    row.Cells[7].Value = Convert.ToString("Não enviada");
+                }
+
 
 
             }

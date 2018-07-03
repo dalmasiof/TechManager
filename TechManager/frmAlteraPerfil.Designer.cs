@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlteraPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
@@ -55,13 +56,26 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pcbHome);
             this.panel1.Controls.Add(this.pcbLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 768);
+            this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(100, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Adm ( Nome )";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pcbHome
             // 
@@ -80,11 +94,11 @@
             // 
             // pcbLogo
             // 
-            this.pcbLogo.BackgroundImage = global::TechManager.Properties.Resources.logoTCC1;
             this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbLogo.Location = new System.Drawing.Point(12, 0);
+            this.pcbLogo.Location = new System.Drawing.Point(85, 12);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(236, 343);
+            this.pcbLogo.Size = new System.Drawing.Size(145, 149);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 13;
             this.pcbLogo.TabStop = false;
             // 
@@ -276,6 +290,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAlteraPerfil_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -303,5 +318,6 @@
         private Bunifu.Framework.UI.BunifuImageButton pcbHome;
         private System.Windows.Forms.TextBox txtAula;
         private System.Windows.Forms.Label lblAula;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -127,8 +127,8 @@
   <data name="if_go-home_118770 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_go-home_118770 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="oie_transparent (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oie_transparent (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_f-cross_256_282471" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_f-cross_256_282471.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="idLog" xml:space="preserve">
     <value>""</value>
@@ -145,6 +145,9 @@
   <data name="if_Error_381599 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_Error_381599 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="prof" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prof.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,14 +157,23 @@
   <data name="logoTCC11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoTCC11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="notiMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noti+1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="oie_transparent (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oie_transparent (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tec1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="door_closed (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\door_closed (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="noti11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\noti11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tec.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_go-home_118770" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_go-home_118770.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,17 +196,17 @@
   <data name="warning_alert_attention_search-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warning_alert_attention_search-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="285648-256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\285648-256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="red-round-error-warning-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red-round-error-warning-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Error_381599" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Error_381599.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="if_Error_381599 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_Error_381599 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_lock_299105" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_lock_299105.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="285648-256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\285648-256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="noti1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\noti1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,17 +217,20 @@
   <data name="if_User_27887" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_User_27887.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_lock_299105" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_lock_299105.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="if_Error_3815992" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_Error_381599.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oie_transparent (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oie_transparent (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="etec-2018-inscricoes-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\etec-2018-inscricoes-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stringImagem" xml:space="preserve">
     <value>""</value>
-  </data>
-  <data name="sleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="business-color_chart-pie-36_icon-icons.com_53463" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business-color_chart-pie-36_icon-icons.com_53463.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,16 +262,13 @@
   <data name="if_Log Out_27856" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_Log Out_27856.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user_namecard-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_namecard-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_Error_381599" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_Error_381599.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="if_f-cross_256_282471" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_f-cross_256_282471.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="notiMais" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noti+1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="adm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

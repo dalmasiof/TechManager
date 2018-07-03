@@ -36,7 +36,6 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,9 +102,10 @@
             // pcbProfessor
             // 
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbProfessor.Location = new System.Drawing.Point(87, 25);
+            this.pcbProfessor.Image = global::TechManager.Properties.Resources.prof;
+            this.pcbProfessor.Location = new System.Drawing.Point(103, 21);
             this.pcbProfessor.Name = "pcbProfessor";
-            this.pcbProfessor.Size = new System.Drawing.Size(167, 160);
+            this.pcbProfessor.Size = new System.Drawing.Size(145, 149);
             this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
@@ -115,7 +115,6 @@
             this.panel1.BackColor = System.Drawing.Color.Peru;
             this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.btnAdve);
             this.panel1.Controls.Add(this.btnVoltar);
             this.panel1.Controls.Add(this.pcbProfessor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -123,42 +122,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 18;
-            // 
-            // btnAdve
-            // 
-            this.btnAdve.Active = false;
-            this.btnAdve.Activecolor = System.Drawing.Color.Silver;
-            this.btnAdve.BackColor = System.Drawing.Color.Silver;
-            this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdve.BorderRadius = 0;
-            this.btnAdve.ButtonText = "Avisos";
-            this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAdve.Iconimage = global::TechManager.Properties.Resources.error_warning_alert_attention_512;
-            this.btnAdve.Iconimage_right = null;
-            this.btnAdve.Iconimage_right_Selected = null;
-            this.btnAdve.Iconimage_Selected = null;
-            this.btnAdve.IconMarginLeft = 0;
-            this.btnAdve.IconMarginRight = 0;
-            this.btnAdve.IconRightVisible = true;
-            this.btnAdve.IconRightZoom = 0D;
-            this.btnAdve.IconVisible = true;
-            this.btnAdve.IconZoom = 90D;
-            this.btnAdve.IsTab = false;
-            this.btnAdve.Location = new System.Drawing.Point(48, 504);
-            this.btnAdve.Name = "btnAdve";
-            this.btnAdve.Normalcolor = System.Drawing.Color.Silver;
-            this.btnAdve.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnAdve.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAdve.selected = false;
-            this.btnAdve.Size = new System.Drawing.Size(231, 53);
-            this.btnAdve.TabIndex = 6;
-            this.btnAdve.Text = "Avisos";
-            this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
-            this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdve.Click += new System.EventHandler(this.btnAdve_Click);
             // 
             // bunifuCustomDataGrid1
             // 
@@ -196,6 +159,7 @@
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.ReadOnly = true;
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(813, 231);
             this.bunifuCustomDataGrid1.TabIndex = 19;
             this.bunifuCustomDataGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellClick);
@@ -328,7 +292,7 @@
             this.btngravar.Location = new System.Drawing.Point(466, 705);
             this.btngravar.Name = "btngravar";
             this.btngravar.Size = new System.Drawing.Size(156, 41);
-            this.btngravar.TabIndex = 29;
+            this.btngravar.TabIndex = 4;
             this.btngravar.Text = "Enviar";
             this.btngravar.UseVisualStyleBackColor = false;
             this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
@@ -344,7 +308,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(904, 705);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(156, 41);
-            this.btnAlterar.TabIndex = 30;
+            this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -360,7 +324,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(685, 705);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(156, 41);
-            this.btnExcluir.TabIndex = 31;
+            this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -376,7 +340,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(1123, 705);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(156, 41);
-            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -446,7 +410,6 @@
         private System.Windows.Forms.PictureBox pcbProfessor;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAdve;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAula;

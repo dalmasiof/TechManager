@@ -153,5 +153,12 @@ namespace TechManager
         {
             this.Close();
         }
+
+        private void btnAdve_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+
+        }
     }
 }

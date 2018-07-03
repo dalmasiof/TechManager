@@ -26,6 +26,7 @@ namespace TechManager
             lblData.Text = DateTime.Now.ToString();
             lblNome.Text = information.nome;
             txtAula.Text = information.aula;
+            txtID.Focus();
             carregaGrid();
             lblAviso.Text = "";
             dto.idProb = -1;
@@ -69,6 +70,7 @@ namespace TechManager
                     lblAviso.ForeColor = Color.Green;
                     LimpaCampos();
                     txtAula.Text = information.aula;
+                    txtID.Focus();
                
                 }
                 catch (Exception erro)
@@ -146,10 +148,13 @@ namespace TechManager
                 carregaGrid();
                 lblAviso.Text = "Problema alterado com sucesso";
                 lblAviso.ForeColor = Color.Green;
+                LimpaCampos();
+                txtAula.Text = information.aula;
+                btngravar.Enabled = true;
             }
             catch(Exception erro)
             {
-                MessageBox.Show(""+erro);
+                MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
         }
@@ -169,6 +174,8 @@ namespace TechManager
                 lblAviso.Text = "Problema deletado com sucesso";
                 lblAviso.ForeColor = Color.Green;
                 LimpaCampos();
+                txtAula.Text = information.aula;
+                btngravar.Enabled = true;
             }
             catch (Exception erro)
             {
@@ -196,6 +203,7 @@ namespace TechManager
 
         private void bunifuCustomDataGrid1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btngravar.Enabled = false;
             int sel = bunifuCustomDataGrid1.CurrentRow.Index;
             txtID.Text = Convert.ToString(bunifuCustomDataGrid1["Column3", sel].Value);
             txtProblema.Text = Convert.ToString(bunifuCustomDataGrid1["Column4", sel].Value);

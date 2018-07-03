@@ -72,7 +72,7 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM historico INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob order by dataProb desc";
+                comando.CommandText = "SELECT * FROM historico LEFT JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob order by dataProb desc";
                 comando.Connection = conexao;
 
                 List<histDto> listProbDto = new List<histDto>();
@@ -124,7 +124,7 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM historico INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob order by dataProb";
+                comando.CommandText = "SELECT * FROM historico LEFT JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob order by dataProb";
                 comando.Connection = conexao;
 
                 List<histDto> listProbDto = new List<histDto>();
@@ -176,7 +176,7 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM HISTORICO INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob WHERE CONCAT(professor) LIKE '%" + dtovar.professor + "%'";
+                comando.CommandText = "SELECT * FROM HISTORICO LEFT JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob WHERE CONCAT(professor) LIKE '%" + dtovar.professor + "%'";
                 comando.Connection = conexao;
 
                 List<histDto> listProbDto = new List<histDto>();
@@ -223,7 +223,7 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM historico INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob WHERE CONCAT(idmaquina) LIKE '%"+dtovar.idMaquina+"%';";
+                comando.CommandText = "SELECT * FROM historico LEFT JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob WHERE CONCAT(idmaquina) LIKE '%" + dtovar.idMaquina+"%';";
                 comando.Connection = conexao;
 
                 

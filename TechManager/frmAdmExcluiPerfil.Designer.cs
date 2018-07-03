@@ -52,6 +52,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
+            this.lblAdnm = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -61,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Brown;
+            this.panel1.Controls.Add(this.lblAdnm);
             this.panel1.Controls.Add(this.pcbHome);
             this.panel1.Controls.Add(this.pcbLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -87,10 +89,10 @@
             // pcbLogo
             // 
             this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbLogo.Image = global::TechManager.Properties.Resources.logoTCC11;
-            this.pcbLogo.Location = new System.Drawing.Point(3, 3);
+            this.pcbLogo.Image = global::TechManager.Properties.Resources.adm;
+            this.pcbLogo.Location = new System.Drawing.Point(49, 47);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(253, 325);
+            this.pcbLogo.Size = new System.Drawing.Size(145, 149);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 13;
             this.pcbLogo.TabStop = false;
@@ -128,7 +130,7 @@
             this.dgvExclui.EnableHeadersVisualStyles = false;
             this.dgvExclui.HeaderBgColor = System.Drawing.Color.Brown;
             this.dgvExclui.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvExclui.Location = new System.Drawing.Point(358, 47);
+            this.dgvExclui.Location = new System.Drawing.Point(245, 47);
             this.dgvExclui.MultiSelect = false;
             this.dgvExclui.Name = "dgvExclui";
             this.dgvExclui.ReadOnly = true;
@@ -202,7 +204,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(573, 393);
+            this.label1.Location = new System.Drawing.Point(460, 393);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 5;
@@ -213,7 +215,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(573, 265);
+            this.label3.Location = new System.Drawing.Point(460, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 29);
             this.label3.TabIndex = 6;
@@ -224,7 +226,7 @@
             this.lblId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(615, 265);
+            this.lblId.Location = new System.Drawing.Point(502, 265);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(39, 29);
             this.lblId.TabIndex = 8;
@@ -235,7 +237,7 @@
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(653, 393);
+            this.lblNome.Location = new System.Drawing.Point(540, 393);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(85, 29);
             this.lblNome.TabIndex = 7;
@@ -252,7 +254,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(926, 686);
+            this.btnExcluir.Location = new System.Drawing.Point(813, 686);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(120, 33);
             this.btnExcluir.TabIndex = 16;
@@ -271,7 +273,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(658, 686);
+            this.btnCancelar.Location = new System.Drawing.Point(545, 686);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
             this.btnCancelar.TabIndex = 17;
@@ -284,7 +286,7 @@
             this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(573, 521);
+            this.lbl1.Location = new System.Drawing.Point(460, 521);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(186, 29);
             this.lbl1.TabIndex = 18;
@@ -295,17 +297,29 @@
             this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(757, 521);
+            this.lblTipo.Location = new System.Drawing.Point(644, 521);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(39, 29);
             this.lblTipo.TabIndex = 19;
             this.lblTipo.Text = "Id:";
             // 
+            // lblAdnm
+            // 
+            this.lblAdnm.AutoSize = true;
+            this.lblAdnm.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdnm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAdnm.Location = new System.Drawing.Point(63, 217);
+            this.lblAdnm.Name = "lblAdnm";
+            this.lblAdnm.Size = new System.Drawing.Size(116, 23);
+            this.lblAdnm.TabIndex = 20;
+            this.lblAdnm.Text = "Adm ( Nome )";
+            this.lblAdnm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAdmExcluiPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1612, 771);
+            this.ClientSize = new System.Drawing.Size(1386, 771);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnCancelar);
@@ -324,6 +338,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdmExcluiPerfil_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExclui)).EndInit();
@@ -354,5 +369,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn login;
         private System.Windows.Forms.DataGridViewTextBoxColumn senha;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.Label lblAdnm;
     }
 }

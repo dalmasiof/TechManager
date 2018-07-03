@@ -34,7 +34,6 @@
             this.txtJustificativa = new System.Windows.Forms.TextBox();
             this.lblJustificativa = new System.Windows.Forms.Label();
             this.btnHome = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,7 +51,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMensagem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAdvert)).BeginInit();
@@ -97,22 +95,12 @@
             this.btnHome.Zoom = 10;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pcbLogo
-            // 
-            this.pcbLogo.BackgroundImage = global::TechManager.Properties.Resources.logoTCC11;
-            this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbLogo.Location = new System.Drawing.Point(-43, 175);
-            this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(306, 258);
-            this.pcbLogo.TabIndex = 3;
-            this.pcbLogo.TabStop = false;
-            // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblNome.Location = new System.Drawing.Point(40, 134);
+            this.lblNome.Location = new System.Drawing.Point(54, 175);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(136, 23);
             this.lblNome.TabIndex = 7;
@@ -121,9 +109,11 @@
             // pcbProfessor
             // 
             this.pcbProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbProfessor.Location = new System.Drawing.Point(58, 25);
+            this.pcbProfessor.Image = global::TechManager.Properties.Resources.tec1;
+            this.pcbProfessor.Location = new System.Drawing.Point(46, 12);
             this.pcbProfessor.Name = "pcbProfessor";
-            this.pcbProfessor.Size = new System.Drawing.Size(118, 106);
+            this.pcbProfessor.Size = new System.Drawing.Size(145, 149);
+            this.pcbProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
             // 
@@ -131,7 +121,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Brown;
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.pcbLogo);
             this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.pcbProfessor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -323,7 +312,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdvertencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -338,7 +326,6 @@
         private System.Windows.Forms.TextBox txtJustificativa;
         private System.Windows.Forms.Label lblJustificativa;
         private Bunifu.Framework.UI.BunifuImageButton btnHome;
-        private System.Windows.Forms.PictureBox pcbLogo;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbProfessor;
         private System.Windows.Forms.Panel panel1;
