@@ -264,43 +264,6 @@ namespace TechManager
             lblMensagem.ForeColor = Color.Black;
         }
 
-        private void btnProcurarFoto_Click(object sender, EventArgs e)
-        {
-
-            OpenFileDialog dialogo = new OpenFileDialog();
-
-
-
-
-            dialogo.Title = "Procurar arquivos no computador";
-
-
-            dialogo.InitialDirectory = @"C:\";
-
-
-
-            dialogo.Filter = "Imagens (*.png)|*.png|Todos os arquivos (*.*)|*.*";
-
-
-
-
-            DialogResult resposta = dialogo.ShowDialog();
-
-
-
-
-            if (resposta == DialogResult.OK)
-
-            {
-
-                string caminhoCompleto = dialogo.FileName;
-                txtNomeFotoPerfil.Text = caminhoCompleto;
-                pcbFoto.Image = null;
-                pcbFoto.ImageLocation = caminhoCompleto;
-
-            }
-        }
-
         private void pcbHome_Click(object sender, EventArgs e)
         {
             this.Close();

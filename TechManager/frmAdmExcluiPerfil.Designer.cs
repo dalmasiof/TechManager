@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmExcluiPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
@@ -65,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 564);
+            this.panel1.Size = new System.Drawing.Size(258, 771);
             this.panel1.TabIndex = 2;
             // 
             // pcbHome
@@ -74,7 +75,7 @@
             this.pcbHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbHome.Image = global::TechManager.Properties.Resources.if_go_home_118770__2_;
             this.pcbHome.ImageActive = global::TechManager.Properties.Resources.if_go_home_118770;
-            this.pcbHome.Location = new System.Drawing.Point(30, 374);
+            this.pcbHome.Location = new System.Drawing.Point(67, 650);
             this.pcbHome.Name = "pcbHome";
             this.pcbHome.Size = new System.Drawing.Size(118, 109);
             this.pcbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,11 +86,12 @@
             // 
             // pcbLogo
             // 
-            this.pcbLogo.BackgroundImage = global::TechManager.Properties.Resources.logoTCC1;
             this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pcbLogo.Location = new System.Drawing.Point(2, 12);
+            this.pcbLogo.Image = global::TechManager.Properties.Resources.logoTCC11;
+            this.pcbLogo.Location = new System.Drawing.Point(3, 3);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(167, 222);
+            this.pcbLogo.Size = new System.Drawing.Size(253, 325);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 13;
             this.pcbLogo.TabStop = false;
             // 
@@ -100,12 +102,13 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvExclui.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvExclui.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvExclui.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvExclui.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvExclui.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvExclui.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -125,13 +128,15 @@
             this.dgvExclui.EnableHeadersVisualStyles = false;
             this.dgvExclui.HeaderBgColor = System.Drawing.Color.Brown;
             this.dgvExclui.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvExclui.Location = new System.Drawing.Point(205, 41);
+            this.dgvExclui.Location = new System.Drawing.Point(358, 47);
             this.dgvExclui.MultiSelect = false;
             this.dgvExclui.Name = "dgvExclui";
             this.dgvExclui.ReadOnly = true;
             this.dgvExclui.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvExclui.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvExclui.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExclui.Size = new System.Drawing.Size(641, 150);
+            this.dgvExclui.Size = new System.Drawing.Size(1068, 150);
             this.dgvExclui.TabIndex = 3;
             this.dgvExclui.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExclui_CellClick);
             // 
@@ -196,10 +201,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label1.Location = new System.Drawing.Point(247, 283);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(573, 393);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nome:";
             // 
@@ -207,10 +212,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label3.Location = new System.Drawing.Point(286, 241);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(573, 265);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 25);
+            this.label3.Size = new System.Drawing.Size(39, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Id:";
             // 
@@ -218,10 +223,10 @@
             // 
             this.lblId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.lblId.Location = new System.Drawing.Point(327, 241);
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(615, 265);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(35, 25);
+            this.lblId.Size = new System.Drawing.Size(39, 29);
             this.lblId.TabIndex = 8;
             this.lblId.Text = "Id:";
             // 
@@ -229,10 +234,10 @@
             // 
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.lblNome.Location = new System.Drawing.Point(327, 283);
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(653, 393);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(74, 25);
+            this.lblNome.Size = new System.Drawing.Size(85, 29);
             this.lblNome.TabIndex = 7;
             this.lblNome.Text = "Nome:";
             // 
@@ -247,7 +252,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(281, 390);
+            this.btnExcluir.Location = new System.Drawing.Point(926, 686);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(120, 33);
             this.btnExcluir.TabIndex = 16;
@@ -266,7 +271,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(648, 390);
+            this.btnCancelar.Location = new System.Drawing.Point(658, 686);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
             this.btnCancelar.TabIndex = 17;
@@ -278,10 +283,10 @@
             // 
             this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.lbl1.Location = new System.Drawing.Point(496, 241);
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(573, 521);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(165, 25);
+            this.lbl1.Size = new System.Drawing.Size(186, 29);
             this.lbl1.TabIndex = 18;
             this.lbl1.Text = "Tipo de acesso:";
             // 
@@ -289,10 +294,10 @@
             // 
             this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.lblTipo.Location = new System.Drawing.Point(667, 241);
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Location = new System.Drawing.Point(757, 521);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(35, 25);
+            this.lblTipo.Size = new System.Drawing.Size(39, 29);
             this.lblTipo.TabIndex = 19;
             this.lblTipo.Text = "Id:";
             // 
@@ -300,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 564);
+            this.ClientSize = new System.Drawing.Size(1612, 771);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnCancelar);

@@ -173,7 +173,7 @@
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Peru;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -192,11 +192,11 @@
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.Peru;
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(537, 400);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(466, 400);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.ReadOnly = true;
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(696, 195);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(813, 231);
             this.bunifuCustomDataGrid1.TabIndex = 19;
             this.bunifuCustomDataGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellClick);
             // 
@@ -265,7 +265,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(388, 250);
+            this.label5.Location = new System.Drawing.Point(388, 234);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 25);
             this.label5.TabIndex = 23;
@@ -291,10 +291,10 @@
             // txtProblema
             // 
             this.txtProblema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProblema.Location = new System.Drawing.Point(561, 250);
+            this.txtProblema.Location = new System.Drawing.Point(561, 234);
             this.txtProblema.Multiline = true;
             this.txtProblema.Name = "txtProblema";
-            this.txtProblema.Size = new System.Drawing.Size(238, 127);
+            this.txtProblema.Size = new System.Drawing.Size(345, 127);
             this.txtProblema.TabIndex = 3;
             // 
             // label7
@@ -325,7 +325,7 @@
             this.btngravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btngravar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btngravar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btngravar.Location = new System.Drawing.Point(466, 687);
+            this.btngravar.Location = new System.Drawing.Point(466, 705);
             this.btngravar.Name = "btngravar";
             this.btngravar.Size = new System.Drawing.Size(156, 41);
             this.btngravar.TabIndex = 29;
@@ -341,7 +341,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAlterar.Location = new System.Drawing.Point(904, 687);
+            this.btnAlterar.Location = new System.Drawing.Point(904, 705);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(156, 41);
             this.btnAlterar.TabIndex = 30;
@@ -357,7 +357,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnExcluir.Location = new System.Drawing.Point(685, 687);
+            this.btnExcluir.Location = new System.Drawing.Point(685, 705);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(156, 41);
             this.btnExcluir.TabIndex = 31;
@@ -373,7 +373,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCancelar.Location = new System.Drawing.Point(1123, 687);
+            this.btnCancelar.Location = new System.Drawing.Point(1123, 705);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(156, 41);
             this.btnCancelar.TabIndex = 32;
@@ -385,7 +385,7 @@
             // 
             this.lblAviso.AutoSize = true;
             this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.lblAviso.Location = new System.Drawing.Point(848, 619);
+            this.lblAviso.Location = new System.Drawing.Point(848, 645);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(58, 22);
             this.lblAviso.TabIndex = 33;

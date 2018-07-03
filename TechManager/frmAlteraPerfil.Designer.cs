@@ -32,10 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
-            this.btnProcurarImagem = new System.Windows.Forms.Button();
-            this.txtImagemUsuario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
@@ -54,7 +50,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,49 +88,10 @@
             this.pcbLogo.TabIndex = 13;
             this.pcbLogo.TabStop = false;
             // 
-            // btnProcurarImagem
-            // 
-            this.btnProcurarImagem.Location = new System.Drawing.Point(1039, 130);
-            this.btnProcurarImagem.Name = "btnProcurarImagem";
-            this.btnProcurarImagem.Size = new System.Drawing.Size(75, 23);
-            this.btnProcurarImagem.TabIndex = 8;
-            this.btnProcurarImagem.Text = "Procurar";
-            this.btnProcurarImagem.UseVisualStyleBackColor = true;
-            this.btnProcurarImagem.Click += new System.EventHandler(this.btnProcurarImagem_Click);
-            // 
-            // txtImagemUsuario
-            // 
-            this.txtImagemUsuario.BackColor = System.Drawing.SystemColors.Control;
-            this.txtImagemUsuario.Enabled = false;
-            this.txtImagemUsuario.Location = new System.Drawing.Point(763, 132);
-            this.txtImagemUsuario.Name = "txtImagemUsuario";
-            this.txtImagemUsuario.Size = new System.Drawing.Size(226, 20);
-            this.txtImagemUsuario.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(760, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 18);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Foto de Perfil";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::TechManager.Properties.Resources.if_Camera_Front_379526;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(580, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 154);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtConfirmarSenha
             // 
             this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(867, 422);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(867, 344);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.PasswordChar = '*';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(212, 29);
@@ -144,7 +100,7 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(867, 370);
+            this.txtSenha.Location = new System.Drawing.Point(867, 254);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(212, 29);
@@ -153,7 +109,7 @@
             // txtLogin
             // 
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(867, 318);
+            this.txtLogin.Location = new System.Drawing.Point(867, 164);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(212, 29);
             this.txtLogin.TabIndex = 1;
@@ -161,7 +117,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(867, 474);
+            this.txtEmail.Location = new System.Drawing.Point(867, 434);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(273, 29);
             this.txtEmail.TabIndex = 4;
@@ -169,7 +125,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(867, 266);
+            this.txtNome.Location = new System.Drawing.Point(867, 74);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(273, 29);
             this.txtNome.TabIndex = 0;
@@ -178,8 +134,8 @@
             // 
             this.lblConfirmarSenha.AutoSize = true;
             this.lblConfirmarSenha.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmarSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblConfirmarSenha.Location = new System.Drawing.Point(600, 421);
+            this.lblConfirmarSenha.ForeColor = System.Drawing.Color.Black;
+            this.lblConfirmarSenha.Location = new System.Drawing.Point(596, 343);
             this.lblConfirmarSenha.Name = "lblConfirmarSenha";
             this.lblConfirmarSenha.Size = new System.Drawing.Size(178, 29);
             this.lblConfirmarSenha.TabIndex = 21;
@@ -189,8 +145,8 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.lblSenha.Location = new System.Drawing.Point(601, 369);
+            this.lblSenha.ForeColor = System.Drawing.Color.Black;
+            this.lblSenha.Location = new System.Drawing.Point(596, 253);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(74, 29);
             this.lblSenha.TabIndex = 20;
@@ -200,8 +156,8 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmail.Location = new System.Drawing.Point(601, 473);
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
+            this.lblEmail.Location = new System.Drawing.Point(596, 433);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(68, 29);
             this.lblEmail.TabIndex = 19;
@@ -211,8 +167,8 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.lblLogin.Location = new System.Drawing.Point(601, 317);
+            this.lblLogin.ForeColor = System.Drawing.Color.Black;
+            this.lblLogin.Location = new System.Drawing.Point(596, 163);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(66, 29);
             this.lblLogin.TabIndex = 18;
@@ -223,8 +179,8 @@
             this.lblNome.AutoSize = true;
             this.lblNome.BackColor = System.Drawing.SystemColors.Control;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNome.Location = new System.Drawing.Point(601, 265);
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
+            this.lblNome.Location = new System.Drawing.Point(596, 73);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(73, 29);
             this.lblNome.TabIndex = 17;
@@ -275,7 +231,7 @@
             // txtAula
             // 
             this.txtAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAula.Location = new System.Drawing.Point(867, 528);
+            this.txtAula.Location = new System.Drawing.Point(867, 524);
             this.txtAula.Name = "txtAula";
             this.txtAula.Size = new System.Drawing.Size(212, 29);
             this.txtAula.TabIndex = 114;
@@ -284,8 +240,8 @@
             // 
             this.lblAula.AutoSize = true;
             this.lblAula.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAula.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAula.Location = new System.Drawing.Point(609, 527);
+            this.lblAula.ForeColor = System.Drawing.Color.Black;
+            this.lblAula.Location = new System.Drawing.Point(596, 523);
             this.lblAula.Name = "lblAula";
             this.lblAula.Size = new System.Drawing.Size(58, 29);
             this.lblAula.TabIndex = 113;
@@ -311,10 +267,6 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.btnProcurarImagem);
-            this.Controls.Add(this.txtImagemUsuario);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -326,7 +278,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,10 +286,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnProcurarImagem;
-        private System.Windows.Forms.TextBox txtImagemUsuario;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtConfirmarSenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtLogin;

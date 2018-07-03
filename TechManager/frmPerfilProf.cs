@@ -40,7 +40,7 @@ namespace TechManager
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
-            frmAdvertenciaProf adv = new frmAdvertenciaProf();
+            frmJustificativaProf adv = new frmJustificativaProf();
             adv.ShowDialog();
         }
 

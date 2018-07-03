@@ -83,7 +83,6 @@ namespace TechManager
             txtEmail.Enabled = false;
             txtLogin.Enabled = false;
             txtNome.Enabled = false;
-            txtNomeFotoPerfil.Enabled = false;
             txtSenha.Enabled = false;
             mktxtRG.Enabled = false;
         }
@@ -94,7 +93,6 @@ namespace TechManager
             txtEmail.Enabled = true;
             txtLogin.Enabled = true;
             txtNome.Enabled = true;
-            txtNomeFotoPerfil.Enabled = true;
             txtSenha.Enabled = true;
             mktxtRG.Enabled = true;
         }
@@ -107,6 +105,29 @@ namespace TechManager
         private void btnGravar_Click(object sender, EventArgs e)
         {
 
+            if (!mktxtRG.MaskCompleted)
+            {
+                lblMensagem.Text = ("O campo CPF está incompleto.");
+                lblMensagem.ForeColor = Color.Red;
+                mktxtRG.BackColor = Color.Salmon;
+
+                return;
+            }
+            else
+            {
+                if (Valida(mktxtRG.Text))
+                {
+                    lblMensagem.Text = ("");
+                }
+                else
+                {
+                    lblMensagem.Text = ("CPF inválido");
+                    lblMensagem.ForeColor = Color.Red;
+                    mktxtRG.BackColor = Color.Salmon;
+                    mktxtRG.Focus();
+                    return;
+                }
+            }
             if (!verificaCampos())
             {
                 return;
@@ -258,6 +279,105 @@ namespace TechManager
         private void mktxtRG_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        public bool Valida(string cpf)
+        {
+
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+            string tempCpf;
+
+            string digito;
+
+            int soma;
+
+            int resto;
+
+            cpf = cpf.Trim();
+
+
+
+            if (cpf.Length < 11)
+            {
+                return false;
+
+            }
+
+
+            tempCpf = cpf.Substring(0, 9);
+
+            soma = 0;
+
+            switch (cpf)
+            {
+                case "11111111111":
+                    return false;
+                case "00000000000":
+                    return false;
+                case "2222222222":
+                    return false;
+                case "33333333333":
+                    return false;
+                case "44444444444":
+                    return false;
+                case "55555555555":
+                    return false;
+                case "66666666666":
+                    return false;
+                case "77777777777":
+                    return false;
+                case "88888888888":
+                    return false;
+                case "99999999999":
+                    return false;
+            }
+
+            for (int i = 0; i < 9; i++)
+
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+
+            resto = soma % 11;
+
+            if (resto < 2)
+
+                resto = 0;
+
+            else
+
+                resto = 11 - resto;
+
+            digito = resto.ToString();
+
+            tempCpf = tempCpf + digito;
+
+            soma = 0;
+
+            for (int i = 0; i < 10; i++)
+
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+
+            resto = soma % 11;
+
+            if (resto < 2)
+
+                resto = 0;
+
+            else
+
+                resto = 11 - resto;
+
+            digito = digito + resto.ToString();
+
+            return cpf.EndsWith(digito);
+
+        }
+
+        private void mktxtRG_TextChanged_1(object sender, EventArgs e)
+        {
+            mktxtRG.BackColor = Color.White;
         }
     }
 }

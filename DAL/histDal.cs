@@ -21,7 +21,7 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM historico INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob";
+                comando.CommandText = "SELECT * FROM historico LEFT JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob";
                 comando.Connection = conexao;
 
                 List<histDto> listHistDto = new List<histDto>();
@@ -43,7 +43,6 @@ namespace DAL
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
                         dtovar.Check = Convert.ToString(dr["resolvido"]);
-                        dtovar.NomeTec = Convert.ToString(dr["nomeTec"]);
                         dtovar.advertencia = Convert.ToString(dr["advertencia"]);
                         dtovar.justificativa = Convert.ToString(dr["justificativa"]);
 
@@ -95,7 +94,6 @@ namespace DAL
                     dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                     dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
                     dtovar.Check = Convert.ToString(dr["resolvido"]);
-                    dtovar.NomeTec = Convert.ToString(dr["nomeTec"]);
                     dtovar.advertencia = Convert.ToString(dr["advertencia"]);
                     dtovar.justificativa = Convert.ToString(dr["justificativa"]);
 
@@ -148,7 +146,6 @@ namespace DAL
                     dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                     dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
                     dtovar.Check = Convert.ToString(dr["resolvido"]);
-                    dtovar.NomeTec = Convert.ToString(dr["nomeTec"]);
                     dtovar.advertencia = Convert.ToString(dr["advertencia"]);
                     dtovar.justificativa = Convert.ToString(dr["justificativa"]);
 
@@ -179,7 +176,7 @@ namespace DAL
                 conexao = new MySqlConnection(conexao_sql);
                 MySqlCommand comando = new MySqlCommand();
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM problema WHERE CONCAT(professor) LIKE '%" + dtovar.professor + "%'";
+                comando.CommandText = "SELECT * FROM HISTORICO INNER JOIN ADVERTENCIA ON ADVERTENCIA.idprob = historico.idprob WHERE CONCAT(professor) LIKE '%" + dtovar.professor + "%'";
                 comando.Connection = conexao;
 
                 List<histDto> listProbDto = new List<histDto>();
@@ -200,7 +197,6 @@ namespace DAL
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
                         dtovar.Check = Convert.ToString(dr["resolvido"]);
-                        dtovar.NomeTec = Convert.ToString(dr["nomeTec"]);
                         dtovar.advertencia = Convert.ToString(dr["advertencia"]);
                         dtovar.justificativa = Convert.ToString(dr["justificativa"]);
 
@@ -250,7 +246,6 @@ namespace DAL
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
                         dtovar.Check = Convert.ToString(dr["resolvido"]);
-                        dtovar.NomeTec = Convert.ToString(dr["nomeTec"]);
                         dtovar.advertencia = Convert.ToString(dr["advertencia"]);
                         dtovar.justificativa = Convert.ToString(dr["justificativa"]);
 

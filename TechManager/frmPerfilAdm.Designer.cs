@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilAdm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnStand = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSair = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -53,7 +52,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnStand);
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.btnDel);
@@ -66,17 +64,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 768);
             this.panel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(115, 833);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 25);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Sair";
             // 
             // btnStand
             // 
@@ -322,7 +309,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btnStand;
         private Bunifu.Framework.UI.BunifuImageButton btnSair;
         private Bunifu.Framework.UI.BunifuFlatButton btnAltera;

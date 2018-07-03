@@ -12,14 +12,14 @@ using BLL;
 
 namespace TechManager
 {
-    public partial class frmAdvertenciaProf : Form
+    public partial class frmJustificativaProf : Form
     {
         int registro;
 
         advertenciaDTO dtovar = new advertenciaDTO();
         advertenciaBLL bll = new advertenciaBLL();
 
-        public frmAdvertenciaProf()
+        public frmJustificativaProf()
         {
             InitializeComponent();
         }

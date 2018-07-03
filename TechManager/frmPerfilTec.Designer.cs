@@ -33,7 +33,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblSair = new System.Windows.Forms.Label();
             this.btnStand = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSair = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnHist = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -83,7 +82,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.lblSair);
             this.panel1.Controls.Add(this.btnStand);
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.btnHist);
@@ -96,17 +94,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 600);
             this.panel1.TabIndex = 8;
-            // 
-            // lblSair
-            // 
-            this.lblSair.AutoSize = true;
-            this.lblSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSair.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSair.Location = new System.Drawing.Point(115, 833);
-            this.lblSair.Name = "lblSair";
-            this.lblSair.Size = new System.Drawing.Size(50, 25);
-            this.lblSair.TabIndex = 10;
-            this.lblSair.Text = "Sair";
             // 
             // btnStand
             // 
@@ -383,7 +370,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblSair;
         private Bunifu.Framework.UI.BunifuFlatButton btnStand;
         private Bunifu.Framework.UI.BunifuImageButton btnSair;
         private Bunifu.Framework.UI.BunifuFlatButton btnHist;

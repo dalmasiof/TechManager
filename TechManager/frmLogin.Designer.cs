@@ -175,9 +175,10 @@
             // linkSenha
             // 
             this.linkSenha.AutoSize = true;
-            this.linkSenha.Location = new System.Drawing.Point(509, 314);
+            this.linkSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkSenha.Location = new System.Drawing.Point(509, 307);
             this.linkSenha.Name = "linkSenha";
-            this.linkSenha.Size = new System.Drawing.Size(89, 13);
+            this.linkSenha.Size = new System.Drawing.Size(112, 16);
             this.linkSenha.TabIndex = 4;
             this.linkSenha.TabStop = true;
             this.linkSenha.Text = "Recuperar senha";

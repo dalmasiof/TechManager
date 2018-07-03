@@ -21,6 +21,7 @@ namespace TechManager
 
         usuarioDTO dto = new usuarioDTO();
 
+
         private void pcbHome_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -32,6 +33,7 @@ namespace TechManager
             lblId.Text = "";
             lblNome.Text = "";
             lblTipo.Text = "";
+            dto.id = -1;
 
         }
 
@@ -118,16 +120,15 @@ namespace TechManager
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
-            int sel = dgvExclui.CurrentRow.Index;
-
-            if (lblId.Text == "")
+            if (dto.id == -1)
             {
-                MessageBox.Show("Selecione um usuário acima clicando sobree ele", "Usuário não selecionado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selecione um usuário acima clicando sobre ele", "Usuário não selecionado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
+                int sel = dgvExclui.CurrentRow.Index;
+
                 if (DialogResult.Yes == MessageBox.Show("Certeza que deseja excluir o registro de " + Convert.ToString(dgvExclui["nome", sel].Value) +
                    "?", "Excluir registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
@@ -135,6 +136,7 @@ namespace TechManager
                     {
                         usuarioBLL bll = new usuarioBLL();
                         bll.deleteUsu(dto);
+                        dto.id = -1;
                     }
                     catch (Exception erro)
                     {

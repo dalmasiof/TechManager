@@ -92,7 +92,7 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(197, 311);
+            this.btnVoltar.Location = new System.Drawing.Point(197, 307);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(120, 33);
             this.btnVoltar.TabIndex = 16;
@@ -103,21 +103,21 @@
             // lblMensagem
             // 
             this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Location = new System.Drawing.Point(88, 158);
+            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagem.Location = new System.Drawing.Point(67, 282);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(35, 13);
+            this.lblMensagem.Size = new System.Drawing.Size(45, 16);
             this.lblMensagem.TabIndex = 17;
             this.lblMensagem.Text = "label2";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblMensagem);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.btnRedefinir);
             this.panel1.Location = new System.Drawing.Point(104, 126);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 179);
+            this.panel1.Size = new System.Drawing.Size(314, 141);
             this.panel1.TabIndex = 18;
             // 
             // lblNome
@@ -146,6 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 343);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.pictureBox1);

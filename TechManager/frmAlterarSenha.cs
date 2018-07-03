@@ -115,7 +115,13 @@ namespace TechManager
                         catch (Exception erro)
                         {
                             MessageBox.Show("Não foi possível enviar o email, verifique a conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            txtEmail.Clear();
+                            panel1.Visible = false;
+                            lblNome.Text = "Nome: " + nome;
+                            lblSenha.Text = "Senha: " + senha;
+
+                            lblMensagem.BringToFront();
+                            lblMensagem.Visible = true;
+                            lblMensagem.Text = "Contate o Administrador do sistema para poder alterar sua senha!";
                         }
                     }
                 }

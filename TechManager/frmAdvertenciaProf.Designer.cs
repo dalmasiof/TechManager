@@ -1,6 +1,6 @@
 ﻿namespace TechManager
 {
-    partial class frmAdvertenciaProf
+    partial class frmJustificativaProf
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdvertenciaProf));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJustificativaProf));
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -120,21 +120,21 @@
             this.lblAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAdvert.AutoSize = true;
             this.lblAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvert.Location = new System.Drawing.Point(523, 276);
+            this.lblAdvert.Location = new System.Drawing.Point(453, 276);
             this.lblAdvert.Name = "lblAdvert";
-            this.lblAdvert.Size = new System.Drawing.Size(65, 25);
+            this.lblAdvert.Size = new System.Drawing.Size(71, 25);
             this.lblAdvert.TabIndex = 4;
-            this.lblAdvert.Text = "Aviso";
+            this.lblAdvert.Text = "Aviso:";
             // 
             // txtAdvert
             // 
             this.txtAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdvert.ForeColor = System.Drawing.Color.Gray;
-            this.txtAdvert.Location = new System.Drawing.Point(594, 277);
+            this.txtAdvert.Location = new System.Drawing.Point(530, 277);
             this.txtAdvert.Multiline = true;
             this.txtAdvert.Name = "txtAdvert";
-            this.txtAdvert.Size = new System.Drawing.Size(378, 157);
+            this.txtAdvert.Size = new System.Drawing.Size(442, 157);
             this.txtAdvert.TabIndex = 1;
             this.txtAdvert.Text = "Escreva seu aviso aqui!";
             this.txtAdvert.TextChanged += new System.EventHandler(this.txtAdvert_TextChanged);
@@ -145,12 +145,13 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridProb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridProb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridProb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridProb.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridProb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -170,11 +171,11 @@
             this.dataGridProb.EnableHeadersVisualStyles = false;
             this.dataGridProb.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dataGridProb.HeaderForeColor = System.Drawing.Color.White;
-            this.dataGridProb.Location = new System.Drawing.Point(528, 25);
+            this.dataGridProb.Location = new System.Drawing.Point(356, 25);
             this.dataGridProb.Name = "dataGridProb";
             this.dataGridProb.ReadOnly = true;
             this.dataGridProb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridProb.Size = new System.Drawing.Size(542, 189);
+            this.dataGridProb.Size = new System.Drawing.Size(714, 189);
             this.dataGridProb.TabIndex = 0;
             this.dataGridProb.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProb_CellClick);
             // 
@@ -248,7 +249,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(643, 564);
+            this.btnCancelar.Location = new System.Drawing.Point(591, 632);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 33);
             this.btnCancelar.TabIndex = 3;
@@ -268,7 +269,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.btnEnviar.ForeColor = System.Drawing.Color.Black;
-            this.btnEnviar.Location = new System.Drawing.Point(838, 564);
+            this.btnEnviar.Location = new System.Drawing.Point(786, 632);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(120, 33);
             this.btnEnviar.TabIndex = 2;
@@ -280,11 +281,11 @@
             // 
             this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(484, 471);
+            this.lblMensagem.Location = new System.Drawing.Point(391, 504);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(485, 16);
+            this.lblMensagem.Size = new System.Drawing.Size(700, 25);
             this.lblMensagem.TabIndex = 5;
             this.lblMensagem.Text = "Selecione um problema para mandar um aviso, e depois clique no botão enviar!";
             // 
