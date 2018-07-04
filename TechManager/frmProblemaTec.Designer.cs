@@ -124,7 +124,7 @@
             this.dgvProb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Peru;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -149,7 +149,7 @@
             this.dgvProb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             this.dgvProb.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProb.Size = new System.Drawing.Size(764, 373);
+            this.dgvProb.Size = new System.Drawing.Size(826, 373);
             this.dgvProb.TabIndex = 20;
             this.dgvProb.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellEndEdit);
             this.dgvProb.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProb_CellValueChanged);

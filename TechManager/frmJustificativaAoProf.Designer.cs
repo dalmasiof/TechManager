@@ -1,6 +1,6 @@
 ﻿namespace TechManager
 {
-    partial class frmJustificativaProf
+    partial class frmJustificativaAoProf
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJustificativaProf));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJustificativaAoProf));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.pcbProfessor = new System.Windows.Forms.PictureBox();
-            this.lblAdvert = new System.Windows.Forms.Label();
-            this.txtAdvert = new System.Windows.Forms.TextBox();
             this.dataGridProb = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +45,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.lblMensagem = new System.Windows.Forms.Label();
+            this.lblJustificativa = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,8 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGreen;
-            this.panel1.Controls.Add(this.btnAdve);
+            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblNome);
@@ -69,46 +63,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 768);
-            this.panel1.TabIndex = 6;
-            // 
-            // btnAdve
-            // 
-            this.btnAdve.Active = false;
-            this.btnAdve.Activecolor = System.Drawing.Color.Silver;
-            this.btnAdve.BackColor = System.Drawing.Color.Silver;
-            this.btnAdve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdve.BorderRadius = 0;
-            this.btnAdve.ButtonText = "Ver Justificativa";
-            this.btnAdve.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdve.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAdve.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdve.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAdve.Iconimage = global::TechManager.Properties.Resources.if_Error_381599;
-            this.btnAdve.Iconimage_right = null;
-            this.btnAdve.Iconimage_right_Selected = null;
-            this.btnAdve.Iconimage_Selected = null;
-            this.btnAdve.IconMarginLeft = 0;
-            this.btnAdve.IconMarginRight = 0;
-            this.btnAdve.IconRightVisible = true;
-            this.btnAdve.IconRightZoom = 0D;
-            this.btnAdve.IconVisible = true;
-            this.btnAdve.IconZoom = 90D;
-            this.btnAdve.IsTab = false;
-            this.btnAdve.Location = new System.Drawing.Point(27, 382);
-            this.btnAdve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAdve.Name = "btnAdve";
-            this.btnAdve.Normalcolor = System.Drawing.Color.Silver;
-            this.btnAdve.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnAdve.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAdve.selected = false;
-            this.btnAdve.Size = new System.Drawing.Size(179, 52);
-            this.btnAdve.TabIndex = 7;
-            this.btnAdve.Text = "Ver Justificativa";
-            this.btnAdve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdve.Textcolor = System.Drawing.Color.DarkRed;
-            this.btnAdve.TextFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdve.Click += new System.EventHandler(this.btnAdve_Click);
+            this.panel1.Size = new System.Drawing.Size(237, 729);
+            this.panel1.TabIndex = 7;
             // 
             // bunifuImageButton2
             // 
@@ -122,7 +78,6 @@
             this.bunifuImageButton2.TabIndex = 3;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // pictureBox3
             // 
@@ -155,30 +110,6 @@
             this.pcbProfessor.TabIndex = 0;
             this.pcbProfessor.TabStop = false;
             // 
-            // lblAdvert
-            // 
-            this.lblAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAdvert.AutoSize = true;
-            this.lblAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvert.Location = new System.Drawing.Point(453, 276);
-            this.lblAdvert.Name = "lblAdvert";
-            this.lblAdvert.Size = new System.Drawing.Size(71, 25);
-            this.lblAdvert.TabIndex = 4;
-            this.lblAdvert.Text = "Aviso:";
-            // 
-            // txtAdvert
-            // 
-            this.txtAdvert.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdvert.ForeColor = System.Drawing.Color.Gray;
-            this.txtAdvert.Location = new System.Drawing.Point(530, 277);
-            this.txtAdvert.Multiline = true;
-            this.txtAdvert.Name = "txtAdvert";
-            this.txtAdvert.Size = new System.Drawing.Size(442, 157);
-            this.txtAdvert.TabIndex = 1;
-            this.txtAdvert.Text = "Escreva seu aviso aqui!";
-            this.txtAdvert.TextChanged += new System.EventHandler(this.txtAdvert_TextChanged);
-            // 
             // dataGridProb
             // 
             this.dataGridProb.AllowUserToDeleteRows = false;
@@ -190,7 +121,7 @@
             this.dataGridProb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -211,12 +142,12 @@
             this.dataGridProb.EnableHeadersVisualStyles = false;
             this.dataGridProb.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dataGridProb.HeaderForeColor = System.Drawing.Color.White;
-            this.dataGridProb.Location = new System.Drawing.Point(458, 25);
+            this.dataGridProb.Location = new System.Drawing.Point(378, 25);
             this.dataGridProb.Name = "dataGridProb";
             this.dataGridProb.ReadOnly = true;
             this.dataGridProb.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridProb.Size = new System.Drawing.Size(714, 189);
-            this.dataGridProb.TabIndex = 0;
+            this.dataGridProb.Size = new System.Drawing.Size(862, 245);
+            this.dataGridProb.TabIndex = 8;
             this.dataGridProb.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProb_CellClick);
             // 
             // Column1
@@ -278,76 +209,32 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // btnCancelar
+            // lblJustificativa
             // 
-            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(591, 632);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(120, 33);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.lblJustificativa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblJustificativa.AutoSize = true;
+            this.lblJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJustificativa.Location = new System.Drawing.Point(373, 408);
+            this.lblJustificativa.Name = "lblJustificativa";
+            this.lblJustificativa.Size = new System.Drawing.Size(131, 25);
+            this.lblJustificativa.TabIndex = 9;
+            this.lblJustificativa.Text = "Justificativa:";
             // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEnviar.BackColor = System.Drawing.Color.White;
-            this.btnEnviar.Enabled = false;
-            this.btnEnviar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnEnviar.FlatAppearance.CheckedBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnEnviar.ForeColor = System.Drawing.Color.Black;
-            this.btnEnviar.Location = new System.Drawing.Point(786, 632);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(120, 33);
-            this.btnEnviar.TabIndex = 2;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = false;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
-            // lblMensagem
-            // 
-            this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(391, 504);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(700, 25);
-            this.lblMensagem.TabIndex = 5;
-            this.lblMensagem.Text = "Selecione um problema para mandar um aviso, e depois clique no botão enviar!";
-            // 
-            // frmJustificativaProf
+            // frmJustificativaAoProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
-            this.Controls.Add(this.lblMensagem);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.txtAdvert);
-            this.Controls.Add(this.lblAdvert);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.lblJustificativa);
             this.Controls.Add(this.dataGridProb);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmJustificativaProf";
+            this.Name = "frmJustificativaAoProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Advertencia Professor";
+            this.Text = "Justificativa Professor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmAdvertenciaTecnico_Load);
+            this.Load += new System.EventHandler(this.frmJustificativaAoProf_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
@@ -363,15 +250,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbProfessor;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblAdvert;
-        private System.Windows.Forms.TextBox txtAdvert;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridProb;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn advertido;
@@ -380,6 +262,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAdve;
+        private System.Windows.Forms.Label lblJustificativa;
     }
 }

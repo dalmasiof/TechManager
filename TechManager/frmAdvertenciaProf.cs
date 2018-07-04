@@ -49,8 +49,7 @@ namespace TechManager
                 foreach (DataGridViewRow row in dataGridProb.Rows)
                 {
 
-                    if (Convert.ToString(row.Cells["advertido"].Value) == "")
-
+                    if (Convert.ToString(row.Cells["justificativa"].Value) != "")
                     {
                         row.Visible = true;
 
@@ -156,7 +155,8 @@ namespace TechManager
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
-
+            frmJustificativaAoProf tela = new frmJustificativaAoProf();
+            tela.Show();
             this.Close();
 
         }
