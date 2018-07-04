@@ -37,6 +37,12 @@ namespace BLL
                 throw ex;
             }
         }
+
+        public void verificaLogin(usuarioDTO dtovar)
+        {
+            dal.verificaemail(dtovar);
+        }
+
         public List<usuarioDTO> validar(usuarioDTO dto)
         {
             try
@@ -78,6 +84,18 @@ namespace BLL
                 dal.admAlteraUsuario(dto);
             }
             catch(Exception erro)
+            {
+                throw erro;
+            }
+        }
+
+        public void verificaLoginUsu(usuarioDTO dtovar)
+        {
+            try
+            {
+                dal.validarLog(dtovar);
+            }
+            catch (Exception erro)
             {
                 throw erro;
             }

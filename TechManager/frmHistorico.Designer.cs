@@ -149,7 +149,7 @@
             this.dgvHist.ReadOnly = true;
             this.dgvHist.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHist.Size = new System.Drawing.Size(866, 387);
+            this.dgvHist.Size = new System.Drawing.Size(939, 387);
             this.dgvHist.TabIndex = 2;
             this.dgvHist.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHist_CellEndEdit);
             // 

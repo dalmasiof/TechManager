@@ -189,6 +189,7 @@ namespace TechManager
             dto.idProb = -1;
             lblAviso.Text = "Clique em um problema para alterá-lo ou exclui-lo";
             lblAviso.ForeColor = Color.Black;
+
         }
         private void LimpaCampos()
         {
@@ -199,6 +200,7 @@ namespace TechManager
                     (c as Control).Text = "";
                 }
             }
+            txtAula.Text = information.aula;
         }
 
         private void bunifuCustomDataGrid1_CellClick(object sender, DataGridViewCellEventArgs e)

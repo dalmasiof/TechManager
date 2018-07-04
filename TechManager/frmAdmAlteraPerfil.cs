@@ -240,6 +240,7 @@ namespace TechManager
 
                 return false;
             }
+
             return true;
 
         }

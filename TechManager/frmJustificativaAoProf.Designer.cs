@@ -41,6 +41,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advertido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advertencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.justificativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProb = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +56,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.bunifuImageButton2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblNome);
@@ -78,9 +79,11 @@
             this.bunifuImageButton2.TabIndex = 3;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.SeaGreen;
             this.pictureBox3.BackgroundImage = global::TechManager.Properties.Resources.logoTCC11;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(-43, 175);
@@ -121,7 +124,7 @@
             this.dataGridProb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridProb.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -134,6 +137,7 @@
             this.Column2,
             this.advertido,
             this.advertencia,
+            this.justificativa,
             this.Column3,
             this.Column4,
             this.idProb,
@@ -179,6 +183,14 @@
             this.advertencia.Name = "advertencia";
             this.advertencia.ReadOnly = true;
             this.advertencia.Visible = false;
+            // 
+            // justificativa
+            // 
+            this.justificativa.DataPropertyName = "justificativa";
+            this.justificativa.HeaderText = "just";
+            this.justificativa.Name = "justificativa";
+            this.justificativa.ReadOnly = true;
+            this.justificativa.Visible = false;
             // 
             // Column3
             // 
@@ -254,14 +266,15 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox pcbProfessor;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridProb;
+        private System.Windows.Forms.Label lblJustificativa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn advertido;
         private System.Windows.Forms.DataGridViewTextBoxColumn advertencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn justificativa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label lblJustificativa;
     }
 }

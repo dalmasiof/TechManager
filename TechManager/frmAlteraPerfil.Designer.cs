@@ -48,6 +48,8 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.txtAula = new System.Windows.Forms.TextBox();
             this.lblAula = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -106,6 +108,7 @@
             // 
             this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarSenha.Location = new System.Drawing.Point(867, 344);
+            this.txtConfirmarSenha.MaxLength = 50;
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.PasswordChar = '*';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(212, 29);
@@ -115,6 +118,7 @@
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(867, 254);
+            this.txtSenha.MaxLength = 50;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(212, 29);
@@ -132,6 +136,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(867, 434);
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(273, 29);
             this.txtEmail.TabIndex = 4;
@@ -246,6 +251,7 @@
             // 
             this.txtAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAula.Location = new System.Drawing.Point(867, 524);
+            this.txtAula.MaxLength = 20;
             this.txtAula.Name = "txtAula";
             this.txtAula.Size = new System.Drawing.Size(212, 29);
             this.txtAula.TabIndex = 114;
@@ -261,6 +267,24 @@
             this.lblAula.TabIndex = 113;
             this.lblAula.Text = "Aula";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(867, 74);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(273, 29);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(867, 164);
+            this.textBox2.MaxLength = 50;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(212, 29);
+            this.textBox2.TabIndex = 1;
+            // 
             // frmAlteraPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,8 +297,10 @@
             this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.txtConfirmarSenha);
             this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblConfirmarSenha);
             this.Controls.Add(this.lblSenha);
@@ -319,5 +345,7 @@
         private System.Windows.Forms.TextBox txtAula;
         private System.Windows.Forms.Label lblAula;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

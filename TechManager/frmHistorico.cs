@@ -98,6 +98,7 @@ namespace TechManager
                 e.Handled = true;
                
             }
+
             
             switch (cmbHist.selectedIndex)
             {
@@ -159,6 +160,7 @@ namespace TechManager
                 else
                 {
                     row.DefaultCellStyle.BackColor = Color.Maroon;
+                    row.DefaultCellStyle.ForeColor = Color.White;
                     row.Cells[5].Value = Convert.ToString("Não resolvido");
 
 

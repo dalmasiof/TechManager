@@ -26,20 +26,23 @@ namespace TechManager
 
         private void btnSair_Click(object sender, EventArgs e)
         {
+            pictureBox2.Image = Properties.Resources.carregando;
             MySqlConnection conexao = new MySqlConnection();
 
             string conexao_sql = "server=localhost;database=db_tech;user=root;password=1234;port=3306";   //Properties.Settings.Default.; SUBSTITUIR PELA FUTURA STRING DE CONEXAO
 
             string email = txtEmail.Text;
-
             if (!verificaCampos())
             {
+                pictureBox2.Image = null;
                 return;
             }
+
             else
             {
                 try
                 {
+                    
                     MySqlConnection conexao1 = new MySqlConnection();
                     conexao1.ConnectionString = conexao_sql;
                     MySqlCommand comando = new MySqlCommand();
@@ -62,8 +65,8 @@ namespace TechManager
 
                     else
                     {
+                        pictureBox2.Image = null;
                         MessageBox.Show("E-mail não cadastrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                         return;
                     }
                 }
@@ -106,10 +109,12 @@ namespace TechManager
 
                             smtp.Send(message);
                             txtEmail.Clear();
+                            pictureBox2.Image = null;
 
                             lblMensagem.Text = "";
                             MessageBox.Show("Email enviado para " + txtEmail.Text + ", caso não encontre verifique a caixa de spams", "Enviado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtEmail.Focus();
+
                         }
 
                         catch (Exception erro)
@@ -128,7 +133,9 @@ namespace TechManager
             }
             else
             {
-                MessageBox.Show("Não foi possível enviar o email, verifique a conexão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pictureBox2.Image = null;
+                MessageBox.Show("Não foi possível enviar o email, sera feito uma recuperação interna, é recomendado que troque de senha", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 panel1.Visible = false;
                 lblNome.Text = "Nome: "+nome;
                 lblSenha.Text = "Senha: " + senha;
@@ -172,6 +179,7 @@ namespace TechManager
         private void frmAlterarSenha_Load(object sender, EventArgs e)
         {
             lblMensagem.Text = "";
+            pictureBox2.Image = null;
         }
     }
 }

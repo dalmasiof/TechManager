@@ -253,6 +253,7 @@
             this.pcbFotoProf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoProf.TabIndex = 0;
             this.pcbFotoProf.TabStop = false;
+            this.toolTip1.SetToolTip(this.pcbFotoProf, "Clique para alterar o perfil");
             this.pcbFotoProf.Click += new System.EventHandler(this.pcbFotoProf_Click);
             // 
             // pictureBox2

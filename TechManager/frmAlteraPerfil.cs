@@ -93,6 +93,48 @@ namespace TechManager
                 lblMensagem.ForeColor = Color.Red;
                 return false;
             }
+            try
+            {
+               
+                dtovar.email = txtEmail.Text;
+
+                bll.verificaLogin(dtovar);
+
+                if (dtovar.valida == false)
+                {
+                    lblMensagem.Text = "Email já cadastrado";
+                    lblMensagem.ForeColor = Color.Red;
+                    txtEmail.Focus();
+                    return false;
+                }
+
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+               
+                dtovar.login = txtLogin.Text;
+
+                bll.verificaLoginUsu(dtovar);
+
+                if (dtovar.valida == false)
+                {
+                    lblMensagem.Text = "Login já cadastrado";
+                    lblMensagem.ForeColor = Color.Red;
+                    txtEmail.Focus();
+                    return false;
+                }
+
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return true;
         }
 

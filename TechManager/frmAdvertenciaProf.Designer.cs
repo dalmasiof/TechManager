@@ -172,6 +172,7 @@
             this.txtAdvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdvert.ForeColor = System.Drawing.Color.Gray;
             this.txtAdvert.Location = new System.Drawing.Point(530, 277);
+            this.txtAdvert.MaxLength = 50;
             this.txtAdvert.Multiline = true;
             this.txtAdvert.Name = "txtAdvert";
             this.txtAdvert.Size = new System.Drawing.Size(442, 157);

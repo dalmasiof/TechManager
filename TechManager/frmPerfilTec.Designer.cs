@@ -217,6 +217,7 @@
             this.pcbFotoTec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFotoTec.TabIndex = 0;
             this.pcbFotoTec.TabStop = false;
+            this.toolTip1.SetToolTip(this.pcbFotoTec, "Clique para alterar o perfil");
             this.pcbFotoTec.Click += new System.EventHandler(this.pcbFotoTec_Click);
             // 
             // btnErro

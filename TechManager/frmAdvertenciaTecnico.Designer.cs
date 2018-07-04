@@ -63,6 +63,7 @@
             this.txtJustificativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJustificativa.ForeColor = System.Drawing.Color.Gray;
             this.txtJustificativa.Location = new System.Drawing.Point(674, 395);
+            this.txtJustificativa.MaxLength = 50;
             this.txtJustificativa.Multiline = true;
             this.txtJustificativa.Name = "txtJustificativa";
             this.txtJustificativa.Size = new System.Drawing.Size(349, 97);

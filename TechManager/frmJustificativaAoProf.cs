@@ -74,5 +74,10 @@ namespace TechManager
 
             lblJustificativa.Text = "Justificativa:     " + Convert.ToString(dataGridProb["justificativa", sel].Value);
         }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

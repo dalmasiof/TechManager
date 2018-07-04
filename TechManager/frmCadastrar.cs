@@ -26,6 +26,7 @@ namespace TechManager
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
+            
             if (!mktxtRG.MaskCompleted)
             {
                 lblMensagem.Text = ("O campo CPF está incompleto.");
@@ -53,6 +54,7 @@ namespace TechManager
             {
                 return;
             }
+            
             else
             {
                 if (cbbAcesso.Text == "Professor")
@@ -82,7 +84,7 @@ namespace TechManager
                 }
                 catch (Exception er)
                 {
-                    MessageBox.Show("Erro Inexperado, contate o T.I." + er, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro Inexperado, contate o T.I." , "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -250,6 +252,48 @@ namespace TechManager
                 lblMensagem.ForeColor = Color.Red;
                 return false;
             }
+            try
+            {
+                dtovar.rg = mktxtRG.Text;
+                dtovar.email = txtEmail.Text;
+
+                bll.verificaLogin(dtovar);
+
+                if (dtovar.valida == false)
+                {
+                    lblMensagem.Text = "Email já cadastrado";
+                    lblMensagem.ForeColor = Color.Red;
+                    txtEmail.Focus();
+                    return false;
+                }
+                
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+                dtovar.rg = mktxtRG.Text;
+                dtovar.login = txtLogin.Text;
+
+                bll.verificaLoginUsu(dtovar);
+
+                if (dtovar.valida == false)
+                {
+                    lblMensagem.Text = "Login já cadastrado";
+                    lblMensagem.ForeColor = Color.Red;
+                    txtEmail.Focus();
+                    return false;
+                }
+
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return true;
         }
 
@@ -276,7 +320,7 @@ namespace TechManager
             {
                 txtAula.Visible = true;
                 lblAula.Visible = true;
-                txtAula.Focus();
+               
 
             }
             else

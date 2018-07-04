@@ -38,7 +38,7 @@ namespace TechManager
         private void frmProblemaTec_Load(object sender, EventArgs e)
         {
             carregaGrid();
-
+            lblNome.Text = information.nome;
             
         }
 

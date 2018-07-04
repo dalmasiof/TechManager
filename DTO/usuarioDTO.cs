@@ -16,7 +16,7 @@ namespace DTO
         public string email { get; set; }
         public int tipo { get; set; }
         public string foto { get; set; }
-
+        public bool valida { get; set; }
         public string aula { get; set; }
 
 

@@ -27,7 +27,7 @@ namespace TechManager
         private void frmAdvertenciaTecnico_Load(object sender, EventArgs e)
         {
             txtAdvert.Enabled = false;
-            pcbProfessor.ImageLocation = information.foto;
+            pcbProfessor.Image = Properties.Resources.prof;
             lblNome.Text = information.nome;
             carregaGrid();
         }
@@ -49,7 +49,7 @@ namespace TechManager
                 foreach (DataGridViewRow row in dataGridProb.Rows)
                 {
 
-                    if (Convert.ToString(row.Cells["justificativa"].Value) != "")
+                    if (Convert.ToString(row.Cells["advertido"].Value) == "")
                     {
                         row.Visible = true;
 
@@ -69,7 +69,7 @@ namespace TechManager
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falha na conexão com o banco de dados, favor entrar em contato com o T.I."+erro, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -156,7 +156,7 @@ namespace TechManager
         private void btnAdve_Click(object sender, EventArgs e)
         {
             frmJustificativaAoProf tela = new frmJustificativaAoProf();
-            tela.Show();
+            tela.ShowDialog();
             this.Close();
 
         }

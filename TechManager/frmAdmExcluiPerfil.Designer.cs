@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmExcluiPerfil));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblAdnm = new System.Windows.Forms.Label();
             this.pcbHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.dgvExclui = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -52,7 +53,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.lblAdnm = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -70,6 +70,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(258, 771);
             this.panel1.TabIndex = 2;
+            // 
+            // lblAdnm
+            // 
+            this.lblAdnm.AutoSize = true;
+            this.lblAdnm.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdnm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAdnm.Location = new System.Drawing.Point(63, 217);
+            this.lblAdnm.Name = "lblAdnm";
+            this.lblAdnm.Size = new System.Drawing.Size(116, 23);
+            this.lblAdnm.TabIndex = 20;
+            this.lblAdnm.Text = "Adm ( Nome )";
+            this.lblAdnm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pcbHome
             // 
@@ -302,18 +314,6 @@
             this.lblTipo.Size = new System.Drawing.Size(39, 29);
             this.lblTipo.TabIndex = 19;
             this.lblTipo.Text = "Id:";
-            // 
-            // lblAdnm
-            // 
-            this.lblAdnm.AutoSize = true;
-            this.lblAdnm.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdnm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAdnm.Location = new System.Drawing.Point(63, 217);
-            this.lblAdnm.Name = "lblAdnm";
-            this.lblAdnm.Size = new System.Drawing.Size(116, 23);
-            this.lblAdnm.TabIndex = 20;
-            this.lblAdnm.Text = "Adm ( Nome )";
-            this.lblAdnm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmAdmExcluiPerfil
             // 

@@ -44,11 +44,11 @@ namespace DAL
                         dtovar.data = Convert.ToDateTime(dr["dataProb"]);
                         dtovar.idMaquina = Convert.ToString(dr["idMaquina"]);
                         dtovar.Check = Convert.ToString(dr["resolvido"]);
-                        dtovar.justificativa = Convert.ToString(dr["justificativa"]);
+                        
                         dtovar.advertencia = Convert.ToString(dr["advertencia"]);
                         dtovar.idAdv = Convert.ToInt32(dr["idAdv"]);
                         dtovar.justificado = Convert.ToString(dr["justificado"]);
-
+                        dtovar.justificativa = Convert.ToString(dr["justificativa"]);
 
                         listAdvertenciaDto.Add(dtovar);
 

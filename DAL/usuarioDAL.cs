@@ -46,6 +46,85 @@ namespace DAL
             }
         }
 
+        public void verificaemail(usuarioDTO dtovar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select * from tb_usuario where email = @email";
+                comando.Connection = conexao;
+
+                comando.Parameters.Add("@email", MySqlDbType.VarChar).Value = dtovar.email;
+                
+                List<usuarioDTO> listaLogin = new List<usuarioDTO>();
+
+                conexao.Open();
+                MySqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+                        dtovar.valida = false;
+                       
+                    }
+
+                }
+                else
+                {
+                    dtovar.valida = true;
+
+                }
+                
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+
+        }
+
+        public void validarLog(usuarioDTO dtovar)
+        {
+            try
+            {
+                conexao = new MySqlConnection(conexao_sql);
+                MySqlCommand comando = new MySqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select * from tb_usuario where login = @email";
+                comando.Connection = conexao;
+
+                comando.Parameters.Add("@email", MySqlDbType.VarChar).Value = dtovar.login;
+
+                List<usuarioDTO> listaLogin = new List<usuarioDTO>();
+
+                conexao.Open();
+                MySqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.HasRows == true)
+                {
+                    while (dr.Read())
+                    {
+                        dtovar.valida = false;
+
+                    }
+
+                }
+                else
+                {
+                    dtovar.valida = true;
+
+                }
+
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+
         public List<usuarioDTO> lista()
         {
             try

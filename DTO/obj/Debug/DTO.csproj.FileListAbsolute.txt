@@ -56,3 +56,4 @@ C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.csproj.
 C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.dll
 C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.pdb
 D:\Github\TechManager\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Maza\Documents\GitHub\TechManager\TechManager\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

@@ -46,6 +46,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblAviso = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -208,11 +210,33 @@
             this.check.HeaderText = "Resolver";
             this.check.Name = "check";
             // 
+            // lblAviso
+            // 
+            this.lblAviso.AutoSize = true;
+            this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.lblAviso.Location = new System.Drawing.Point(569, 117);
+            this.lblAviso.Name = "lblAviso";
+            this.lblAviso.Size = new System.Drawing.Size(593, 22);
+            this.lblAviso.TabIndex = 34;
+            this.lblAviso.Text = "Verifique o problema clicando no caixa de verificação na coluna Resolver";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.label1.Location = new System.Drawing.Point(740, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(264, 22);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "e pressione ENTER para salvar";
+            // 
             // frmProblemaTec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAviso);
             this.Controls.Add(this.dgvProb);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -229,6 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfessor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProb)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -248,5 +273,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn check;
+        private System.Windows.Forms.Label lblAviso;
+        private System.Windows.Forms.Label label1;
     }
 }

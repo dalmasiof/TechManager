@@ -203,7 +203,7 @@ namespace TechManager
 
         private void txtSenha_MouseClick(object sender, MouseEventArgs e)
         {
-            txtSenha.Text = null;
+           
         }
 
         private void linkSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
