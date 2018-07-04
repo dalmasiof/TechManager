@@ -141,7 +141,7 @@ namespace TechManager
                     }
                     catch (Exception erro)
                     {
-                        throw erro;
+                        MessageBox.Show("Erro Inexperado, contate o T.I." , "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     carregaGrid();
                     lblNome.Text = "";

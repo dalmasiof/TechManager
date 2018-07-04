@@ -83,7 +83,7 @@ namespace TechManager
             }
             catch (Exception erro)
             {
-                throw erro;
+                MessageBox.Show("Falha ao conectar com o banco de dados, por favor enre em contato com o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -120,7 +120,7 @@ namespace TechManager
                     }
                     catch (Exception erro)
                     {
-                        throw erro;
+                        MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
 
@@ -136,7 +136,7 @@ namespace TechManager
                     }
                     catch (Exception erro)
                     {
-                        throw erro;
+                        MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
 
@@ -198,7 +198,7 @@ namespace TechManager
                 }
                 catch (Exception erro)
                 {
-                    throw erro;
+                    MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else if(cmbHist.selectedIndex == 4)
@@ -216,7 +216,7 @@ namespace TechManager
                 }
                 catch (Exception erro)
                 {
-                    throw erro;
+                    MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

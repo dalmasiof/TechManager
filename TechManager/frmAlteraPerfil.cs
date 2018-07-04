@@ -47,7 +47,7 @@ namespace TechManager
                 }
                 catch (Exception er)
                 {
-                    throw er;
+                    MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

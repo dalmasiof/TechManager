@@ -29,6 +29,9 @@ namespace TechManager
         int notiComecoAdv;
         int notiAdv;
 
+        Boolean mostrar = true;
+        Boolean mostrarADv = true;
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -36,7 +39,9 @@ namespace TechManager
 
         private void frmPerfilTec_Load(object sender, EventArgs e)
         {
-             try
+           
+
+            try
             {
                 List<probDto> ListDto = new List<probDto>();
                 ListDto = new probBll().notificacao(dtovar);
@@ -66,8 +71,10 @@ namespace TechManager
 
         private void btnAdve_Click(object sender, EventArgs e)
         {
+            btnAdve.Iconimage_right = null;
+            this.Hide();
             frmAdvertenciaTecnico adv = new frmAdvertenciaTecnico();
-            adv.Show();
+            adv.ShowDialog();
         }
 
         private void btnErro_Click(object sender, EventArgs e)
@@ -139,14 +146,24 @@ namespace TechManager
             {
                 btnErro.Iconimage_right = Properties.Resources.noti12;
 
+               if( mostrar == true){
+
+                notifyIcon2.Visible = true;
+                notifyIcon2.Icon = SystemIcons.Information;
+                notifyIcon2.BalloonTipTitle = "Novo problema";
+                notifyIcon2.BalloonTipText = "Foi registrado um novo problema";
+                notifyIcon2.ShowBalloonTip(30000);
+                    mostrar = false;
+                }
+
             }
             else if(noti - notiComeco > 1)
             {
-                btnErro.Iconimage_right = Properties.Resources.notiMais;
+              
 
             }
 
-            ///////////////////////////////////////////////////////////////
+           
 
            
         }
@@ -175,12 +192,34 @@ namespace TechManager
             {
                 btnAdve.Iconimage_right = Properties.Resources.noti12;
 
+                if (mostrarADv == true)
+                {
+
+                    notifyIcon2.Visible = true;
+                    notifyIcon2.Icon = SystemIcons.Exclamation;
+                    notifyIcon2.BalloonTipTitle = "Novo aviso";
+                    notifyIcon2.BalloonTipText = "Foi registrado um novo aviso";
+                    notifyIcon2.ShowBalloonTip(30000);
+                    mostrarADv = false;
+                }
+
             }
             else if (notiAdv - notiComecoAdv > 1)
             {
                 btnAdve.Iconimage_right = Properties.Resources.notiMais;
 
             }
+        }
+
+        private void notifyIcon2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+               
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.cps.sp.gov.br/category/etec/");
         }
     }
 

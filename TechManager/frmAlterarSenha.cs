@@ -69,7 +69,7 @@ namespace TechManager
                 }
                 catch (Exception erro)
                 {
-                    MessageBox.Show("" + erro);
+                    MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

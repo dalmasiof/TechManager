@@ -66,13 +66,15 @@ namespace TechManager
             }
             catch (Exception erro)
             {
-                MessageBox.Show(""+erro);
+                MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmPerfilTec tec = new frmPerfilTec();
+            tec.Show();
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -98,7 +100,7 @@ namespace TechManager
 
             catch (Exception erro)
             {
-                MessageBox.Show("" + erro);
+                MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
             }
         }

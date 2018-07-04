@@ -72,7 +72,8 @@ namespace TechManager
             catch (Exception erro)
             {
                 throw erro;
-            }            mktxtRG.ForeColor = Color.Black;
+            }
+            mktxtRG.ForeColor = Color.Black;
 
         }
 
@@ -150,7 +151,7 @@ namespace TechManager
                 }
                 catch (Exception er)
                 {
-                    MessageBox.Show(""+ er);
+                    MessageBox.Show("Erro Inexperado, contate o T.I." + er, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

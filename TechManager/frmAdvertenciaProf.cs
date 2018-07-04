@@ -144,7 +144,7 @@ namespace TechManager
 
             catch
             {
-                lblMensagem.Text = "Ocorreu um erro, por favor contatar a equipe Visus!";
+                MessageBox.Show("Erro Inexperado, contate o T.I.", "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

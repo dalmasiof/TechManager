@@ -26,7 +26,7 @@ namespace TechManager
 
         private void frmPerfilProf_Load(object sender, EventArgs e)
         {
-
+          
             notifyIcon1.Visible = false;
             lblNome.Text = information.nome;
             pcbFotoProf.ImageLocation = information.foto;
